@@ -1,0 +1,52 @@
+- form_for @candidate do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :ward_id
+    %br
+    = f.text_field :ward_id
+  %p
+    = f.label :incumbent_since
+    %br
+    = f.text_field :incumbent_since
+  %p
+    = f.label :website
+    %br
+    = f.text_field :website
+  %p
+    = f.label :facebook
+    %br
+    = f.text_field :facebook
+  %p
+    = f.label :twitter
+    %br
+    = f.text_field :twitter
+  %p
+    = f.label :youtube
+    %br
+    = f.text_field :youtube
+  %p
+    = f.label :office_address
+    %br
+    = f.text_field :office_address
+  %p
+    = f.label :phone_number
+    %br
+    = f.text_field :phone_number
+  %p
+    = f.label :email
+    %br
+    = f.text_field :email
+  %p
+    = f.label :image_url
+    %br
+    = f.text_field :image_url
+  %p
+    = f.label :dob
+    %br
+    = f.datetime_select :dob
+  %p
+    = f.submit

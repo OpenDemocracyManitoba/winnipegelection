@@ -1,0 +1,45 @@
+- title "Candidate"
+
+%p
+  %strong Name:
+  =h @candidate.name
+%p
+  %strong Ward:
+  =h @candidate.ward_id
+%p
+  %strong Incumbent Since:
+  =h @candidate.incumbent_since
+%p
+  %strong Website:
+  =h @candidate.website
+%p
+  %strong Facebook:
+  =h @candidate.facebook
+%p
+  %strong Twitter:
+  =h @candidate.twitter
+%p
+  %strong Youtube:
+  =h @candidate.youtube
+%p
+  %strong Office Address:
+  =h @candidate.office_address
+%p
+  %strong Phone Number:
+  =h @candidate.phone_number
+%p
+  %strong Email:
+  =h @candidate.email
+%p
+  %strong Image Url:
+  =h @candidate.image_url
+%p
+  %strong Dob:
+  =h @candidate.dob
+
+%p
+  = link_to "Edit", edit_candidate_path(@candidate)
+  |
+  = link_to "Destroy", @candidate, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", candidates_path
