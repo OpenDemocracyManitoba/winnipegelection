@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100711182447) do
+ActiveRecord::Schema.define(:version => 20100711190634) do
 
   create_table "candidates", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,10 @@ ActiveRecord::Schema.define(:version => 20100711182447) do
     t.datetime "dob"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "wards", :force => true do |t|
@@ -33,6 +37,10 @@ ActiveRecord::Schema.define(:version => 20100711182447) do
     t.string   "pdf_map_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end

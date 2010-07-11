@@ -6,7 +6,9 @@
 %p
   %strong Pdf Map Url:
   =h @ward.pdf_map_url
-
+%p
+  = image_tag @ward.image.url(:thumb)
+  
 %p
   = link_to "Edit", edit_ward_path(@ward)
   |

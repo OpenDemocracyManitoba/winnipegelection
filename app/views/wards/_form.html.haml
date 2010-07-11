@@ -1,4 +1,4 @@
-- form_for @ward do |f|
+- form_for @ward, :html => { :multipart => true } do |f|
   = f.error_messages
   %p
     = f.label :name
@@ -8,5 +8,7 @@
     = f.label :pdf_map_url
     %br
     = f.text_field :pdf_map_url
+  %p
+    = f.file_field :image
   %p
     = f.submit
