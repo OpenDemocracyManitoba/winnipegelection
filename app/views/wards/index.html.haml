@@ -7,7 +7,7 @@
   - for ward in @wards
     %tr
       %td= h ward.name
-      %td= h ward.pdf_map_url
+      %td= h truncate(ward.pdf_map_url)
       %td= link_to 'Show', ward
       %td= link_to 'Edit', edit_ward_path(ward)
       %td= link_to 'Destroy', ward, :confirm => 'Are you sure?', :method => :delete

@@ -3,6 +3,11 @@ body {
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
 
+table {
+  border: 1px solid #bbbbbb; }
+  table th, table td {
+    border: 1px solid #cccccc; }
+
 a {
   color: blue; }
   a img {
