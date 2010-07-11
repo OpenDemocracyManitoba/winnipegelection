@@ -1,0 +1,15 @@
+- title "Ward"
+
+%p
+  %strong Name:
+  =h @ward.name
+%p
+  %strong Pdf Map Url:
+  =h @ward.pdf_map_url
+
+%p
+  = link_to "Edit", edit_ward_path(@ward)
+  |
+  = link_to "Destroy", @ward, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", wards_path
