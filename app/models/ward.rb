@@ -1,4 +1,8 @@
 class Ward < ActiveRecord::Base
+  has_many :candidates
+  
+  validates_presence_of :name
+  
   attr_accessible :name, :pdf_map_url, :image
   
   has_attached_file :image, :styles => { :large => "700x700>", :medium => "600x600>", :small => "500x500>", :thumb => "300x300>" },

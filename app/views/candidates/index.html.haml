@@ -15,21 +15,61 @@
     %th Image url
     %th Dob
   - for candidate in @candidates
-    %tr
+    %tr{:class => candidate.incumbent_since? ? 'incumbent' : ''}
       %td= h candidate.name
-      %td= h candidate.ward_id
+      - if candidate.ward.pdf_map_url?
+        %td= h link_to candidate.ward.name, candidate.ward.pdf_map_url
+      - else
+        %td= h candidate.ward.name
       %td= h candidate.incumbent_since
-      %td= h candidate.website
-      %td= h candidate.facebook
-      %td= h candidate.twitter
-      %td= h candidate.youtube
-      %td= h candidate.office_address
-      %td= h candidate.phone_number
-      %td= h candidate.email
-      %td= h candidate.image_url
-      %td= h candidate.dob
+      
+      - if candidate.website?  
+        %td= link_to 'link', candidate.website
+      - else
+        %td.missing
+        
+      - if candidate.facebook?
+        %td= link_to 'link', candidate.facebook
+      - else
+        %td.missing
+        
+      - if candidate.twitter?
+        %td= link_to 'link', candidate.twitter
+      - else
+        %td.missing
+        
+      - if candidate.youtube?
+        %td= link_to 'link', candidate.youtube
+      - else
+        %td.missing
+        
+      - if candidate.office_address?
+        %td= h truncate(candidate.office_address)
+      - else
+        %td.missing
+        
+      - if candidate.phone_number?
+        %td= h candidate.phone_number
+      - else
+        %td.missing
+      
+      -if candidate.email?
+        %td= mail_to candidate.email, 'mail'
+      - else
+        %td.missing
+      
+      - if candidate.image_url?
+        %td= image_tag candidate.image_url, :width => 100
+      - else
+        %td.missing
+        
+      - if candidate.dob.year == 1910
+        %td.missing
+      - else
+        %td= h candidate.dob
+        
       %td= link_to 'Show', candidate
       %td= link_to 'Edit', edit_candidate_path(candidate)
-      %td= link_to 'Destroy', candidate, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Delete', candidate, :confirm => 'Are you sure?', :method => :delete
 
 %p= link_to "New Candidate", new_candidate_path

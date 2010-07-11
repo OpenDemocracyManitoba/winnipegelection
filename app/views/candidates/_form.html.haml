@@ -7,7 +7,7 @@
   %p
     = f.label :ward_id
     %br
-    = f.text_field :ward_id
+    = f.collection_select :ward_id, @wards, :id, :name
   %p
     = f.label :incumbent_since
     %br
@@ -45,9 +45,9 @@
     %br
     = f.text_field :image_url
   %p
-    = f.label :dob
+    = f.label 'Date of Birth'
     %br
-    = f.datetime_select :dob
+    = f.date_select :dob, :start_year => (Date.today.year - 100), :end_year => (Date.today.year - 17)
   %p
     = f.file_field :image
   %p

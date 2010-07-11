@@ -15,7 +15,7 @@ class WardsController < ApplicationController
     @ward = Ward.new(params[:ward])
     if @ward.save
       flash[:notice] = "Successfully created ward."
-      redirect_to @ward
+      redirect_to :wards
     else
       render :action => 'new'
     end

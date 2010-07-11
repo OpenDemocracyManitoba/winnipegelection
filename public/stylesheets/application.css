@@ -19,7 +19,7 @@ a {
   overflow: hidden; }
 
 #container {
-  width: 75%;
+  width: 1000px;
   margin: 0 auto;
   background: white;
   padding: 20px 40px;
@@ -66,3 +66,36 @@ a {
     #errorExplanation ul li {
       font-size: 12px;
       list-style: disc; }
+
+td.missing {
+  background-color: #fed8d8; }
+
+tr.incumbent {
+  background-color: #d9dbfd; }
+
+div.ward_title {
+  overflow: auto; }
+  div.ward_title h2 {
+    float: left;
+    margin-right: 10px; }
+  div.ward_title p {
+    float: left;
+    padding-top: 16px;
+    font-size: 10px; }
+
+.grey {
+  color: #777777; }
+
+.candidates {
+  overflow: auto; }
+  .candidates .candidate {
+    padding-left: 10px;
+    background-color: #eeeeee;
+    width: 300px;
+    height: 200px;
+    float: left;
+    margin: 0 20px 20px 0; }
+    .candidates .candidate .image {
+      float: right; }
+    .candidates .candidate .icons a img {
+      border-bottom: 2px solid blue; }

@@ -37,7 +37,10 @@
   %strong Dob:
   =h @candidate.dob
 %p
-  = image_tag @candidate.image.url(:thumb)
+  - if @candidate.image?
+    = image_tag @candidate.image.url(:thumb)
+  - else
+    %strong Image Missing!
 %p
   = link_to "Edit", edit_candidate_path(@candidate)
   |

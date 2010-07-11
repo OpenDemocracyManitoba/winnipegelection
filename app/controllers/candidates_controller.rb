@@ -1,6 +1,6 @@
 class CandidatesController < ApplicationController
   def index
-    @candidates = Candidate.all
+    @candidates = Candidate.all(:include => :ward)
   end
   
   def show
@@ -9,13 +9,14 @@ class CandidatesController < ApplicationController
   
   def new
     @candidate = Candidate.new
+    @wards = Ward.all
   end
   
   def create
     @candidate = Candidate.new(params[:candidate])
     if @candidate.save
       flash[:notice] = "Successfully created candidate."
-      redirect_to @candidate
+      redirect_to :candidates
     else
       render :action => 'new'
     end
@@ -23,6 +24,7 @@ class CandidatesController < ApplicationController
   
   def edit
     @candidate = Candidate.find(params[:id])
+    @wards = Ward.all
   end
   
   def update

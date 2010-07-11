@@ -1,0 +1,37 @@
+.candidate
+  .image
+    - if candidate.image_url?
+      = image_tag candidate.image_url, :width => 100
+    - else
+      = image_tag '/images/missing_candidate.jpg', :width => 100
+  %p
+    %strong= candidate.name
+  %p
+    - if candidate.website?
+      = link_to 'Official Website', candidate.website
+    - else
+      %span.grey Official Website
+  %p.icons
+    - if candidate.email?
+      = link_to image_tag('/images/mail_active.jpg'), "mailto:#{candidate.email}"
+    - else
+      = image_tag '/images/mail_inactive.jpg'
+      
+    - if candidate.facebook?
+      = link_to image_tag('/images/facebook_active.jpg'), candidate.facebook
+    - else
+      = image_tag '/images/facebook_inactive.jpg'
+      
+    - if candidate.twitter?
+      = link_to image_tag('/images/twitter_active.jpg'), candidate.twitter
+    - else
+      = image_tag '/images/twitter_inactive.jpg'
+      
+    - if candidate.youtube?
+      = link_to image_tag('/images/youtube_active.jpg'), candidate.youtube
+    - else
+      = image_tag '/images/youtube_inactive.jpg'
+    
+  - if candidate.phone_number?
+    %p
+      Phone: #{candidate.phone_number}
