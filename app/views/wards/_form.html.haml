@@ -5,6 +5,10 @@
     %br
     = f.text_field :name
   %p
+    = f.label :ward_type
+    %br
+    = f.select :ward_type, Ward::WARD_TYPES
+  %p
     = f.label :pdf_map_url
     %br
     = f.text_field :pdf_map_url

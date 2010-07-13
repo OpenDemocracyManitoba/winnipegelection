@@ -4,7 +4,7 @@
   %tr
     %th Name
     %th Ward
-    %th Incumbent since
+    %th Incumbent Since
     %th Website
     %th Facebook
     %th Twitter
@@ -13,6 +13,7 @@
     %th Phone number
     %th Email
     %th Image url
+    %th Image
     %th Dob
   - for candidate in @candidates
     %tr{:class => candidate.incumbent_since? ? 'incumbent' : ''}
@@ -53,13 +54,13 @@
       - else
         %td.missing
       
-      -if candidate.email?
+      - if candidate.email?
         %td= mail_to candidate.email, 'mail'
       - else
         %td.missing
       
-      - if candidate.image_url?
-        %td= image_tag candidate.image_url, :width => 100
+      - if candidate.image?
+        %td= image_tag candidate.image(:thumb)
       - else
         %td.missing
         

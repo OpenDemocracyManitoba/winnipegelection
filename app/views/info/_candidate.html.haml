@@ -1,11 +1,13 @@
 .candidate
   .image
-    - if candidate.image_url?
-      = image_tag candidate.image_url, :width => 100
+    - if candidate.image?
+      = image_tag candidate.image(:thumb)
     - else
       = image_tag '/images/missing_candidate.jpg', :width => 100
   %p
     %strong= candidate.name
+    - if candidate.incumbent_since?
+      %em.grey.small incumbent
   %p
     - if candidate.website?
       = link_to 'Official Website', candidate.website

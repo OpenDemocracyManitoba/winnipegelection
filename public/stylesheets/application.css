@@ -86,6 +86,9 @@ div.ward_title {
 .grey {
   color: #777777; }
 
+.small {
+  font-size: 0.8em; }
+
 .candidates {
   overflow: auto; }
   .candidates .candidate {
@@ -99,3 +102,8 @@ div.ward_title {
       float: right; }
     .candidates .candidate .icons a img {
       border-bottom: 2px solid blue; }
+
+div.ward_map {
+  text-align: center; }
+  div.ward_map img {
+    border: none; }

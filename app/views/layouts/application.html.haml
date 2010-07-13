@@ -10,10 +10,16 @@
   
   %body
     #container
+      %h1 Winnipeg Election 2010
+      
+      = link_to 'home', root_path
+      |
+      = link_to 'all wards', :controller => 'info', :action => 'wards'
+      
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
       
       - if show_title?
-        %h1=h yield(:title)
+        %h2=h yield(:title)
       
       = yield
