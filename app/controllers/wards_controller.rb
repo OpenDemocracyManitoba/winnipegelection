@@ -1,4 +1,6 @@
 class WardsController < ApplicationController
+  before_filter :authenticate
+  
   def index
     @wards = Ward.all
   end
@@ -41,4 +43,5 @@ class WardsController < ApplicationController
     flash[:notice] = "Successfully destroyed ward."
     redirect_to wards_url
   end
+  
 end

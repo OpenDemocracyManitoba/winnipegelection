@@ -1,4 +1,6 @@
 class CandidatesController < ApplicationController
+  before_filter :authenticate
+  
   def index
     @candidates = Candidate.all(:include => :ward)
   end
