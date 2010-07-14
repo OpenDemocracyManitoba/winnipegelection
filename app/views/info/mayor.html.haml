@@ -1,4 +1,2 @@
 - title @title
-
-.candidates
-    = render :partial => 'candidate', :collection => @ward.candidates
+= render :partial => 'ward', :locals => { :ward => @ward}

@@ -10,7 +10,7 @@
   
   %body
     #container
-      %h1 Winnipeg Election 2010
+      %h1 Winnipeg Election 2010 - #{yield(:title)}
       
       = link_to 'home', root_path
       |
@@ -22,8 +22,5 @@
       
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
-      
-      - if show_title?
-        %h2=h yield(:title)
       
       = yield
