@@ -12,13 +12,18 @@
     #container
       %h1 Winnipeg Election 2010 - #{yield(:title)}
       
-      = link_to 'home', root_path
-      |
-      = link_to 'mayoral candidates', :controller => 'info', :action => 'mayor'
-      |
-      = link_to 'council candidates', :controller => 'info', :action => 'council'
-      |
-      = link_to 'school trustee candidates', :controller => 'info', :action => 'school_trustee'
+      %p
+        = link_to 'home', root_path
+        |
+        = link_to 'mayoral candidates', :controller => 'info', :action => 'mayor'
+        |
+        = link_to 'council candidates', :controller => 'info', :action => 'council'
+        |
+        = link_to 'school trustee candidates', :controller => 'info', :action => 'school_trustee'
+        |
+        = link_to 'candidates admin', :controller => 'candidates'
+        |
+        = link_to 'wards admin', :controller => 'wards'
       
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"

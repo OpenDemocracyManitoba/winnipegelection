@@ -3,9 +3,9 @@
 %ul
   - for ward in wards
     %li
-      = link_to ward.name, "#" + ward.name
+      = link_to ward.name, "#" + ward.name.parameterize
       %span.grey= pluralize ward.candidates.size, 'candidate'
 
 - for ward in wards
-  %a{:name => ward.name}
+  %a{:name => ward.name.parameterize}
   = render :partial => 'ward', :locals => { :ward => ward}
