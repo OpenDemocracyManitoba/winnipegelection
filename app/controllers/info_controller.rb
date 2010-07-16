@@ -1,4 +1,8 @@
 class InfoController < ApplicationController
+  
+  def index
+    @days_until_election = Date.parse("2010 October 27") - Date.today
+  end
   def mayor
     @ward = Ward.first(:include => :candidates, :conditions => "ward_type = 'Mayoral'")
     @title = 'Winnipeg Mayoral Candidates'

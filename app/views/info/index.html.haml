@@ -1,4 +1,21 @@
-- title 'Select Your Ward'
+- title 'Welcome'
+
+%h2 Election Countdown
+
+%p
+  On Wednesday October 27 of 2010 the citizens of Winnipeg go to the polls to elect their Mayor, City Councillors and School Trustees.
+
+%strong 
+  - if @days_until_election == 0
+    The election is today.
+  - elsif @days_until_election > 0
+    %p  
+      There #{prefixed_pluralize(@days_until_election,'is','are','day')} until the election.
+  - else
+    The election has already occured.
+
+%h2
+  Select Your Ward
 
 .ward_map
   = image_tag '/images/civic_wards.gif', :usemap => '#Map'

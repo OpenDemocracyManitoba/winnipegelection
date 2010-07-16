@@ -21,9 +21,9 @@
         |
         = link_to 'school trustee candidates', :controller => 'info', :action => 'school_trustee'
         |
-        = link_to 'candidates admin', :controller => 'candidates'
+        = link_to 'about', '/about'
         |
-        = link_to 'wards admin', :controller => 'wards'
+        = link_to 'admin', '/admin'
       
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
