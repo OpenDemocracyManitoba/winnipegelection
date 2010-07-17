@@ -10,7 +10,7 @@
     = f.text_field :permalink
   %p
     = f.label :content
-    (#{link_to 'markdown enabled', 'http://daringfireball.net/projects/markdown/dingus'})
+    (#{link_to 'markdown enabled', static_path({:permalink => 'markdown'})})
     %br
     = f.text_area :content
   %p

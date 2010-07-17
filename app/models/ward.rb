@@ -1,7 +1,9 @@
 class Ward < ActiveRecord::Base
+  extend Random
+  
   WARD_TYPES = ['Civic','School Division','Mayoral']
   
-  has_many :candidates
+  has_many :candidates, :order => db_random
   
   validates_presence_of :name, :ward_type
   validates_inclusion_of :ward_type, :in => WARD_TYPES, :message => "must be: #{WARD_TYPES.join(', ')}"

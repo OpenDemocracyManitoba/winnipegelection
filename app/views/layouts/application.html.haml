@@ -15,15 +15,19 @@
       %p
         = link_to 'home', root_path
         |
+        = link_to 'election information', static_path({:permalink => 'election_info'})
+        |
+        = link_to 'debates', static_path({:permalink => 'debates'})
+        |
         = link_to 'mayoral candidates', :controller => 'info', :action => 'mayor'
         |
         = link_to 'council candidates', :controller => 'info', :action => 'council'
         |
         = link_to 'school trustee candidates', :controller => 'info', :action => 'school_trustee'
         |
-        = link_to 'about', '/about'
+        = link_to 'about', static_path({:permalink => 'about'})
         |
-        = link_to 'admin', '/admin'
+        = link_to 'admin', static_path({:permalink => 'admin'})
       
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"

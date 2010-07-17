@@ -15,7 +15,14 @@
     The election has already occured.
 
 %h2
-  Select Your Ward
+  Who Are You Voting For?
+
+%p
+  %ul
+    %li #{ link_to 'Mayoral Candiates', :controller => 'info', :action => 'mayor' }
+    %li
+      #{ link_to 'City Council Candiates', :controller => 'info', :action => 'council' }
+      \-or- Select your ward:
 
 .ward_map
   = image_tag '/images/civic_wards.gif', :usemap => '#Map'
