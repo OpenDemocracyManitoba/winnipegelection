@@ -1,5 +1,6 @@
 class Candidate < ActiveRecord::Base
   belongs_to :ward
+  has_and_belongs_to_many :news_articles, :join_table => 'candidates_news_articles'
   
   validates_presence_of :name, :ward_id
   

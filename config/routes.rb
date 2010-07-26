@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :news_articles
+
   map.resources :pages
 
   map.resources :wards

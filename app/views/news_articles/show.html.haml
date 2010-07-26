@@ -1,0 +1,34 @@
+- title "News Article"
+
+%p
+  %strong Title:
+  =h @news_article.title
+%p
+  %strong Source:
+  =h @news_article.source
+%p
+  %strong Pubdate:
+  =h @news_article.pubdate
+%p
+  %strong Summary:
+  =h @news_article.summary
+%p
+  %strong Gnews Url:
+  =h @news_article.gnews_url
+%p
+  %strong Url:
+  =h @news_article.url
+%p
+  %strong Moderation:
+  =h @news_article.moderation
+%p
+  %strong Mentions:
+  - for candidate in @news_article.candidates
+    = candidate.name + ', '
+
+%p
+  = link_to "Edit", edit_news_article_path(@news_article)
+  |
+  = link_to "Destroy", @news_article, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", news_articles_path

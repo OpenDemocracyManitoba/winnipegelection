@@ -1,0 +1,25 @@
+- title "News Articles"
+
+%table
+  %tr
+    %th Title
+    %th Source
+    %th Pubdate
+    %th Summary
+    %th Gnews url
+    %th Url
+    %th Moderation
+  - for news_article in @news_articles
+    %tr
+      %td= h news_article.title
+      %td= h news_article.source
+      %td= h news_article.pubdate
+      %td= h news_article.summary
+      %td= h news_article.gnews_url
+      %td= h news_article.url
+      %td= h news_article.moderation
+      %td= link_to 'Show', news_article
+      %td= link_to 'Edit', edit_news_article_path(news_article)
+      %td= link_to 'Destroy', news_article, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New News Article", new_news_article_path
