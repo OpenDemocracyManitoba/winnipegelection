@@ -19,15 +19,50 @@ a {
   overflow: hidden; }
 
 #container {
-  width: 1000px;
+  position: relative;
+  width: 999px;
   margin: 0 auto;
   background: white;
-  padding: 20px 40px;
+  padding: 20px 30px;
   border: solid 1px black;
-  margin-top: 20px; }
+  margin-top: 20px;
+  overflow: hidden; }
+  #container .twitter {
+    position: absolute;
+    top: 43px;
+    right: 30px; }
+  #container #footer {
+    clear: both;
+    font-size: 80%;
+    color: #555555; }
+  #container #main, #container #main-full, #container #sidebar {
+    margin-bottom: 20px; }
+  #container #main {
+    float: left;
+    width: 680px; }
+  #container #feedback {
+    position: absolute;
+    top: 85px;
+    right: 30px;
+    width: 151px;
+    font-size: 9px;
+    background: #eeffaa;
+    padding: 0 5px; }
+  #container #sidebar {
+    float: right;
+    width: 250px;
+    margin-top: -30px;
+    padding: 0 20px 20px 20px;
+    background-color: #eeeeee; }
+    #container #sidebar .urtak {
+      min-height: 345px;
+      height: 345px; }
+    #container #sidebar .facebook {
+      margin-top: 20px; }
 
 #flash_notice,
 #flash_error {
+  width: 650px;
   padding: 5px 8px;
   margin: 10px 0; }
 
@@ -95,7 +130,7 @@ div.ward_title {
     padding-left: 10px;
     background-color: #eeeeee;
     width: 300px;
-    height: 200px;
+    height: 155px;
     float: left;
     margin: 0 20px 20px 0; }
     .candidates .candidate .image {
@@ -103,7 +138,8 @@ div.ward_title {
     .candidates .candidate .icons a img {
       border-bottom: 2px solid blue; }
 
-div.ward_map {
-  text-align: center; }
-  div.ward_map img {
-    border: none; }
+div.ward_map img {
+  border: none; }
+
+.percent90 {
+  width: 90%; }

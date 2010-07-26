@@ -8,6 +8,10 @@ module LayoutHelper
     @show_title = show_title
   end
   
+  def sidebar(show_sidebar = true)
+    @show_sidebar = show_sidebar
+  end
+  
   def show_title?
     @show_title
   end

@@ -10,9 +10,9 @@
       %em.grey.small incumbent
   %p
     - if candidate.website?
-      = link_to 'Official Website', candidate.website
+      = link_to 'Election Website', candidate.website
     - else
-      %span.grey Official Website
+      %span.grey Election Website
   %p.icons
     - if candidate.email?
       = link_to image_tag('/images/mail_active.jpg'), "mailto:#{candidate.email}"

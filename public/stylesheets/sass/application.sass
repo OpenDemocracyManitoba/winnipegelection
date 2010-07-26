@@ -1,4 +1,5 @@
 !primary_color = #4B7399
+!min_container_height = 600px
 
 body
   :background-color = !primary_color
@@ -22,15 +23,50 @@ a
   :overflow hidden
 
 #container
-  :width 1000px
+  :position relative
+  :width 999px
   :margin 0 auto
   :background #fff
-  :padding 20px 40px
+  :padding 20px 30px
   :border solid 1px black
   :margin-top 20px
+  :overflow hidden
+  .twitter
+    :position absolute
+    :top 43px
+    :right 30px
+  #footer
+    :clear both
+    :font-size 80%
+    :color #555
+  #main, #main-full, #sidebar
+    :margin-bottom 20px
+  #main
+    :float left
+    :width 680px
+  #feedback
+    :position absolute
+    :top 85px
+    :right 30px
+    :width 151px
+    :font-size 9px
+    :background #eeffaa
+    :padding 0 5px
+  #sidebar
+    :float right
+    :width 250px
+    :margin-top -30px
+    :padding 0 20px 20px 20px
+    :background-color #eeeeee
+    .urtak
+      :min-height 345px
+      :height 345px
+    .facebook
+      :margin-top 20px
 
 #flash_notice,
 #flash_error
+  :width 650px
   :padding 5px 8px
   :margin 10px 0
 
@@ -99,7 +135,7 @@ div.ward_title
     :padding-left 10px
     :background-color #eeeeee
     :width 300px
-    :height 200px
+    :height 155px
     :float left
     :margin 0 20px 20px 0 
     .image
@@ -109,6 +145,8 @@ div.ward_title
         :border-bottom 2px solid blue
         
 div.ward_map
-  :text-align center
   img
     :border none
+    
+.percent90
+  :width 90%

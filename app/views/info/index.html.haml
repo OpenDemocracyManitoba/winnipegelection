@@ -1,28 +1,36 @@
-- title 'Welcome'
+- sidebar
 
-%h2 Election Countdown
+%h2 Get To Know Your Election Candidates
 
-%p
+%p.percent90
   On Wednesday October 27 of 2010 the citizens of Winnipeg go to the polls to elect their Mayor, City Councillors and School Trustees.
 
-%strong 
-  - if @days_until_election == 0
-    The election is today.
-  - elsif @days_until_election > 0
-    %p  
+%p
+  %strong 
+    - if @days_until_election == 0
+      The election is today.
+    - elsif @days_until_election > 0 
       There #{prefixed_pluralize(@days_until_election,'is','are','day')} until the election.
-  - else
-    The election has already occured.
-
+    - else
+      The election has already occured.
+  = link_to 'More election information?', static_path({:permalink => 'election_info'})
+  
+    
+%br
 %h2
   Who Are You Voting For?
 
 %p
   %ul
-    %li #{ link_to 'Mayoral Candiates', :controller => 'info', :action => 'mayor' }
+    %li #{ link_to 'Mayoral Candidates', :controller => 'info', :action => 'mayor' }
     %li
-      #{ link_to 'City Council Candiates', :controller => 'info', :action => 'council' }
+      School Trustee Candidates
+      %em (coming soon)
+    %li
+      #{ link_to 'City Council Candidates', :controller => 'info', :action => 'council' }
       \-or- Select your ward:
+
+%br
 
 .ward_map
   = image_tag '/images/civic_wards.gif', :usemap => '#Map'
@@ -44,4 +52,4 @@
   <area shape="poly" coords="294,514,374,483,355,426,354,401,335,351,347,343,335,324,317,334,297,324,279,328,266,338,256,413,279,408,262,472" href="/ward/River_Heights_-_Fort_Garry" alt="River Heights - Fort Garry" title="River Heights - Fort Garry" /> 
   <area shape="poly" coords="243,541,243,549,252,549" href="#" /> 
   <area shape="poly" coords="253,670,246,667,247,778,404,690,380,639,382,619,356,617,356,609,399,593,387,564,400,547,425,561,468,532,449,476,387,502,376,484,297,515,242,546,252,546" href="/ward/St_Norbert" alt="St. Norbert" title="St. Norbert" /> 
-  <area shape="poly" coords="434,264,418,250,397,227,413,214,423,215,442,178,483,197,494,184,525,201,537,189,533,210,493,281" href="/ward/Elmwood_-_East_Kildonan" alt="Elmwood - East Kildonan" title="Elmwood - East Kildonan"/> 
+  <area shape="poly" coords="434,264,418,250,397,227,413,214,423,215,442,178,483,197,494,184,525,201,537,189,533,210,493,281" href="/ward/Elmwood_-_East_Kildonan" alt="Elmwood - East Kildonan" title="Elmwood - East Kildonan"/>

@@ -3,33 +3,80 @@
   
   %head
     %title
-      = "Winnipeg Election 2010 - " + h(yield(:title) || "Untitled")
+      - if (t = yield(:title)) 
+        = h yield(:title) + " - Winnipeg Election 2010"
+      - else
+        Winnipeg Election 2010
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     = stylesheet_link_tag 'application'
     = yield(:head)
+    = javascript_include_tag 'jquery' 
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17537013-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
   
   %body
     #container
-      %h1 Winnipeg Election 2010 - #{yield(:title)}
-      
+      %h1
+        - if (t = yield(:title)) 
+          = h yield(:title) + " - Winnipeg Election 2010"
+        - else
+          Winnipeg Election 2010
+        
       %p
         = link_to 'home', root_path
         |
         = link_to 'election information', static_path({:permalink => 'election_info'})
         |
-        = link_to 'debates', static_path({:permalink => 'debates'})
-        |
         = link_to 'mayoral candidates', :controller => 'info', :action => 'mayor'
         |
         = link_to 'council candidates', :controller => 'info', :action => 'council'
         |
-        = link_to 'school trustee candidates', :controller => 'info', :action => 'school_trustee'
+        = link_to 'debates', static_path({:permalink => 'debates'})
         |
         = link_to 'about', static_path({:permalink => 'about'})
-        |
-        = link_to 'admin', static_path({:permalink => 'admin'})
-      
+
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
       
-      = yield
+      %div.twitter
+        <a href="http://www.twitter.com/WpgElection"><img src="http://twitter-badges.s3.amazonaws.com/follow_us-a.png" alt="Follow WpgElection on Twitter"/></a>
+      
+      - if @show_sidebar
+        #main
+          = yield
+        #sidebar
+          %div.urtak
+            %h2 Your Thoughts?
+            <script src="http://assets.urtak.com/javascripts/widget.js" type="text/javascript"></script>
+            <a class='urtak_link' data-urtak-widget-key="46opxawgw7jykxgsnjwsrlqjjqrrd7qu" href="http://www.urtak.com/u/3641">Winnipeg Election 2010</a>
+          %div.facebook
+            <iframe src="http://www.facebook.com/plugins/likebox.php?id=145495908793867&amp;width=249&amp;connections=8&amp;stream=false&amp;header=false&amp;height=265" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:249px; height:265px;" allowTransparency="true"></iframe>
+      - else
+        - if @show_feedback
+          #feedback
+            %p
+              Send us your additions and corrections:
+            %p
+              <a href="mailto:winnipeg.election@gmail.com">winnipeg.election@gmail.com</a>
+        #main-full
+          = yield
+      
+      #footer
+        %hr
+        Winnipeg Election 2010 - All content is public domain.
+    
+    <script type="text/javascript">
+    var sc_project=6061793; 
+    var sc_invisible=1; 
+    var sc_security="bc1ee522"; 
+    </script>
+    <script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+    = javascript_include_tag 'main' 
