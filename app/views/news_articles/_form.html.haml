@@ -13,10 +13,6 @@
     %br
     = f.datetime_select :pubdate
   %p
-    = f.label :summary
-    %br
-    = f.text_area :summary
-  %p
     = f.label :gnews_url
     %br
     = f.text_area :gnews_url
@@ -27,7 +23,7 @@
   %p
     = f.label :moderation
     %br
-    = f.text_field :moderation
+    = f.select :moderation, NewsArticle::MODERATION_OPTIONS
   %p
     = f.submit
   %p

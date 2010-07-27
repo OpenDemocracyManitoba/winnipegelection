@@ -1,25 +1,72 @@
 - title "News Articles"
 
+%h3 New Articles
+
 %table
   %tr
     %th Title
     %th Source
     %th Pubdate
-    %th Summary
-    %th Gnews url
-    %th Url
+    %th Mentions
+    %th Actions
     %th Moderation
-  - for news_article in @news_articles
+  - for news_article in @news_articles_new
     %tr
-      %td= h news_article.title
+      %td= link_to news_article.title, news_article.url
       %td= h news_article.source
       %td= h news_article.pubdate
-      %td= h news_article.summary
-      %td= h news_article.gnews_url
-      %td= h news_article.url
-      %td= h news_article.moderation
-      %td= link_to 'Show', news_article
-      %td= link_to 'Edit', edit_news_article_path(news_article)
-      %td= link_to 'Destroy', news_article, :confirm => 'Are you sure?', :method => :delete
+      %td= news_article.mentions.size
+      %td
+        = link_to 'Show', news_article
+        = link_to 'Edit', edit_news_article_path(news_article)
+        = link_to 'Destroy', news_article, :confirm => 'Are you sure?', :method => :delete
+      %td
+        = link_to 'Reject', reject_news_article_path(news_article), :method => :post
+        = link_to 'Approve', approve_news_article_path(news_article), :method => :post
 
-%p= link_to "New News Article", new_news_article_path
+%h3 Approved Articles
+
+%table
+  %tr
+    %th Title
+    %th Source
+    %th Pubdate
+    %th Mentions
+    %th Actions
+    %th Moderation
+  - for news_article in @news_articles_approved
+    %tr
+      %td= link_to news_article.title, news_article.url
+      %td= h news_article.source
+      %td= h news_article.pubdate
+      %td= news_article.mentions.size
+      %td
+        = link_to 'Show', news_article
+        = link_to 'Edit', edit_news_article_path(news_article)
+        = link_to 'Destroy', news_article, :confirm => 'Are you sure?', :method => :delete
+      %td
+        = link_to 'Reject', reject_news_article_path(news_article), :method => :post
+
+
+%h3 Rejected Articles
+
+%table
+  %tr
+    %th Title
+    %th Source
+    %th Pubdate
+    %th Mentions
+    %th Actions
+    %th Moderation
+  - for news_article in @news_articles_rejected
+    %tr
+      %td= link_to news_article.title, news_article.url
+      %td= h news_article.source
+      %td= h news_article.pubdate
+      %td= news_article.mentions.size
+      %td
+        = link_to 'Show', news_article
+        = link_to 'Edit', edit_news_article_path(news_article)
+        = link_to 'Destroy', news_article, :confirm => 'Are you sure?', :method => :delete
+      %td
+        = link_to 'Approve', approve_news_article_path(news_article), :method => :post

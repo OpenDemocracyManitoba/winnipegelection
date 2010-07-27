@@ -1,6 +1,9 @@
 class NewsArticlesController < ApplicationController
+  before_filter :authenticate
   def index
-    @news_articles = NewsArticle.all
+    @news_articles_new = NewsArticle.all(:conditions => "moderation = 'new'")
+    @news_articles_approved = NewsArticle.all(:conditions => "moderation = 'approved'")
+    @news_articles_rejected = NewsArticle.all(:conditions => "moderation = 'rejected'")
   end
   
   def show
@@ -42,4 +45,27 @@ class NewsArticlesController < ApplicationController
     flash[:notice] = "Successfully destroyed news article."
     redirect_to news_articles_url
   end
-end
+  
+  def approve
+    @news_article = NewsArticle.find(params[:id])
+    @news_article.moderation = 'approved'
+    if @news_article.save
+      flash[:notice] = 'Successfully approved news article.'
+    else
+      flash[:error] = 'Error approving news article.'
+    end
+    redirect_to news_articles_url
+  end
+  
+ 
+  def reject
+    @news_article = NewsArticle.find(params[:id])
+    @news_article.moderation = 'rejected'
+    if @news_article.save
+      flash[:notice] = 'Successfully rejected news article.'
+    else
+      flash[:error] = 'Error rejecting news article.'
+    end
+    redirect_to news_articles_url
+  end
+ end

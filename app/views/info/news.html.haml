@@ -1,28 +1,13 @@
-= debug @feed_raw
-
-%h2 Winnipeg Election News
-- @feed.each do |entry|
-  %p
-    %strong #{entry[:title]} - #{entry[:source]}
-    %br
-    %span.small
-      =entry[:date].strftime("%A %B %d, %Y")
-  %blockquote
-    = entry[:summary]
-    
-
--@candidate_feeds.each do |c|
+-@candidates.each do |c|
   %h2
-    = c[:name]
-  - c[:feed].each do |entry|
+    = c.name
+    ( #{c.mentions.size} )
+  - c.mentions.each do |m|
+    %h3
+      = link_to m.news_article.title, m.news_article.url
+      \- #{m.news_article.source}
+    %p.small
+      = m.news_article.pubdate.strftime("%A, %d %B %Y")
     %p
-      %h3
-        entry[:title]}
-        \- #{entry[:source]}
-      %br
-      %span.small
-        =entry[:date].strftime("%A %B %d, %Y")
-        =entry[:link]
-    %blockquote
-      = entry[:summary]
+      = m.summary
   %br

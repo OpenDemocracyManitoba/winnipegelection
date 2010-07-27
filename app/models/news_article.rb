@@ -1,4 +1,10 @@
 class NewsArticle < ActiveRecord::Base
-  has_and_belongs_to_many :candidates, :join_table => 'candidates_news_articles'
-  attr_accessible :title, :source, :pubdate, :summary, :gnews_url, :url, :moderation, :candidate_ids
+  MODERATION_OPTIONS = ['new', 'approved', 'rejected']
+  
+  validates_inclusion_of :moderation, :in => MODERATION_OPTIONS
+  
+  has_many :mentions, :dependent => :destroy
+  has_many :candidates, :through => :mentions
+  
+  attr_accessible :title, :source, :pubdate, :gnews_url, :url, :moderation, :candidate_ids
 end
