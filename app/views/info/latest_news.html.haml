@@ -2,14 +2,18 @@
 - sidebar
 
 %h2 Latest Winnipeg Election News
-- @latest_news.each do |n|
-  %p.small
-    = n.pubdate.strftime("%A, %d %B %Y")
-  %h3
-    = link_to n.title, n.url
-    \- #{n.source}
-  %p.small
-    %strong Mentions: 
-    - n.mentions.each do |m|
-      <a href="/ward/#{m.candidate.ward.name.sub(/^St\./,'St').gsub(' ','_')}">#{m.candidate.name}</a>
+
+%p These news stories are automatically gathered from #{ link_to 'Google News', 'http://news.google.ca'} by searching for the names of the candidates in the upcoming Winnipeg municipal election.
+%br
+
+-  @latest_news_by_day.each do |day, articles|
+  %h3= day
+  - articles.each do |n|
+    %h4
+      = link_to n.title, n.url
+      \- #{n.source}
+    %p.small
+      %strong Mentions: 
+      - n.mentions.each do |m|
+        <a href="/ward/#{m.candidate.ward.ward_url}">#{m.candidate.name}</a>
   %br

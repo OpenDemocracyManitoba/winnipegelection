@@ -18,4 +18,8 @@ class NewsArticle < ActiveRecord::Base
   named_scope :with_nested_candidates_and_wards, :include => {:mentions, {:candidate, :ward}}
   named_scope :latest, lambda { |*num| { :limit => num.flatten.first || 10, :order => 'pubdate DESC'} }
   
+  def pretty_date
+    self.pubdate.strftime("%A, %d %B %Y")
+  end
+  
 end

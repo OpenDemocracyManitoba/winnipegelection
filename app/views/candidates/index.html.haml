@@ -16,8 +16,8 @@
     %th Office address
     %th Phone number
     %th Email
-    %th Image url
     %th Image
+    %th Major Issues
   - for candidate in @candidates
     %tr{:class => candidate.incumbent_since? ? 'incumbent' : ''}
       %td= h candidate.name
@@ -64,6 +64,11 @@
       
       - if candidate.image?
         %td= image_tag candidate.image(:thumb)
+      - else
+        %td.missing
+        
+      - if candidate.majorissues?
+        %td= candidate.majorissues.split(',').size
       - else
         %td.missing
         

@@ -14,11 +14,15 @@
     - else
       The election has already occured.
   = link_to 'More election information?', static_path({:permalink => 'election_info'})
+
+%br
+%h2 Winnipeg Election News
+%p
+  = link_to 'Read the latest News articles that mention the candidates.', :controller => 'info', :action => 'latest_news'
   
     
 %br
-%h2
-  Who Are You Voting For?
+%h2 Who Are You Voting For?
 
 %p
   %ul

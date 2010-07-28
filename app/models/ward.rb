@@ -13,4 +13,12 @@ class Ward < ActiveRecord::Base
   has_attached_file :image, :styles => { :large => "700x700>", :medium => "600x600>", :small => "500x500>", :thumb => "300x300>" },
                     :url  => "/uploads/ward_image/:id/:style/:basename.:extension",
                     :path => ":rails_root/public/uploads/ward_image/:id/:style/:basename.:extension"
+  
+  def ward_url
+    self.name.sub(/^St\./,'St').gsub(' ','_')
+  end
+  
+  def self.url_to_ward(url)
+    url.sub(/^St/,'St.').gsub('_',' ')
+  end
 end

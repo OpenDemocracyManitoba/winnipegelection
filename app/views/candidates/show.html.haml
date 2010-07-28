@@ -31,6 +31,12 @@
   %strong Email:
   =h @candidate.email
 %p
+  %strong Major Issues:
+  - if @candidate.majorissues?
+    %ul
+      - for issue in @candidate.majorissues.split(',')
+        %li= issue.strip
+%p
   - if @candidate.image?
     = image_tag @candidate.image.url(:thumb)
     = image_tag @candidate.image.url(:small)

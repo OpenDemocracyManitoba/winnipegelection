@@ -41,6 +41,10 @@
     %br
     = f.text_field :email
   %p
+    = f.label :majorissues, 'Major Issues'
+    %br
+    = f.text_field :majorissues
+  %p
     = f.label 'Image'
     -if @candidate.image?
       %br

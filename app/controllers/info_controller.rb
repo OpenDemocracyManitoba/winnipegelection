@@ -25,7 +25,7 @@ class InfoController < ApplicationController
   end
   def ward
     @show_feedback = true
-    @ward_name = params[:ward_name].sub(/^St/,'St.').gsub('_',' ')
+    @ward_name = Ward.url_to_ward(params[:ward_name])
     @ward = Ward.first( :conditions => ["name = ?", @ward_name] )
   end
   def news
@@ -34,5 +34,6 @@ class InfoController < ApplicationController
   def latest_news
     @title = 'Latest Election News'
     @latest_news = NewsArticle.latest(20).approved.with_nested_candidates_and_wards
+    @latest_news_by_day = @latest_news.group_by(&:pretty_date)
   end
 end
