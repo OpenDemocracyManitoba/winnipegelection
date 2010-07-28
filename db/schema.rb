@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100727014440) do
+ActiveRecord::Schema.define(:version => 20100728151409) do
 
   create_table "candidates", :force => true do |t|
     t.string   "name"
@@ -23,13 +23,13 @@ ActiveRecord::Schema.define(:version => 20100727014440) do
     t.string   "phone_number"
     t.string   "email"
     t.string   "image_url"
-    t.datetime "dob"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.text     "majorissues"
   end
 
   create_table "mentions", :force => true do |t|

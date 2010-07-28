@@ -41,15 +41,13 @@
     %br
     = f.text_field :email
   %p
-    = f.label 'Date of Birth'
-    %br
-    = f.date_select :dob, :start_year => (Date.today.year - 100), :end_year => (Date.today.year - 17)
-  %p
     = f.label 'Image'
     -if @candidate.image?
       %br
       = image_tag @candidate.image.url(:thumb)
       %br
+      = f.label :delete_image, 'Delete Image?'
+      = f.check_box(:delete_image)
     = f.file_field :image
   %p
     = f.submit

@@ -29,6 +29,10 @@ class InfoController < ApplicationController
     @ward = Ward.first( :conditions => ["name = ?", @ward_name] )
   end
   def news
-    @candidates = Candidate.all(:include => :mentions)  
+    @candidates = Candidate.with_approved_articles
+  end
+  def latest_news
+    @title = 'Latest Election News'
+    @latest_news = NewsArticle.latest(20).approved.with_nested_candidates_and_wards
   end
 end

@@ -1,9 +1,9 @@
 class NewsArticlesController < ApplicationController
   before_filter :authenticate
   def index
-    @news_articles_new = NewsArticle.all(:conditions => "moderation = 'new'")
-    @news_articles_approved = NewsArticle.all(:conditions => "moderation = 'approved'")
-    @news_articles_rejected = NewsArticle.all(:conditions => "moderation = 'rejected'")
+    @news_articles_new = NewsArticle.unset.with_mentions.desc
+    @news_articles_approved = NewsArticle.approved.with_mentions.desc
+    @news_articles_rejected = NewsArticle.rejected.with_mentions.desc
   end
   
   def show

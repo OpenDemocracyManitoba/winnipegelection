@@ -31,9 +31,6 @@
   %strong Email:
   =h @candidate.email
 %p
-  %strong Dob:
-  =h @candidate.dob
-%p
   - if @candidate.image?
     = image_tag @candidate.image.url(:thumb)
     = image_tag @candidate.image.url(:small)
