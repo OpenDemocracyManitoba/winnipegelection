@@ -1,5 +1,6 @@
 class NewsArticlesController < ApplicationController
-  before_filter :authenticate
+  before_filter :authenticate, :except => :latest
+  
   def index
     @news_articles_new = NewsArticle.unset.with_mentions.desc
     @news_articles_approved = NewsArticle.approved.with_mentions.desc
@@ -57,7 +58,6 @@ class NewsArticlesController < ApplicationController
     redirect_to news_articles_url
   end
   
- 
   def reject
     @news_article = NewsArticle.find(params[:id])
     @news_article.moderation = 'rejected'
@@ -67,5 +67,18 @@ class NewsArticlesController < ApplicationController
       flash[:error] = 'Error rejecting news article.'
     end
     redirect_to news_articles_url
+  end
+  
+  def latest
+    @title = 'Latest Election News'
+    page_num = params[:page_id] || 1
+    
+    articles = NewsArticle.approved.desc
+    articles.per_page = 15
+    
+    @current_page = articles.pages.find(page_num)
+    @current_page.paginator.set_path { |page|  latest_page_news_articles_path(page) }
+    
+    @current_page_by_date = @current_page.news_articles.group_by(&:pretty_date)
   end
  end

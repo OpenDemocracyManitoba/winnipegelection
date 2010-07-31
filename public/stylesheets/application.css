@@ -26,7 +26,8 @@ a {
   padding: 20px 30px;
   border: solid 1px black;
   margin-top: 20px;
-  overflow: hidden; }
+  overflow: hidden;
+  zoom: 1; }
   #container .twitter {
     position: absolute;
     top: 43px;
@@ -109,7 +110,8 @@ tr.incumbent {
   background-color: #d9dbfd; }
 
 div.ward_title {
-  overflow: auto; }
+  overflow: auto;
+  zoom: 1; }
   div.ward_title h2 {
     float: left;
     margin-right: 10px; }
@@ -125,7 +127,8 @@ div.ward_title {
   font-size: 0.8em; }
 
 .candidates {
-  overflow: auto; }
+  overflow: auto;
+  zoom: 1; }
   .candidates .candidate {
     padding-left: 10px;
     background-color: #eeeeee;
@@ -146,6 +149,7 @@ div.ward_map img {
 
 ul.mentions {
   overflow: hidden;
+  zoom: 1;
   list-style: none;
   padding-left: 0; }
   ul.mentions li {
@@ -153,3 +157,27 @@ ul.mentions {
     width: 200px;
     height: 1.4em;
     display: inline; }
+
+ul.pagination {
+  margin: 0;
+  padding: 0; }
+  ul.pagination li.selected span {
+    background: gray;
+    color: white; }
+  ul.pagination .gap_before:before {
+    content: "... "; }
+  ul.pagination li.page {
+    display: inline; }
+    ul.pagination li.page a {
+      text-decoration: none; }
+    ul.pagination li.page span {
+      border: 1px solid gray;
+      padding: 0.2em 0.5em; }
+    ul.pagination li.page span:hover {
+      background: gray;
+      color: white; }
+  ul.pagination li.symbol {
+    color: gray; }
+    ul.pagination li.symbol span:hover {
+      background: white;
+      color: gray; }

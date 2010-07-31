@@ -1,0 +1,30 @@
+- title @title
+- sidebar
+
+%h2 Latest Winnipeg Election News
+
+%p These news stories are automatically gathered from #{ link_to 'Google News', 'http://news.google.ca'} by searching for the names of the candidates in the upcoming Winnipeg municipal election.
+%p
+  %em Coming Soon: 
+  View articles by candidate.
+%br
+
+- @current_page_by_date.each do |date, articles|
+  %h3= date
+  - articles.each do |n|
+    %h4
+      = link_to n.title, n.url
+      \- #{n.source}
+    %p.small
+      %strong Mentions: 
+      - n.mentions.each do |m|
+        <a href="/ward/#{m.candidate.ward.ward_url}">#{m.candidate.name}</a>
+  %br
+
+%p
+  %strong Read More:
+  
+%ul.pagination
+  - @current_page.paginator.window(:inner => 2, :outer => 1, :extras => [:previous, :next]) do |page, path, classes|
+    - content_tag_for :li, page, :class => (classes << :page).join(' ') do
+      %span= link_to_if path, { :previous => "&lt; newer", :next => "older &gt;" }[page] || page.number, path

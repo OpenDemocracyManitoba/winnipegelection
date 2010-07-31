@@ -31,6 +31,7 @@ a
   :border solid 1px black
   :margin-top 20px
   :overflow hidden
+  :zoom 1
   .twitter
     :position absolute
     :top 43px
@@ -115,6 +116,7 @@ tr.incumbent
   
 div.ward_title
   :overflow auto
+  :zoom 1
   h2
     :float left
     :margin-right 10px
@@ -131,6 +133,7 @@ div.ward_title
   
 .candidates
   :overflow auto
+  :zoom 1
   .candidate
     :padding-left 10px
     :background-color #eeeeee
@@ -153,6 +156,7 @@ div.ward_map
   
 ul.mentions
   :overflow hidden
+  :zoom 1
   :list-style none
   :padding-left 0
   li
@@ -160,3 +164,28 @@ ul.mentions
     :width 200px
     :height 1.4em
     :display inline
+
+ul.pagination
+  :margin 0
+  :padding 0
+  li.selected span
+    :background gray
+    :color white
+  .gap_before:before
+    :content "... "
+  li.page
+    :display inline
+    a
+      :text-decoration none
+    span
+      :border 1px solid gray
+      :padding 0.2em 0.5em
+    span:hover
+      :background gray
+      :color white
+  li.symbol
+    :color gray
+    span:hover
+      :background white
+      :color gray
+  

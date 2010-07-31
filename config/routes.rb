@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :news_articles, :member => { :approve => :post, :reject => :post }
+  map.resources :news_articles, :member => { :approve => :post, :reject => :post }, :collection => { :latest => :get}, :paged => { :latest => true }
 
   map.resources :pages
 
