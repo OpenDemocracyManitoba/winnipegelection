@@ -13,7 +13,7 @@
   %h3= date
   - articles.each do |n|
     %h4
-      = link_to n.title, n.url
+      = link_to n.title, n.gnews_url
       \- #{n.source}
     %p.small
       %strong Mentions: 
