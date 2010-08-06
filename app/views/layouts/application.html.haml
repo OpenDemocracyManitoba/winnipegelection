@@ -7,10 +7,16 @@
         = h yield(:title) + " - Winnipeg Election 2010"
       - else
         Winnipeg Election 2010
+    
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
+    %meta{'name'=>'keywords', :content => @meta_keywords}/
+    - if @meta_description
+      %meta{'name'=>'description', :content => @meta_description}/
+    
     = stylesheet_link_tag 'application'
     = yield(:head)
-    = javascript_include_tag 'jquery' 
+    = javascript_include_tag 'jquery'
+    
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-17537013-1']);
@@ -28,7 +34,7 @@
         - if (t = yield(:title)) 
           = h yield(:title) + " - Winnipeg Election 2010"
         - else
-          Winnipeg Election 2010
+          Winnipeg Civic Election 2010
         
       %p
         = link_to 'home', root_path

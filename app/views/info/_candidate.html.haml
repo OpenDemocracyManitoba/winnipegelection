@@ -1,4 +1,10 @@
+- hide_incumbent_link ||= false
+- show_ward ||= false
+
 .candidate
+  -if show_ward
+    %div.ward
+      = candidate.ward.name
   .image
     - if candidate.image?
       = image_tag candidate.image(:thumb)
@@ -6,8 +12,8 @@
       = image_tag '/images/missing_candidate.jpg', :width => 100
   %p
     %strong= candidate.name
-    - if candidate.incumbent_since?
-      %em.grey.small incumbent
+    - if candidate.incumbent_since? && !hide_incumbent_link
+      %span.incumbent_link= link_to 'incumbent', {:controller => 'info', :action => 'incumbents'}, :title => "since #{candidate.incumbent_since}"
   %p
     - if candidate.website?
       = link_to 'Election Website', candidate.website

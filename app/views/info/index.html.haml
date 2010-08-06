@@ -10,7 +10,7 @@
     - if @days_until_election == 0
       The election is today.
     - elsif @days_until_election > 0 
-      There #{prefixed_pluralize(@days_until_election,'is','are','day')} until the election.
+      There #{prefixed_pluralize(@days_until_election,'is','are','day')} until the municipal election.
     - else
       The election has already occured.
   = link_to 'More election information?', static_path({:permalink => 'election_info'})

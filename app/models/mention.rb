@@ -7,10 +7,12 @@ class Mention < ActiveRecord::Base
   belongs_to :news_article
   
   def self.gnews_search_for(candidate)
+    
     query = URI.escape('"' + candidate +'"' + ' location:winnipeg')
     find_url = GOOGLE_NEWS_URL_1 + query + GOOGLE_NEWS_URL_2
     cfeed_raw = FeedNormalizer::FeedNormalizer.parse open(find_url)
     feed = []
+    
     cfeed_raw.entries.each do |entry_raw|
       entry = {}
       title_elements = entry_raw.title.split('-')
@@ -22,10 +24,11 @@ class Mention < ActiveRecord::Base
       entry[:summary] = summary[1].inner_html
       entry[:gnews_url] = entry_raw.urls[0]
       entry[:url] = entry_raw.urls[0].split('url=')[1]
-      feed << entry
+      feed << entry if entry[:summary].include? candidate
     end
     
     feed
     
   end
+  
 end

@@ -6,6 +6,7 @@ class InfoController < ApplicationController
   
   def index
     @days_until_election = Date.parse("2010 October 27") - Date.today
+    @meta_description = "Get to know your mayoral, city council and school trustee candidates for the upcoming Winnipeg civic election."
   end
   def mayor
     @show_feedback = true
@@ -34,5 +35,10 @@ class InfoController < ApplicationController
   end
   def latest_news
     redirect_to latest_news_articles_path
+  end
+  def incumbents
+    @title = 'Incumbents'
+    @mayor = Candidate.first( :include => :ward, :conditions => "incumbent_since IS NOT NULL AND wards.ward_type = 'Mayoral'" )
+    @incumbents = Candidate.all( :include => :ward, :conditions => "incumbent_since IS NOT NULL AND wards.ward_type ='Civic'", :order => Candidate.db_random)
   end
 end

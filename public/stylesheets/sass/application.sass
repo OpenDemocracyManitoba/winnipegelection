@@ -131,14 +131,13 @@ div.ward_title
 .small
   :font-size .8em
   
-.candidates
+.candidates, .incumbents
   :overflow auto
   :zoom 1
   .candidate
     :padding-left 10px
     :background-color #eeeeee
     :width 300px
-    :height 155px
     :float left
     :margin 0 20px 20px 0 
     .image
@@ -146,7 +145,20 @@ div.ward_title
     .icons
       a img
         :border-bottom 2px solid blue
+    .ward
+      :color #888
+      :font-weight bold
+      :font-size 1.3em
+      :margin 10px 0
+
+.candidates
+  .candidate
+    :height 147px
         
+.incumbents
+  .candidate
+    :height 185px
+    
 div.ward_map
   img
     :border none
@@ -164,6 +176,15 @@ ul.mentions
     :width 200px
     :height 1.4em
     :display inline
+
+span.incumbent_link
+  a
+    :font-style italic
+    :font-size 0.75em
+    :text-decoration none
+  a:hover
+    :text-decoration underline
+
 
 ul.pagination
   :margin 0
@@ -188,4 +209,3 @@ ul.pagination
     span:hover
       :background white
       :color gray
-  

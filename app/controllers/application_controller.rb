@@ -4,6 +4,7 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  before_filter :meta_defaults
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
@@ -15,5 +16,7 @@ protected
       username == AppConfig.admin_user && password == AppConfig.admin_password
     end
   end
-  
+  def meta_defaults
+    @meta_keywords = "Winnipeg election, Winnipeg, municipal election, civic election, city council, school trustee, councillor, mayoral, school division, politics, government, democracy, 2010, Manitoba, Canada"
+  end
 end

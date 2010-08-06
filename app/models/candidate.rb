@@ -1,4 +1,6 @@
 class Candidate < ActiveRecord::Base
+  extend Random
+  
   belongs_to :ward
   
   has_many :mentions, :dependent => :destroy
