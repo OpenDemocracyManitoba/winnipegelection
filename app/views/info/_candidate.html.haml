@@ -1,17 +1,25 @@
 - hide_incumbent_link ||= false
 - show_ward ||= false
+- hide_candidate_link ||= false
 
-.candidate
+.candidate{ :class => show_ward ? 'show_ward' : '' }
   -if show_ward
     %div.ward
       = candidate.ward.name
+      - if candidate.incumbent_since?
+        %p.since
+          Incumbent since #{candidate.incumbent_since}
   .image
     - if candidate.image?
-      = image_tag candidate.image(:thumb)
+      = link_to image_tag(candidate.image(:thumb)), candidate.candidate_url
     - else
-      = image_tag '/images/missing_candidate.jpg', :width => 100
+      = link_to image_tag('/images/missing_candidate.jpg', :width => 100), candidate.candidate_url
   %p
-    %strong= candidate.name
+    %strong
+      - if hide_candidate_link
+        = candidate.name
+      - else
+        = link_to candidate.name, candidate.candidate_url
     - if candidate.incumbent_since? && !hide_incumbent_link
       %span.incumbent_link= link_to 'incumbent', {:controller => 'info', :action => 'incumbents'}, :title => "since #{candidate.incumbent_since}"
   %p
@@ -39,6 +47,12 @@
       = link_to image_tag('/images/youtube_active.jpg'), candidate.youtube
     - else
       = image_tag '/images/youtube_inactive.jpg'
+    
+    - if candidate.news_articles.size > 0
+      = link_to image_tag('/images/news_active.jpg'), candidate.candidate_url + "#related_news", :title => "#{pluralize(candidate.news_articles.size, 'News Mention', 'News Mentions')} Found"
+    - else
+      = image_tag '/images/news_inactive.jpg', :title => "No News Mentions Found", :alt => "No News Mentions Founds"
+    
     
   - if candidate.phone_number?
     %p

@@ -140,16 +140,20 @@ div.ward_title {
     .candidates .candidate .icons a img, .incumbents .candidate .icons a img {
       border-bottom: 2px solid blue; }
     .candidates .candidate .ward, .incumbents .candidate .ward {
-      color: #888888;
+      color: #777777;
       font-weight: bold;
-      font-size: 1.3em;
+      font-size: 1.2em;
       margin: 10px 0; }
+      .candidates .candidate .ward .since, .incumbents .candidate .ward .since {
+        font-weight: normal;
+        font-size: 0.65em;
+        margin-top: 0; }
 
 .candidates .candidate {
   height: 147px; }
 
-.incumbents .candidate {
-  height: 185px; }
+.candidates .show_ward, .incumbents .show_ward {
+  height: 190px; }
 
 div.ward_map img {
   border: none; }
@@ -179,18 +183,19 @@ ul.pagination {
   margin: 0;
   padding: 0; }
   ul.pagination li.selected span {
+    padding: 2px 3px;
     background: gray;
-    color: white; }
+    color: white;
+    border: 1px solid gray; }
   ul.pagination .gap_before:before {
     content: "... "; }
   ul.pagination li.page {
     display: inline; }
     ul.pagination li.page a {
-      text-decoration: none; }
-    ul.pagination li.page span {
-      border: 1px solid gray;
-      padding: 0.2em 0.5em; }
-    ul.pagination li.page span:hover {
+      padding: 2px 3px;
+      text-decoration: none;
+      border: 1px solid gray; }
+    ul.pagination li.page a:hover {
       background: gray;
       color: white; }
   ul.pagination li.symbol {
@@ -198,3 +203,10 @@ ul.pagination {
     ul.pagination li.symbol span:hover {
       background: white;
       color: gray; }
+
+div#related_news {
+  font-size: 0.95em; }
+  div#related_news blockquote {
+    font-family: Georgia, times, serif; }
+  div#related_news h3 {
+    color: #555555; }

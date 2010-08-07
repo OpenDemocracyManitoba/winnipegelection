@@ -146,18 +146,22 @@ div.ward_title
       a img
         :border-bottom 2px solid blue
     .ward
-      :color #888
+      :color #777
       :font-weight bold
-      :font-size 1.3em
+      :font-size 1.2em
       :margin 10px 0
+      .since
+        :font-weight normal
+        :font-size 0.65em
+        :margin-top 0
 
 .candidates
   .candidate
     :height 147px
         
-.incumbents
-  .candidate
-    :height 185px
+.candidates, .incumbents
+  .show_ward
+    :height 190px
     
 div.ward_map
   img
@@ -190,18 +194,19 @@ ul.pagination
   :margin 0
   :padding 0
   li.selected span
+    :padding 2px 3px
     :background gray
     :color white
+    :border 1px solid gray
   .gap_before:before
     :content "... "
   li.page
     :display inline
     a
+      :padding 2px 3px
       :text-decoration none
-    span
       :border 1px solid gray
-      :padding 0.2em 0.5em
-    span:hover
+    a:hover
       :background gray
       :color white
   li.symbol
@@ -209,3 +214,10 @@ ul.pagination
     span:hover
       :background white
       :color gray
+
+div#related_news
+  :font-size 0.95em
+  blockquote
+    :font-family Georgia, times, serif
+  h3
+    :color #555

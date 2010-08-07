@@ -1,0 +1,13 @@
+- title @title
+
+.candidates
+  = render :partial => 'candidate', :locals => { :candidate => @candidate, :show_ward => true, :hide_candidate_link => true }
+%h2 Related News Articles
+- for m in @candidate.mentions
+  - if m.news_article.moderation == 'approved'
+    %h4
+      = link_to m.news_article.title, m.news_article.gnews_url
+      \- #{m.news_article.source}
+      \- #{m.news_article.pretty_date}
+    %blockquote
+      = m.summary
