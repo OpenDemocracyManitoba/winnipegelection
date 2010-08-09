@@ -128,7 +128,7 @@ div.ward_title {
   font-size: 0.8em; }
 
 .candidates, .incumbents {
-  overflow: auto;
+  overflow: hidden;
   zoom: 1; }
   .candidates .candidate, .incumbents .candidate {
     padding-left: 10px;
@@ -157,7 +157,7 @@ div.ward_title {
   height: 160px; }
 
 .candidates .show_ward, .incumbents .show_ward {
-  height: 190px; }
+  height: 205px; }
 
 div.ward_map img {
   border: none; }
