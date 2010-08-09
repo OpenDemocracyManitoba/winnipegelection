@@ -2,7 +2,7 @@
   %h2= ward.name
   %p= link_to 'map', ward.pdf_map_url
 %p
-  There are #{pluralize ward.candidates.size, 'candidate'} in this ward.
+  There #{prefixed_pluralize ward.candidates.size, 'is', 'are', 'candidate'} in this ward.
   %em.grey.small (Candidates are displayed in random order.)
 
 .candidates
