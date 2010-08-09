@@ -13,7 +13,7 @@
   - for news_article in @news_articles_new
     %tr
       %td
-        = link_to news_article.title, news_article.url
+        = link_to news_article.title, news_article.fixed_url
         %br
         - news_article.mentions.each do |m|
           %p
@@ -42,7 +42,7 @@
     %th Moderation
   - for news_article in @news_articles_approved
     %tr
-      %td= link_to news_article.title, news_article.url
+      %td= link_to news_article.title, news_article.fixed_url
       %td= h news_article.source
       %td= h news_article.pubdate
       %td= news_article.mentions.size
@@ -65,7 +65,7 @@
     %th Moderation
   - for news_article in @news_articles_rejected
     %tr
-      %td= link_to news_article.title, news_article.url
+      %td= link_to news_article.title, news_article.fixed_url
       %td= h news_article.source
       %td= h news_article.pubdate
       %td= news_article.mentions.size

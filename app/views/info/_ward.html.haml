@@ -2,6 +2,8 @@
   %h2= ward.name
   %p= link_to 'map', ward.pdf_map_url
 %p
-  This race has #{pluralize ward.candidates.size, 'candidate'}.
+  There are #{pluralize ward.candidates.size, 'candidate'} in this ward.
+  %em.grey.small (Candidates are displayed in random order.)
+
 .candidates
   = render :partial => 'candidate', :collection => ward.candidates

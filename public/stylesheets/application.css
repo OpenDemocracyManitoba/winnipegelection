@@ -114,7 +114,8 @@ div.ward_title {
   zoom: 1; }
   div.ward_title h2 {
     float: left;
-    margin-right: 10px; }
+    margin-right: 10px;
+    margin-bottom: 0; }
   div.ward_title p {
     float: left;
     padding-top: 16px;
@@ -148,9 +149,12 @@ div.ward_title {
         font-weight: normal;
         font-size: 0.65em;
         margin-top: 0; }
+    .candidates .candidate .phone, .candidates .candidate .news_text, .incumbents .candidate .phone, .incumbents .candidate .news_text {
+      margin: 0 0 0.5em 0;
+      font-size: 0.75em; }
 
 .candidates .candidate {
-  height: 147px; }
+  height: 160px; }
 
 .candidates .show_ward, .incumbents .show_ward {
   height: 190px; }

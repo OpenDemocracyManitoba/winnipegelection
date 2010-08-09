@@ -48,12 +48,11 @@
     - else
       = image_tag '/images/youtube_inactive.jpg'
     
-    - if candidate.news_articles.size > 0
-      = link_to image_tag('/images/news_active.jpg'), candidate.candidate_url + "#related_news", :title => "#{pluralize(candidate.news_articles.size, 'News Mention', 'News Mentions')} Found"
-    - else
-      = image_tag '/images/news_inactive.jpg', :title => "No News Mentions Found", :alt => "No News Mentions Founds"
-    
+  %p.news_text
+    News:
+    = link_to "#{pluralize(candidate.news_articles.size, 'Related Article', 'Related Articles')} Found", candidate.candidate_url + "#related_news"
     
   - if candidate.phone_number?
-    %p
-      Phone: #{candidate.phone_number}
+    %p.phone
+      Phone:
+      #{candidate.phone_number}

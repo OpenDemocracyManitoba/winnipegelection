@@ -14,6 +14,11 @@ class Ward < ActiveRecord::Base
                     :url  => "/uploads/ward_image/:id/:style/:basename.:extension",
                     :path => ":rails_root/public/uploads/ward_image/:id/:style/:basename.:extension"
   
+  named_scope :council, :conditions => "ward_type = 'Civic'"
+  named_scope :mayoral, :conditions => "ward_type = 'Mayoral'"
+  named_scope :with_candidates, :include => {:candidates => [:news_articles]}, :conditions => "news_articles.moderation ='approved'", :order => db_random
+  
+  
   def ward_url
     self.name.sub(/^St\./,'St').gsub(' ','_')
   end

@@ -1,25 +1,23 @@
 - title @title
 - sidebar
 
-%h2 Latest Winnipeg Election News
+%h2 Latest Civic Election News
 
-%p These news stories are automatically gathered from #{ link_to 'Google News', 'http://news.google.ca'} by searching for the names of the candidates in the upcoming Winnipeg municipal election.
-%p
-  %em Coming Soon: 
-  View articles by candidate.
+%p These news stories are automatically gathered from #{ link_to 'Google News', 'http://news.google.ca'} by searching for the full names of the candidates in the upcoming Winnipeg municipal election.
 %br
 
-- @current_page_by_date.each do |date, articles|
-  %h3= date
-  - articles.each do |n|
-    %h4
-      = link_to n.title, n.gnews_url
-      \- #{n.source}
-    %p.small
-      %strong Mentions: 
-      - n.mentions.each do |m|
-        <a href="/ward/#{m.candidate.ward.ward_url}">#{m.candidate.name}</a>
-  %br
+%div#related_news
+  - @current_page_by_date.each do |date, articles|
+    %h3= date
+    - articles.each do |n|
+      %h4
+        = link_to n.title, n.fixed_url
+        \- #{n.source}
+      %p.small
+        %strong Mentions: 
+        - n.mentions.each do |m|
+          = link_to m.candidate.name, m.candidate.candidate_url
+    %br
 
 %p
   %strong Read More:

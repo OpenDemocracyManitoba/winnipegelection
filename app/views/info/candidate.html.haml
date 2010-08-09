@@ -2,12 +2,32 @@
 
 .candidates
   = render :partial => 'candidate', :locals => { :candidate => @candidate, :show_ward => true, :hide_candidate_link => true }
-%h2 Related News Articles
-- for m in @candidate.mentions
-  - if m.news_article.moderation == 'approved'
-    %h4
-      = link_to m.news_article.title, m.news_article.gnews_url
-      \- #{m.news_article.source}
-      \- #{m.news_article.pretty_date}
-    %blockquote
-      = m.summary
+
+%div#related_news
+  %h2
+    - if !@page_num.eql?("1")
+      Page #{@page_num} of
+    Articles that Mention #{@candidate.name}
+  - @mentions_by_date.each do |date, ms|
+    %h3= date
+    - for m in ms do
+      %h4
+        = link_to m.news_article.title, m.news_article.fixed_url
+        \- #{m.news_article.source}
+      %blockquote
+        = m.summary
+      - if m.news_article.mentions.size > 1
+        %p.small
+          %strong Also mentions:
+          - m.news_article.mentions.each do |mention|
+            = link_to mention.candidate.name, mention.candidate.candidate_url if @candidate.name != mention.candidate.name
+    %br
+
+- if @mentions.pages.count > 1
+  %p
+    %strong Read More:
+    
+  %ul.pagination
+    - @current_mentions_page.paginator.window(:inner => 2, :outer => 1, :extras => [:previous, :next]) do |page, path, classes|
+      - content_tag_for :li, page, :class => (classes << :page).join(' ') do
+        %span= link_to_if path, { :previous => "&lt; newer", :next => "older &gt;" }[page] || page.number, path

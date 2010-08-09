@@ -10,12 +10,12 @@ class InfoController < ApplicationController
   end
   def mayor
     @show_feedback = true
-    @ward = Ward.first(:include => :candidates, :conditions => "ward_type = 'Mayoral'")
+    @ward = Ward.mayoral.with_candidates.first
     @title = 'Mayoral Candidates'
   end
   def council
     @show_feedback = true
-    @wards = Ward.all(:include => :candidates, :conditions => "ward_type = 'Civic'")
+    @wards = Ward.council.with_candidates.all(:order => 'wards.name')
     @title = 'City Councillor Candidates'
     @wards_title = 'All Electoral Wards'
   end
@@ -28,17 +28,29 @@ class InfoController < ApplicationController
   def ward
     @show_feedback = true
     @ward_name = Ward.url_to_ward(params[:ward_name])
-    @ward = Ward.first( :conditions => ["name = ?", @ward_name] )
+    @ward = Ward.with_candidates.first( :conditions => ["wards.name = ?", @ward_name] )
+  end
+  def candidate
+    @show_feedback = true
+    @page_num = params[:page_id] || '1'
+    
+    @candidate_name = Candidate.url_to_candidate(params[:candidate_name])
+    @title = @candidate_name
+    @candidate = Candidate.by_name(@candidate_name).with_approved_articles.with_ward.first
+    
+    @mentions = Mention.with_related_approved_news.by_name(@candidate.id)
+    @mentions.per_page = 10
+    
+    @current_mentions_page = @mentions.pages.find(@page_num)
+    @current_mentions_page.paginator.set_path { |page| paged_candidate_path(page, params[:candidate_name]) + '#related_news' }
+    @mentions_by_date = @current_mentions_page.mentions.group_by{ |mention| mention.news_article.pretty_date }
   end
   def news
     @candidates = Candidate.with_approved_articles
   end
-  def latest_news
-    redirect_to latest_news_articles_path
-  end
   def incumbents
     @title = 'Incumbents'
     @mayor = Candidate.first( :include => :ward, :conditions => "incumbent_since IS NOT NULL AND wards.ward_type = 'Mayoral'" )
-    @incumbents = Candidate.all( :include => :ward, :conditions => "incumbent_since IS NOT NULL AND wards.ward_type ='Civic'", :order => Candidate.db_random)
+    @incumbents = Candidate.incumbent.with_ward.with_approved_articles.all(:conditions => "wards.ward_type ='Civic'", :order => Candidate.db_random)
   end
 end

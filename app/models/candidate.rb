@@ -16,6 +16,12 @@ class Candidate < ActiveRecord::Base
                     :path => ":rails_root/public/uploads/candidate_image/:id/:style/:basename.:extension"
   
   named_scope :with_approved_articles, :include => :news_articles, :conditions => "news_articles.moderation ='approved'"
+  named_scope :with_mentions, :include => {:mentions => [:news_article => [:mentions => [:candidate]]]}, :order => 'news_articles.pubdate DESC', :conditions =>  "news_articles.moderation ='approved'"
+  named_scope :with_ward, :include => :ward
+  named_scope :incumbent, :conditions => "incumbent_since IS NOT NULL"
+  named_scope :by_name, lambda { |name|
+    {:conditions => ["candidates.name = ?", name]}
+  }
     
   # Virtual Attribute for image deletion.
   def delete_image=(value)
@@ -24,6 +30,14 @@ class Candidate < ActiveRecord::Base
   
   def delete_image
     false
+  end
+  
+  def candidate_url
+    '/candidate/' + self.name.gsub(' ','_')
+  end
+  
+  def self.url_to_candidate(url)
+    url.gsub('_',' ')
   end
   
 end
