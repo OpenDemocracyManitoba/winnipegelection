@@ -214,3 +214,6 @@ div#related_news {
     font-family: Georgia, times, serif; }
   div#related_news h3 {
     color: #555555; }
+
+.hidden {
+  display: none; }

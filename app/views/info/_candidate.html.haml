@@ -1,6 +1,6 @@
 - hide_incumbent_link ||= false
 - show_ward ||= false
-- hide_candidate_link ||= false
+- hide_candidate_link ||= true
 
 .candidate{ :class => show_ward ? 'show_ward' : '' }
   -if show_ward
@@ -11,9 +11,11 @@
           Incumbent since #{candidate.incumbent_since}
   .image
     - if candidate.image?
-      = link_to image_tag(candidate.image(:thumb)), candidate.candidate_url
+      = image_tag(candidate.image(:thumb))
+      - #link_to image_tag(candidate.image(:thumb)), candidate.candidate_url
     - else
-      = link_to image_tag('/images/missing_candidate.jpg', :width => 100), candidate.candidate_url
+      = image_tag('/images/missing_candidate.jpg', :width => 100)
+      - #link_to image_tag('/images/missing_candidate.jpg', :width => 100), candidate.candidate_url
   %p
     %strong
       - if hide_candidate_link
@@ -48,7 +50,7 @@
     - else
       = image_tag '/images/youtube_inactive.jpg'
     
-  %p.news_text
+  %p.news_text.hidden
     News:
     = link_to "#{pluralize(candidate.news_articles.size, 'Related Article', 'Related Articles')} Found", candidate.candidate_url + "#related_news"
     
