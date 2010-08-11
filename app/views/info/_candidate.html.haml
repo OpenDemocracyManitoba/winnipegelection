@@ -11,11 +11,9 @@
           Incumbent since #{candidate.incumbent_since}
   .image
     - if candidate.image?
-      = image_tag(candidate.image(:thumb))
-      - #link_to image_tag(candidate.image(:thumb)), candidate.candidate_url
+      = link_to image_tag(candidate.image(:thumb)), candidate.candidate_url
     - else
-      = image_tag('/images/missing_candidate.jpg', :width => 100)
-      - #link_to image_tag('/images/missing_candidate.jpg', :width => 100), candidate.candidate_url
+      = link_to image_tag('/images/missing_candidate.jpg', :width => 100), candidate.candidate_url
   %p
     %strong
       - if hide_candidate_link
