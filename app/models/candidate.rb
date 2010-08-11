@@ -16,7 +16,7 @@ class Candidate < ActiveRecord::Base
                     :path => ":rails_root/public/uploads/candidate_image/:id/:style/:basename.:extension"
   
   named_scope :with_approved_articles, :include => :news_articles, :conditions => "news_articles.moderation ='approved'"
-  named_scope :with_mentions, :include => {:mentions => [:news_article => [:mentions => [:candidate]]]}, :order => 'news_articles.pubdate DESC', :conditions =>  "news_articles.moderation ='approved'"
+  named_scope :with_mentions, :include => :mentions 
   named_scope :with_ward, :include => :ward
   named_scope :incumbent, :conditions => "incumbent_since IS NOT NULL"
   named_scope :by_name, lambda { |name|

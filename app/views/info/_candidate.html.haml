@@ -50,9 +50,9 @@
     - else
       = image_tag '/images/youtube_inactive.jpg'
     
-  %p.news_text.hidden
+  %p.news_text
     News:
-    = link_to "#{pluralize(candidate.news_articles.size, 'Related Article', 'Related Articles')} Found", candidate.candidate_url + "#related_news"
+    = link_to "#{pluralize(candidate.mentions.size, 'Related Article', 'Related Articles')} Found", candidate.candidate_url + "#related_news"
     
   - if candidate.phone_number?
     %p.phone

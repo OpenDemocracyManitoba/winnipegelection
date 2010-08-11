@@ -16,8 +16,7 @@ class Ward < ActiveRecord::Base
   
   named_scope :council, :conditions => "ward_type = 'Civic'"
   named_scope :mayoral, :conditions => "ward_type = 'Mayoral'"
-  named_scope :with_candidates, :include => {:candidates => [:news_articles]}, :order => db_random #, :conditions => "news_articles.moderation != 'rejected'", :order => db_random
-  
+  named_scope :with_candidates, :include => {:candidates => [:mentions]}, :order => db_random   
   
   def ward_url
     self.name.sub(/^St\./,'St').gsub(' ','_')

@@ -6,7 +6,7 @@ class NewsArticle < ActiveRecord::Base
   has_many :mentions, :dependent => :destroy
   has_many :candidates, :through => :mentions
   
-  attr_accessible :title, :source, :pubdate, :gnews_url, :url, :moderation, :candidate_ids
+  attr_accessible :title, :source, :pubdate, :gnews_url, :url, :moderation, :candidate_ids, :rejection
   
   default_scope :order => 'pubdate DESC'
   named_scope :unset, :conditions => "moderation = 'new'"
@@ -24,6 +24,13 @@ class NewsArticle < ActiveRecord::Base
   
   def fixed_url
     URI.unescape(self.url)
+  end
+  
+  before_update do |record|
+    if record.moderation == 'rejected' && record.mentions.size > 0
+      record.rejection += "\n<br/>\nPre-Rejection Mentions: " + record.mentions.inject(""){|str,m| str += "#{m.candidate.name}, "}
+      record.mentions.each { |m| m.delete }
+    end
   end
   
 end

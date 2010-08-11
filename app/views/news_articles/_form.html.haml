@@ -33,3 +33,7 @@
         %li
           = check_box_tag 'news_article[candidate_ids][]', candidate.id, @news_article.candidates.include?(candidate)
           = candidate.name
+  %p
+    = f.label 'Rejection Reason'
+    %br
+    = f.text_area :rejection

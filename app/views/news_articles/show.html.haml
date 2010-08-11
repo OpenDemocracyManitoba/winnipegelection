@@ -22,6 +22,10 @@
   %strong Mentions:
   - for candidate in @news_article.candidates
     = candidate.name + ', '
+- if @news_article.rejection?
+  %p
+    %strong Rejection Reason:
+    = @news_article.rejection
 
 %p
   = link_to "Edit", edit_news_article_path(@news_article)
