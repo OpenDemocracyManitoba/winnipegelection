@@ -22,6 +22,7 @@
           - m.news_article.mentions.each do |mention|
             = link_to mention.candidate.name, mention.candidate.candidate_url if @candidate.name != mention.candidate.name
     %br
+  = "No mentions found." if @mentions_by_date.size == 0
 
 - if @mentions.pages.count > 1
   %p
