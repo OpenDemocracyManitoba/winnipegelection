@@ -1,4 +1,5 @@
 !primary_color = #4B7399
+!link_color = #3B59BB
 !min_container_height = 600px
 
 body
@@ -13,9 +14,13 @@ table
     :border 1px solid #ccc
 
 a
-  :color #0000FF
+  :color = !link_color
+  :text-decoration none
   img
     :border none
+    
+a:hover
+  :text-decoration underline
 
 .clear
   :clear both
@@ -145,7 +150,8 @@ div.ward_title
       :float right
     .icons
       a img
-        :border-bottom 2px solid blue
+        :border-bottom 2px solid
+        :border-color = !link_color
     .ward
       :color #777
       :font-weight bold
@@ -158,6 +164,10 @@ div.ward_title
     .phone, .news_text
       :margin 0 0 0.5em 0
       :font-size 0.75em
+    span.incumbent_link
+      a
+        :font-style italic
+        :font-size 0.75em
 
 .candidates
   .candidate
@@ -185,13 +195,6 @@ ul.mentions
     :height 1.4em
     :display inline
 
-span.incumbent_link
-  a
-    :font-style italic
-    :font-size 0.75em
-    :text-decoration none
-  a:hover
-    :text-decoration underline
 
 
 ul.pagination

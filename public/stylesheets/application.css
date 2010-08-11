@@ -9,9 +9,13 @@ table {
     border: 1px solid #cccccc; }
 
 a {
-  color: blue; }
+  color: #3b59bb;
+  text-decoration: none; }
   a img {
     border: none; }
+
+a:hover {
+  text-decoration: underline; }
 
 .clear {
   clear: both;
@@ -139,7 +143,8 @@ div.ward_title {
     .candidates .candidate .image, .incumbents .candidate .image {
       float: right; }
     .candidates .candidate .icons a img, .incumbents .candidate .icons a img {
-      border-bottom: 2px solid blue; }
+      border-bottom: 2px solid;
+      border-color: #3b59bb; }
     .candidates .candidate .ward, .incumbents .candidate .ward {
       color: #777777;
       font-weight: bold;
@@ -151,6 +156,9 @@ div.ward_title {
         margin-top: 0; }
     .candidates .candidate .phone, .candidates .candidate .news_text, .incumbents .candidate .phone, .incumbents .candidate .news_text {
       margin: 0 0 0.5em 0;
+      font-size: 0.75em; }
+    .candidates .candidate span.incumbent_link a, .incumbents .candidate span.incumbent_link a {
+      font-style: italic;
       font-size: 0.75em; }
 
 .candidates .candidate {
@@ -175,13 +183,6 @@ ul.mentions {
     width: 200px;
     height: 1.4em;
     display: inline; }
-
-span.incumbent_link a {
-  font-style: italic;
-  font-size: 0.75em;
-  text-decoration: none; }
-span.incumbent_link a:hover {
-  text-decoration: underline; }
 
 ul.pagination {
   margin: 0;
