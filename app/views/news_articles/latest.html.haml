@@ -15,7 +15,8 @@
       %p.small
         %strong Mentions: 
         - n.mentions.each do |m|
-          = link_to m.candidate.name, m.candidate.candidate_url
+          = link_to(m.candidate.name, m.candidate.candidate_url)
+          &nbsp;
     %br
 
 %p
