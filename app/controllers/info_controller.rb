@@ -27,6 +27,7 @@ class InfoController < ApplicationController
     @show_feedback = true
     @ward_name = Ward.url_to_ward(params[:ward_name])
     @ward = Ward.with_candidates.first( :conditions => ["wards.name = ?", @ward_name] )
+    @atom_auto_discovery = @ward.rss_url
   end
   def candidate
     @show_feedback = true
@@ -35,6 +36,7 @@ class InfoController < ApplicationController
     @candidate_name = Candidate.url_to_candidate(params[:candidate_name])
     @title = @candidate_name
     @candidate = Candidate.by_name(@candidate_name).with_ward.first
+    @atom_auto_discovery = @candidate.rss_url
     
     @mentions = Mention.with_related_approved_news.by_name(@candidate.id)
     @mentions.per_page = 10

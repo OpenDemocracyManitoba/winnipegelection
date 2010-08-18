@@ -80,5 +80,7 @@ class NewsArticlesController < ApplicationController
     @current_page.paginator.set_path { |page|  latest_page_news_articles_path(page) }
     
     @current_page_by_date = @current_page.news_articles.group_by(&:pretty_date)
+    
+    @atom_auto_discovery = latest_feed_path(:atom)
   end
  end

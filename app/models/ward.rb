@@ -22,6 +22,10 @@ class Ward < ActiveRecord::Base
     self.name.sub(/^St\./,'St').gsub(' ','_')
   end
   
+  def rss_url
+    "/feeds/ward/#{self.name.sub(/^St\./,'St').gsub(' ','_')}.atom"
+  end
+  
   def self.url_to_ward(url)
     url.sub(/^St/,'St.').gsub('_',' ')
   end

@@ -52,8 +52,13 @@ ActionController::Routing::Routes.draw do |map|
   
   map.connect '/ward/:ward_name', :controller => 'info', :action => 'ward'
   map.connect '/candidate/:candidate_name', :controller => 'info', :action => 'candidate'
+  
   map.static ':permalink', :controller => 'pages', :action => 'show'
   map.paged_candidate '/pages/:page_id/candidate/:candidate_name', :controller => 'info', :action => 'candidate'
+  
+  map.connect '/feeds/candidate/:candidate_name.:format', :controller => 'feeds', :action => 'candidate', :requirement => { :format => 'atom'}
+  map.connect '/feeds/ward/:ward_name.:format', :controller => 'feeds', :action => 'ward', :requirement => { :format => 'atom'}
+  map.latest_feed '/feeds/latest_news.:format', :controller => 'feeds', :action => 'latest_news', :requirement => { :format => 'atom'}
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

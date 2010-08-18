@@ -9,6 +9,7 @@ class Mention < ActiveRecord::Base
   named_scope :by_name, lambda { |id|
     {:conditions => ["mentions.candidate_id = ?", id]}
   }
+  named_scope :recent, :limit => 15
   
   def self.gnews_search_for(candidate)
     
