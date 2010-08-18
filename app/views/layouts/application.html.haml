@@ -12,6 +12,8 @@
     %meta{'name'=>'keywords', :content => @meta_keywords}/
     - if @meta_description
       %meta{'name'=>'description', :content => @meta_description}/
+    - if @atom_auto_discovery
+      = auto_discovery_link_tag(:atom, @atom_auto_discovery)
     
     = stylesheet_link_tag 'application'
     = yield(:head)

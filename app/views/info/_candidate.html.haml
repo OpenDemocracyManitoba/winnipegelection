@@ -47,6 +47,10 @@
       = link_to image_tag('/images/youtube_active.jpg'), candidate.youtube
     - else
       = image_tag '/images/youtube_inactive.jpg'
+    - if candidate.mentions.size > 0
+      = link_to image_tag('/images/rss_active.jpg'), candidate.rss_url, :title => "#{candidate.name}'s News Feed"
+    - else
+      = image_tag '/images/rss_inactive.jpg'
     
   %p.news_text
     News:

@@ -121,9 +121,14 @@ div.ward_title {
     margin-right: 10px;
     margin-bottom: 0; }
   div.ward_title p {
-    float: left;
-    padding-top: 16px;
+    float: left; }
+  div.ward_title p.map {
+    padding-top: 18px;
     font-size: 10px; }
+  div.ward_title p.rss {
+    padding-top: 11px;
+    padding-bottom: 0;
+    margin-right: 10px; }
 
 .grey {
   color: #777777; }

@@ -36,6 +36,10 @@ class Candidate < ActiveRecord::Base
     '/candidate/' + self.name.gsub(' ','_')
   end
   
+  def rss_url
+    "/feeds/candidate/#{self.name.gsub(' ','_')}.atom"
+  end
+  
   def self.url_to_candidate(url)
     url.gsub('_',' ')
   end

@@ -1,7 +1,9 @@
 - title @title
 - sidebar
 
-%h2 Latest Civic Election News
+.ward_title
+  %h2 Latest Civic Election News
+  %p.rss= link_to image_tag('/images/rss.jpg', :size => "13x13"), latest_feed_path(:atom), :title => "News Feed for all Winnipeg Election Candidates"
 
 %p.grey.bigger-bottom Articles are automatically gathered from #{ link_to 'Google News', 'http://news.google.ca'} by searching for the full names of the candidates in the upcoming Winnipeg municipal election.
 
@@ -15,8 +17,7 @@
       %p.small
         %strong Mentions: 
         - n.mentions.each do |m|
-          = link_to(m.candidate.name, m.candidate.candidate_url)
-          &nbsp;
+          = link_to(m.candidate.name + ",", m.candidate.candidate_url)
     %br
 
 %p
