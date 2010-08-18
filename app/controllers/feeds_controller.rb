@@ -4,7 +4,7 @@ class FeedsController < ApplicationController
     @candidate = Candidate.by_name(@candidate_name).with_ward.first
     @mentions = Mention.with_related_approved_news.by_name(@candidate.id).recent
     @mentions_by_date = @mentions.group_by{ |mention| mention.news_article.pretty_date }
-    @title = "Articles that Mention #{@candidate_name}"
+    @title = "Articles that Mention #{@candidate_name} - WinnipegElection.ca"
     @updated = @mentions.first.news_article.pubdate unless @mentions.empty?
   end
   def ward
@@ -12,12 +12,12 @@ class FeedsController < ApplicationController
     @ward = Ward.first( :include => :candidates, :conditions => ["wards.name = ?", @ward_name] )
     @mentions = Mention.all( :select => "mentions.news_article_id", :conditions => ["candidate_id IN (?)",@ward.candidates] )
     @news_articles = NewsArticle.all( :include => {:mentions => [:candidate]}, :conditions => ["id IN (#{@mentions.map(&:news_article_id).join(",")})"], :order => "pubdate DESC", :limit => 15)
-    @title = "Articles that Mention #{@ward_name} Candidates"
+    @title = "Articles that Mention #{@ward_name} Candidates - WinnipegElection.ca"
     @updated = @news_articles.first.pubdate unless @news_articles.empty?
   end
   def latest_news
      @news_articles = NewsArticle.all( :include => {:mentions => [:candidate]}, :order => "pubdate DESC", :limit => 15 )
-     @title = "Articles that Mention Winnipeg Election Candidates"
+     @title = "Articles that Mention Winnipeg Election Candidates - WinnipegElection.ca"
      @updated = @news_articles.first.pubdate unless @news_articles.empty?
   end
 end
