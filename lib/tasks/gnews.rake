@@ -21,6 +21,10 @@ namespace :gnews do
             mention = Mention.new(:candidate => candidate, :news_article => current_article, :summary => article[:summary])
             puts "    Error saving mention for #{current_article.title}." if !mention.save
           end
+          if current_article.moderation == 'new'
+            current_article.moderation = 'approved'
+            current_article.save
+          end
         end
       end
       puts "  !! #{mention_count} New Mentions. !!" if mention_count != 0

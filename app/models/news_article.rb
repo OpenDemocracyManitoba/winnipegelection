@@ -28,6 +28,7 @@ class NewsArticle < ActiveRecord::Base
   
   before_update do |record|
     if record.moderation == 'rejected' && record.mentions.size > 0
+      record.rejection ||= ''
       record.rejection += "\n<br/>\nPre-Rejection Mentions: " + record.mentions.inject(""){|str,m| str += "#{m.candidate.name}, "}
       record.mentions.each { |m| m.delete }
     end
