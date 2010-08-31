@@ -13,6 +13,9 @@
   %strong Website:
   =h @candidate.website
 %p
+  %strong Council Site:
+  =h @candidate.council_site
+%p
   %strong Facebook:
   =h @candidate.facebook
 %p
@@ -37,10 +40,12 @@
       - for issue in @candidate.majorissues.split(',')
         %li= issue.strip
 %p
+  %strong Other Resources:
+  :markdown
+    #{@candidate.other_resources}
+%p
   - if @candidate.image?
     = image_tag @candidate.image.url(:thumb)
-    = image_tag @candidate.image.url(:small)
-    = image_tag @candidate.image.url(:medium)
   - else
     %strong Image Missing!
 %p

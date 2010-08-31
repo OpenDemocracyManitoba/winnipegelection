@@ -10,6 +10,16 @@
   %strong Pdf Map Url:
   =h @ward.pdf_map_url
 %p
+  %strong Stats:
+%blockquote
+  :markdown
+    #{@ward.stats}
+%p
+  %strong Voting History:
+%blockquote
+  :markdown
+    #{@ward.past_votes}
+%p
   - if @ward.image?
     = image_tag @ward.image.url(:thumb)
   - else

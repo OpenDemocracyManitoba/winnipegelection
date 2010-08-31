@@ -159,18 +159,20 @@ div.ward_title {
         font-weight: normal;
         font-size: 0.65em;
         margin-top: 0; }
-    .candidates .candidate .phone, .candidates .candidate .news_text, .incumbents .candidate .phone, .incumbents .candidate .news_text {
+    .candidates .candidate .phone, .candidates .candidate .news_text, .candidates .candidate .other_resources, .incumbents .candidate .phone, .incumbents .candidate .news_text, .incumbents .candidate .other_resources {
       margin: 0 0 0.5em 0;
       font-size: 0.75em; }
     .candidates .candidate span.incumbent_link a, .incumbents .candidate span.incumbent_link a {
       font-style: italic;
       font-size: 0.75em; }
+    .candidates .candidate p.election_website, .incumbents .candidate p.election_website {
+      font-size: 0.85em; }
 
 .candidates .candidate {
   height: 160px; }
 
 .candidates .show_ward, .incumbents .show_ward {
-  height: 205px; }
+  height: 210px; }
 
 div.ward_map img {
   border: none; }

@@ -1,6 +1,8 @@
 - hide_incumbent_link ||= false
 - show_ward ||= false
 - hide_candidate_link ||= false
+- show_council_link ||= false
+- show_other_resources ||= false
 
 .candidate{ :class => show_ward ? 'show_ward' : '' }
   -if show_ward
@@ -14,7 +16,7 @@
       = link_to image_tag(candidate.image(:thumb)), candidate.candidate_url
     - else
       = link_to image_tag('/images/missing_candidate.jpg', :width => 100), candidate.candidate_url
-  %p
+  %p.name
     %strong
       - if hide_candidate_link
         = candidate.name
@@ -22,11 +24,21 @@
         = link_to candidate.name, candidate.candidate_url
     - if candidate.incumbent_since? && !hide_incumbent_link
       %span.incumbent_link= link_to 'incumbent', {:controller => 'info', :action => 'incumbents'}, :title => "since #{candidate.incumbent_since}"
-  %p
-    - if candidate.website?
-      = link_to 'Election Website', candidate.website
-    - else
-      %span.grey Election Website
+  - if show_council_link && candidate.council_site?
+    %p.election_website
+      - if candidate.website?
+        = link_to 'Election', candidate.website
+        &
+        = link_to 'Councillor', candidate.council_site
+        Websites
+      - else
+        = link_to 'Councillor Website', candidate.council_site
+  - else
+    %p.election_website
+      - if candidate.website?
+        = link_to 'Election Website', candidate.website
+      - else
+        %span.grey Election Website
   %p.icons
     - if candidate.email?
       = link_to image_tag('/images/mail_active.jpg'), "mailto:#{candidate.email}"
@@ -60,3 +72,8 @@
     %p.phone
       Phone:
       #{candidate.phone_number}
+      
+  - if show_other_resources && candidate.other_resources?
+    %p.other_resources
+      Extra:
+      #{candidate.other_resources}

@@ -8,27 +8,30 @@
   %tr
     %th Name
     %th Ward
-    %th Incumbent Since
-    %th Website
-    %th Facebook
-    %th Twitter
-    %th Youtube
+    %th In Office Since
+    %th Sites
+    %th Face book
+    %th Tweets
+    %th You tube
     %th Office address
     %th Phone number
     %th Email
     %th Image
     %th Major Issues
+    %th Other Info
   - for candidate in @candidates
     %tr{:class => candidate.incumbent_since? ? 'incumbent' : ''}
-      %td= h candidate.name
+      %td= link_to candidate.name, candidate
       - if candidate.ward.pdf_map_url?
         %td= h link_to candidate.ward.name, candidate.ward.pdf_map_url
       - else
         %td= h candidate.ward.name
       %td= h candidate.incumbent_since
       
-      - if candidate.website?  
-        %td= link_to 'link', candidate.website
+      - if candidate.website? || candidate.council_site?
+        %td
+          = link_to 'election', candidate.website if candidate.website?
+          = link_to 'council', candidate.council_site if candidate.council_site?
       - else
         %td.missing
         
@@ -71,8 +74,12 @@
         %td= candidate.majorissues.split(',').size
       - else
         %td.missing
+      
+      - if candidate.other_resources?
+        %td yes
+      - else
+        %td.missing
         
-      %td= link_to 'Show', candidate
       %td= link_to 'Edit', edit_candidate_path(candidate)
       %td= link_to 'Delete', candidate, :confirm => 'Are you sure?', :method => :delete
 

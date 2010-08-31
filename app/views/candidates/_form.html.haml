@@ -17,6 +17,10 @@
     %br
     = f.text_field :website
   %p
+    = f.label :council_site
+    %br
+    = f.text_field :council_site
+  %p
     = f.label :facebook
     %br
     = f.text_field :facebook
@@ -53,5 +57,11 @@
       = f.label :delete_image, 'Delete Image?'
       = f.check_box(:delete_image)
     = f.file_field :image
+  %p
+    = f.submit
+  %p
+    = f.label :other_resources
+    %br
+    = f.text_area :other_resources
   %p
     = f.submit

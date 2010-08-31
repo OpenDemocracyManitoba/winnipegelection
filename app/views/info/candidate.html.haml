@@ -1,7 +1,7 @@
 - title @title
 
 .candidates
-  = render :partial => 'candidate', :locals => { :candidate => @candidate, :show_ward => true, :hide_candidate_link => true }
+  = render :partial => 'candidate', :locals => { :candidate => @candidate, :show_ward => true, :hide_candidate_link => true, :show_council_link => true, :show_other_resources => true }
 
 %div#related_news
   %h2

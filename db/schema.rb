@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100810212448) do
+ActiveRecord::Schema.define(:version => 20100826040717) do
 
   create_table "candidates", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(:version => 20100810212448) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.text     "majorissues"
+    t.string   "council_site"
+    t.text     "other_resources"
   end
 
   create_table "mentions", :force => true do |t|
@@ -70,6 +72,8 @@ ActiveRecord::Schema.define(:version => 20100810212448) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "ward_type"
+    t.text     "stats"
+    t.text     "past_votes"
   end
 
 end
