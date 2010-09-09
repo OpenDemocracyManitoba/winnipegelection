@@ -1,17 +1,13 @@
 !primary_color = #4B7399
 !link_color = #3B59BB
 !min_container_height = 600px
+!box_background_color = #eeeeee
 
 body
   :background-color = !primary_color
   :font
     :family Verdana, Helvetica, Arial
     :size 14px
-
-table
-  :border 1px solid #bbb
-  th, td
-    :border 1px solid #ccc
 
 a
   :color = !link_color
@@ -128,13 +124,15 @@ div.ward_title
     :margin-bottom 0
   p
     :float left
-  p.map
+  p.map, p.more_info
     :padding-top 18px
     :font-size 10px
+    :padding-right 10px
   p.rss
+    :padding-left 3px
     :padding-top 11px
     :padding-bottom 0
-    :margin-right 10px
+    :margin-right 13px
 
 .grey
   :color #777
@@ -142,12 +140,46 @@ div.ward_title
 .small
   :font-size .8em
   
+div.more_info
+  :overflow hidden
+  :zoom 1
+  h4
+    :margin-bottom 5px
+  .stats, .past_votes
+    :float left
+  .stats
+    :width 600px
+    :margin-left 50px
+    li
+      :font-size .9em
+    p
+      :margin-bottom 1px
+      :font-size .9em
+  table
+    :font-size .85em
+    :margin-bottom 1em
+    th,td
+      :padding-left 5px
+    th
+      :text-align left
+      :width 70px
+    tbody
+      em
+        :color green
+      tr
+        :text-align left
+        td:first-child
+          :width 150px
+      tr:nth-child(odd)
+        :background-color #ddd
+    
+  
 .candidates, .incumbents
   :overflow hidden
   :zoom 1
   .candidate
     :padding-left 10px
-    :background-color #eeeeee
+    :background-color !box_background_color
     :width 300px
     :float left
     :margin 0 20px 20px 0 

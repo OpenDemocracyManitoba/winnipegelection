@@ -11,4 +11,4 @@
 - for ward in wards
   %a{:name => ward.name.parameterize}
   %br
-  = render :partial => 'ward', :locals => { :ward => ward}
+  = render :partial => 'ward', :locals => { :ward => ward, :show_more_info_link => true}

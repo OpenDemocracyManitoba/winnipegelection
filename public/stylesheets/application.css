@@ -3,11 +3,6 @@ body {
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
 
-table {
-  border: 1px solid #bbbbbb; }
-  table th, table td {
-    border: 1px solid #cccccc; }
-
 a {
   color: #3b59bb;
   text-decoration: none; }
@@ -122,19 +117,53 @@ div.ward_title {
     margin-bottom: 0; }
   div.ward_title p {
     float: left; }
-  div.ward_title p.map {
+  div.ward_title p.map, div.ward_title p.more_info {
     padding-top: 18px;
-    font-size: 10px; }
+    font-size: 10px;
+    padding-right: 10px; }
   div.ward_title p.rss {
+    padding-left: 3px;
     padding-top: 11px;
     padding-bottom: 0;
-    margin-right: 10px; }
+    margin-right: 13px; }
 
 .grey {
   color: #777777; }
 
 .small {
   font-size: 0.8em; }
+
+div.more_info {
+  overflow: hidden;
+  zoom: 1; }
+  div.more_info h4 {
+    margin-bottom: 5px; }
+  div.more_info .stats, div.more_info .past_votes {
+    float: left; }
+  div.more_info .stats {
+    width: 600px;
+    margin-left: 50px; }
+    div.more_info .stats li {
+      font-size: 0.9em; }
+    div.more_info .stats p {
+      margin-bottom: 1px;
+      font-size: 0.9em; }
+  div.more_info table {
+    font-size: 0.85em;
+    margin-bottom: 1em; }
+    div.more_info table th, div.more_info table td {
+      padding-left: 5px; }
+    div.more_info table th {
+      text-align: left;
+      width: 70px; }
+    div.more_info table tbody em {
+      color: green; }
+    div.more_info table tbody tr {
+      text-align: left; }
+      div.more_info table tbody tr td:first-child {
+        width: 150px; }
+    div.more_info table tbody tr:nth-child(odd) {
+      background-color: #dddddd; }
 
 .candidates, .incumbents {
   overflow: hidden;

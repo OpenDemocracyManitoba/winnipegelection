@@ -19,7 +19,7 @@ class Ward < ActiveRecord::Base
   named_scope :with_candidates, :include => {:candidates => [:mentions]}, :order => db_random   
   
   def ward_url
-    self.name.sub(/^St\./,'St').gsub(' ','_')
+    "/ward/"+self.name.sub(/^St\./,'St').gsub(' ','_')
   end
   
   def rss_url
