@@ -25,7 +25,8 @@
       :markdown
         #{ward.past_votes}
       %span.small
-        %em Note: Percentage of valid votes shown.
+        %em Percentage of valid votes shown. #{link_to 'More election info...', static_path({:permalink => 'election_info'})}
+      
   - if show_stats
     %a{:name=>'stats'}
     .stats
