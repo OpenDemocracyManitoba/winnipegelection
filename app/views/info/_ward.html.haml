@@ -1,13 +1,12 @@
 - show_stats ||= false
 - show_past_votes ||= false
-- show_more_info_link ||= false
+- ward_url ||= ward.ward_url
 
 .ward_title
   %h2= ward.name
   %p.rss= link_to image_tag('/images/rss.jpg', :size => "12x12"), ward.rss_url, :title => "#{ward.name} Candidate News Feed"
-  - if show_more_info_link
-    %p.more_info= link_to 'ward stats', ward.ward_url + "#stats"
-    %p.more_info= link_to 'past election results', ward.ward_url + "#past_votes"
+  %p.more_info= link_to 'ward stats', ward_url + "#stats"
+  %p.more_info= link_to 'past election results', ward_url + "#past_votes"
   %p.map= link_to 'map', ward.pdf_map_url
 %p
   There #{prefixed_pluralize ward.candidates.size, 'is', 'are', 'candidate'} in this ward.
