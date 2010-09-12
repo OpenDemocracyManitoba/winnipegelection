@@ -12,6 +12,10 @@
   
 %h2 Current City Councillors Running for Re-Election
 
+%p
+  There #{prefixed_pluralize @incumbents.size, 'is', 'are', 'incumbent'} in council.
+  %em.grey.small (Incumbents are displayed alphabetically by ward.)  
+
 .incumbents
   = render :partial => 'candidate', :collection => @incumbents, :locals => { :hide_incumbent_link => true, :show_ward => true, :show_council_link => true }
   

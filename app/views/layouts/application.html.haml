@@ -63,12 +63,26 @@
         #main
           = yield
         #sidebar
-          %div.urtak
-            %h2 Your Thoughts?
-            <script src="http://assets.urtak.com/javascripts/widget.js" type="text/javascript"></script>
-            <a class='urtak_link' data-urtak-widget-key="46opxawgw7jykxgsnjwsrlqjjqrrd7qu" href="http://www.urtak.com/u/3641">Winnipeg Election 2010</a>
           %div.facebook
             <iframe src="http://www.facebook.com/plugins/likebox.php?id=145495908793867&amp;width=249&amp;connections=8&amp;stream=false&amp;header=false&amp;height=265" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:249px; height:265px;" allowTransparency="true"></iframe>
+          %h3 Latest Election News
+          %div.sidebar_news
+            - @latest_news_by_date.each do |date, articles|
+              %p.date= date
+              %ul
+                - articles.each do |n|
+                  %li
+                    %p.link
+                      = link_to n.title, n.fixed_url
+                    %p.mentions
+                      Mentions: 
+                      - mlinks = []
+                      - n.mentions.each do |m|
+                        - mlinks << link_to(m.candidate.name, m.candidate.candidate_url)
+                      = mlinks.join(', ')
+            %div.footer
+              %p.more= link_to 'More News...', :controller => 'news_articles', :action => 'latest'
+              %p.rss= link_to image_tag('/images/rss.jpg', :size => "13x13"), latest_feed_path(:atom), :title => "News Feed for all Winnipeg Election Candidates"
       - else
         - if @show_feedback
           #feedback

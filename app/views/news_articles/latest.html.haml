@@ -1,5 +1,4 @@
 - title @title
-- sidebar
 
 .ward_title
   %h2 Latest Civic Election News
@@ -15,9 +14,11 @@
         = link_to n.title, n.fixed_url
         \- #{n.source}
       %p.small
-        %strong Mentions: 
+        %strong Mentions:
+        - mlinks = []
         - n.mentions.each do |m|
-          = link_to(m.candidate.name + ",", m.candidate.candidate_url)
+          - mlinks << link_to(m.candidate.name, m.candidate.candidate_url)
+        = mlinks.join(', ')
     %br
 
 %p

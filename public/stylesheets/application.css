@@ -52,13 +52,45 @@ a:hover {
     float: right;
     width: 250px;
     margin-top: -30px;
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 5px 20px;
     background-color: #eeeeee; }
-    #container #sidebar .urtak {
-      min-height: 345px;
-      height: 345px; }
+    #container #sidebar h3 {
+      margin-bottom: 10px; }
     #container #sidebar .facebook {
-      margin-top: 20px; }
+      margin-top: 20px;
+      margin-bottom: 5px; }
+    #container #sidebar .sidebar_news {
+      font-size: 13px; }
+      #container #sidebar .sidebar_news ul {
+        list-style-type: none;
+        margin-left: 0;
+        margin-bottom: 0;
+        padding-left: 0; }
+        #container #sidebar .sidebar_news ul li {
+          border-bottom: 1px solid #cccccc;
+          margin-bottom: 10px; }
+      #container #sidebar .sidebar_news .date {
+        font-size: 11px;
+        margin-top: 0;
+        color: #666666; }
+      #container #sidebar .sidebar_news .link {
+        margin-top: 3px;
+        margin-bottom: 0; }
+      #container #sidebar .sidebar_news .mentions {
+        margin-top: 4px;
+        font-size: 10px;
+        color: #777777; }
+        #container #sidebar .sidebar_news .mentions a {
+          font-style: italic; }
+      #container #sidebar .sidebar_news .footer {
+        overflow: auto;
+        zoom: 1; }
+        #container #sidebar .sidebar_news .footer p {
+          margin-top: 0; }
+        #container #sidebar .sidebar_news .footer .rss {
+          float: right; }
+        #container #sidebar .sidebar_news .footer .more {
+          float: left; }
 
 #flash_notice,
 #flash_error {

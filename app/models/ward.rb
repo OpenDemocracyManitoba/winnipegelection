@@ -1,9 +1,7 @@
 class Ward < ActiveRecord::Base
-  extend Random
-  
   WARD_TYPES = ['Civic','School Division','Mayoral']
   
-  has_many :candidates, :order => db_random
+  has_many :candidates # previous ordered random. js handles that now. see:main.js
   
   validates_presence_of :name, :ward_type
   validates_inclusion_of :ward_type, :in => WARD_TYPES, :message => "must be: #{WARD_TYPES.join(', ')}"
@@ -16,7 +14,7 @@ class Ward < ActiveRecord::Base
   
   named_scope :council, :conditions => "ward_type = 'Civic'"
   named_scope :mayoral, :conditions => "ward_type = 'Mayoral'"
-  named_scope :with_candidates, :include => {:candidates => [:mentions]}, :order => db_random   
+  named_scope :with_candidates, :include => {:candidates => [:mentions]} # previous ordered random. js handles that now. see:main.js
   
   def ward_url
     "/ward/"+self.name.sub(/^St\./,'St').gsub(' ','_')

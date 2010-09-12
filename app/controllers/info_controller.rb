@@ -51,6 +51,6 @@ class InfoController < ApplicationController
     # Is there any way to eager load an association count? I guess we could use counter caching.
     # Tried to use a :select to specify count, but they are ignored when using :include. Boo.
     @mayor = Candidate.incumbent.with_ward.first(:conditions => "wards.ward_type ='Mayoral'")
-    @incumbents = Candidate.incumbent.with_ward.all(:conditions => "wards.ward_type ='Civic'", :order => Candidate.db_random)
+    @incumbents = Candidate.incumbent.with_ward.all(:conditions => "wards.ward_type ='Civic'", :order => 'wards.name') # Previously :order => Candidate.db_random but js handles that now. see:main.js
   end
 end

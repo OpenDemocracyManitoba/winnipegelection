@@ -10,6 +10,8 @@ module LayoutHelper
   
   def sidebar(show_sidebar = true)
     @show_sidebar = show_sidebar
+    latest_news = NewsArticle.approved.desc.latest(6)
+    @latest_news_by_date = latest_news.group_by(&:pretty_date)
   end
   
   def show_title?
