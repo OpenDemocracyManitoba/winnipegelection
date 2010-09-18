@@ -16,6 +16,7 @@
       = auto_discovery_link_tag(:atom, @atom_auto_discovery)
     
     = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'droplist-flyout.css'
     = yield(:head)
     = javascript_include_tag 'jquery'
     
@@ -31,28 +32,49 @@
     </script>
   
   %body
-    #container
+    %div#header
       %h1
-        - if (t = yield(:title)) 
-          = h yield(:title) + " - Winnipeg Election 2010"
-        - else
-          Winnipeg Civic Election 2010
-        
-      %p
-        = link_to 'home', root_path
-        |
-        = link_to 'election info', static_path({:permalink => 'election_info'})
-        |
-        = link_to 'mayoral candidates', :controller => 'info', :action => 'mayor'
-        |
-        = link_to 'council candidates', :controller => 'info', :action => 'council'
-        |
-        = link_to 'latest news', latest_news_articles_path
-        |
-        = link_to 'calendar', static_path({:permalink => 'calendar'})
-        |
-        = link_to 'about', static_path({:permalink => 'about'})
-
+        Winnipeg Civic Election 2010
+    #container
+      %div.dropList
+        %ul
+          %li= link_to 'Home', root_path
+          :plain
+            <li class="oneCol"><a class="oneCol fly nohover" href="">Candidates<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+              <!--[if lte IE 6]><table><tr><td><![endif]--> 
+              <div> 
+                <ul> 
+                  <li><a href="/info/mayor">Mayoral Candidates</a></li>
+                  <li class="fly"><a class="fly" href="/info/council">Council Candidates<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                  <!--[if lte IE 6]><table><tr><td><![endif]--> 
+                    <ul> 
+                      <li><a href="/ward/Charleswood_-_Tuxedo">Charleswood - Tuxedo</a></li> 
+                      <li><a href="/ward/Daniel_McIntyre">Daniel McIntyre</a></li> 
+                      <li><a href="/ward/Elmwood_-_East_Kildonan">Elmwood - East Kildonan</a></li>
+                      <li><a href="/ward/Fort_Rouge_-_East_Fort_Garry">Fort Rouge - East Fort Garry</a></li> 
+                      <li><a href="/ward/Mynarski">Mynarski</a></li> 
+                      <li><a href="/ward/North_Kildonan">North Kildonan</a></li> 
+                      <li><a href="/ward/Old_Kildonan">Old Kildonan</a></li> 
+                      <li><a href="/ward/Point_Douglas">Point Douglas</a></li> 
+                      <li><a href="/ward/River_Heights_-_Fort Garry">River Heights - Fort Garry</a></li> 
+                      <li><a href="/ward/St_Boniface">St. Boniface</a></li> 
+                      <li><a href="/ward/St_Charles">St. Charles</a></li> 
+                      <li><a href="/ward/St_James_-_Brooklands">St. James - Brooklands</a></li> 
+                      <li><a href="/ward/St_Norbert">St. Norbert</a></li>
+                      <li><a href="/ward/St_Vital">St. Vital</a></li>
+                      <li><a href="/ward/Transcona">Transcona</a></li> 
+                    </ul> 
+                  <!--[if lte IE 6]></td></tr></table></a><![endif]--> 
+                  </li> 
+                </ul> 
+              </div> 
+            <!--[if lte IE 6]></td></tr></table></a><![endif]--> 
+            </li>
+          %li= link_to 'Latest News', {:controller => 'news_articles', :action => 'latest'}
+          %li= link_to 'Calendar', static_path({:permalink => 'calendar'})
+          %li= link_to 'Election Info', static_path({:permalink => 'election_info'})
+          %li= link_to 'About', static_path({:permalink => 'about'})
+          
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
       
@@ -64,7 +86,7 @@
           = yield
         #sidebar
           %div.facebook
-            <iframe src="http://www.facebook.com/plugins/likebox.php?id=145495908793867&amp;width=249&amp;connections=8&amp;stream=false&amp;header=false&amp;height=265" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:249px; height:265px;" allowTransparency="true"></iframe>
+            <iframe src="http://www.facebook.com/plugins/likebox.php?id=145495908793867&amp;width=237&amp;connections=8&amp;stream=false&amp;header=false&amp;height=272" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:237px; height:272px;" allowTransparency="true"></iframe>
           %h3 Latest Election News
           %div.sidebar_news
             - @latest_news_by_date.each do |date, articles|

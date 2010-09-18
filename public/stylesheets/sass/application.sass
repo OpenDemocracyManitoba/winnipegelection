@@ -3,6 +3,25 @@
 !min_container_height = 600px
 !box_background_color = #eeeeee
 
+=drop-shadow(!ho, !vo, !b, !a) 
+  :-o-box-shadow =      !ho !vo !b rgba(0, 0, 0, !a)
+  :-icab-box-shadow =   !ho !vo !b rgba(0, 0, 0, !a)
+  :-khtml-box-shadow =  !ho !vo !b rgba(0, 0, 0, !a)
+  :-moz-box-shadow =    !ho !vo !b rgba(0, 0, 0, !a)
+  :-webkit-box-shadow = !ho !vo !b rgba(0, 0, 0, !a)
+  :box-shadow =         !ho !vo !b rgba(0, 0, 0, !a)
+
+=rounded(!tl, !tr, !br, !bl)
+  :-o-border-radius= !tl !tr !br !bl
+  :-icab-border-radius= !tl !tr !br !bl
+  :-khtml-border-radius= !tl !tr !br !bl
+  :-moz-border-radius= !tl !tr !br !bl
+  :-webkit-border-top-right-radius= !tr
+  :-webkit-border-top-left-radius= !tl
+  :-webkit-border-bottom-right-radius= !br
+  :-webkit-border-bottom-left-radius= !bl
+  :border-radius= !tl !tr !br !bl
+
 body
   :background-color = !primary_color
   :font
@@ -23,41 +42,64 @@ a:hover
   :height 0
   :overflow hidden
 
+#header
+  :width 1001px
+  :height 74px
+  :margin 0 auto
+  :background-image url(/images/building.gif)
+  :background-repeat no-repeat
+  :background-position right top
+  :padding-top 24px
+  h1
+    :font-family Georgia, 'Bitstream Charter', serif
+    :font-size 41px
+    :font-style italic
+    :margin-top 0
+    :color #f1f1ff
+
+h1, h2, h3, h4, h5
+  :font-family Georgia, 'Bitstream Charter', serif
+
 #container
   :position relative
   :width 999px
   :margin 0 auto
   :background #fff
-  :padding 20px 30px
-  :border solid 1px black
-  :margin-top 20px
+  :padding 20px 15px
+  :border solid 1px #555
   :overflow hidden
   :zoom 1
   .twitter
     :position absolute
-    :top 43px
-    :right 30px
+    :top 25px
+    :right 20px
   #footer
     :clear both
     :font-size 80%
     :color #555
   #main, #main-full, #sidebar
     :margin-bottom 20px
+  #main, #main-full
+    :margin-top 10px
   #main
     :float left
     :width 680px
   #feedback
+    +drop-shadow(0px, 2px, 4px, 0.2)
     :position absolute
-    :top 85px
-    :right 30px
+    :top 80px
+    :right 17px
     :width 151px
     :font-size 9px
     :background #eeffaa
     :padding 0 5px
   #sidebar
+    +drop-shadow(0px, 4px, 9px, 0.2)
+    +rounded(0, 0, 6px, 6px)
+    :border 1px solid #aaa
     :float right
-    :width 250px
-    :margin-top -30px
+    :width 237px
+    :margin-top 32px
     :padding 0 20px 5px 20px
     :background-color #eeeeee
     h3
@@ -207,14 +249,17 @@ div.more_info
     
   
 .candidates, .incumbents
+  :margin-left -28px
   :overflow hidden
   :zoom 1
   .candidate
+    +drop-shadow(0px, 2px, 5px, 0.2)
+    :border 1px solid #e4e4e4
     :padding-left 10px
     :background-color !box_background_color
     :width 300px
     :float left
-    :margin 0 20px 20px 0 
+    :margin 0 0 25px 30px 
     .image
       :float right
     .icons
@@ -310,6 +355,8 @@ div#related_news
     :font-family Georgia, times, serif
   h3
     :color #555
+    :font-size 1.3em
+    :margin-bottom 1.5em
 
 .bigger-bottom
   :margin-bottom 2.5em

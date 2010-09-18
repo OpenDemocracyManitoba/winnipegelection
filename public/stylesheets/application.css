@@ -17,41 +17,82 @@ a:hover {
   height: 0;
   overflow: hidden; }
 
+#header {
+  width: 1001px;
+  height: 74px;
+  margin: 0 auto;
+  background-image: url(/images/building.gif);
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding-top: 24px; }
+  #header h1 {
+    font-family: Georgia, "Bitstream Charter", serif;
+    font-size: 41px;
+    font-style: italic;
+    margin-top: 0;
+    color: #f1f1ff; }
+
+h1, h2, h3, h4, h5 {
+  font-family: Georgia, "Bitstream Charter", serif; }
+
 #container {
   position: relative;
   width: 999px;
   margin: 0 auto;
   background: white;
-  padding: 20px 30px;
-  border: solid 1px black;
-  margin-top: 20px;
+  padding: 20px 15px;
+  border: solid 1px #555555;
   overflow: hidden;
   zoom: 1; }
   #container .twitter {
     position: absolute;
-    top: 43px;
-    right: 30px; }
+    top: 25px;
+    right: 20px; }
   #container #footer {
     clear: both;
     font-size: 80%;
     color: #555555; }
   #container #main, #container #main-full, #container #sidebar {
     margin-bottom: 20px; }
+  #container #main, #container #main-full {
+    margin-top: 10px; }
   #container #main {
     float: left;
     width: 680px; }
   #container #feedback {
+    -o-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    -icab-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    -khtml-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     position: absolute;
-    top: 85px;
-    right: 30px;
+    top: 80px;
+    right: 17px;
     width: 151px;
     font-size: 9px;
     background: #eeffaa;
     padding: 0 5px; }
   #container #sidebar {
+    -o-box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
+    -icab-box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
+    -khtml-box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
+    -o-border-radius: 0 0 6px 6px;
+    -icab-border-radius: 0 0 6px 6px;
+    -khtml-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-bottom-right-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    border-radius: 0 0 6px 6px;
+    border: 1px solid #aaaaaa;
     float: right;
-    width: 250px;
-    margin-top: -30px;
+    width: 237px;
+    margin-top: 32px;
     padding: 0 20px 5px 20px;
     background-color: #eeeeee; }
     #container #sidebar h3 {
@@ -198,14 +239,22 @@ div.more_info {
       background-color: #dddddd; }
 
 .candidates, .incumbents {
+  margin-left: -28px;
   overflow: hidden;
   zoom: 1; }
   .candidates .candidate, .incumbents .candidate {
+    -o-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    -icab-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    -khtml-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e4e4e4;
     padding-left: 10px;
     background-color: #eeeeee;
     width: 300px;
     float: left;
-    margin: 0 20px 20px 0; }
+    margin: 0 0 25px 30px; }
     .candidates .candidate .image, .incumbents .candidate .image {
       float: right; }
     .candidates .candidate .icons a img, .incumbents .candidate .icons a img {
@@ -290,7 +339,9 @@ div#related_news {
   div#related_news blockquote {
     font-family: Georgia, times, serif; }
   div#related_news h3 {
-    color: #555555; }
+    color: #555555;
+    font-size: 1.3em;
+    margin-bottom: 1.5em; }
 
 .bigger-bottom {
   margin-bottom: 2.5em; }
