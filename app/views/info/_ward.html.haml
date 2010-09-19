@@ -7,7 +7,6 @@
   %p.rss= link_to image_tag('/images/rss.jpg', :size => "12x12"), ward.rss_url, :title => "#{ward.name} Candidate News Feed"
   %p.more_info= link_to 'ward stats', ward_url + "#stats"
   %p.more_info= link_to 'past election results', ward_url + "#past_votes"
-  %p.map= link_to 'map', ward.pdf_map_url
 %p
   There #{prefixed_pluralize ward.candidates.size, 'is', 'are', 'candidate'} in this ward.
   - if ward.candidates.size > 1
@@ -17,6 +16,17 @@
   = render :partial => 'candidate', :collection => ward.candidates
 
 .more_info
+  - if show_stats
+    %a{:name=>'stats'}
+    .stats
+      %h2 Ward Stats
+      :markdown
+        #{ward.stats}
+      - if ward.image?
+        %br
+        %p
+          %h2 Ward Map
+          = link_to image_tag(@ward.image.url :small), ward.pdf_map_url, :title => 'View PDF Map'
   - if show_past_votes
     %a{:name=>'past_votes'}
     .past_votes
@@ -25,10 +35,3 @@
         #{ward.past_votes}
       %span.small
         %em Percentage of valid votes shown. #{link_to 'More election info...', static_path({:permalink => 'election_info'})}
-      
-  - if show_stats
-    %a{:name=>'stats'}
-    .stats
-      %h2 Ward Stats
-      :markdown
-        #{ward.stats}

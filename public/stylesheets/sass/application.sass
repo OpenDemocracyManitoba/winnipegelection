@@ -23,7 +23,6 @@
   :border-radius= !tl !tr !br !bl
 
 body
-  :background-color = !primary_color
   :font
     :family Verdana, Helvetica, Arial
     :size 14px
@@ -55,7 +54,7 @@ a:hover
     :font-size 41px
     :font-style italic
     :margin-top 0
-    :color #f1f1ff
+    :color #202040
 
 h1, h2, h3, h4, h5
   :font-family Georgia, 'Bitstream Charter', serif
@@ -65,29 +64,29 @@ h1, h2, h3, h4, h5
   :width 999px
   :margin 0 auto
   :background #fff
-  :padding 20px 15px
-  :border solid 1px #555
+  :padding 0 15px 20px 15px
   :overflow hidden
   :zoom 1
   .twitter
     :position absolute
-    :top 25px
+    :top 5px
     :right 20px
   #footer
     :clear both
     :font-size 80%
     :color #555
+    :margin-top 30px
   #main, #main-full, #sidebar
     :margin-bottom 20px
   #main, #main-full
-    :margin-top 10px
+    :margin-top 20px
   #main
     :float left
-    :width 680px
+    :width 700px
   #feedback
     +drop-shadow(0px, 2px, 4px, 0.2)
     :position absolute
-    :top 80px
+    :top 60px
     :right 17px
     :width 151px
     :font-size 9px
@@ -99,7 +98,7 @@ h1, h2, h3, h4, h5
     :border 1px solid #aaa
     :float right
     :width 237px
-    :margin-top 32px
+    :margin-top 42px
     :padding 0 20px 5px 20px
     :background-color #eeeeee
     h3
@@ -195,21 +194,27 @@ div.ward_title
   h2
     :float left
     :margin-right 10px
-    :margin-bottom 0
+    :font-size 1.6em
   p
     :float left
-  p.map, p.more_info
-    :padding-top 18px
+  p.more_info
     :font-size 10px
     :padding-right 15px
+    :padding-top 19px
   p.rss
     :padding-left 3px
-    :padding-top 11px
+    :padding-top 12px
     :padding-bottom 0
     :margin-right 13px
 
 .grey
   :color #777
+hr.light
+  :border-color #bbb
+  :border-style solid
+  :border-bottom none
+  :border-left none
+  :border-right none
   
 .small
   :font-size .8em
@@ -222,8 +227,9 @@ div.more_info
   .stats, .past_votes
     :float left
   .stats
-    :width 600px
-    :margin-left 50px
+    :width 313px
+    :margin-left 3px
+    :margin-right 26px
     li
       :font-size .9em
     p
@@ -305,6 +311,7 @@ div.more_info
       :color green
     
 div.ward_map
+  :margin-left -15px
   img
     :border none
     

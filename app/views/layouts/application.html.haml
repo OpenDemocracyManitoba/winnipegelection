@@ -18,6 +18,9 @@
     = stylesheet_link_tag 'application'
     = stylesheet_link_tag 'droplist-flyout.css'
     = yield(:head)
+    
+    <link href="/favicon.ico?3" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    
     = javascript_include_tag 'jquery'
     
     <script type="text/javascript">
@@ -72,7 +75,18 @@
             </li>
           %li= link_to 'Latest News', {:controller => 'news_articles', :action => 'latest'}
           %li= link_to 'Calendar', static_path({:permalink => 'calendar'})
-          %li= link_to 'Election Info', static_path({:permalink => 'election_info'})
+          :plain
+            <li class="oneCol"><a class="oneCol fly nohover" href="/election_info">Election Info<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+              <!--[if lte IE 6]><table><tr><td><![endif]--> 
+              <div> 
+                <ul> 
+                  <li><a href="/election_info">General Election Info</a></li>
+                  <li><a href="/roles">Roles of Elected Officials</a></li>
+                  <li><a href="/resources">Online Resources</a></li>
+                </ul> 
+              </div> 
+            <!--[if lte IE 6]></td></tr></table></a><![endif]--> 
+            </li>
           %li= link_to 'About', static_path({:permalink => 'about'})
           
       - flash.each do |name, msg|
@@ -116,7 +130,7 @@
           = yield
       
       #footer
-        %hr
+        %hr.light
         Winnipeg Election 2010 - All content is public domain.
     
     <script type="text/javascript">

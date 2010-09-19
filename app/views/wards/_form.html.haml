@@ -13,7 +13,15 @@
     %br
     = f.text_field :pdf_map_url
   %p
-    = f.file_field :image
+  = f.label 'Image'
+  -if @ward.image?
+    %br
+    = image_tag @ward.image.url(:small)
+    %br
+    = f.label :delete_image, 'Delete Image?'
+    = f.check_box(:delete_image)
+  = f.file_field :image
+    
   %p
     = f.submit
   %p

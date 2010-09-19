@@ -21,7 +21,9 @@
     #{@ward.past_votes}
 %p
   - if @ward.image?
-    = image_tag @ward.image.url(:thumb)
+    %p
+      %strong Map:
+    = image_tag @ward.image.url(:small)
   - else
     %strong Image Missing!
   

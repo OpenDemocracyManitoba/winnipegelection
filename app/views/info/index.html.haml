@@ -1,8 +1,8 @@
 - sidebar
 
-%h2 Get To Know Your Election Candidates
+%h2 The Next Winnipeg Election Approaches
 
-%p.percent90
+%p
   On Wednesday October 27 of 2010 the citizens of Winnipeg go to the polls to elect their Mayor, City Councillors and School Trustees.
 
 %p
@@ -16,7 +16,7 @@
   = link_to 'More election information?', static_path({:permalink => 'election_info'})
 
 %br
-%h2 Who Are You Voting For?
+%h2 Get To Know Your Election Candidates
 
 %p
   %ul
@@ -31,7 +31,7 @@
 %br
 
 .ward_map
-  = image_tag '/images/civic_wards.gif', :usemap => '#Map'
+  = image_tag '/images/civic_wards.png', :usemap => '#Map'
 
 %map{:name=>"Map", :id=>"Map"} 
   <area shape="poly" coords="26,365,29,330,21,336,23,280,53,280,56,194,94,189,158,188,155,267,132,267,133,378,126,384,64,352" href="/ward/St_Charles" alt="St. Charles" title="St. Charles"/> 

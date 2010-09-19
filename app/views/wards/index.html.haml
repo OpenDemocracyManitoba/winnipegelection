@@ -18,7 +18,7 @@
       %td= h ward.ward_type
       %td= link_to 'link', ward.pdf_map_url
       - if ward.image?
-        %td= image_tag ward.image(:thumb)
+        %td= image_tag ward.image(:tiny)
       - else
         %td.missing
       - if ward.stats?
