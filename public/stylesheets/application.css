@@ -99,38 +99,39 @@ h1, h2, h3, h4, h5 {
     #container #sidebar .facebook {
       margin-top: 20px;
       margin-bottom: 5px; }
-    #container #sidebar .sidebar_news {
-      font-size: 13px; }
-      #container #sidebar .sidebar_news ul {
-        list-style-type: none;
-        margin-left: 0;
-        margin-bottom: 0;
-        padding-left: 0; }
-        #container #sidebar .sidebar_news ul li {
-          border-bottom: 1px solid #cccccc;
-          margin-bottom: 10px; }
-      #container #sidebar .sidebar_news .date {
-        font-size: 11px;
-        margin-top: 0;
-        color: #666666; }
-      #container #sidebar .sidebar_news .link {
-        margin-top: 3px;
-        margin-bottom: 0; }
-      #container #sidebar .sidebar_news .mentions {
-        margin-top: 4px;
-        font-size: 10px;
-        color: #777777; }
-        #container #sidebar .sidebar_news .mentions a {
-          font-style: italic; }
-      #container #sidebar .sidebar_news .footer {
-        overflow: auto;
-        zoom: 1; }
-        #container #sidebar .sidebar_news .footer p {
-          margin-top: 0; }
-        #container #sidebar .sidebar_news .footer .rss {
-          float: right; }
-        #container #sidebar .sidebar_news .footer .more {
-          float: left; }
+
+.sidebar_news, .ward_news {
+  font-size: 13px; }
+  .sidebar_news ul, .ward_news ul {
+    list-style-type: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 0; }
+    .sidebar_news ul li, .ward_news ul li {
+      border-bottom: 1px solid #cccccc;
+      margin-bottom: 10px; }
+  .sidebar_news .date, .ward_news .date {
+    font-size: 11px;
+    margin-top: 0;
+    color: #666666; }
+  .sidebar_news .link, .ward_news .link {
+    margin-top: 3px;
+    margin-bottom: 0; }
+  .sidebar_news .mentions, .ward_news .mentions {
+    margin-top: 4px;
+    font-size: 10px;
+    color: #777777; }
+    .sidebar_news .mentions a, .ward_news .mentions a {
+      font-style: italic; }
+  .sidebar_news .footer, .ward_news .footer {
+    overflow: auto;
+    zoom: 1; }
+    .sidebar_news .footer p, .ward_news .footer p {
+      margin-top: 0; }
+    .sidebar_news .footer .rss, .ward_news .footer .rss {
+      float: right; }
+    .sidebar_news .footer .more, .ward_news .footer .more {
+      float: left; }
 
 #flash_notice,
 #flash_error {
@@ -217,8 +218,11 @@ div.more_info {
   zoom: 1; }
   div.more_info h4 {
     margin-bottom: 5px; }
-  div.more_info .stats, div.more_info .past_votes {
+  div.more_info .stats, div.more_info .past_votes, div.more_info .ward_news {
     float: left; }
+  div.more_info .ward_news {
+    width: 313px;
+    margin-left: 28px; }
   div.more_info .stats {
     width: 313px;
     margin-left: 3px;

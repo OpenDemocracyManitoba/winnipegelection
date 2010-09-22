@@ -1,5 +1,6 @@
 - show_stats ||= false
 - show_past_votes ||= false
+- show_ward_news ||= false
 - ward_url ||= ward.ward_url
 
 .ward_title
@@ -27,6 +28,7 @@
         %p
           %h2 Ward Map
           = link_to image_tag(@ward.image.url :small), ward.pdf_map_url, :title => 'View PDF Map'
+          
   - if show_past_votes
     %a{:name=>'past_votes'}
     .past_votes
@@ -35,3 +37,22 @@
         #{ward.past_votes}
       %span.small
         %em Percentage of valid votes shown. #{link_to 'More election info...', static_path({:permalink => 'election_info'})}
+  
+  - if show_ward_news
+    .ward_news
+      %h2 Candidate News
+      %p.small.grey
+        %em Recent articles that mention candidates from this race.
+      %ul
+        - @news_articles.each do |n|
+          %li
+            %p.link= link_to n.title, n.fixed_url, :title => "#{n.source} - #{n.pretty_date}"
+            %p.mentions
+              - mlinks = []
+              - candidate_ids = ward.candidates.map { |c| c.id }
+              - n.mentions.each do |m|
+                - mlinks << link_to(m.candidate.name, m.candidate.candidate_url) if candidate_ids.include?(m.candidate.id)
+              Mentions: 
+              = mlinks.join(', ')
+      %div.footer
+        %p.more= link_to 'More News...', {:controller => 'news_articles', :action => 'latest'}, :title => 'The latest news for all candidates.'

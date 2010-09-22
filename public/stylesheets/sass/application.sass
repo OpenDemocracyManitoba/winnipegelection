@@ -106,38 +106,39 @@ h1, h2, h3, h4, h5
     .facebook
       :margin-top 20px
       :margin-bottom 5px
-    .sidebar_news
-      :font-size 13px
-      ul
-        :list-style-type none
-        :margin-left 0
-        :margin-bottom 0
-        :padding-left 0
-        li
-          :border-bottom 1px solid #ccc
-          :margin-bottom 10px
-      .date
-        :font-size 11px
-        :margin-top 0
-        :color #666
-      .link
-        :margin-top 3px
-        :margin-bottom 0
-      .mentions
-        :margin-top 4px
-        :font-size 10px
-        :color #777
-        a
-          :font-style italic
-      .footer
-        :overflow auto
-        :zoom 1
-        p
-          :margin-top 0
-        .rss
-          float: right
-        .more
-          float: left
+      
+.sidebar_news, .ward_news
+  :font-size 13px
+  ul
+    :list-style-type none
+    :margin-left 0
+    :margin-bottom 0
+    :padding-left 0
+    li
+      :border-bottom 1px solid #ccc
+      :margin-bottom 10px
+  .date
+    :font-size 11px
+    :margin-top 0
+    :color #666
+  .link
+    :margin-top 3px
+    :margin-bottom 0
+  .mentions
+    :margin-top 4px
+    :font-size 10px
+    :color #777
+    a
+      :font-style italic
+  .footer
+    :overflow auto
+    :zoom 1
+    p
+      :margin-top 0
+    .rss
+      float: right
+    .more
+      float: left
 
 #flash_notice,
 #flash_error
@@ -219,13 +220,17 @@ hr.light
 .small
   :font-size .8em
   
+  
 div.more_info
   :overflow hidden
   :zoom 1
   h4
     :margin-bottom 5px
-  .stats, .past_votes
+  .stats, .past_votes, .ward_news
     :float left
+  .ward_news
+    :width 313px
+    :margin-left 28px
   .stats
     :width 313px
     :margin-left 3px
