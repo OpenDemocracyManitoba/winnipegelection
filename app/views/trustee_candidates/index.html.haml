@@ -1,0 +1,65 @@
+- title "Trustee Candidates"
+
+%h2 Manage Trustee Candidates
+
+%p= link_to "New Trustee Candidate", new_trustee_candidate_path
+
+%table
+  %tr
+    %th Name
+    %th School ward
+    %th Incumbent
+    %th Incumbent since
+    %th Website
+    %th Facebook
+    %th Twitter
+    %th Youtube
+    %th Phone number
+    %th Email
+    %th Image 
+  - for trustee_candidate in @trustee_candidates
+    %tr
+      %td= link_to trustee_candidate.name, trustee_candidate
+      %td
+        = "#{trustee_candidate.school_ward.school_division.name} - #{trustee_candidate.school_ward.name}"
+      %td= h trustee_candidate.incumbent
+      %td= h trustee_candidate.incumbent_since
+      
+      - if trustee_candidate.website?
+        %td= link_to 'link', trustee_candidate.website
+      -else
+        %td.missing
+        
+      - if trustee_candidate.facebook?
+        %td= link_to 'link', trustee_candidate.facebook
+      - else
+        %td.missing
+        
+      - if trustee_candidate.twitter?
+        %td= link_to 'link', trustee_candidate.twitter
+      -else
+        %td.missing
+        
+      - if trustee_candidate.youtube?
+        %td= link_to 'link', trustee_candidate.youtube
+      -else
+        %td.missing
+        
+      - if trustee_candidate.youtube?
+        %td= h trustee_candidate.phone_number
+      -else
+        %td.missing
+        
+      - if trustee_candidate.email?
+        %td= mail_to 'mail', trustee_candidate.email
+      -else
+        %td.missing
+        
+      - if trustee_candidate.image?
+        %td= image_tag trustee_candidate.image(:thumb)
+      - else
+        %td.missing
+      %td= link_to 'Edit', edit_trustee_candidate_path(trustee_candidate)
+      %td= link_to 'Destroy', trustee_candidate, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Trustee Candidate", new_trustee_candidate_path

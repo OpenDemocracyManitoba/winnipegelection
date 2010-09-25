@@ -1,0 +1,53 @@
+- form_for @trustee_candidate, :html => { :multipart => true } do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :school_ward_id
+    %br
+    = f.collection_select :school_ward_id, @school_wards, :id, :name_with_division
+  %p
+    = f.label :incumbent
+    %br
+    = f.check_box :incumbent
+  %p
+    = f.label :incumbent_since
+    %br
+    = f.text_field :incumbent_since
+  %p
+    = f.label :website
+    %br
+    = f.text_field :website
+  %p
+    = f.label :facebook
+    %br
+    = f.text_field :facebook
+  %p
+    = f.label :twitter
+    %br
+    = f.text_field :twitter
+  %p
+    = f.label :youtube
+    %br
+    = f.text_field :youtube
+  %p
+    = f.label :phone_number
+    %br
+    = f.text_field :phone_number
+  %p
+    = f.label :email
+    %br
+    = f.text_field :email
+  %p
+    = f.label 'Image'
+    -if @trustee_candidate.image?
+      %br
+      = image_tag @trustee_candidate.image.url(:small)
+      %br
+      = f.label :delete_image, 'Delete Image?'
+      = f.check_box(:delete_image)
+    = f.file_field :image
+  %p
+    = f.submit

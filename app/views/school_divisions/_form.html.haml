@@ -1,0 +1,24 @@
+- form_for @school_division, :html => { :multipart => true } do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+    
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+    
+  %p
+  = f.label 'Image'
+  -if @school_division.image?
+    %br
+    = image_tag @school_division.image.url(:small)
+    %br
+    = f.label :delete_image, 'Delete Image?'
+    = f.check_box(:delete_image)
+  = f.file_field :image
+  
+  %p
+  = f.submit

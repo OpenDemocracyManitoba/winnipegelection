@@ -1,0 +1,23 @@
+- title "School Divisions"
+
+%h2 Manage School Divisions
+
+%p= link_to "New School Division", new_school_division_path
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th Image
+  - for school_division in @school_divisions
+    %tr
+      %td= link_to school_division.name, school_division
+      %td= h truncate(school_division.description)
+      - if school_division.image?
+        %td= image_tag school_division.image(:tiny)
+      - else
+        %td.missing
+      %td= link_to 'Edit', edit_school_division_path(school_division)
+      %td= link_to 'Destroy', school_division, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New School Division", new_school_division_path

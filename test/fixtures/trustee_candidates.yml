@@ -1,0 +1,31 @@
+one:
+  name: MyString
+  school_ward_id: 1
+  incumbent: false
+  incumbent_since: 1
+  website: MyString
+  facebook: MyString
+  twitter: MyString
+  youtube: MyString
+  phone_number: MyString
+  email: MyString
+  image_file_name: MyString
+  image_content_type: MyString
+  image_file_size: 1
+  image_updated_at: 2010-09-25 19:09:53
+
+two:
+  name: MyString
+  school_ward_id: 1
+  incumbent: false
+  incumbent_since: 1
+  website: MyString
+  facebook: MyString
+  twitter: MyString
+  youtube: MyString
+  phone_number: MyString
+  email: MyString
+  image_file_name: MyString
+  image_content_type: MyString
+  image_file_size: 1
+  image_updated_at: 2010-09-25 19:09:53

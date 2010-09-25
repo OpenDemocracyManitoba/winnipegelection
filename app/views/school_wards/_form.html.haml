@@ -1,0 +1,34 @@
+- form_for @school_ward, :html => { :multipart => true } do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+
+  %p
+    = f.label :school_division_id
+    %br
+    = f.collection_select :school_division_id, @school_divisions, :id, :name
+  
+  %p
+    = f.label :seats
+    %br
+    = f.text_field :seats
+    
+  %p
+    = f.label 'Image'
+    -if @school_ward.image?
+      %br
+      = image_tag @school_ward.image.url(:small)
+      %br
+      = f.label :delete_image, 'Delete Image?'
+      = f.check_box(:delete_image)
+  = f.file_field :image
+  
+  %p
+    = f.submit

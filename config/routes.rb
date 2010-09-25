@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :trustee_candidates
+
+  map.resources :school_wards
+
+  map.resources :school_divisions
+
   map.resources :news_articles, :member => { :approve => :post, :reject => :post }, :collection => { :latest => :get}, :paged => { :latest => true }
 
   map.resources :pages

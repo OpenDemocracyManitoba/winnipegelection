@@ -1,0 +1,19 @@
+one:
+  name: MyString
+  description: MyText
+  image_file_name: MyString
+  image_content_type: MyString
+  image_file_size: 1
+  image_updated_at: 2010-09-25 19:09:33
+  school_division_id: 1
+  seats: 1
+
+two:
+  name: MyString
+  description: MyText
+  image_file_name: MyString
+  image_content_type: MyString
+  image_file_size: 1
+  image_updated_at: 2010-09-25 19:09:33
+  school_division_id: 1
+  seats: 1

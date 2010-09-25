@@ -1,5 +1,5 @@
 class Ward < ActiveRecord::Base
-  WARD_TYPES = ['Civic','School Division','Mayoral']
+  WARD_TYPES = ['Civic','Mayoral']
   
   has_many :candidates # previous ordered random. js handles that now. see:main.js
   

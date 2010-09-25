@@ -1,0 +1,28 @@
+- title "School Ward"
+
+%p
+  %strong Name:
+  =h @school_ward.name
+%p
+  %strong Description:
+  =h @school_ward.description
+%p
+  %strong School Division:
+  =h @school_ward.school_division.name
+%p
+  %strong Seats:
+  =h @school_ward.seats
+%p
+  - if @school_ward.image?
+    %p
+      %strong Map:
+    = image_tag @school_ward.image.url(:small)
+  - else
+    %strong Image Missing!
+
+%p
+  = link_to "Edit", edit_school_ward_path(@school_ward)
+  |
+  = link_to "Destroy", @school_ward, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", school_wards_path

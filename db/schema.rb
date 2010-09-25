@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100826040717) do
+ActiveRecord::Schema.define(:version => 20100925190953) do
 
   create_table "candidates", :force => true do |t|
     t.string   "name"
@@ -58,6 +58,49 @@ ActiveRecord::Schema.define(:version => 20100826040717) do
     t.string   "title"
     t.string   "permalink"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "school_divisions", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "school_wards", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "school_division_id"
+    t.integer  "seats"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "trustee_candidates", :force => true do |t|
+    t.string   "name"
+    t.integer  "school_ward_id"
+    t.boolean  "incumbent"
+    t.integer  "incumbent_since"
+    t.string   "website"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "youtube"
+    t.string   "phone_number"
+    t.string   "email"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
