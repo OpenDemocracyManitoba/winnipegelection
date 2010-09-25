@@ -1,4 +1,5 @@
 class SchoolDivisionsController < ApplicationController
+  before_filter :authenticate
   def index
     @school_divisions = SchoolDivision.all
   end

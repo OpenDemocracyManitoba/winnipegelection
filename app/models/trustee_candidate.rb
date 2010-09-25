@@ -14,8 +14,5 @@ class TrusteeCandidate < ActiveRecord::Base
   def delete_image
     false
   end
-  
-  def name_with_division
-    "#{school_division.name} - #{name}"
-  end
+
 end

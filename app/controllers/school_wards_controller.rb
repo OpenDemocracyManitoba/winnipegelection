@@ -1,4 +1,5 @@
 class SchoolWardsController < ApplicationController
+  before_filter :authenticate
   def index
     @school_wards = SchoolWard.all
   end

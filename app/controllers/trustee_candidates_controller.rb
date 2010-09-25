@@ -1,4 +1,5 @@
 class TrusteeCandidatesController < ApplicationController
+  before_filter :authenticate
   def index
     @trustee_candidates = TrusteeCandidate.all
   end
