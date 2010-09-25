@@ -1,30 +1,71 @@
 - title @title
 
-.ward_title
-  %h2 Latest Civic Election News
-  %p.rss= link_to image_tag('/images/rss.jpg', :size => "13x13"), latest_feed_path(:atom), :title => "News Feed for all Winnipeg Election Candidates"
-
-%p.grey.bigger-bottom Articles are automatically gathered from #{ link_to 'Google News', 'http://news.google.ca'} by searching for the full names of the candidates in the upcoming Winnipeg municipal election.
-
-%div#related_news
-  - @current_page_by_date.each do |date, articles|
-    %h3= date
-    - articles.each do |n|
-      %h4
-        = link_to n.title, n.fixed_url
-        \- #{n.source}
-      %p.small
-        %strong Mentions:
-        - mlinks = []
-        - n.mentions.each do |m|
-          - mlinks << link_to(m.candidate.name, m.candidate.candidate_url)
-        = mlinks.join(', ')
-    %br
-
-%p
-  %strong Read More:
+%div#news_column
+  .ward_title
+    %h2 Latest Civic Election News
+    %p.rss= link_to image_tag('/images/rss.jpg', :size => "13x13"), latest_feed_path(:atom), :title => "News Feed for all Winnipeg Election Candidates"
   
-%ul.pagination
-  - @current_page.paginator.window(:inner => 2, :outer => 1, :extras => [:previous, :next]) do |page, path, classes|
-    - content_tag_for :li, page, :class => (classes << :page).join(' ') do
-      %span= link_to_if path, { :previous => "&lt; newer", :next => "older &gt;" }[page] || page.number, path
+  %p.grey.bigger-bottom Articles are automatically gathered from #{ link_to 'Google News', 'http://news.google.ca'} by searching for the full names of the candidates in the upcoming Winnipeg municipal election.
+  
+  %div#related_news
+    - @current_page_by_date.each do |date, articles|
+      %h3= date
+      - articles.each do |n|
+        %h4
+          = link_to n.title, n.fixed_url
+          \- #{n.source}
+        %p.small
+          %strong.grey Mentions:
+          - mlinks = []
+          - n.mentions.each do |m|
+            - mlinks << link_to(m.candidate.name, m.candidate.candidate_url)
+          = mlinks.join(', ')
+      %br
+  
+  %p
+    %strong Read More:
+    
+  %ul.pagination
+    - @current_page.paginator.window(:inner => 2, :outer => 1, :extras => [:previous, :next]) do |page, path, classes|
+      - content_tag_for :li, page, :class => (classes << :page).join(' ') do
+        %span= link_to_if path, { :previous => "&lt; newer", :next => "older &gt;" }[page] || page.number, path
+
+%div#twitter_column
+  %h2 Winnipeg Election Tweets
+  :plain
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script>
+    new TWTR.Widget({
+      version: 2,
+      type: 'search',
+      search: '#wpgvotes',
+      interval: 6500,
+      title: 'Tweets hash-tagged with:',
+      subject: '#wpgvotes',
+      width: 350,
+      height: 900,
+      theme: {
+        shell: {
+          background: '#ffffff',
+          color: '#111459'
+        },
+        tweets: {
+          background: '#ffffff',
+          color: '#444444',
+          links: '#3B59BB'
+        }
+      },
+      features: {
+        scrollbar: false,
+        loop: true,
+        live: true,
+        hashtags: false,
+        timestamp: true,
+        avatars: true,
+        toptweets: false,
+        behavior: 'default'
+      }
+    }).render().start();
+    </script>
+    
+%br.clear

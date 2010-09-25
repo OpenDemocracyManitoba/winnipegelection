@@ -51,7 +51,7 @@
         %td.missing
         
       - if trustee_candidate.email?
-        %td= mail_to 'mail', trustee_candidate.email
+        %td= mail_to trustee_candidate.email, 'mail'
       -else
         %td.missing
         
