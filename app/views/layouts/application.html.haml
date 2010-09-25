@@ -88,7 +88,17 @@
               </div> 
             <!--[if lte IE 6]></td></tr></table></a><![endif]--> 
             </li>
-          %li= link_to 'About', static_path({:permalink => 'about'})
+          :plain
+            <li class="oneCol"><a class="oneCol fly nohover" href="/about">About<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+              <!--[if lte IE 6]><table><tr><td><![endif]--> 
+              <div> 
+                <ul> 
+                  <li><a href="/about">About Us</a></li>
+                  <li><a href="/faq">FAQ</a></li>
+                  <li><a href="/press">Press</a></li>
+                </ul> 
+              </div> 
+            <!--[if lte IE 6]></td></tr></table></a><![endif]--> 
           
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
