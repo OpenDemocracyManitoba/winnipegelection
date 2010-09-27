@@ -33,6 +33,16 @@ class InfoController < ApplicationController
     @news_articles = NewsArticle.all( :include => {:mentions => [:candidate]}, :conditions => ["id IN (#{@mentions.map(&:news_article_id).join(",")})"], :order => "pubdate DESC", :limit => 7)
     @atom_auto_discovery = @ward.rss_url
   end
+  def school_ward
+    @show_feedback = true
+    @school_ward_name = SchoolWard.url_to_ward(params[:ward_name])
+    @school_division_name = SchoolDivision.url_to_ward( params[:division_name])
+    @school_ward = SchoolWard.first(:include => [:trustee_candidates, :school_division] , :conditions => ["school_wards.name = ? and school_divisions.name = ?", @school_ward_name, @school_division_name] )
+  end
+  def school_board
+    @title = 'School Division Wards'
+    @school_divisions = SchoolDivision.all(:include => [:school_wards], :order =>"school_divisions.name")
+  end
   def candidate
     @show_feedback = true
     @page_num = params[:page_id] || '1'

@@ -17,4 +17,12 @@ class SchoolDivision < ActiveRecord::Base
   def delete_image
     false
   end
+  
+  def self.url_to_ward(url)
+    url.sub(/^St/,'St.').gsub('_',' ')
+  end
+  
+  def division_url
+    self.name.gsub(' ','_').sub(/^St./,'St')
+  end
 end

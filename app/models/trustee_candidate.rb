@@ -14,5 +14,17 @@ class TrusteeCandidate < ActiveRecord::Base
   def delete_image
     false
   end
+  
+  def candidate_url
+    false
+  end
+  
+  def rss_url
+    false
+  end
+  
+  def self.url_to_candidate(url)
+    false
+  end
 
 end

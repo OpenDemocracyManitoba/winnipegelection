@@ -57,6 +57,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => 'info'
   
   map.connect '/ward/:ward_name', :controller => 'info', :action => 'ward'
+  map.connect '/school_ward/:division_name/:ward_name', :controller => 'info', :action => 'school_ward'
   map.connect '/candidate/:candidate_name', :controller => 'info', :action => 'candidate'
   
   map.static ':permalink', :controller => 'pages', :action => 'show'

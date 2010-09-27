@@ -20,4 +20,20 @@ class SchoolWard < ActiveRecord::Base
   def name_with_division
     "#{school_division.name} - #{name}"
   end
+  
+  def ward_url
+    "/school_ward/#{school_division.division_url}/"+self.name.sub(/ St\./,' St').gsub(' ','_')
+  end
+  
+  def rss_url
+    false
+  end
+  
+  def self.url_to_ward(url)
+    url.sub(/_St_/,'_St._').gsub('_',' ')
+  end
+  
+  def candidates
+    trustee_candidates
+  end
 end

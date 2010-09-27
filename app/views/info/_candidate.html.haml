@@ -12,10 +12,16 @@
         %p.since
           Incumbent since #{candidate.incumbent_since}
   .image
-    - if candidate.image?
-      = link_to image_tag(candidate.image(:thumb)), candidate.candidate_url
+    - if candidate.candidate_url
+      - if candidate.image?
+        = link_to image_tag(candidate.image(:thumb)), candidate.candidate_url
+      - else
+        = link_to image_tag('/images/missing_candidate.jpg', :width => 100), candidate.candidate_url
     - else
-      = link_to image_tag('/images/missing_candidate.jpg', :width => 100), candidate.candidate_url
+      - if candidate.image?
+        = image_tag(candidate.image(:thumb))
+      - else
+        = image_tag('/images/missing_candidate.jpg', :width => 100)
   %p.name
     %strong
       - if hide_candidate_link
@@ -59,14 +65,16 @@
       = link_to image_tag('/images/youtube_active.jpg'), candidate.youtube
     - else
       = image_tag '/images/youtube_inactive.jpg'
-    - if candidate.mentions.size > 0
-      = link_to image_tag('/images/rss_active.jpg'), candidate.rss_url, :title => "#{candidate.name}'s News Feed"
-    - else
-      = image_tag '/images/rss_inactive.jpg'
-    
-  %p.news_text
-    News:
-    = link_to "#{pluralize(candidate.mentions.size, 'Related Article', 'Related Articles')} Found", candidate.candidate_url + "#related_news"
+    - if defined?(candidate.mentions)
+      -if candidate.mentions.size > 0
+        = link_to image_tag('/images/rss_active.jpg'), candidate.rss_url, :title => "#{candidate.name}'s News Feed"
+      - else
+        = image_tag '/images/rss_inactive.jpg'
+  
+  - if defined?(candidate.mentions)
+    %p.news_text
+      News:
+      = link_to "#{pluralize(candidate.mentions.size, 'Related Article', 'Related Articles')} Found", candidate.candidate_url + "#related_news"
     
   - if candidate.phone_number?
     %p.phone

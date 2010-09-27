@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5 {
 
 #twitter_column {
   float: right;
-  width: 380px; }
+  width: 370px; }
 
 #container {
   position: relative;
@@ -376,3 +376,11 @@ div#related_news {
 
 .hidden {
   display: none; }
+
+div#main-full div#select_division {
+  float: left;
+  width: 285px; }
+div#main-full div#division_map {
+  float: left;
+  width: 710px;
+  margin-top: 20px; }
