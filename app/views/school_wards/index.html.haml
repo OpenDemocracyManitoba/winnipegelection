@@ -13,7 +13,10 @@
   - for school_ward in @school_wards
     %tr
       %td= "#{school_ward.school_division.name} - #{school_ward.name}"
-      %td= h school_ward.description
+      - if school_ward.description?
+        %td yes
+      - else
+        %td.missing
       %td= h school_ward.seats
       - if school_ward.image?
         %td= image_tag school_ward.image(:tiny)

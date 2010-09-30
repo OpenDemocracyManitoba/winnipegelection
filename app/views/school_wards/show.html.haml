@@ -4,14 +4,16 @@
   %strong Name:
   =h @school_ward.name
 %p
-  %strong Description:
-  =h @school_ward.description
-%p
   %strong School Division:
   =h @school_ward.school_division.name
 %p
   %strong Seats:
   =h @school_ward.seats
+%p
+  %strong Description:
+  %blockquote
+    :markdown
+      #{@school_ward.description}
 %p
   - if @school_ward.image?
     %p
