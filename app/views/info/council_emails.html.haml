@@ -1,0 +1,45 @@
+- for candidate in @candidates
+  %div
+    %h1= candidate.name
+    %p
+      #{candidate.email}
+      %br
+      %br
+    %p
+      Dear #{candidate.name},
+    %p  
+      The WinnipegElection.ca website has become a recognized source of information for this October’s election. We are averaging 2500+ visitors a week and this number is expected to grow as the election approaches.
+    %p  
+      Included with this email is a short questionnaire. If you would kindly reply to these questions we will add your replies to your WinnipegElection.ca page: 
+    %p
+      http://winnipegelection.ca#{candidate.candidate_url}
+    %p  
+      Your replies will be easy for voters to find online. If you Google for your name and the word Winnipeg you will see our website in the first few results. 
+    %p  
+      http://www.google.ca/search?q=#{candidate.name.gsub(' ','+')}+Winnipeg
+    %p  
+      The questions are as follows:
+    %p
+      1. Why did you decide to run in the 2010 Winnipeg election?
+      %br
+      2. What experience will you bring to compliment your role as councillor?
+      %br
+      3. What are the major issues you would like to stand for and why did you choose these issues?
+      %br
+      4. Is there anything in particular you would like to change in our city? In your ward?
+      %br
+      5. Do you have any other comments regarding your candidacy?
+    %p
+      Each reply should be less than 200 words. Longer replies will be truncated to 200 words. You need not reply to all the questions. We will post your replies unedited. We will not editorialize or comment on your answers.
+    %p  
+      While we have your attention, please visit your page on our site and review the information we have posted. If you have any corrections or additions please let us know.
+    %p  
+      Thank you kindly,
+      %br
+      The Winnipeg Election Team
+    %p
+      %br
+      About WinnipegElection.ca
+    %p  
+      WinnipegElection.ca is a citizen created resource for the 2010 Winnipeg general election. The website features interactive ward maps, ward statistics, historical information about past elections, and a calendar of election related events. Mayoral, Council and School Trustee candidates are listed along with links to their web pages, email addresses, Facebook fan pages and Twitter feeds. Links to election related news articles are updated daily.
+    %hr
