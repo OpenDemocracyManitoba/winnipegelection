@@ -5,7 +5,7 @@
   =h @candidate.name
 %p
   %strong Ward:
-  =h @candidate.ward_id
+  = link_to @candidate.ward.name, @candidate.ward.ward_url
 %p
   %strong Incumbent Since:
   =h @candidate.incumbent_since
@@ -40,9 +40,10 @@
       - for issue in @candidate.majorissues.split(',')
         %li= issue.strip
 %p
-  %strong Other Resources:
-  :markdown
-    #{@candidate.other_resources}
+  %strong Questionnaire:
+  %blockquote
+    :markdown
+      #{@candidate.qa}
 %p
   - if @candidate.image?
     = image_tag @candidate.image.url(:thumb)

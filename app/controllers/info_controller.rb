@@ -15,6 +15,7 @@ class InfoController < ApplicationController
     @mentions = Mention.all( :select => "mentions.news_article_id", :conditions => ["candidate_id IN (?)",@ward.candidates] )
     @news_articles = NewsArticle.all( :include => {:mentions => [:candidate]}, :conditions => ["id IN (#{@mentions.map(&:news_article_id).join(",")})"], :order => "pubdate DESC", :limit => 7)
     @title = 'Mayoral Candidates'
+    @atom_auto_discovery = @ward.rss_url
   end
   def council
     @show_feedback = true
@@ -56,7 +57,7 @@ class InfoController < ApplicationController
     @atom_auto_discovery = @candidate.rss_url
     
     @mentions = Mention.with_related_approved_news.by_name(@candidate.id)
-    @mentions.per_page = 10
+    @mentions.per_page = 7
     
     @current_mentions_page = @mentions.pages.find(@page_num)
     @current_mentions_page.paginator.set_path { |page| paged_candidate_path(page, params[:candidate_name]) + '#related_news' }
@@ -71,6 +72,6 @@ class InfoController < ApplicationController
     @incumbents = Candidate.incumbent.with_ward.all(:conditions => "wards.ward_type ='Civic'", :order => 'wards.name') # Previously :order => Candidate.db_random but js handles that now. see:main.js
   end
   def council_emails
-    @candidates = Candidate.with_ward.all(:conditions => "wards.ward_type ='Civic'", :order => 'candidates.name')
+    @candidates = Candidate.with_ward.all(:conditions => "wards.ward_type ='Mayoral'", :order => 'candidates.name')
   end
 end

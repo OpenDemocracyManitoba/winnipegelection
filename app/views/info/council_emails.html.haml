@@ -1,3 +1,6 @@
+%p
+  - for candidate in @candidates
+    #{(candidate.email?) ? candidate.email : '#'+candidate.name+'#'},
 - for candidate in @candidates
   %div
     %h1= candidate.name

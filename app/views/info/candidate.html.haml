@@ -1,38 +1,46 @@
 - title @title
 
-.candidates
-  = render :partial => 'candidate', :locals => { :candidate => @candidate, :show_ward => true, :hide_candidate_link => true, :show_council_link => true, :show_other_resources => true }
 
-%div#related_news
-  %h2
-    - if !@page_num.eql?("1")
-      Page #{@page_num} of
-    Articles that Mention #{@candidate.name}
-  %p.grey.bigger-bottom
-    - if @mentions_by_date.size == 0
-      No mentions found.
-    - else
-      Articles are automatically gathered from #{link_to 'Google News', 'http://news.google.ca'} by searching for the candidate's full name.
-  - @mentions_by_date.each do |date, ms|
-    %h3= date
-    - for m in ms do
-      %h4
-        = link_to m.news_article.title, m.news_article.fixed_url
-        \- #{m.news_article.source}
-      %blockquote
-        = m.summary
-      - if m.news_article.mentions.size > 1
-        %p.small
-          %strong Also mentions:
-          - m.news_article.mentions.each do |mention|
-            = link_to mention.candidate.name, mention.candidate.candidate_url if @candidate.name != mention.candidate.name
-    %br
+%div{ :id => (@candidate.qa?) ? 'with_questionnaire' : ''}
+  .candidates
+    = render :partial => 'candidate', :locals => { :candidate => @candidate, :show_ward => true, :hide_candidate_link => true, :show_council_link => true, :show_other_resources => true }
 
-- if @mentions.pages.count > 1
-  %p
-    %strong Read More:
-    
-  %ul.pagination
-    - @current_mentions_page.paginator.window(:inner => 2, :outer => 1, :extras => [:previous, :next]) do |page, path, classes|
-      - content_tag_for :li, page, :class => (classes << :page).join(' ') do
-        %span= link_to_if path, { :previous => "&lt; newer", :next => "older &gt;" }[page] || page.number, path
+  %div#related_news
+    %h2
+      - if !@page_num.eql?("1")
+        Page #{@page_num} of
+      Articles that Mention #{@candidate.name}
+    %p.grey.bigger-bottom
+      - if @mentions_by_date.size == 0
+        No mentions found.
+      - else
+        Articles are automatically gathered from #{link_to 'Google News', 'http://news.google.ca'} by searching for the candidate's full name.
+    - @mentions_by_date.each do |date, ms|
+      %h3= date
+      - for m in ms do
+        %h4= link_to m.news_article.title, m.news_article.fixed_url
+        %p.summary
+          %em #{m.news_article.source}:
+          #{m.summary}
+        - if m.news_article.mentions.size > 1
+          %p.small
+            %strong Also mentions:
+            - m.news_article.mentions.each do |mention|
+              = link_to mention.candidate.name, mention.candidate.candidate_url if @candidate.name != mention.candidate.name
+      %br
+  
+  - if @mentions.pages.count > 1
+    %p
+      %strong Read More:
+      
+    %ul.pagination
+      - @current_mentions_page.paginator.window(:inner => 2, :outer => 1, :extras => [:previous, :next]) do |page, path, classes|
+        - content_tag_for :li, page, :class => (classes << :page).join(' ') do
+          %span= link_to_if path, { :previous => "&lt; newer", :next => "older &gt;" }[page] || page.number, path
+
+- if @candidate.qa?        
+  %div#questionnaire
+    %h2 2010 Election Questionnaire
+    :markdown
+      #{@candidate.qa}
+  %br.clear

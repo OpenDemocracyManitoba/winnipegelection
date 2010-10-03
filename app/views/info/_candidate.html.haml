@@ -7,7 +7,10 @@
 .candidate{ :class => show_ward ? 'show_ward' : '' }
   -if show_ward
     %div.ward
-      = candidate.ward.name
+      - if (candidate.ward.name == 'Mayoral Race')
+        = link_to candidate.ward.name, :controller => 'info', :action => 'mayor'
+      - else
+        = link_to candidate.ward.name, candidate.ward.ward_url
       - if candidate.incumbent_since?
         %p.since
           Incumbent since #{candidate.incumbent_since}
@@ -70,6 +73,12 @@
         = link_to image_tag('/images/rss_active.jpg'), candidate.rss_url, :title => "#{candidate.name}'s News Feed"
       - else
         = image_tag '/images/rss_inactive.jpg'
+  
+  - if !hide_candidate_link && defined?(candidate.qa) && candidate.qa?
+    %p.questionnaire
+      %strong
+        Questionnaire:
+        = link_to "Read #{candidate.name.split[0]}'s Response", candidate.candidate_url
   
   - if defined?(candidate.mentions)
     %p.news_text

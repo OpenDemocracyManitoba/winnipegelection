@@ -7,7 +7,7 @@
   -if ward.rss_url
     %p.rss= link_to image_tag('/images/rss.jpg', :size => "12x12"), ward.rss_url, :title => "#{ward.name} Candidate News Feed"
   -if ward.description?
-    %p.more_info= link_to 'ward description', ward_url + "#description"
+    %p.more_info= link_to 'past election results', ward_url + "#past_votes"
 %p
   There #{prefixed_pluralize ward.candidates.size, 'is', 'are', 'School Trustee candidate'} competing for #{pluralize ward.seats, 'seat'} in this ward.
   - if ward.candidates.size > 1
@@ -18,11 +18,11 @@
 
 - if show_description && ward.description?
   .more_info
-    %a{:name=>'description'}
+    %a{:name=>'past_votes'}
     .stats
-      %h2 Ward Description
+      %h2 Past Election Results
       %p
-        %em.small.grey= "#{ward.name} in the #{ward.school_division.name} school division."
+        %em.small.grey= "Results for #{ward.name} in the #{ward.school_division.name} school division."
       :markdown
         #{ward.description}
       - if ward.image?
@@ -30,3 +30,6 @@
         %p
           %h2 Ward Map
           = image_tag(@ward.image.url :small)
+
+%p.small
+  = link_to 'Return to School Ward Map', :controller => 'info', :action => 'school_board'
