@@ -5,7 +5,7 @@
   =h @trustee_candidate.name
 %p
   %strong School Ward:
-  = "#{@trustee_candidate.school_ward.school_division.name} - #{@trustee_candidate.school_ward.name}"
+  = "#{@trustee_candidate.school_ward.school_division.name} - #{link_to @trustee_candidate.school_ward.name, @trustee_candidate.school_ward.ward_url}"
 %p
   %strong Incumbent:
   =h @trustee_candidate.incumbent
