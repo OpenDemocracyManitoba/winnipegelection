@@ -284,13 +284,17 @@ div.more_info {
       font-weight: bold;
       font-size: 1.2em;
       margin: 10px 0; }
+      .candidates .candidate .ward a, .incumbents .candidate .ward a {
+        color: #777777; }
       .candidates .candidate .ward .since, .incumbents .candidate .ward .since {
         font-weight: normal;
         font-size: 0.65em;
         margin-top: 0; }
-    .candidates .candidate .phone, .candidates .candidate .news_text, .candidates .candidate .other_resources, .incumbents .candidate .phone, .incumbents .candidate .news_text, .incumbents .candidate .other_resources {
+    .candidates .candidate .phone, .candidates .candidate .news_text, .candidates .candidate .other_resources, .candidates .candidate .questionnaire, .incumbents .candidate .phone, .incumbents .candidate .news_text, .incumbents .candidate .other_resources, .incumbents .candidate .questionnaire {
       margin: 0 0 0.5em 0;
       font-size: 0.75em; }
+    .candidates .candidate .questionnaire, .incumbents .candidate .questionnaire {
+      color: #14510f; }
     .candidates .candidate span.incumbent_link a, .incumbents .candidate span.incumbent_link a {
       font-style: italic;
       font-size: 0.75em; }
@@ -298,7 +302,7 @@ div.more_info {
       font-size: 0.85em; }
 
 .candidates .candidate {
-  height: 160px; }
+  height: 170px; }
 
 .candidates .show_ward, .incumbents .show_ward {
   height: 210px; }
@@ -360,7 +364,7 @@ ul.pagination {
 
 div#related_news {
   font-size: 0.95em; }
-  div#related_news blockquote {
+  div#related_news p.summary {
     font-family: Georgia, times, serif; }
   div#related_news h3 {
     color: #555555;
@@ -370,6 +374,22 @@ div#related_news {
     margin-bottom: 0; }
   div#related_news p.small {
     margin-top: 2px; }
+
+div#questionnaire {
+  margin-top: -20px;
+  font-size: 0.9em;
+  float: left;
+  width: 650px; }
+  div#questionnaire h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px; }
+
+div#with_questionnaire {
+  float: left;
+  width: 315px;
+  margin-right: 30px; }
+  div#with_questionnaire div#related_news {
+    font-size: 0.85em; }
 
 .bigger-bottom {
   margin-bottom: 2.5em; }
