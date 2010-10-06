@@ -110,6 +110,8 @@ h1, h2, h3, h4, h5 {
 
 .sidebar_news, .ward_news {
   font-size: 13px; }
+  .sidebar_news h2, .ward_news h2 {
+    font-size: 1.6em; }
   .sidebar_news ul, .ward_news ul {
     list-style-type: none;
     margin-left: 0;

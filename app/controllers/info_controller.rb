@@ -13,7 +13,7 @@ class InfoController < ApplicationController
     @show_feedback = true
     @ward = Ward.mayoral.with_candidates.first
     @mentions = Mention.all( :select => "mentions.news_article_id", :conditions => ["candidate_id IN (?)",@ward.candidates] )
-    @news_articles = NewsArticle.all( :include => {:mentions => [:candidate]}, :conditions => ["id IN (#{@mentions.map(&:news_article_id).join(",")})"], :order => "pubdate DESC", :limit => 7)
+    @news_articles = NewsArticle.all( :include => {:mentions => [:candidate]}, :conditions => ["id IN (#{@mentions.map(&:news_article_id).join(",")})"], :order => "pubdate DESC", :limit => 10)
     @title = 'Mayoral Candidates'
     @atom_auto_discovery = @ward.rss_url
   end
@@ -34,7 +34,7 @@ class InfoController < ApplicationController
     @ward_name = Ward.url_to_ward(params[:ward_name])
     @ward = Ward.with_candidates.first( :conditions => ["wards.name = ?", @ward_name] )
     @mentions = Mention.all( :select => "mentions.news_article_id", :conditions => ["candidate_id IN (?)",@ward.candidates] )
-    @news_articles = NewsArticle.all( :include => {:mentions => [:candidate]}, :conditions => ["id IN (#{@mentions.map(&:news_article_id).join(",")})"], :order => "pubdate DESC", :limit => 7)
+    @news_articles = NewsArticle.all( :include => {:mentions => [:candidate]}, :conditions => ["id IN (#{@mentions.map(&:news_article_id).join(",")})"], :order => "pubdate DESC", :limit => 10)
     @atom_auto_discovery = @ward.rss_url
   end
   def school_ward
