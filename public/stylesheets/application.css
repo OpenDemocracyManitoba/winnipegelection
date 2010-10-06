@@ -276,9 +276,11 @@ div.more_info {
     margin: 0 0 25px 30px; }
     .candidates .candidate .image, .incumbents .candidate .image {
       float: right; }
-    .candidates .candidate .icons a img, .incumbents .candidate .icons a img {
-      border-bottom: 2px solid;
-      border-color: #3b59bb; }
+    .candidates .candidate .icons, .incumbents .candidate .icons {
+      margin-bottom: 10px; }
+      .candidates .candidate .icons a img, .incumbents .candidate .icons a img {
+        border-bottom: 2px solid;
+        border-color: #3b59bb; }
     .candidates .candidate .ward, .incumbents .candidate .ward {
       color: #777777;
       font-weight: bold;
@@ -291,7 +293,7 @@ div.more_info {
         font-size: 0.65em;
         margin-top: 0; }
     .candidates .candidate .phone, .candidates .candidate .news_text, .candidates .candidate .other_resources, .candidates .candidate .questionnaire, .incumbents .candidate .phone, .incumbents .candidate .news_text, .incumbents .candidate .other_resources, .incumbents .candidate .questionnaire {
-      margin: 0 0 0.5em 0;
+      margin: 0 0 0.4em 0;
       font-size: 0.75em; }
     .candidates .candidate .questionnaire, .incumbents .candidate .questionnaire {
       color: #14510f; }
@@ -300,6 +302,9 @@ div.more_info {
       font-size: 0.75em; }
     .candidates .candidate p.election_website, .incumbents .candidate p.election_website {
       font-size: 0.85em; }
+
+.incumbents .image {
+  margin-top: -10px; }
 
 .candidates .candidate {
   height: 170px; }

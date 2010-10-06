@@ -3,6 +3,7 @@
 - hide_candidate_link ||= false
 - show_council_link ||= false
 - show_other_resources ||= false
+- show_email_text ||= false
 
 .candidate{ :class => show_ward ? 'show_ward' : '' }
   -if show_ward
@@ -49,6 +50,12 @@
       - else
         %span.grey Election Website
   %p.icons
+    - if defined?(candidate.qa)
+      -if candidate.qa?
+        = link_to image_tag('/images/qanda_active.jpg'), candidate.candidate_url, :title => "Questionnaire Response"
+      - else
+        = image_tag '/images/qanda_inactive.jpg', :title => "No Candidate Questionnaire Response"
+        
     - if candidate.email?
       = link_to image_tag('/images/mail_active.jpg'), "mailto:#{candidate.email}"
     - else
@@ -78,7 +85,7 @@
     %p.questionnaire
       %strong
         Questionnaire:
-        = link_to "Read #{candidate.name.split[0]}'s Response", candidate.candidate_url
+        = link_to "Read #{candidate.name.split[0]}'s Answers", candidate.candidate_url
   
   - if defined?(candidate.mentions)
     %p.news_text
@@ -94,3 +101,7 @@
     %p.other_resources
       Extra:
       #{candidate.other_resources}
+      
+  - if show_other_resources && candidate.email?
+    %p.other_resources
+      Email: #{mail_to candidate.email}

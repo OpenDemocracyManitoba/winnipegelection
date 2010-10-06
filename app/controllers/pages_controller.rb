@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   before_filter :authenticate, :except => [:show]
   
+  # Caching works, but the latest news will stay cached with each page.
+  # caches_page :show
+  
   def index
     @pages = Page.all
   end
@@ -36,7 +39,8 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
     if @page.update_attributes(params[:page])
       flash[:notice] = "Successfully updated page."
-      redirect_to @page
+      #expire_page "/" + @page.permalink
+      redirect_to pages_url
     else
       render :action => 'edit'
     end
