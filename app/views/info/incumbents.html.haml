@@ -21,3 +21,14 @@
   
 %p
   %em To see all current City Councillors, including those not running for re-election, visit the #{ link_to "City's Council page", 'http://www.winnipeg.ca/council/'}.
+
+%br
+  
+%h2 Current School Trustees Running for Re-Election
+
+- for division in @school_divisions
+  %h2
+    #{division.name} School Division
+  .incumbents
+    - for ward in division.school_wards
+      = render :partial => 'candidate', :collection => ward.trustee_candidates, :locals => { :hide_incumbent_link => true, :show_ward => true }

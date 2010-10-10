@@ -8,13 +8,19 @@
 .candidate{ :class => show_ward ? 'show_ward' : '' }
   -if show_ward
     %div.ward
-      - if (candidate.ward.name == 'Mayoral Race')
-        = link_to candidate.ward.name, :controller => 'info', :action => 'mayor'
-      - else
-        = link_to candidate.ward.name, candidate.ward.ward_url
-      - if candidate.incumbent_since?
-        %p.since
-          Incumbent since #{candidate.incumbent_since}
+      - if defined?(candidate.ward)
+        - if (candidate.ward.name == 'Mayoral Race')
+          = link_to candidate.ward.name, :controller => 'info', :action => 'mayor'
+        - else
+          = link_to candidate.ward.name, candidate.ward.ward_url
+        - if candidate.incumbent_since?
+          %p.since
+            Incumbent since #{candidate.incumbent_since}
+      - elsif defined?(candidate.school_ward)
+        = link_to candidate.school_ward.school_division.name, candidate.school_ward.ward_url
+        %br
+        %span.small= link_to candidate.school_ward.name, candidate.school_ward.ward_url
+        
   .image
     - if candidate.candidate_url
       - if candidate.image?
@@ -33,7 +39,7 @@
       - else
         = link_to candidate.name, candidate.candidate_url
     - if candidate.incumbent_since? && !hide_incumbent_link
-      %span.incumbent_link= link_to 'incumbent', {:controller => 'info', :action => 'incumbents'}, :title => "since #{candidate.incumbent_since}"
+      %span.incumbent_link= link_to 'incumbent', {:controller => 'info', :action => 'incumbents'}, :title => (defined?(candidate.school_ward)) ? '' : "since #{candidate.incumbent_since}" # Note the hack for school trustees, 'cause we don't actually know their since date.
   - if show_council_link && candidate.council_site?
     %p.election_website
       - if candidate.website?

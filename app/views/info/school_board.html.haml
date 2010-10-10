@@ -11,7 +11,7 @@
         %li= link_to ward.name, ward.ward_url
 
 %div#division_map
-  = image_tag '/images/schoolwards.png', :usemap => '#Map'
+  = image_tag '/images/schoolwards.png', :usemap => '#Map', :class => 'no_border'
   %map{:name=>"Map", :id=>"Map"} 
     <area shape="poly" alt="Seven Oaks - Ward 2" title="Seven Oaks - Ward 2" coords="342,17,340,2,350,2,491,94,468,118,452,117,448,121,438,116,429,123,411,115,402,123,361,105,335,152,282,127,273,83,290,66,289,55,329,53,329,12,340,12" href="/school_ward/Seven_Oaks/Ward_2" />
     <area shape="poly" alt="Seven Oaks - Ward 3" title="Seven Oaks - Ward 3" coords="381,166,426,189,423,175,423,162,433,152,440,152,420,139,430,123,411,116,402,124,361,106,335,152,376,171" href="/school_ward/Seven_Oaks/Ward_3" />

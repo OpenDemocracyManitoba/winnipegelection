@@ -3,7 +3,7 @@ GOOGLE_NEWS_URL_2 = '&as_qdr=a&as_drrb=q&as_mind=25&as_minm=2&cf=all&as_maxd=27&
 
 class InfoController < ApplicationController
   
-  before_filter :authenticate, :only => [:council_emails]
+  before_filter :authenticate, :only => [:questionnaire_emails]
   
   def index
     @days_until_election = Date.parse("2010 October 27") - Date.today
@@ -70,8 +70,9 @@ class InfoController < ApplicationController
     # Tried to use a :select to specify count, but they are ignored when using :include. Boo.
     @mayor = Candidate.incumbent.with_ward.first(:conditions => "wards.ward_type ='Mayoral'")
     @incumbents = Candidate.incumbent.with_ward.all(:conditions => "wards.ward_type ='Civic'", :order => 'wards.name') # Previously :order => Candidate.db_random but js handles that now. see:main.js
+    @school_divisions = SchoolDivision.all(:include => {:school_wards => :trustee_candidates}, :order => 'school_divisions.name, school_wards.name', :conditions => 'trustee_candidates.incumbent_since = 2006')
   end
-  def council_emails
-    @candidates = Candidate.with_ward.all(:conditions => "wards.ward_type ='Mayoral'", :order => 'candidates.name')
+  def questionnaire_emails
+    @candidates = TrusteeCandidate.all(:include => 'school_ward', :order => 'name')
   end
 end

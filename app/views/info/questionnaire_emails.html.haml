@@ -1,0 +1,53 @@
+%p
+  - for candidate in @candidates
+    #{(candidate.email?) ? candidate.email : '#'+candidate.name+'#'},
+- for candidate in @candidates
+  %div
+    %h1= candidate.name
+    %p
+      #{candidate.email}
+      %br
+      %br
+    %p
+      Dear #{candidate.name},
+    %p  
+      The WinnipegElection.ca website has become a recognized source of information for this October’s election. We are averaging 4000+ visitors a week and this number is expected to grow as the election approaches.
+    %p  
+      Included with this email is a short questionnaire. If you would kindly reply to these questions we will add your replies to our site. Your answers will be accessible through your ward page:
+    %p
+      http://winnipegelection.ca#{candidate.school_ward.ward_url}
+    %p  
+      The questions are as follows:
+    %p
+      1. Why did you decide to run in the 2010 school board election?
+      %br
+      2. What experience will you bring to complement your role as school trustee?
+      %br
+      3. What are the major issues you would like to stand for and why did you choose these issues?
+      %br
+      4. Is there anything in particular you would like to change in your school division? In your ward?
+      %br
+      5. Do you have any other comments regarding your candidacy?
+    %p
+      Each of your five answers must be less than 200 words. (This gives you a maximum of 1000 words overall). Answers longer than 200 words will not be posted until they are shortened. You need not reply to all the questions.
+    %p
+      We will post your replies unedited. We will not editorialize or comment on your answers.
+    %p
+      Replies will be posted in batches as they are received. We will try our best to post your reply within 48 hours of its arrival.
+    %p
+      %em
+        After October 24th we will no longer accept questionnaire responses. Replies received after this date will not be posted to our site.
+    %p  
+      While we have your attention, please visit your ward page on our site and review the information we have posted. If you have any corrections or additions please let us know.
+    %p  
+      Thank you kindly,
+      %br
+      The Winnipeg Election Team
+    %p
+      %br
+      About WinnipegElection.ca
+    %p  
+      WinnipegElection.ca is a citizen created resource for the 2010 Winnipeg general election. The website features interactive ward maps, ward statistics, historical information about past elections, and a calendar of election related events. Mayoral, Council and School Trustee candidates are listed along with links to their web pages, email addresses, Facebook fan pages and Twitter feeds. Links to election related news articles are updated daily.
+    %p
+      For more information: http://winnipegelection.ca/press
+    %hr
