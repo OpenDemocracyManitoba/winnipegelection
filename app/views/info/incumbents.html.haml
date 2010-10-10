@@ -31,4 +31,4 @@
     #{division.name} School Division
   .incumbents
     - for ward in division.school_wards
-      = render :partial => 'candidate', :collection => ward.trustee_candidates, :locals => { :hide_incumbent_link => true, :show_ward => true }
+      = render :partial => 'candidate', :collection => ward.trustee_candidates, :locals => { :hide_candidate_link => true, :hide_incumbent_link => true, :show_ward => true }
