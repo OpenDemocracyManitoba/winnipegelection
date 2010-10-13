@@ -13,4 +13,6 @@
         = link_to trustee_candidate.name, answer_trustee_candidate_path(trustee_candidate)
         %span.small.grey
           #{trustee_candidate.school_ward.school_division.name} - #{trustee_candidate.school_ward.name}
+          - if trustee_candidate.qa?
+            = " - #{link_to 'public link', trustee_candidate.candidate_url}"
 
