@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :trustee_candidates
+  map.resources :trustee_candidates, :member => { :updateqa => :put, :answer => :get}, :collection => { :question => :get }
 
   map.resources :school_wards
 
@@ -59,6 +59,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/ward/:ward_name', :controller => 'info', :action => 'ward'
   map.connect '/school_ward/:division_name/:ward_name', :controller => 'info', :action => 'school_ward'
   map.connect '/candidate/:candidate_name', :controller => 'info', :action => 'candidate'
+  map.connect '/trustee_candidate/:candidate_name', :controller => 'info', :action => 'trustee_candidate'
   
   map.static ':permalink', :controller => 'pages', :action => 'show'
   map.paged_candidate '/pages/:page_id/candidate/:candidate_name', :controller => 'info', :action => 'candidate'

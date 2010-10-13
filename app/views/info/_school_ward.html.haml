@@ -14,7 +14,7 @@
     %em.grey.small (Candidates are displayed in random order.)
 
 .candidates
-  = render :partial => 'candidate', :collection => ward.candidates, :locals => { :hide_candidate_link => true  }
+  = render :partial => 'candidate', :collection => ward.candidates
 
 - if show_description && ward.description?
   .more_info

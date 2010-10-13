@@ -1,0 +1,16 @@
+- title "Trustee Candidates Questionnaires"
+
+%h2
+  Manage Trustee Candidate Questionnaires
+  %span.small.grey
+    #{@trustees_with_replies}/#{@trustee_candidates.size}
+
+
+%table.questionnaire
+  - for trustee_candidate in @trustee_candidates
+    %tr
+      %td{ :class => trustee_candidate.qa? ? 'replied' : 'unreplied'}
+        = link_to trustee_candidate.name, answer_trustee_candidate_path(trustee_candidate)
+        %span.small.grey
+          #{trustee_candidate.school_ward.school_division.name} - #{trustee_candidate.school_ward.name}
+

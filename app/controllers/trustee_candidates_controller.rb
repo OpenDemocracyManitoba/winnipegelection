@@ -1,5 +1,15 @@
 class TrusteeCandidatesController < ApplicationController
   before_filter :authenticate
+  
+  def question
+    @trustee_candidates = TrusteeCandidate.all
+    @trustees_with_replies = TrusteeCandidate.all(:conditions => 'qa IS NOT NULL and qa != ""').size
+  end
+  
+  def answer
+    @trustee_candidate = TrusteeCandidate.find(params[:id])
+  end
+  
   def index
     @trustee_candidates = TrusteeCandidate.all
   end
@@ -32,9 +42,19 @@ class TrusteeCandidatesController < ApplicationController
     @trustee_candidate = TrusteeCandidate.find(params[:id])
     if @trustee_candidate.update_attributes(params[:trustee_candidate])
       flash[:notice] = "Successfully updated trustee candidate."
+      
       redirect_to @trustee_candidate
     else
       render :action => 'edit'
+    end
+  end
+  
+  def updateqa
+    @trustee_candidate = TrusteeCandidate.find(params[:id])
+    if @trustee_candidate.update_attributes(params[:trustee_candidate])
+      flash[:notice] = "Successfully updated trustee questionnaire."
+    else
+      render :action => 'answer'
     end
   end
   

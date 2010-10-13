@@ -23,11 +23,11 @@ class InfoController < ApplicationController
     @title = 'City Councillor Candidates'
     @wards_title = 'All Electoral Wards'
   end
-  def school_trustee
+  def trustee_candidate
     @show_feedback = true
-    @wards = Ward.all(:include => :candidates, :conditions => "ward_type = 'School Division'")
-    @title = 'School Trustee Candidates'
-    @wards_title = 'All School Divisions'
+    @candidate_name = TrusteeCandidate.url_to_candidate(params[:candidate_name])
+    @title = @candidate_name
+    @candidate = TrusteeCandidate.by_name(@candidate_name).with_division_ward.first
   end
   def ward
     @show_feedback = true
