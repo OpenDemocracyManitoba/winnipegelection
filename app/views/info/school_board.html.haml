@@ -3,12 +3,24 @@
 %h2 Select Your School Division Ward
 
 %div#select_division
+  %p.small.grey
+    #{ link_to 'Find on your ward', '#lookup'} by name or click on the map.
   - @school_divisions.each do |division|
     %h3
       = division.name
     %ul
       - division.school_wards.each do |ward|
         %li= link_to ward.name, ward.ward_url
+  %br
+  %a{ :name => 'lookup' }
+  %h2 Find Your School Ward
+  #{ render :partial => 'lookup', :locals => { :button_name => 'find' } }
+  %p.small.grey.percent90
+    Submit your street number (#) and street name to find your civic ward, school division, and voting locations.
+  %p.small.grey.percent90
+    %em
+      (Provided by the #{ link_to "City Clerk's Dept", "http://www.winnipeg.ca/clerks/docs/elections/2010election/" }.)
+  %br
 
 %div#division_map
   = image_tag '/images/schoolwards.png', :usemap => '#Map', :class => 'no_border'

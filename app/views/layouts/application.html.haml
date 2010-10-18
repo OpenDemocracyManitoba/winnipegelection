@@ -38,6 +38,8 @@
     %div#header
       %h1
         Winnipeg Civic Election 2010
+      %h3
+        A <a href="/about">Citizen Created</a> Election Resource
     #container
       %div.dropList
         %ul
@@ -174,7 +176,7 @@
         #sidebar
           %div.facebook
             <iframe src="http://www.facebook.com/plugins/likebox.php?id=145495908793867&amp;width=237&amp;connections=8&amp;stream=false&amp;header=false&amp;height=272" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:237px; height:272px;" allowTransparency="true"></iframe>
-          %h3 Latest Election News
+          %h2 Latest Election News
           %div.sidebar_news
             - @latest_news_by_date.each do |date, articles|
               %p.date= date

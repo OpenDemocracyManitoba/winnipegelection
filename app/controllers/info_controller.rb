@@ -6,7 +6,7 @@ class InfoController < ApplicationController
   before_filter :authenticate, :only => [:questionnaire_emails]
   
   def index
-    @days_until_election = Date.parse("2010 October 27") - Date.today
+    @days_until_election = Date.parse("2010 October 27") - Time.zone.today
     @meta_description = "Get to know your mayoral, city council and school trustee candidates for the upcoming Winnipeg civic election."
   end
   def mayor
@@ -18,6 +18,10 @@ class InfoController < ApplicationController
     @atom_auto_discovery = @ward.rss_url
   end
   def council
+    @title = 'Council Wards'
+    @wards = Ward.council.all(:order => 'wards.name')
+  end
+  def all_council
     @show_feedback = true
     @wards = Ward.council.with_candidates.all(:order => 'wards.name')
     @title = 'City Councillor Candidates'

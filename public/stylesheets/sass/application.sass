@@ -49,12 +49,20 @@ a:hover
   :background-repeat no-repeat
   :background-position right top
   :padding-top 24px
-  h1
+  h1, h3
     :font-family Georgia, 'Bitstream Charter', serif
-    :font-size 41px
     :font-style italic
-    :margin-top -10px
+  h1
+    :font-size 41px
+    :margin-top -18px
+    :margin-bottom 0
     :color #202040
+  h3
+    :padding-left 4px
+    :margin-top 5px
+    :color #4a4a6f
+    a
+      :color #4a4a6f
 
 h1, h2, h3, h4, h5
   :font-family Georgia, 'Bitstream Charter', serif
@@ -89,7 +97,7 @@ h1, h2, h3, h4, h5
     :margin-top 20px
   #main
     :float left
-    :width 700px
+    :width 710px
   #feedback
     +drop-shadow(0px, 2px, 4px, 0.2)
     :position absolute
@@ -108,7 +116,8 @@ h1, h2, h3, h4, h5
     :margin-top 42px
     :padding 0 20px 5px 20px
     :background-color #eeeeee
-    h3
+    h2
+      :color #202040
       :margin-bottom 10px
     .facebook
       :margin-top 20px
@@ -425,10 +434,11 @@ div#with_questionnaire
 div#main-full  
   div#select_division
     :float left
-    :width 285px
+    :width 288px
+    :padding 0
   div#division_map
     :float left
-    :width 710px
+    :width 709px
     :margin-top 20px
     
 
@@ -465,3 +475,67 @@ div.questionnaire
 
 p.example_questionnaire
   :width 69%
+  
+div#front_main
+  :zoom 1
+  :overflow hidden
+  :padding-bottom 5px
+  div#countdown, div#your
+    :width 305px
+    :height 360px
+  div#countdown, div#your, div#calendar
+    :float left
+    :background-color #f5f5f5
+    :padding 15px 15px
+    :margin-top 22px
+    +drop-shadow(0px, 4px, 9px, 0.2)
+    +rounded(0, 0, 6px, 6px)
+    :border 1px solid #aaa
+    h2
+      :margin-top 0
+      :color #202040
+  div#calendar
+    :width 664px
+    :height 360px
+  div#countdown
+    :margin-right 22px
+  div#countdown
+    h2
+      :margin-top -8px
+      span
+        :color #BB2222
+        :font-size 1.4em
+        :padding-right 2px
+    ul
+      :margin-top 22px
+      :margin-bottom 40px
+  div#your
+    :zoom 1
+    :overflow hidden
+    div.links, div.maps
+      :float left
+    div.links
+      :margin-top 15px
+      :width 208px
+      p
+        :margin-top 5px
+        :margin-bottom 5px
+      p.top_space
+        :margin-top 70px
+      a
+        :font-weight bold
+    div.maps
+      :width 96px
+      img
+        :margin-bottom 5px
+    
+form#ward_tool
+  :zoom 1
+  :overflow hidden
+  input, select
+    :float left
+    :display inline
+  input.house_num
+    :width 45px
+  input.house_street
+    :width 100px
