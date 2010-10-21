@@ -16,6 +16,11 @@ protected
       username == AppConfig.admin_user && password == AppConfig.admin_password
     end
   end
+  def authenticate_press
+    authenticate_or_request_with_http_basic do |username, password|
+      username == AppConfig.press_user && password == AppConfig.press_password
+    end
+  end
   def meta_defaults
     @meta_keywords = "Winnipeg election, Winnipeg, municipal election, civic election, city council, school trustee, councillor, mayoral, school division, politics, government, democracy, 2010, Manitoba, Canada"
   end

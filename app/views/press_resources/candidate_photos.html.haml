@@ -1,0 +1,29 @@
+- title 'Press Resource - Candidate Photos'
+
+%h1
+  Mayoral Candidates Photos
+  - @mayoral_ward.candidates.each do |candidate|
+    %h3 #{candidate.name}
+    - if candidate.image_file_name?
+      %img{ :src => "http://github.com/stungeye/winnipegelection/raw/master/public/uploads/candidate_image/#{candidate.id}/small/#{candidate.image_file_name}"}
+      %p
+        #{ link_to 'Original Size Image - '+candidate.name, "http://github.com/stungeye/winnipegelection/raw/master/public/uploads/candidate_image/#{candidate.id}/original/#{candidate.image_file_name}"}
+    - else
+      No image on file for #{candidate.name}.
+
+%br  
+
+%h1
+  Council Candidates Photos
+  - @council_wards.each do |ward|
+    %h2 #{ward.name}
+    - ward.candidates.each do |candidate|
+      %h3 #{candidate.name}
+      - if candidate.image_file_name?
+        %img{ :src => "http://github.com/stungeye/winnipegelection/raw/master/public/uploads/candidate_image/#{candidate.id}/small/#{candidate.image_file_name}"}
+        %p
+          #{ link_to 'Original Size Image - '+candidate.name, "http://github.com/stungeye/winnipegelection/raw/master/public/uploads/candidate_image/#{candidate.id}/original/#{candidate.image_file_name}"}
+      - else
+        %p
+          No image on file for #{candidate.name}.
+    %br

@@ -78,5 +78,6 @@ class InfoController < ApplicationController
   end
   def questionnaire_emails
     @candidates = TrusteeCandidate.all(:include => 'school_ward', :order => 'name')
+    #@candidates = Candidate.all(:include => 'ward', :order => 'name')
   end
 end
