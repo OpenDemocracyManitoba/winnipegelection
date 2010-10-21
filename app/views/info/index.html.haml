@@ -19,6 +19,8 @@
         = link_to 'Latest News &amp; Tweets', :controller => 'news_articles', :action => 'latest'
       %li
         = link_to 'Online Resources', static_path({:permalink => 'resources'})
+      %li
+        = link_to 'Help us Engage Winnipeg Voters', static_path({:permalink => 'poster'})
     %h2
       Ward &amp; Voting Location
     #{ render :partial => 'lookup' }
