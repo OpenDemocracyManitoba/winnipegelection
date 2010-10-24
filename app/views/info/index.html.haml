@@ -4,7 +4,7 @@
   %div#countdown
     %h2
       - if @days_until_election == 0
-        The Election Is Today!
+        Vote! The Election Is Today.
       - elsif @days_until_election > 0
         %span #{@days_until_election}
         #{(@days_util_election == 1) ? 'Day' : 'Days'} Until The Election
