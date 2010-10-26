@@ -4,6 +4,7 @@ GOOGLE_NEWS_URL_2 = '&as_qdr=a&as_drrb=q&as_mind=25&as_minm=2&cf=all&as_maxd=27&
 class InfoController < ApplicationController
   
   before_filter :authenticate, :only => [:questionnaire_emails]
+  caches_page :index, :mayor, :council, :all_council, :trustee_candidate, :ward, :school_ward, :school_board, :candidate, :incumbents
   
   def index
     @days_until_election = Date.parse("2010 October 27") - Time.zone.today
