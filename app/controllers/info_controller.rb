@@ -7,7 +7,7 @@ class InfoController < ApplicationController
   caches_page :index, :mayor, :council, :all_council, :trustee_candidate, :ward, :school_ward, :school_board, :candidate, :incumbents
   
   def index
-    @days_until_election = Date.parse("2010 October 27") - Time.zone.today
+    @days_until_election = (Date.parse("2010 October 27") - Time.zone.today).to_i
     @meta_description = "Get to know your mayoral, city council and school trustee candidates for the upcoming Winnipeg civic election."
   end
   def mayor
