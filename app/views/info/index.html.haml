@@ -3,31 +3,29 @@
 %div#front_main
   %div#countdown
     %h2
-      - if @days_until_election == 0
-        Vote! The Election Is Today.
-      - elsif @days_until_election > 0
-        %span #{@days_until_election}
-        #{(@days_until_election == 1) ? 'Day' : 'Days'} Until The Election
-      - else
-        The Election Has Already Passed.
+      Today Was Election Day
     %p
-      On <strong>Wednesday October 27</strong> of 2010 the citizens of Winnipeg go to the polls to elect their #{ link_to 'Mayor', :controller => 'info', :action => 'mayor'}, their #{ link_to 'City Councillors', :controller => 'info', :action => 'council'} and their #{ link_to 'School Trustees', :controller => 'info', :action => 'school_board'}.
+      On <strong>Wednesday October 27</strong> of 2010 the citizens of Winnipeg went to the polls to elect their #{ link_to 'Mayor', :controller => 'info', :action => 'mayor'}, their #{ link_to 'City Councillors', :controller => 'info', :action => 'council'} and their #{ link_to 'School Trustees', :controller => 'info', :action => 'school_board'}.      
+    %h2
+      Online Election Coverage
+    %p
+      The following websites have live online coverage of the election results.
     %ul
       %li
-        = link_to 'General Election Information', static_path({:permalink => 'election_info'})
+        %a{ :href => "http://www.cbc.ca/manitoba/features/manitobavotes2010/"}
+          CBC Manitoba
       %li
-        = link_to 'Latest News &amp; Tweets', :controller => 'news_articles', :action => 'latest'
+        %a{ :href => "http://www.chrisd.ca/blog/"}
+          ChrisD
       %li
-        = link_to 'Online Resources', static_path({:permalink => 'resources'})
+        %a{ :href => "http://winnipeg.ctv.ca/election/"}
+          CTV Winnipeg
       %li
-        = link_to 'Help us Engage Winnipeg Voters', static_path({:permalink => 'poster'})
-    %h2
-      Ward &amp; Voting Location
-    #{ render :partial => 'lookup' }
-    %p.small.grey
-      Submit your street number (#) and street name to find your civic ward, school division, and voting locations. 
-      %em
-        (Provided by the #{ link_to "City Clerk's Dept", "http://www.winnipeg.ca/clerks/docs/elections/2010election/" }.)
+        %a{ :href => "http://www.globalwinnipeg.com/story.html?id=3556527"}
+          Global Winnipeg
+      %li
+        %a{ :href => "http://www.winnipegfreepress.com"}
+          Winnipeg Free Press
   %div#your
     %h2 Meet Your Candidates
     %div.maps

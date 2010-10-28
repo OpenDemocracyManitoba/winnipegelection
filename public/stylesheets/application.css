@@ -494,12 +494,10 @@ div#front_main {
     height: 360px; }
   div#front_main div#countdown {
     margin-right: 22px; }
-  div#front_main div#countdown h2 {
-    margin-top: -8px; }
-    div#front_main div#countdown h2 span {
-      color: #bb2222;
-      font-size: 1.4em;
-      padding-right: 2px; }
+  div#front_main div#countdown h2 span {
+    color: #bb2222;
+    font-size: 1.4em;
+    padding-right: 2px; }
   div#front_main div#countdown ul {
     margin-top: 22px;
     margin-bottom: 32px; }
