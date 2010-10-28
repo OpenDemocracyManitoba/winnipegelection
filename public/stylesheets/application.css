@@ -232,6 +232,12 @@ hr.light {
 .small {
   font-size: 0.8em; }
 
+.large {
+  font-size: 1.2em; }
+
+a.underlined {
+  text-decoration: underline; }
+
 div.more_info {
   overflow: hidden;
   zoom: 1; }

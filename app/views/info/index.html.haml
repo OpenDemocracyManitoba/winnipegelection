@@ -3,19 +3,25 @@
 %div#front_main
   %div#countdown
     %h2
-      Today Was Election Day
+      Winnipeg Election Results
     %p
-      On <strong>Wednesday October 27</strong> of 2010 the citizens of Winnipeg went to the polls to elect their #{ link_to 'Mayor', :controller => 'info', :action => 'mayor'}, their #{ link_to 'City Councillors', :controller => 'info', :action => 'council'} and their #{ link_to 'School Trustees', :controller => 'info', :action => 'school_board'}.      
+      On
+      %strong October 27 of 2010
+      the citizens of Winnipeg went to the polls to elect their Mayor, their City Councillors and their School Trustees.
+    %p
+      %a{ :class => 'large underlined', :href => "http://www.winnipeg.ca/clerks/docs/elections/2010Election/results/winnipeg.html" }
+        View 2010 Election Results
+    %br
     %h2
-      Online Election Coverage
-    %p
-      The following websites have live online coverage of the election results.
+      Election News Coverage
     %ul
+      %li
+        #{ link_to 'Our Latest Election News', :controller => 'news_articles', :action => 'latest' }
       %li
         %a{ :href => "http://www.cbc.ca/manitoba/features/manitobavotes2010/"}
           CBC Manitoba
       %li
-        %a{ :href => "http://www.chrisd.ca/blog/"}
+        %a{ :href => "http://www.chrisd.ca/blog/tag/civic-election-2010/"}
           ChrisD
       %li
         %a{ :href => "http://winnipeg.ctv.ca/election/"}
@@ -24,8 +30,11 @@
         %a{ :href => "http://www.globalwinnipeg.com/story.html?id=3556527"}
           Global Winnipeg
       %li
-        %a{ :href => "http://www.winnipegfreepress.com"}
+        %a{ :href => "http://www.winnipegfreepress.com/special/civicelection/"}
           Winnipeg Free Press
+      %li
+        %a{ :href => "http://www.winnipegsun.com/news/winnipegvotes2010/"}
+          Winnipeg Sun
   %div#your
     %h2 Meet Your Candidates
     %div.maps
