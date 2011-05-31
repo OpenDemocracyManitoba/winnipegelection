@@ -3,7 +3,7 @@
 # Rails and Java applications with deep visibility and low overhead.  For more
 # information, visit www.newrelic.com.
 #
-# Generated September 22, 2010
+# Generated March 30, 2011
 #
 # This configuration file is custom generated for Winnipeg Election
 
@@ -229,3 +229,4 @@ staging:
   <<: *default_settings
   monitor_mode: true
   app_name: My Application (Staging)
+

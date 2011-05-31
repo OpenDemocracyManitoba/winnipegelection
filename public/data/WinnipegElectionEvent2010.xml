@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<election id="1" nm="2010 General Election" dt="20101027" tp="General Election" jd="WINNIPEG" des="2010 General Election&#xD;&#xA;Data import: 2010-09-17 19:07:12, file: 2010 General Election_2010_09_17_17_53_51Z_proj.xml" ts="2010-10-26 16:31:23" el="453021">
+  <areatypes>
+    <areatype id="1" nm="Municipality" top="1" ab="" des="" pid="" s="0" />
+    <areatype id="2" nm="Mayor" top="0" ab="M" des="" pid="1" s="1" />
+    <areatype id="3" nm="Ward Councillor" top="0" ab="WC" des="" pid="1" s="2" />
+    <areatype id="4" nm="School Trustee" top="0" ab="ST" des="" pid="1" s="3" />
+  </areatypes>
+  <areas>
+    <area id="1" nm="WINNIPEG" ab="" des="" atid="1" pid="" t="1" el="453021" s="1" />
+    <area id="2" nm="Mayor" ab="" des="" atid="2" pid="1" t="0" el="453021" s="2" />
+    <area id="3" nm="Charleswood - Tuxedo" ab="" des="" atid="3" pid="1" t="0" el="31050" s="3" />
+    <area id="4" nm="St. Charles" ab="" des="" atid="3" pid="1" t="0" el="23801" s="4" />
+    <area id="5" nm="St. James - Brooklands" ab="" des="" atid="3" pid="1" t="0" el="25335" s="5" />
+    <area id="6" nm="Daniel McIntyre" ab="" des="" atid="3" pid="1" t="0" el="28857" s="6" />
+    <area id="7" nm="Fort Rouge - East Fort Garry" ab="" des="" atid="3" pid="1" t="0" el="32694" s="7" />
+    <area id="8" nm="River Heights - Fort Garry" ab="" des="" atid="3" pid="1" t="0" el="36234" s="8" />
+    <area id="9" nm="Elmwood - East Kildonan" ab="" des="" atid="3" pid="1" t="0" el="29915" s="9" />
+    <area id="10" nm="North Kildonan" ab="" des="" atid="3" pid="1" t="0" el="27744" s="10" />
+    <area id="11" nm="Transcona" ab="" des="" atid="3" pid="1" t="0" el="25243" s="11" />
+    <area id="12" nm="Mynarski" ab="" des="" atid="3" pid="1" t="0" el="26707" s="12" />
+    <area id="13" nm="Old Kildonan" ab="" des="" atid="3" pid="1" t="0" el="30025" s="13" />
+    <area id="14" nm="Point Douglas" ab="" des="" atid="3" pid="1" t="0" el="25456" s="14" />
+    <area id="15" nm="St. Norbert" ab="" des="" atid="3" pid="1" t="0" el="34333" s="15" />
+    <area id="16" nm="St. Boniface" ab="" des="" atid="3" pid="1" t="0" el="38185" s="16" />
+    <area id="17" nm="St. Vital" ab="" des="" atid="3" pid="1" t="0" el="37442" s="17" />
+    <area id="18" nm="Louis Riel Ward 1" ab="" des="" atid="4" pid="1" t="0" el="20557" s="18" />
+    <area id="19" nm="Louis Riel Ward 2" ab="" des="" atid="4" pid="1" t="0" el="17849" s="19" />
+    <area id="20" nm="Louis Riel Ward 3" ab="" des="" atid="4" pid="1" t="0" el="27704" s="20" />
+    <area id="21" nm="Louis Riel Ward 4" ab="" des="" atid="4" pid="1" t="0" el="21216" s="21" />
+    <area id="22" nm="Pembina Trails Ward 1" ab="" des="" atid="4" pid="1" t="0" el="19718" s="22" />
+    <area id="23" nm="Pembina Trails Ward 2" ab="" des="" atid="4" pid="1" t="0" el="28414" s="23" />
+    <area id="24" nm="Pembina Trails Ward 3" ab="" des="" atid="4" pid="1" t="0" el="20593" s="24" />
+    <area id="25" nm="River East Transcona Ward 1" ab="" des="" atid="4" pid="1" t="0" el="19446" s="25" />
+    <area id="26" nm="River East Transcona Ward 2" ab="" des="" atid="4" pid="1" t="0" el="11478" s="26" />
+    <area id="27" nm="River East Transcona Ward 3" ab="" des="" atid="4" pid="1" t="0" el="10911" s="27" />
+    <area id="28" nm="River East Transcona Ward 4" ab="" des="" atid="4" pid="1" t="0" el="16808" s="28" />
+    <area id="29" nm="River East Transcona Ward 5" ab="" des="" atid="4" pid="1" t="0" el="17827" s="29" />
+    <area id="30" nm="St. James - Assiniboia King Edward - Deer Lodge Ward" ab="" des="" atid="4" pid="1" t="0" el="15266" s="30" />
+    <area id="31" nm="St. James - Assiniboia Kirkfield - St. Charles Ward" ab="" des="" atid="4" pid="1" t="0" el="15580" s="31" />
+    <area id="32" nm="St. James - Assiniboia Silver Heights - Booth Ward" ab="" des="" atid="4" pid="1" t="0" el="16176" s="32" />
+    <area id="33" nm="Seven Oaks Ward 2" ab="" des="" atid="4" pid="1" t="0" el="22358" s="33" />
+    <area id="34" nm="Seven Oaks Ward 3" ab="" des="" atid="4" pid="1" t="0" el="16337" s="34" />
+    <area id="35" nm="Winnipeg Ward 1" ab="" des="" atid="4" pid="1" t="0" el="44048" s="35" />
+    <area id="36" nm="Winnipeg Ward 2" ab="" des="" atid="4" pid="1" t="0" el="46982" s="36" />
+    <area id="37" nm="Winnipeg Ward 3" ab="" des="" atid="4" pid="1" t="0" el="50162" s="37" />
+  </areas>
+  <offices>
+    <office id="1" nm="Mayor" atid="2" tp="Candidacy" sys="FPTP" maj="0" s="1" />
+    <office id="2" nm="Ward Councillor" atid="3" tp="Candidacy" sys="FPTP" maj="0" s="2" />
+    <office id="3" nm="School Trustee" atid="4" tp="Candidacy" sys="FPTP" maj="0" s="3" />
+  </offices>
+  <contests>
+    <contest id="1001" nm="Mayor" aid="2" oid="1" pos="1" wr="0" el="462720" acc="0" dis="0" s="100036" />
+    <contest id="1002" nm="Ward Councillor for Charleswood - Tuxedo" aid="3" oid="2" pos="1" wr="0" el="31698" acc="0" dis="0" s="200021" />
+    <contest id="1003" nm="Ward Councillor for St. Charles" aid="4" oid="2" pos="1" wr="0" el="23801" acc="0" dis="0" s="200022" />
+    <contest id="1004" nm="Ward Councillor for St. James - Brooklands" aid="5" oid="2" pos="1" wr="0" el="28217" acc="0" dis="0" s="200023" />
+    <contest id="1005" nm="Ward Councillor for Daniel McIntyre" aid="6" oid="2" pos="1" wr="0" el="28857" acc="0" dis="0" s="200024" />
+    <contest id="1006" nm="Ward Councillor for Fort Rouge - East Fort Garry" aid="7" oid="2" pos="1" wr="0" el="32694" acc="0" dis="0" s="200025" />
+    <contest id="1007" nm="Ward Councillor for River Heights - Fort Garry" aid="8" oid="2" pos="1" wr="0" el="36234" acc="0" dis="0" s="200026" />
+    <contest id="1008" nm="Ward Councillor for Elmwood - East Kildonan" aid="9" oid="2" pos="1" wr="0" el="31933" acc="0" dis="0" s="200027" />
+    <contest id="1009" nm="Ward Councillor for North Kildonan" aid="10" oid="2" pos="1" wr="0" el="28425" acc="0" dis="0" s="200028" />
+    <contest id="1010" nm="Ward Councillor for Transcona" aid="11" oid="2" pos="1" wr="0" el="25932" acc="0" dis="0" s="200029" />
+    <contest id="1011" nm="Ward Councillor for Mynarski" aid="12" oid="2" pos="1" wr="0" el="27477" acc="0" dis="0" s="200030" />
+    <contest id="1012" nm="Ward Councillor for Old Kildonan" aid="13" oid="2" pos="1" wr="0" el="30025" acc="0" dis="0" s="200031" />
+    <contest id="1013" nm="Ward Councillor for Point Douglas" aid="14" oid="2" pos="1" wr="0" el="26127" acc="0" dis="0" s="200032" />
+    <contest id="1014" nm="Ward Councillor for St. Norbert" aid="15" oid="2" pos="1" wr="0" el="34333" acc="0" dis="0" s="200033" />
+    <contest id="1015" nm="Ward Councillor for St. Boniface" aid="16" oid="2" pos="1" wr="0" el="38799" acc="0" dis="0" s="200034" />
+    <contest id="1016" nm="Ward Councillor for St. Vital" aid="17" oid="2" pos="1" wr="0" el="38168" acc="0" dis="0" s="200035" />
+    <contest id="1017" nm="School Trustee for Louis Riel Ward 1" aid="18" oid="3" pos="2" wr="0" el="0" acc="0" dis="0" s="300001" />
+    <contest id="1018" nm="School Trustee for Louis Riel Ward 2" aid="19" oid="3" pos="2" wr="0" el="0" acc="0" dis="0" s="300002" />
+    <contest id="1019" nm="School Trustee for Louis Riel Ward 3" aid="20" oid="3" pos="3" wr="0" el="0" acc="0" dis="0" s="300003" />
+    <contest id="1020" nm="School Trustee for Louis Riel Ward 4" aid="21" oid="3" pos="2" wr="0" el="0" acc="1" dis="0" s="300004" />
+    <contest id="1021" nm="School Trustee for Pembina Trails Ward 1" aid="22" oid="3" pos="3" wr="0" el="0" acc="0" dis="0" s="300005" />
+    <contest id="1022" nm="School Trustee for Pembina Trails Ward 2" aid="23" oid="3" pos="3" wr="0" el="0" acc="0" dis="0" s="300006" />
+    <contest id="1023" nm="School Trustee for Pembina Trails Ward 3" aid="24" oid="3" pos="3" wr="0" el="0" acc="0" dis="0" s="300007" />
+    <contest id="1024" nm="School Trustee for River East Transcona Ward 1" aid="25" oid="3" pos="2" wr="0" el="0" acc="0" dis="0" s="300008" />
+    <contest id="1025" nm="School Trustee for River East Transcona Ward 2" aid="26" oid="3" pos="1" wr="0" el="0" acc="0" dis="0" s="300009" />
+    <contest id="1026" nm="School Trustee for River East Transcona Ward 3" aid="27" oid="3" pos="1" wr="0" el="0" acc="0" dis="0" s="300010" />
+    <contest id="1027" nm="School Trustee for River East Transcona Ward 4" aid="28" oid="3" pos="2" wr="0" el="0" acc="0" dis="0" s="300011" />
+    <contest id="1028" nm="School Trustee for River East Transcona Ward 5" aid="29" oid="3" pos="2" wr="0" el="0" acc="0" dis="0" s="300012" />
+    <contest id="1029" nm="School Trustee for St. James - Assiniboia King Edward - Deer Lodge Ward" aid="30" oid="3" pos="3" wr="0" el="0" acc="0" dis="0" s="300013" />
+    <contest id="1030" nm="School Trustee for St. James - Assiniboia Kirkfield - St. Charles Ward" aid="31" oid="3" pos="3" wr="0" el="0" acc="0" dis="0" s="300014" />
+    <contest id="1031" nm="School Trustee for St. James - Assiniboia Silver Heights - Booth Ward" aid="32" oid="3" pos="3" wr="0" el="0" acc="0" dis="0" s="300015" />
+    <contest id="1032" nm="School Trustee for Seven Oaks Ward 2" aid="33" oid="3" pos="4" wr="0" el="0" acc="0" dis="0" s="300016" />
+    <contest id="1033" nm="School Trustee for Seven Oaks Ward 3" aid="34" oid="3" pos="4" wr="0" el="0" acc="1" dis="0" s="300017" />
+    <contest id="1034" nm="School Trustee for Winnipeg Ward 1" aid="35" oid="3" pos="3" wr="0" el="0" acc="0" dis="0" s="300018" />
+    <contest id="1035" nm="School Trustee for Winnipeg Ward 2" aid="36" oid="3" pos="3" wr="0" el="0" acc="0" dis="0" s="300019" />
+    <contest id="1036" nm="School Trustee for Winnipeg Ward 3" aid="37" oid="3" pos="3" wr="0" el="0" acc="0" dis="0" s="300020" />
+  </contests>
+  <parties />
+  <choices>
+    <choice id="1" nm="Sam KATZ" conid="1001" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="19" />
+    <choice id="2" nm="Judy WASYLYCIA-LEIS" conid="1001" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="161" />
+    <choice id="3" nm="Brad GROSS" conid="1001" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="278" />
+    <choice id="4" nm="Rav GILL" conid="1001" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="279" />
+    <choice id="5" nm="Jarret HANNAH" conid="1002" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="162" />
+    <choice id="6" nm="Timothy MARTIN" conid="1002" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="163" />
+    <choice id="7" nm="Wendy LENTON" conid="1002" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="164" />
+    <choice id="8" nm="Paula HAVIXBECK" conid="1002" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="165" />
+    <choice id="9" nm="Steve SZEGO" conid="1002" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="166" />
+    <choice id="10" nm="Livio CIARALLI" conid="1002" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="167" />
+    <choice id="11" nm="Dashi ZARGANI" conid="1002" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="280" />
+    <choice id="12" nm="Shawn DOBSON" conid="1003" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="193" />
+    <choice id="13" nm="Lloyd FINLAY" conid="1003" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="194" />
+    <choice id="14" nm="Grant NORDMAN" conid="1003" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="195" />
+    <choice id="15" nm="Scott FIELDING" conid="1004" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="196" />
+    <choice id="16" nm="Fred MORRIS" conid="1004" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="197" />
+    <choice id="17" nm="Deanne CROTHERS" conid="1004" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="198" />
+    <choice id="18" nm="Lito TARUC" conid="1005" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="168" />
+    <choice id="19" nm="Cindy GILROY-PRICE" conid="1005" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="169" />
+    <choice id="20" nm="Keith BELLAMY" conid="1005" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="170" />
+    <choice id="21" nm="Harvey SMITH" conid="1005" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="171" />
+    <choice id="22" nm="John CARDOSO" conid="1005" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="172" />
+    <choice id="23" nm="Shane NESTRUCK" conid="1006" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="176" />
+    <choice id="24" nm="Ian RABB" conid="1006" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="177" />
+    <choice id="25" nm="Jenny GERBASI" conid="1006" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="283" />
+    <choice id="26" nm="Michael KOWALSON" conid="1007" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="189" />
+    <choice id="27" nm="John ORLIKOW" conid="1007" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="190" />
+    <choice id="28" nm="Shaneen ROBINSON" conid="1008" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="173" />
+    <choice id="29" nm="Rod GIESBRECHT" conid="1008" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="174" />
+    <choice id="30" nm="Gordon WARREN" conid="1008" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="175" />
+    <choice id="31" nm="Nelson SANDERSON" conid="1008" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="281" />
+    <choice id="32" nm="Thomas STEEN" conid="1008" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="282" />
+    <choice id="33" nm="Jeff BROWATY" conid="1009" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="183" />
+    <choice id="34" nm="Brian OLYNIK" conid="1009" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="184" />
+    <choice id="35" nm="Wendy PASALUKO-PLAS" conid="1009" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="285" />
+    <choice id="36" nm="Russ WYATT" conid="1010" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="203" />
+    <choice id="37" nm="Vlad KOWALYK" conid="1010" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="204" />
+    <choice id="38" nm="Ross EADIE" conid="1011" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="178" />
+    <choice id="39" nm="Trevor MUELLER" conid="1011" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="179" />
+    <choice id="40" nm="Jenny MOTKALUK" conid="1011" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="180" />
+    <choice id="41" nm="John PETRINKA" conid="1011" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="181" />
+    <choice id="42" nm="Greg LITTLEJOHN" conid="1011" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="182" />
+    <choice id="43" nm="David POLSKY" conid="1011" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="284" />
+    <choice id="44" nm="Casey JONES" conid="1012" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="185" />
+    <choice id="45" nm="Robert CHENNELLS" conid="1012" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="186" />
+    <choice id="46" nm="Devi SHARMA" conid="1012" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="187" />
+    <choice id="47" nm="Mike PAGTAKHAN" conid="1013" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="188" />
+    <choice id="48" nm="Dean KOSHELANYK" conid="1013" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="286" />
+    <choice id="49" nm="Herman HOLLA" conid="1013" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="287" />
+    <choice id="50" nm="Louise MAY" conid="1014" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="199" />
+    <choice id="51" nm="Justin SWANDEL" conid="1014" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="200" />
+    <choice id="52" nm="Chris WATT" conid="1015" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="191" />
+    <choice id="53" nm="Dan VANDAL" conid="1015" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="192" />
+    <choice id="54" nm="Harry WOLBERT" conid="1016" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="201" />
+    <choice id="55" nm="Gord STEEVES" conid="1016" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="202" />
+    <choice id="56" nm="Bob WILSON" conid="1017" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="205" />
+    <choice id="57" nm="Gary GERVAIS" conid="1017" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="206" />
+    <choice id="58" nm="Chris WILSON" conid="1017" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="207" />
+    <choice id="59" nm="Louise JOHNSTON" conid="1017" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="290" />
+    <choice id="60" nm="Chris SIGURDSON" conid="1018" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="208" />
+    <choice id="61" nm="Mike DUCHARME" conid="1018" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="209" />
+    <choice id="62" nm="Mike DAOUST" conid="1018" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="291" />
+    <choice id="63" nm="Dave RICHARDSON" conid="1019" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="210" />
+    <choice id="64" nm="Wayne RUFF" conid="1019" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="211" />
+    <choice id="65" nm="Sandy NEMETH" conid="1019" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="212" />
+    <choice id="66" nm="Alem ASGHEDOM" conid="1019" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="213" />
+    <choice id="67" nm="Robert PAGE" conid="1019" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="214" />
+    <choice id="68" nm="Tom PARKER" conid="1020" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="215" />
+    <choice id="69" nm="Hugh COBURN" conid="1020" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="216" />
+    <choice id="70" nm="Jim KOMENDA" conid="1021" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="217" />
+    <choice id="71" nm="Gerry MELNYK" conid="1021" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="218" />
+    <choice id="72" nm="Gail WATSON" conid="1021" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="219" />
+    <choice id="73" nm="Dianne ZUK" conid="1021" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="220" />
+    <choice id="74" nm="Norm WYLIE" conid="1022" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="221" />
+    <choice id="75" nm="Sue CLAYTON" conid="1022" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="222" />
+    <choice id="76" nm="Tim JOHNSON" conid="1022" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="223" />
+    <choice id="77" nm="David JOHNSON" conid="1022" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="224" />
+    <choice id="78" nm="Tina STRONG" conid="1022" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="293" />
+    <choice id="79" nm="Jacquie FIELD" conid="1023" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="225" />
+    <choice id="80" nm="Laureen GOODRIDGE" conid="1023" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="226" />
+    <choice id="81" nm="Julie FISHER" conid="1023" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="227" />
+    <choice id="82" nm="Charlotte ROY-JOHNSON" conid="1023" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="294" />
+    <choice id="83" nm="Caroline MEHRA" conid="1023" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="295" />
+    <choice id="84" nm="George MARSHALL" conid="1024" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="228" />
+    <choice id="85" nm="Amanda GIESBRECHT" conid="1024" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="229" />
+    <choice id="86" nm="Dan RICHARD" conid="1024" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="230" />
+    <choice id="87" nm="Derek GOODMAN" conid="1024" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="231" />
+    <choice id="88" nm="Colleen CARSWELL" conid="1024" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="296" />
+    <choice id="89" nm="David KENDALL" conid="1024" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="297" />
+    <choice id="90" nm="Gurpreet BRAR" conid="1025" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="232" />
+    <choice id="91" nm="John TOEWS" conid="1025" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="233" />
+    <choice id="92" nm="Bob FRASER" conid="1026" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="234" />
+    <choice id="93" nm="A. J. FALK" conid="1026" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="235" />
+    <choice id="94" nm="Eva PRYSIZNEY" conid="1027" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="236" />
+    <choice id="95" nm="Roland HEADLEY" conid="1027" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="237" />
+    <choice id="96" nm="Jeff CIESZECKI" conid="1027" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="238" />
+    <choice id="97" nm="Wayne RITCHER" conid="1027" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="298" />
+    <choice id="98" nm="Peter KOTYK" conid="1028" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="239" />
+    <choice id="99" nm="Jan ANDERSON" conid="1028" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="299" />
+    <choice id="100" nm="Derek LITKE" conid="1028" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="300" />
+    <choice id="101" nm="Michael HAMM" conid="1028" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="301" />
+    <choice id="102" nm="Shirley TIMM-RUDOLPH" conid="1028" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="302" />
+    <choice id="103" nm="Marie ANTAYA" conid="1028" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="303" />
+    <choice id="104" nm="Roxane DELBRIDGE" conid="1029" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="240" />
+    <choice id="105" nm="Ed HUME" conid="1029" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="241" />
+    <choice id="106" nm="Kelly-Ann STEVENSON" conid="1029" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="242" />
+    <choice id="107" nm="Jennifer LAWSON" conid="1029" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="243" />
+    <choice id="108" nm="Scott JOHNSTON" conid="1029" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="244" />
+    <choice id="109" nm="Cheryl SMUKOWICH" conid="1030" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="245" />
+    <choice id="110" nm="Sandy LETHBRIDGE" conid="1030" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="246" />
+    <choice id="111" nm="Bruce CHEGUS" conid="1030" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="247" />
+    <choice id="112" nm="Ted HULL" conid="1030" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="248" />
+    <choice id="113" nm="Teresa PITZEL" conid="1030" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="249" />
+    <choice id="114" nm="Eric HOLLAND" conid="1030" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="250" />
+    <choice id="115" nm="Craig JOHNSON" conid="1031" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="251" />
+    <choice id="116" nm="Cheyenne GREEN" conid="1031" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="252" />
+    <choice id="117" nm="Craig MCGREGOR" conid="1031" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="253" />
+    <choice id="118" nm="Rockford MCKAY" conid="1031" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="254" />
+    <choice id="119" nm="Bryan METCALFE" conid="1031" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="255" />
+    <choice id="120" nm="Cory JUAN" conid="1032" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="256" />
+    <choice id="121" nm="Ben BANSAL" conid="1032" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="257" />
+    <choice id="122" nm="Kai SCHIOLER" conid="1032" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="258" />
+    <choice id="123" nm="Derek DABEE" conid="1032" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="259" />
+    <choice id="124" nm="Bill MCGOWAN" conid="1032" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="305" />
+    <choice id="125" nm="Dennis RUGGLES" conid="1032" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="306" />
+    <choice id="126" nm="Ric DELA CRUZ" conid="1032" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="307" />
+    <choice id="127" nm="Teresa JAWORSKI" conid="1033" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="260" />
+    <choice id="128" nm="Claudia SARBIT" conid="1033" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="261" />
+    <choice id="129" nm="Edward PLOSZAY" conid="1033" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="262" />
+    <choice id="130" nm="Richard SAWKA" conid="1033" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="263" />
+    <choice id="131" nm="Rita HILDAHL" conid="1034" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="264" />
+    <choice id="132" nm="Joyce BATEMAN" conid="1034" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="265" />
+    <choice id="133" nm="Jackie SNEESBY" conid="1034" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="266" />
+    <choice id="134" nm="Kevin FREEDMAN" conid="1034" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="309" />
+    <choice id="135" nm="Brenda POERSCH" conid="1034" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="310" />
+    <choice id="136" nm="Johnny SALANGAD" conid="1034" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="311" />
+    <choice id="137" nm="Cathy COLLINS" conid="1035" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="267" />
+    <choice id="138" nm="Anthony RAMOS" conid="1035" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="268" />
+    <choice id="139" nm="Kristine BARR" conid="1035" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="269" />
+    <choice id="140" nm="Rolf SALFERT" conid="1035" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="270" />
+    <choice id="141" nm="Myra LARAMEE" conid="1035" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="271" />
+    <choice id="142" nm="Kenny MORAN" conid="1035" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="272" />
+    <choice id="143" nm="Bradley MCKAY" conid="1035" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="313" />
+    <choice id="144" nm="Suzanne HRYNYK" conid="1036" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="273" />
+    <choice id="145" nm="Roy HARGRAVE" conid="1036" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="274" />
+    <choice id="146" nm="Mike BABINSKY" conid="1036" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="275" />
+    <choice id="147" nm="Darlyne BAUTISTA" conid="1036" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="276" />
+    <choice id="148" nm="Sonia PREVOST-DERBECKER" conid="1036" wr="0" dis="0" inc="0" fnm="" lnm="" gen="" s="277" />
+  </choices>
+  <affiliations />
+  <electoraldivisions>
+    <division id="1" nm="No Partition" t="1" par="0" />
+    <division id="2" nm="School Ditrict Eligible" t="0" par="0" />
+  </electoraldivisions>
+  <electorgroups>
+    <electorgroup id="1" nm="All" did="1" ab="All" t="1" om="0" s="1" />
+    <electorgroup id="3" nm="Eligible" did="2" ab="Eg" t="0" om="0" s="2" />
+    <electorgroup id="2" nm="Non-Eligible" did="2" ab="NE" t="0" om="0" s="3" />
+  </electorgroups>
+  <combinations>
+    <combo id="1" nm="Eligible / All" />
+    <combo id="2" nm="Non-Eligible / All" />
+  </combinations>
+  <combohasgroups>
+    <chg gid="3" cid="1" s="1" />
+    <chg gid="1" cid="1" s="2" />
+    <chg gid="2" cid="2" s="3" />
+    <chg gid="1" cid="2" s="4" />
+  </combohasgroups>
+  <countinggroups>
+    <countinggroup id="1" name="Election Day" />
+    <countinggroup id="2" name="MALL/UNIVERSITY" />
+    <countinggroup id="3" name="MOBILE ADVANCE" />
+    <countinggroup id="4" name="HOSPITAL/SEALED ENVELOPE" />
+    <countinggroup id="5" name="CITY HALL ADVANCE" />
+    <countinggroup id="6" name="COMMUNITY ADVANCE" />
+  </countinggroups>
+</election>
