@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101012205151) do
+ActiveRecord::Schema.define(:version => 20110531035143) do
 
   create_table "candidates", :force => true do |t|
     t.string   "name"
@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(:version => 20101012205151) do
     t.datetime "updated_at"
     t.text     "rejection"
   end
+
+  add_index "news_articles", ["url"], :name => "index_news_articles_on_url"
 
   create_table "pages", :force => true do |t|
     t.string   "title"
