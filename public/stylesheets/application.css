@@ -538,9 +538,9 @@ form#ward_tool {
   form#ward_tool input.house_street {
     width: 100px; }
 
-#federal-election-header {
+#top-election-header {
   width: 988px;
-  margin: 0 auto 10px auto;
+  margin: 10px auto 15px auto;
   padding: 1px 10px 1px 10px;
   background: #fffbcc;
   -o-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
@@ -549,6 +549,6 @@ form#ward_tool {
   -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); }
-  #federal-election-header h3 {
+  #top-election-header h3 {
     margin-top: 10px;
     font-style: italic; }

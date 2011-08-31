@@ -1,26 +1,26 @@
-!primary_color = #4B7399
-!link_color = #3B59BB
-!min_container_height = 600px
-!box_background_color = #eeeeee
+$primary_color: #4B7399
+$link_color: #3B59BB
+$min_container_height: 600px
+$box_background_color: #eeeeee
 
-=drop-shadow(!ho, !vo, !b, !a) 
-  :-o-box-shadow =      !ho !vo !b rgba(0, 0, 0, !a)
-  :-icab-box-shadow =   !ho !vo !b rgba(0, 0, 0, !a)
-  :-khtml-box-shadow =  !ho !vo !b rgba(0, 0, 0, !a)
-  :-moz-box-shadow =    !ho !vo !b rgba(0, 0, 0, !a)
-  :-webkit-box-shadow = !ho !vo !b rgba(0, 0, 0, !a)
-  :box-shadow =         !ho !vo !b rgba(0, 0, 0, !a)
+@mixin drop-shadow($ho, $vo, $b, $a)
+  -o-box-shadow:      $ho $vo $b rgba(0, 0, 0, $a)
+  -icab-box-shadow:   $ho $vo $b rgba(0, 0, 0, $a)
+  -khtml-box-shadow:  $ho $vo $b rgba(0, 0, 0, $a)
+  -moz-box-shadow:    $ho $vo $b rgba(0, 0, 0, $a)
+  -webkit-box-shadow: $ho $vo $b rgba(0, 0, 0, $a)
+  box-shadow:         $ho $vo $b rgba(0, 0, 0, $a)
 
-=rounded(!tl, !tr, !br, !bl)
-  :-o-border-radius= !tl !tr !br !bl
-  :-icab-border-radius= !tl !tr !br !bl
-  :-khtml-border-radius= !tl !tr !br !bl
-  :-moz-border-radius= !tl !tr !br !bl
-  :-webkit-border-top-right-radius= !tr
-  :-webkit-border-top-left-radius= !tl
-  :-webkit-border-bottom-right-radius= !br
-  :-webkit-border-bottom-left-radius= !bl
-  :border-radius= !tl !tr !br !bl
+@mixin rounded($tl, $tr, $br, $bl)
+  -o-border-radius: $tl $tr $br $bl
+  -icab-border-radius: $tl $tr $br $bl
+  -khtml-border-radius: $tl $tr $br $bl
+  -moz-border-radius: $tl $tr $br $bl
+  -webkit-border-top-right-radius: $tr
+  -webkit-border-top-left-radius: $tl
+  -webkit-border-bottom-right-radius: $br
+  -webkit-border-bottom-left-radius: $bl
+  border-radius: $tl $tr $br $bl
 
 body
   :font
@@ -28,7 +28,7 @@ body
     :size 14px
 
 a
-  :color = !link_color
+  :color $link_color
   :text-decoration none
   img
     :border none
@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5
     :float left
     :width 710px
   #feedback
-    +drop-shadow(0px, 2px, 4px, 0.2)
+    @include drop-shadow(0px, 2px, 4px, 0.2)
     :position absolute
     :top 60px
     :right 17px
@@ -108,8 +108,8 @@ h1, h2, h3, h4, h5
     :background #eeffaa
     :padding 0 5px
   #sidebar
-    +drop-shadow(0px, 4px, 9px, 0.2)
-    +rounded(0, 0, 6px, 6px)
+    @include drop-shadow(0px, 4px, 9px, 0.2)
+    @include rounded(0, 0, 6px, 6px)
     :border 1px solid #aaa
     :float right
     :width 237px
@@ -288,10 +288,10 @@ div.more_info
   :overflow hidden
   :zoom 1
   .candidate
-    +drop-shadow(0px, 2px, 5px, 0.2)
+    @include drop-shadow(0px, 2px, 5px, 0.2)
     :border 1px solid #e4e4e4
     :padding-left 10px
-    :background-color !box_background_color
+    :background-color $box_background_color
     :width 300px
     :float left
     :margin 0 0 25px 30px 
@@ -301,7 +301,7 @@ div.more_info
       :margin-bottom 10px
       a img
         :border-bottom 2px solid
-        :border-color = !link_color
+        :border-color $link_color
     .ward
       :color #777
       :font-weight bold
@@ -492,8 +492,8 @@ div#front_main
     :background-color #f5f5f5
     :padding 15px 15px
     :margin-top 22px
-    +drop-shadow(0px, 4px, 9px, 0.2)
-    +rounded(0, 0, 6px, 6px)
+    @include drop-shadow(0px, 4px, 9px, 0.2)
+    @include rounded(0, 0, 6px, 6px)
     :border 1px solid #aaa
     h2
       :margin-top 0
@@ -543,12 +543,12 @@ form#ward_tool
   input.house_street
     :width 100px
 
-#federal-election-header
+#top-election-header
   :width 988px
-  :margin 0 auto 10px auto
+  :margin 10px auto 15px auto
   :padding 1px 10px 1px 10px
   :background #FFFBCC
-  +drop-shadow(0px, 3px, 6px, 0.2)
+  @include drop-shadow(0px, 3px, 6px, 0.2)
   h3
     :margin-top 10px
     :font-style italic
