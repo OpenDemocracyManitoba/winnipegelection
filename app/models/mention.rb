@@ -13,7 +13,7 @@ class Mention < ActiveRecord::Base
   
   def self.gnews_search_for(candidate)
     
-    query = URI.escape('"' + candidate +'"' + ' location:winnipeg')
+    query = URI.escape('"' + candidate +'"' + ' location:manitoba')
     find_url = GOOGLE_NEWS_URL_1 + query + GOOGLE_NEWS_URL_2
     cfeed_raw = FeedNormalizer::FeedNormalizer.parse open(find_url)
     feed = []
