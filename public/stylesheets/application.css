@@ -30,8 +30,9 @@ a:hover {
   #header h1 {
     font-size: 41px;
     margin-top: -18px;
-    margin-bottom: 0;
-    color: #202040; }
+    margin-bottom: 0; }
+    #header h1 a {
+      color: #202040; }
   #header h3 {
     padding-left: 4px;
     margin-top: 5px;

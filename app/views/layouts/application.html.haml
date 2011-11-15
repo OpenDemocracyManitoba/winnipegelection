@@ -22,22 +22,11 @@
     <link href="/favicon.ico?3" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     
     = javascript_include_tag 'jquery'
-    
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-17537013-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
-  
+ 
   %body
     %div#header
       %h1
-        Winnipeg Civic Election
+        = link_to 'Winnipeg Civic Election', '/'
       %h3
         A <a href="/about">Citizen Created</a> Election Resource
     #container
@@ -119,6 +108,9 @@
         #sidebar
           %div.facebook
             <iframe src="http://www.facebook.com/plugins/likebox.php?id=145495908793867&amp;width=237&amp;connections=8&amp;stream=false&amp;header=false&amp;height=272" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:237px; height:272px;" allowTransparency="true"></iframe>
+          %br
+          %div
+            <g:plusone annotation="inline"></g:plusone>
       - else
         - if @show_feedback
           #feedback
@@ -141,4 +133,21 @@
     </script>
     <script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
     = javascript_include_tag 'main' 
-
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17537013-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    <script type="text/javascript">
+    (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+    </script>
+ 
