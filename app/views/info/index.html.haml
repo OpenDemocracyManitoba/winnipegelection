@@ -3,64 +3,47 @@
 %div#front_main
   %div#countdown
     %h2
-      Winnipeg Election Results
+      Winnipeg 2011 By-Election
     %p
       On
-      %strong October 27 of 2010
-      the citizens of Winnipeg went to the polls to elect their Mayor, their City Councillors and their School Trustees.
+      %strong November 26th of 2011
+      there will be a by-election held for the following city council and school trustee wards:
     %ul
-      %li
-        %a{ :href => "http://www.winnipeg.ca/clerks/docs/elections/2010Election/results/winnipeg.html" }
-          View 2010 Election Results
-      %li
-        = link_to 'Our 2010 Open Data', '/open_data_2010'
-    %h2
-      Election News Coverage
+      %li St. Vital Civic Ward
+      %li Winnipeg School Division Ward 1
+      %li Louis Reil School Division Ward 2
+    %br
+    %h2 
+      Where To Vote
+    %p 
+      Voting will take place in advance on November 17-21. The actual by-election takes place on the 26th.
     %ul
-      %li
-        #{ link_to 'Our Latest Election News', :controller => 'news_articles', :action => 'latest' }
-      %li
-        %a{ :href => "http://www.cbc.ca/manitoba/features/manitobavotes2010/"}
-          CBC Manitoba
-      %li
-        %a{ :href => "http://www.chrisd.ca/blog/tag/civic-election-2010/"}
-          ChrisD
-      %li
-        %a{ :href => "http://winnipeg.ctv.ca/election/"}
-          CTV Winnipeg
-      %li
-        %a{ :href => "http://www.globalwinnipeg.com/story.html?id=3556527"}
-          Global Winnipeg
-      %li
-        %a{ :href => "http://www.winnipegfreepress.com/special/civicelection/"}
-          Winnipeg Free Press
-      %li
-        %a{ :href => "http://www.winnipegsun.com/news/winnipegvotes2010/"}
-          Winnipeg Sun
+      %li= link_to 'Advanced Voting Dates and Locations', 'http://www.winnipeg.ca/clerks/docs/elections/2011byelection/voter/advancevoting.htm'
+      %li= link_to 'Regular Voting Locations', 'http://winnipeg.ca/Election/ENG/SelectLocation.asp?SelectActionUrl=AddressDetails%2Easp%3F'
   %div#your
-    %h2 Meet Your Candidates
+    %h2 2011 By-Election Candidates
     %div.maps
-      %a{ :href => '/info/mayor' }
-        %img{ :src => '/images/city_thumb.png', :title => 'Click to see mayoral candidates.'}
-      %a{ :href => '/info/council' }
-        %img{ :src => '/images/civicwards_thumb.png', :title => 'Click to find city council candidates.'}
-      %a{ :href => '/info/school_board' }
-        %img{ :src => '/images/schoolwards_thumb.png', :title => 'Click to find school trustee candidates.'}
+      %a{ :href => '/ward/St_Vital_By-Election' }
+        %img{ :src => '/images/civicwards_thumb.png', :title => 'St. Vital by-election candidates.'}
+      %a{ :href => '/school_ward/Louis_Riel/Ward_2_By-Election' }
+        %img{ :src => '/images/schoolwards_thumb.png', :title => 'Louis Reil by-election school trustee candidates.'}
+      %a{ :href => '/school_ward/Winnipeg/Ward_1_By-Election' }
+        %img{ :src => '/images/schoolwards_thumb.png', :title => 'Winnipeg by-election school trustee candidates.'}
     %div.links
       %p
-        = link_to 'Mayoral Candidates', :controller => 'info', :action => 'mayor'
-      %p.small
-        = link_to 'Role of the Mayor', '/role_mayor'
-      %p.top_space
-        = link_to 'City Council Candidates', :controller => 'info', :action => 'council'
+        = link_to 'St. Vital City Council Candidates', '/ward/St_Vital_By-Election' 
       %p.small
         = link_to 'Role of a City Councillor', '/role_council'
-      %p.top_space
-        = link_to 'School Trustee Candidates', :controller => 'info', :action => 'school_board'
+      %p
+        %br
+        %br
+        = link_to 'Louis Riel School Division Trustee Candidates', '/school_ward/Louis_Riel/Ward_2_By-Election' 
       %p.small
         = link_to 'Role of a School Trustee', '/role_trustee'
-    
-  %div#calendar
-    %h2 Important Election Dates
-    <iframe src="https://www.google.com/calendar/b/0/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=310&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=winnipeg.election%40gmail.com&amp;color=%23060D5E&amp;ctz=America%2FWinnipeg" style=" border-width:0 " width="660" height="310" frameborder="0" scrolling="no"></iframe>
-
+      %p
+        %br
+        %br
+        %br
+        = link_to 'Winnipeg School Division Trustee Candidates',  '/school_ward/Winnipeg/Ward_1_By-Election' 
+      %p.small
+        = link_to 'Role of a School Trustee', '/role_trustee'

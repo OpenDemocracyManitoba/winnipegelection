@@ -4,9 +4,9 @@
   %head
     %title
       - if (t = yield(:title)) 
-        = h yield(:title) + " - Winnipeg Election 2010"
+        = h yield(:title) + " - Winnipeg Election"
       - else
-        Winnipeg Election - Civic Election 2010
+        Winnipeg Election - Civic Election
     
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     %meta{'name'=>'keywords', :content => @meta_keywords}/
@@ -35,15 +35,9 @@
     </script>
   
   %body
-    %div#top-election-header
-      %h3
-        Looking for information on the 2011 Manitoba general election?
-      %p
-        :markdown
-          Visit [ManitobaElection.ca](http://manitobaelection.ca) to research your MLA candidates for the provincial election this October 4th, 2011.
     %div#header
       %h1
-        Winnipeg Civic Election 2010
+        Winnipeg Civic Election
       %h3
         A <a href="/about">Citizen Created</a> Election Resource
     #container
@@ -55,83 +49,27 @@
               <!--[if lte IE 6]><table><tr><td><![endif]--> 
               <div> 
                 <ul> 
-                  <li><a href="/info/mayor">Mayoral Candidates</a></li>
-                  <li class="fly"><a class="fly" href="/info/council">Council Candidates<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                  <li class="fly"><a class="fly nohover" href="#">Council Candidates<!--[if gte IE 7]><!--></a><!--<![endif]--> 
                   <!--[if lte IE 6]><table><tr><td><![endif]--> 
                     <ul> 
-                      <li><a href="/ward/Charleswood_-_Tuxedo">Charleswood - Tuxedo</a></li> 
-                      <li><a href="/ward/Daniel_McIntyre">Daniel McIntyre</a></li> 
-                      <li><a href="/ward/Elmwood_-_East_Kildonan">Elmwood - East Kildonan</a></li>
-                      <li><a href="/ward/Fort_Rouge_-_East_Fort_Garry">Fort Rouge - East Fort Garry</a></li> 
-                      <li><a href="/ward/Mynarski">Mynarski</a></li> 
-                      <li><a href="/ward/North_Kildonan">North Kildonan</a></li> 
-                      <li><a href="/ward/Old_Kildonan">Old Kildonan</a></li> 
-                      <li><a href="/ward/Point_Douglas">Point Douglas</a></li> 
-                      <li><a href="/ward/River_Heights_-_Fort_Garry">River Heights - Fort Garry</a></li> 
-                      <li><a href="/ward/St_Boniface">St. Boniface</a></li> 
-                      <li><a href="/ward/St_Charles">St. Charles</a></li> 
-                      <li><a href="/ward/St_James_-_Brooklands">St. James - Brooklands</a></li> 
-                      <li><a href="/ward/St_Norbert">St. Norbert</a></li>
-                      <li><a href="/ward/St_Vital">St. Vital</a></li>
-                      <li><a href="/ward/Transcona">Transcona</a></li> 
+                      <li><a href="/ward/St_Vital_By-Election/">St. Vital By-Elecion</a></li>
                     </ul> 
                   <!--[if lte IE 6]></td></tr></table></a><![endif]--> 
                   </li> 
-                  <li class="fly"><a class="fly" href="/info/school_board">School Trustees<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                  <li class="fly"><a class="fly nohover" href="#">School Trustees<!--[if gte IE 7]><!--></a><!--<![endif]--> 
                   <!--[if lte IE 6]><table><tr><td><![endif]--> 
                     <ul> 
                       <li class="fly"><a class="fly nohover" href="#">Louis Riel<!--[if gte IE 7]><!--></a><!--<![endif]--> 
                         <!--[if lte IE 6]><table><tr><td><![endif]--> 
                         <ul>
-                          <li><a href="/school_ward/Louis_Riel/Ward_1">Ward 1</a></li>
-                          <li><a href="/school_ward/Louis_Riel/Ward_2">Ward 2</a></li>
-                          <li><a href="/school_ward/Louis_Riel/Ward_3">Ward 3</a></li>
-                          <li><a href="/school_ward/Louis_Riel/Ward_4">Ward 4</a></li>
+                          <li><a href="/school_ward/Louis_Riel/Ward_2_By-Election">Ward 2 By-Election</a></li>
                         </ul> 
                         <!--[if lte IE 6]></td></tr></table></a><![endif]--> 
                       </li> 
-                      <li class="fly"><a class="fly nohover" href="#">Pembina Trails<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                      <li class="fly"><a class="fly nohover" href="#">Winnipeg<!--[if gte IE 7]><!--></a><!--<![endif]-->  
                         <!--[if lte IE 6]><table><tr><td><![endif]--> 
                         <ul>
-                          <li><a href="/school_ward/Pembina_Trails/Ward_1">Ward 1</a></li>
-                          <li><a href="/school_ward/Pembina_Trails/Ward_2">Ward 2</a></li>
-                          <li><a href="/school_ward/Pembina_Trails/Ward_3">Ward 3</a></li>
-                        </ul> 
-                        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-                      </li>
-                      <li class="fly"><a class="fly nohover" href="#">River East - Transcona<!--[if gte IE 7]><!--></a><!--<![endif]-->  
-                        <!--[if lte IE 6]><table><tr><td><![endif]--> 
-                        <ul>
-                          <li><a href="/school_ward/River_East_-_Transcona/Ward_1">Ward 1</a></li>
-                          <li><a href="/school_ward/River_East_-_Transcona/Ward_2">Ward 2</a></li>
-                          <li><a href="/school_ward/River_East_-_Transcona/Ward_3">Ward 3</a></li>
-                          <li><a href="/school_ward/River_East_-_Transcona/Ward_4">Ward 4</a></li>
-                          <li><a href="/school_ward/River_East_-_Transcona/Ward_5">Ward 5</a></li>
-                        </ul> 
-                        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-                      </li>
-                      <li class="fly"><a class="fly nohover" href="#">Seven Oaks<!--[if gte IE 7]><!--></a><!--<![endif]-->  
-                        <!--[if lte IE 6]><table><tr><td><![endif]--> 
-                        <ul>
-                          <li><a href="/school_ward/Seven_Oaks/Ward_2">Ward 2</a></li>
-                          <li><a href="/school_ward/Seven_Oaks/Ward_3">Ward 3</a></li>
-                        </ul> 
-                        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-                      </li>
-                      <li class="fly"><a class="fly nohover" href="#">St James - Assiniboia<!--[if gte IE 7]><!--></a><!--<![endif]-->  
-                        <!--[if lte IE 6]><table><tr><td><![endif]--> 
-                        <ul>
-                          <li><a href="/school_ward/St_James_-_Assiniboia/King_Edward_-_Deer_Lodge">King Edward - Deer Lodge</a></li>
-                          <li><a href="/school_ward/St_James_-_Assiniboia/Kirkfield_-_St_Charles">Kirkfield - St. Charles</a></li>
-                          <li><a href="/school_ward/St_James_-_Assiniboia/Silver_Heights_-_Booth">Silver Heights - Booth</a></li>
-                        </ul> 
-                        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-                      </li>                       <li class="fly"><a class="fly nohover" href="#">Winnipeg<!--[if gte IE 7]><!--></a><!--<![endif]-->  
-                        <!--[if lte IE 6]><table><tr><td><![endif]--> 
-                        <ul>
-                          <li><a href="/school_ward/Winnipeg/Ward_1">Ward 1</a></li>
-                          <li><a href="/school_ward/Winnipeg/Ward_2">Ward 2</a></li>
-                          <li><a href="/school_ward/Winnipeg/Ward_3">Ward 3</a></li>
+                          <li><a href="/school_ward/Winnipeg/Ward_1_By-Election">Ward 1 By-Election</a></li>
                         </ul> 
                         <!--[if lte IE 6]></td></tr></table></a><![endif]-->
                       </li>
@@ -143,8 +81,6 @@
               </div> 
             <!--[if lte IE 6]></td></tr></table></a><![endif]--> 
             </li>
-          %li= link_to 'Latest News', {:controller => 'news_articles', :action => 'latest'}
-          %li= link_to 'Calendar', static_path({:permalink => 'calendar'})
           :plain
             <li class="oneCol"><a class="oneCol fly nohover" href="/election_info">Election Info<!--[if gte IE 7]><!--></a><!--<![endif]--> 
               <!--[if lte IE 6]><table><tr><td><![endif]--> 
@@ -183,24 +119,6 @@
         #sidebar
           %div.facebook
             <iframe src="http://www.facebook.com/plugins/likebox.php?id=145495908793867&amp;width=237&amp;connections=8&amp;stream=false&amp;header=false&amp;height=272" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:237px; height:272px;" allowTransparency="true"></iframe>
-          %h2 Latest Election News
-          %div.sidebar_news
-            - @latest_news_by_date.each do |date, articles|
-              %p.date= date
-              %ul
-                - articles.each do |n|
-                  %li
-                    %p.link
-                      = link_to n.title, n.fixed_url
-                    %p.mentions
-                      Mentions: 
-                      - mlinks = []
-                      - n.mentions.each do |m|
-                        - mlinks << link_to(m.candidate.name, m.candidate.candidate_url)
-                      = mlinks.join(', ')
-            %div.footer
-              %p.more= link_to 'More News...', :controller => 'news_articles', :action => 'latest'
-              %p.rss= link_to image_tag('/images/rss.jpg', :size => "13x13"), latest_feed_path(:atom), :title => "News Feed for all Winnipeg Election Candidates"
       - else
         - if @show_feedback
           #feedback
@@ -214,7 +132,7 @@
       
       #footer
         %hr.light
-        Winnipeg Election 2010 - All content is public domain.
+        Winnipeg Election - All content is public domain.
     
     <script type="text/javascript">
     var sc_project=6061793; 
