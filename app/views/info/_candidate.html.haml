@@ -98,15 +98,14 @@
       News:
       = link_to "#{pluralize(candidate.mentions.size, 'Related Article', 'Related Articles')} Found", candidate.candidate_url + "#related_news"
     
+  - if show_other_resources && candidate.other_resources?
+    %p.other_resources
+      #{candidate.other_resources}
+      
   - if candidate.phone_number?
     %p.phone
       Phone:
       #{candidate.phone_number}
-      
-  - if show_other_resources && candidate.other_resources?
-    %p.other_resources
-      Extra:
-      #{candidate.other_resources}
       
   - if show_other_resources && candidate.email?
     %p.other_resources
