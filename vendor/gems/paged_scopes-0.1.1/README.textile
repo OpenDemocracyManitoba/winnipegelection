@@ -1,0 +1,525 @@
+h1. Paged Scopes: A Will_paginate Alternative
+
+The first time I needed to paginate data in a Rails site, I went straight for the de-facto standard, which, since Rails 2.0, has undoubtedly been "will_paginate":http://wiki.github.com/mislav/will_paginate. However, it didn't take me long to discover it couldn't do all that I wanted it to.
+
+Most importantly, I wanted to be able to redirect from a resource member action (the update action, say) back to the index action, with the page set so that the edited resource would be part of the paged list. I couldn't see a way to do that with will_paginate. I found the will_paginate helper a bit messy - ever heard of block helpers? And finally, I wanted my pages to be objects, not just numbers. This would let me load them in controllers and pass them to named routes and have them just work. Will_paginate didn't seem to fit the bill.
+
+Now don't get me wrong; will_paginate must be pretty great - it's the "third most watched repo on GitHub":http://github.com/popular/watched as I write this. But choice is always good, and to me, will_paginate seems a bit bloated and ill-fitting to the way I like to structure my code.
+
+So, naturally, I rolled my own pagination solution. I've finally packaged it up and released it as a new ActiveRecord pagination gem, _PagedScopes_. It's everything I need in Rails pagination and nothing I don't. It's also lightweight and pretty solid. Check it out!
+
+h2. Features
+
+The bullet-point summary of the PagedScopes gem goes something like this:
+
+* Pages are instances of a class which belongs to the collection it's paginating;
+* Pages can be found by number or by contained object;
+* Each page has its own paged collection, which is a scope on the underlying collection; and
+* Flexible, Digg-style pagination links are achieved using a block helper.
+
+h2. A Console Session Is Worth a Thousand Words
+
+Let's take a look at how pagination works with PagedScopes. Consider a collection of articles obtained using a <code>published</code> named scope.
+
+<pre>
+@articles = Article.published
+=> [#<Article id: 1, title: "Article #1">, ..., #<Article id: 5, title: "Article #5">]
+@articles.count
+=> 5
+</pre>
+
+The PagedScopes gem adds a <code>per_page</code> attribute directly to <code>named_scope</code> collections (and to association collections, too). This value determines how many objects each page contains, and needs to be set before we can paginate the collection:
+
+<pre>
+@articles.per_page = 2
+=> 2
+</pre>
+
+Paginating this collection will now give us three pages.
+
+How do we access these pages? By calling <code>pages</code>, the other main method added to <code>ActiveRecord</code> collections. It returns an enumerated class, the instances of which represent the pages of the collection. We can interact with the pages class in some familiar ways:
+
+<pre>
+@articles.pages
+=> #<Class:0x24ea99c>
+@articles.pages.count
+=> 3
+@articles.pages.first
+=> #<Page, for: Article, number: 1>
+@articles.pages.find(1)
+=> #<Page, for: Article, number: 1>
+@articles.pages.last
+=> #<Page, for: Article, number: 3>
+@articles.pages.find(4)
+=> # PagedScopes::PageNotFound: couldn't find page number 4
+@articles.pages.all
+=> [#<Page, for: Article, number: 1>, #<Page, for: Article, number: 2>, #<Page, for: Article, number: 3>]
+@articles.first.to_param
+=> "1"
+</pre>
+
+Looks just like any other model - each page is its own self-contained object, as it should be. We can access the collection objects in the page using the same name as the underlying model. In our example, our collection contains <code>Article</code> instances, so the articles in the page are accessed using an <code>articles</code> method:
+
+<pre>
+@articles.pages.first.articles
+=> [#<Article id: 1, title: "Article #1">, #<Article id: 2, title: "Article #2">]
+@articles.pages.last.articles
+=> [#<Article id: 5, title: "Article #5">]
+@articles.pages.map(&:articles).map(&:size)
+=> [2, 2, 1]
+@articles.pages.map { |page| page.articles.map(&:title) }
+=> [["Article #1", "Article #2"], ["Article #3", "Article #4"], ["Article #5"]]
+</pre>
+
+So far, so good. Bu what, exactly, is return by the <code>articles</code> method? Let's see:
+
+<pre>
+@articles.pages.first.articles.class
+=> ActiveRecord::NamedScope::Scope
+@articles.pages.first.articles.send(:scope, :find)
+=> {:conditions=>"published_at IS NOT NULL", :offset=>0, :limit=>2}
+@articles.pages.last.articles.send(:scope, :find)
+=> {:conditions=>"published_at IS NOT NULL", :offset=>4, :limit=>2}
+@articles.send(:scope, :find)
+=> {:conditions=>"published_at IS NOT NULL"}
+</pre>
+
+Yep, it's just a scope on the parent collection, with <code>:limit</code> and <code>:offset</code> added according to the page number. This is kinda important. It means that the objects in the paged collection will not load from the database until they are referenced. We can pass around page objects in view helpers and named routes and so on, without worrying about inadvertently loading the paged data.
+
+h2. Finding a Page By Its Contents
+
+One particularly nice feature of the library is that we can find a page by identifying an object the page contains.
+
+<pre>
+article = Article.find(3)
+=> #<Article id: 3, title: "Article #3">
+@articles.pages.find_by_article(article)
+=> #<Page, for: Article, number: 2>
+
+article = articles.find(8)
+=> #<Article id: 8, title: "Article #8">
+@articles.pages.find_by_article(article)
+=> nil
+@articles.pages.find_by_article!(article)
+=> # PagedScopes::PageNotFound: #<Article id: 8, title: "Article #8"> not found in scope
+</pre>
+
+This is really handy if you want to redirect from a resource member action to the paged of the index containing the edited object. (More on this later.)
+
+This is implemented using the code I described in my "previous post":http://code.matthewhollingworth.net/articles/2009-06-22-indexing-activerecord-objects-in-an-ordered-collection. As a result you get a couple of freebies on your ActiveRecord objects:
+
+<pre>
+article = Article.scoped(:order => "title ASC").find(3)
+=> #<Article id: 3, title: "Article #3">
+article.next
+=> #<Article id: 4, title: "Article #4">
+
+article = Article.scoped(:order => "title DESC").find(3)
+=> #<Article id: 3, title: "Article #3">
+article.next
+=> #<Article id: 2, title: "Article #2">
+article.previous
+=> #<Article id: 4, title: "Article #4">
+</pre>
+
+In other words, you can find the <code>next</code> and <code>previous</code> objects for any object in a collection. This provides an easy way to link to neighbouring objects (e.g. older and newer posts in a blog).
+
+h2. A Caveat
+
+It's important to store the paged scope or association collection in a variable, rather than refer to it directly. In other words:
+
+<pre>
+# Do this:
+@articles = @user.articles.published # or whatever
+=> [#<Article ...>, ..., #<Article ...>]
+@articles.per_page = 5
+=> 5
+@articles.per_page
+=> 5
+
+# Don't do this:
+@user.articles.published.per_page = 5
+=> 5
+@user.articles.published.per_page
+=> nil
+</pre>
+
+This is because paged scopes and association collections return new instances each time they're called. You need to hang onto them to set the <code>per_page</code> and then get the pages.
+
+h2. Page Routing
+
+The most common way to represent a paginated collection in an URL is to tack on the page number as a query paramater: <code>http://www.example.com/articles?page=3</code>, for example.
+
+I'm not a fan of this approach at all. For starters, it's a bit ugly. More importantly, it won't work with standard Rails page caching, which ignores query parameters.
+
+I prefer to think of pagination as just another scoping of the collection. Just as we have paths like <code>/users/9/articles</code>, I prefer a paged collection to have paths like <code>/pages/2/articles</code> (or <code>/users/9/pages/2/articles</code>, for that matter).
+
+To this end, the Paged Scopes gem adds a <code>:paged</code> option to the Rails <code>resources</code> mapper. We'll use this option to define the routes for our articles:
+
+<pre>
+ActionController::Routing::Routes.draw do |map|
+  map.resources :articles, :paged => true
+end
+</pre>
+
+Checking our routes using <code>rake routes</code>:
+
+<pre>
+     articles GET    /articles(.:format)                {:controller=>"articles", :action=>"index"}
+              POST   /articles(.:format)                {:controller=>"articles", :action=>"create"}
+  new_article GET    /articles/new(.:format)            {:controller=>"articles", :action=>"new"}
+ edit_article GET    /articles/:id/edit(.:format)       {:controller=>"articles", :action=>"edit"}
+      article GET    /articles/:id(.:format)            {:controller=>"articles", :action=>"show"}
+              PUT    /articles/:id(.:format)            {:controller=>"articles", :action=>"update"}
+              DELETE /articles/:id(.:format)            {:controller=>"articles", :action=>"destroy"}
+page_articles GET    /pages/:page_id/articles(.:format) {:controller=>"articles", :action=>"index"}
+</pre>
+
+Just your standard set of resource routes, with one extra - the paged articles index route, last in the list. Specifying the <code>:paged</code> option in the mapping yields this extra route for use in our index actions. (Everything else remains the same.)
+
+Want a bit more flexibility? We can pass <code>:as</code> or <code>:name</code> options to the paged option if needed:
+
+<pre>
+map.resources :articles, :paged => { :as => :pagina }
+map.resources :users, :paged => { :name => :group }
+</pre>
+
+Which would produce these routes:
+
+<pre>
+page_articles GET /pagina/:page_id/articles(.:format) {:controller=>"articles", :action=>"index"}
+  group_users GET /groups/:group_id/users(.:format)   {:controller=>"users", :action=>"index"}
+</pre>
+
+(This is likely only to be useful in rare situations. One example would be paginating more than one collection in a single view.)
+
+A more complex example:
+
+<pre>
+map.resources :articles, :collection => { :published => :get }, :paged => true
+</pre>
+
+Which would produce these paged routes:
+
+<pre>
+published_page_articles GET /pages/:page_id/articles/published(.:format) {:controller=>"articles", :action=>"published"}
+          page_articles GET /pages/:page_id/articles(.:format)           {:controller=>"articles", :action=>"index"}
+</pre>
+
+By default paged routes are generated for the <code>:index</code> action and any <code>:collection</code> actions that specify the <code>:get</code> method. To override the default behaviour, simply be explicit about which paged routes are required:
+
+<pre>
+map.resources :articles, :collection => { :published => :get }, :paged => { :published => true }   
+</pre>
+
+Which would produce only this paged route:
+
+<pre>
+published_page_articles GET /pages/:page_id/articles/published(.:format) {:controller=>"articles", :action=>"published"}
+</pre>
+
+Another complex example:
+
+<pre>
+map.resources :articles, :collection => { :published => :get }, :paged => { :index => true, :published => { :as => :pagina } }
+</pre>
+
+Which would produce these paged routes:
+
+<pre>
+published_page_articles GET /pagina/:page_id/articles/published(.:format) {:controller=>"articles", :action=>"published"}
+          page_articles GET /pages/:page_id/articles(.:format)            {:controller=>"articles", :action=>"index"}
+</pre>
+
+In fact, the <code>:as</code> and <code>:name</code> options specified in the root of the <code>:paged</code> will be used for all paged routes where an alternative is not specified.
+
+<pre>
+map.resources :users, :collection => { :active => :get, :blocked => :get, :online => :get }, :paged => { :as => "pagina", :index => true, :active => { :name => "group" }, :blocked => { :as => "blacklist" } }
+</pre>
+
+Which would produce these three paged routes:
+
+<pre>
+blocked_page_users GET /blacklist/:page_id/users/blocked(.:format) {:controller=>"users", :action=>"blocked"}
+active_group_users GET /pagina/:group_id/users/active(.:format)    {:controller=>"users", :action=>"active"}
+        page_users GET /pagina/:page_id/users(.:format)            {:controller=>"users", :action=>"index"}
+</pre>
+
+Notice that there is no paged route for the <code>:online</code> collection action.
+
+h2. Controller Methods
+
+OK, so we have our pages represented in our article index route. Let's turn to the articles controller next.
+
+I believe there is diverging practice on this, but in controllers I always prefer to load the collection and object in before filters, typically along the lines of:
+
+<pre>
+class ArticlesController < ApplicationController
+  before_filter :get_articles
+  before_filter :get_article, :only => [ :show, :edit, :update, :destroy ]
+  before_filter :new_article, :only => [ :new, :create ]
+
+  # actions here ...
+
+  protected
+  
+  def get_articles
+    @articles = @user.articles.scoped(:order => "created_at DESC") # or whatever
+  end
+  
+  def get_article
+    @article = @articles.find_from_param(params[:id])
+  end
+  
+  def new_article
+    @article = @articles.new(params[:article])
+  end
+end
+</pre>
+
+It's a very consistent way to write RESTful controllers. The <code>@articles</code> collection is _always_ created, which is OK, since it's just a scope or an association and no records are actually loaded. For the member actions, the collection instance is either loaded from the collection or built from it, depending on whether the action is creating a new record (new, create) or modifying an existing once (show, edit, update, destroy).
+
+Using this pattern, paginating the collection fits naturally as another before filter once the collection is set. To this end, Paged Scopes provides a tailored <code>paginate</code> class method to do just that:
+
+<pre>
+class ArticlesController < ApplicationController
+  before_filter :get_articles
+  before_filter :get_article, :only => [ :show, :edit, :update, :destroy ]
+  before_filter :new_article, :only => [ :new, :create ]
+
+  paginate :articles, :per_page => 3, :path => :page_articles_path
+
+  ...
+
+</pre>
+
+This <code>paginate</code> method basically adds another <code>before_filter</code> which loads the current page from the collection. As arguments, it takes an optional collection name and an options hash. If omitted, the collection name is inferred from the controller name. (Hence, in the above example, we could have omitted the <code>:artices</code> arguments and <code>@articles</code> would then be inferred from the <code>ArticlesController</code> name. Hurrah for naming conventions!)
+
+You can pass a few options to the <code>paginate</code> method:
+
+* A <code>:per_page</code> option sets the page size on the collection if you specify it. (This option can be omitted if <code>per_page</code> has already been set on the collection.)
+* A <code>:path</code> option will set the path proc for the paginator to be the controller method you specify. In the above example we've set it to a named route (<code>page_articles_path</code>), but it could equally well be a method you've defined later in the controller. (This could be useful if you want to use a polymorphic path, for example.)
+* a <code>:name</code> option is available if you want to refer to your pages by a different class name (unlikely).
+
+Any other options will be passed through to the filter definition. So you can use filter options, such as <code>:if</code>, <code>:only</code> and <code>:except</code>, just as you would for any other filter.
+
+Aside from setting the options you specify, the main job of the <code>paginate</code> filter is to set the page as an instance variable. Controller actions will then have a <code>@page</code> variable available to be used for pagination. The page number is determined from three locations in order of priority.
+
+# If an object of the collection is present (an <code>@article</code>, in our example), the page containing that object is loaded (unless the object is a new record).
+# Failing that, the request params are examine for a <code>:page_id</code>. If present, that page number is loaded. (This fits with the paged resource routes described earlier.)
+# Failing that, the first page is loaded by default.
+
+Loading the page for a member action (show, edit, update) might not seem useful at first. Its utility becomes apparent when we're redirecting though:
+
+<pre>
+def update
+  if @article.save
+    flash[:notice] = "Success!"
+    redirect_to page_articles_path(@page)
+  else
+    ...
+  end
+end
+</pre>
+
+The page is used to redirect to the index at the page containing the edited object.  Very polite to users! (Views can also link back to the paged index in a similar manner.)
+
+h2. Pagination Links
+
+The basic idea is to render a row of numbered links for a few pages either side of the one being viewed. This is referred to as the _inner window_. An _outer window_ is often also included - this shows links for the first and last few pages at the start and end of the list. Usually, _next page_ and _previous page_ links are also sandwiched around  the numbered links.
+
+The "will_paginate rdoc":http://gitrdoc.com/mislav/will_paginate/tree/master/ has some good links to articles on pagination UI design:
+
+* a "Yahoo Design Pattern Library article":http://developer.yahoo.com/ypatterns/parent.php?pattern=pagination describing two styles of pagination;
+* a "Smashing Magazine article":http://www.smashingmagazine.com/2007/11/16/pagination-gallery-examples-and-good-practices/ with good practices and examples; and
+* "another article":http://kurafire.net/log/archive/2007/06/22/pagination-101 with heaps of examples, both good and bad.
+
+In the "will_paginate":http://wiki.github.com/mislav/will_paginate gem, the eponymous <code>will_paginate</code> view helper is provided to render these links in your view. It seems to work well, but one look at the method's options gives you an idea what you'll be up for if you want to customize the HTML structure of your pagination links. Want to render your pagination links as a list? You'll have to write your own <code>LinkRenderer</code> subclass. (Have fun with that.)
+
+There has to be a better way. There is of course, and it comes from a less-is-more approach.
+
+h2. Using the Window Helper
+
+With the PagedScopes gem, each page has an associated <code>paginator</code> which provides some simple methods for generating page links. First, we need to call <code>set_path</code> to tell the paginator how to generate links for a pages:
+
+<pre>
+@page.paginator.set_path { |page|  page_articles_path(page) }
+</pre>
+
+The block we supply will be used by the paginator to generate a paged URL whenever one is needed.
+
+(Note that the controller <code>paginate</code> method I presented in the last article can also be used to set the path proc by using the <code>:path</code> option.)
+
+Next, we use the <code>window</code> method to render the page links. We supply a block which the paginator will call for each page in the window, allowing us to render the link exactly as we want tp. Let's render that list we were talking about:
+
+<pre>
+<ul>
+  <% @page.paginator.window(:inner => 2, :outer => 1) do |page, path, classes| %>
+    <% content_tag_for :li, page, :class => classes.join(" ") do %>
+      <%= link_to_if path, page.number, path %>
+    <% end %>
+  <% end %>
+</ul>
+</pre>
+
+Here we've specified an inner window of size 2 (meaning we want links for two pages either side of the current page) and an outer window of size 1 (meaning we want links for just the first and last pages).
+
+The <code>window</code> helper passes a succession of pages to our block for us to render. The block arguments are:
+
+# The page itself, from which we can get the page number.
+# The path for the page, produced using the <code>set_path</code> proc we've already specified. If the page is the current page, then nil is passed as the path - this is because we shouldn't render a link for the current page. (Hence our use of <code>link_to_if</code>.)
+# An optional array of classes describing the link. Possible values for the classes are <code>:selected</code> if the page is the current page, <code>:gap_before</code> if there's a gap in the numbering before the page, and <code>:gap_after</code> if there's a gap after. You can use these as you see fit, but they're intended to be passed through to your link container as classes for styling. (We've done this above with the <code>:class => classes.join(" ")</code> option.)
+
+Within the block, the page link can be rendered as we please. In our example we're putting it inside an <code><li></code> element. For page 7, the <code>window</code> function would produce the following markup:
+
+<pre>
+<ul>
+  <li class="page gap_after" id="page_1">
+    <span><a href="/pages/1/articles">1</a></span>
+  </li>
+  <li class="page gap_before" id="page_5">
+    <span><a href="/pages/5/articles">5</a></span>
+  </li>
+  <li class="page" id="page_6">
+    <span><a href="/pages/6/articles">6</a></span>
+  </li>
+  <li class="page selected" id="page_7">
+    <span>7</span>
+  </li>
+  <li class="page" id="page_8">
+    <span><a href="/pages/8/articles">8</a></span>
+  </li>
+  <li class="page gap_after" id="page_9">
+    <span><a href="/pages/9/articles">9</a></span>
+  </li>
+  <li class="page gap_before" id="page_12">
+    <span><a href="/pages/12/articles">12</a></span>
+  </li>
+</ul>
+</pre>
+
+h2. Styling the Output
+
+Add some styling, using our classes to distinguish the currently selected pages and to add a separator where there are numbering gaps:
+
+<pre>
+li.page { display: inline }
+li.page a { text-decoration: none }
+li.page span {
+  border: 1px solid gray;
+  padding: 0.2em 0.5em }
+li.page.selected span, li.page span:hover {
+  background: gray;
+  color: white }
+li.page.gap_before:before { content: "..." }
+</pre>
+
+The result: a nice-looking set of page links.
+
+[Refer to the original article at "code.matthewhollingworth.net":http://code.matthewhollingworth.net/articles/11 for correctly rendered examples!]
+
+<notextile>
+<ul class="pgex">
+  <li class="page gap_after" id="page_1">
+    <span><a href="#">1</a></span>
+  </li>
+  <li class="page gap_before" id="page_5">
+    <span><a href="#">5</a></span>
+  </li>
+  <li class="page" id="page_6">
+    <span><a href="#">6</a></span>
+  </li>
+  <li class="page selected" id="page_7">
+    <span>7</span>
+  </li>
+  <li class="page" id="page_8">
+    <span><a href="#">8</a></span>
+  </li>
+  <li class="page gap_after" id="page_9">
+    <span><a href="#">9</a></span>
+  </li>
+  <li class="page gap_before" id="page_12">
+    <span><a href="#">12</a></span>
+  </li>
+</ul>
+</notextile>
+
+Too easy!
+
+h2. Adding Extra Controls
+
+How do we get add _previous_ and _next_ links? This is pretty easy, too - just specify the <code>:extras</code> we want as an option. (Choose from <code>:first</code>, <code>:previous</code>, <code>:next</code> and <code>:last</code>.) Those symbols will be passed to our block as the page when they need to be rendered.
+
+We'll move our pagination links to a helper for clarity:
+
+<pre>
+module ArticlesHelper
+  MARKER = { :previous => "&lt; newer", :next => "older &gt;" }
+  def article_page_links
+    @page.paginator.window(:inner => 2, :outer => 1, :extras => [ :previous, :next ]) do |page, path, classes|
+      content_tag :li, :class => (classes << :page).join(" ") do
+        content_tag :li, link_to_if(path, MARKER[page] || page.number, path)
+      end
+    end
+  end
+end
+</pre>
+
+Which renders as follows (for page 4 this time):
+
+[Refer to the original article at "code.matthewhollingworth.net":http://code.matthewhollingworth.net/articles/11 for correctly rendered examples!]
+
+<notextile>
+<ul class="pgex">
+  <li class="page">
+    <span><a href="#">&lt; newer</a></span>
+  </li>
+  <li class="page">
+    <span><a href="#">1</a></span>
+  </li>
+  <li class="page">
+    <span><a href="#">2</a></span>
+  </li>
+  <li class="page">
+    <span><a href="#">3</a></span>
+  </li>
+  <li class="page selected">
+    <span>4</span>
+  </li>
+  <li class="page">
+    <span><a href="#">5</a></span>
+  </li>
+  <li class="page gap_after">
+    <span><a href="#">6</a></span>
+  </li>
+  <li class="page gap_before">
+    <span><a href="#">12</a></span>
+  </li>
+  <li class="page">
+    <span><a href="#">older &gt;</a></span>
+  </li>
+</ul>
+</notextile>
+
+Just what we want!
+
+Links for the <code>:first</code> and <code>:last</code> pages can also be specified as extras; these will appear outside the _previous_ and _next_ links. (If you use these extras, you'll want to omit the <code>:outer</code> window option.)
+
+h2. Get It!
+
+You can install the PagedScopes gem as follows:
+
+<pre>
+gem sources -a http://gemcutter.org # just once
+sudo gem install paged_scopes
+</pre>
+
+And in your <code>config/environment.rb</code>, if you're on Rails:
+
+<pre>
+config.gem "paged_scopes", :source => "http://gemcutter.org"
+</pre>
+
+Peruse the code at "GitHub":http://github.com/mholling/paged_scopes.
+
+Copyright (c) 2009 Matthew Hollingworth. See LICENSE for details.

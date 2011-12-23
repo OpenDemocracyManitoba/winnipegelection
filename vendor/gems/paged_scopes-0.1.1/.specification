@@ -1,0 +1,114 @@
+--- !ruby/object:Gem::Specification 
+name: paged_scopes
+version: !ruby/object:Gem::Version 
+  hash: 25
+  prerelease: 
+  segments: 
+  - 0
+  - 1
+  - 1
+  version: 0.1.1
+platform: ruby
+authors: 
+- Matthew Hollingworth
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2009-10-22 00:00:00 +00:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: activerecord
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 5
+        segments: 
+        - 2
+        - 2
+        - 1
+        version: 2.2.1
+  type: :runtime
+  version_requirements: *id001
+description: 
+email: mdholling@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- LICENSE
+- README.textile
+files: 
+- .document
+- .gitignore
+- LICENSE
+- README.textile
+- Rakefile
+- VERSION.yml
+- history.txt
+- lib/paged_scopes.rb
+- lib/paged_scopes/collection.rb
+- lib/paged_scopes/context.rb
+- lib/paged_scopes/controller.rb
+- lib/paged_scopes/index.rb
+- lib/paged_scopes/pages.rb
+- lib/paged_scopes/paginator.rb
+- lib/paged_scopes/resources.rb
+- paged_scopes.gemspec
+- rails/init.rb
+- spec/collection_spec.rb
+- spec/context_spec.rb
+- spec/controller_spec.rb
+- spec/index_spec.rb
+- spec/page_spec.rb
+- spec/paginator_spec.rb
+- spec/resources_spec.rb
+- spec/spec_helper.rb
+has_rdoc: true
+homepage: http://github.com/mholling/paged_scopes
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --charset=UTF-8
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.5.2
+signing_key: 
+specification_version: 3
+summary: PagedScopes is an ActiveRecord pagination gem. It lets you easily paginate collection associations and named scopes. It also paginates collections which already have :limit and :offset scopes in place. You can also find the page containing a given object in a collection, and find the next and previous objects for each object in the collection.
+test_files: 
+- spec/collection_spec.rb
+- spec/context_spec.rb
+- spec/controller_spec.rb
+- spec/index_spec.rb
+- spec/page_spec.rb
+- spec/paginator_spec.rb
+- spec/resources_spec.rb
+- spec/spec_helper.rb

@@ -1,0 +1,170 @@
+--- !ruby/object:Gem::Specification 
+name: feed-normalizer
+version: !ruby/object:Gem::Version 
+  hash: 7
+  prerelease: 
+  segments: 
+  - 1
+  - 5
+  - 2
+  version: 1.5.2
+platform: ruby
+authors: 
+- Andrew A. Smith
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-01-25 00:00:00 +00:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: simple-rss
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 13
+        segments: 
+        - 1
+        - 1
+        version: "1.1"
+  type: :runtime
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: hpricot
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 7
+        segments: 
+        - 0
+        - 6
+        version: "0.6"
+  type: :runtime
+  version_requirements: *id002
+- !ruby/object:Gem::Dependency 
+  name: rubyforge
+  prerelease: false
+  requirement: &id003 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 9
+        segments: 
+        - 2
+        - 0
+        - 3
+        version: 2.0.3
+  type: :development
+  version_requirements: *id003
+- !ruby/object:Gem::Dependency 
+  name: gemcutter
+  prerelease: false
+  requirement: &id004 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 19
+        segments: 
+        - 0
+        - 3
+        - 0
+        version: 0.3.0
+  type: :development
+  version_requirements: *id004
+- !ruby/object:Gem::Dependency 
+  name: hoe
+  prerelease: false
+  requirement: &id005 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 27
+        segments: 
+        - 2
+        - 5
+        - 0
+        version: 2.5.0
+  type: :development
+  version_requirements: *id005
+description: |-
+  An extensible Ruby wrapper for Atom and RSS parsers.
+  
+  Feed normalizer wraps various RSS and Atom parsers, and returns a single unified
+  object graph, regardless of the underlying feed format.
+email: andy@tinnedfruit.org
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- History.txt
+- License.txt
+- Manifest.txt
+- README.txt
+files: 
+- History.txt
+- License.txt
+- Manifest.txt
+- Rakefile
+- README.txt
+- lib/feed-normalizer.rb
+- lib/html-cleaner.rb
+- lib/parsers/rss.rb
+- lib/parsers/simple-rss.rb
+- lib/structures.rb
+- test/data/atom03.xml
+- test/data/atom10.xml
+- test/data/rdf10.xml
+- test/data/rss20.xml
+- test/data/rss20diff.xml
+- test/data/rss20diff_short.xml
+- test/test_feednormalizer.rb
+- test/test_htmlcleaner.rb
+has_rdoc: true
+homepage: http://github.com/aasmith/feed-normalizer
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --main
+- README.txt
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: feed-normalizer
+rubygems_version: 1.5.2
+signing_key: 
+specification_version: 3
+summary: Extensible Ruby wrapper for Atom and RSS parsers
+test_files: 
+- test/test_feednormalizer.rb
+- test/test_htmlcleaner.rb

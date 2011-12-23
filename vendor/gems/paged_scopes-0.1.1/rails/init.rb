@@ -1,0 +1,1 @@
+require 'paged_scopes'

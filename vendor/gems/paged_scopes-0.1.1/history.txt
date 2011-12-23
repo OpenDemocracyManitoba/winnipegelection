@@ -1,0 +1,5 @@
+PagedScopes Revision History
+ 
+Version 0.1.1
+* Added this revision history.
+* Added ability to generate paged routes for other collection actions (Matthew Gibbons, Matthew Hollingworth).
