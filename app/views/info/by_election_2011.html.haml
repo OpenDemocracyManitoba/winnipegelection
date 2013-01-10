@@ -1,0 +1,48 @@
+- sidebar
+
+%div#front_main
+  %div#countdown
+    %h2
+      Winnipeg 2011 By-Election
+    %p
+      On
+      %strong November 26th of 2011
+      there was a by-election for the following city council and school trustee wards:
+    %ul
+      %li St. Vital Civic Ward
+      %li Winnipeg School Division Ward 1
+      %li Louis Reil School Division Ward 2
+    %br
+    %h2 
+      2011 By-Election Results
+    %p
+      View the unofficial results here:
+    %ul
+      %li= link_to '2011 Winnipeg By-Election Results', 'http://www.winnipeg.ca/clerks/docs/elections/2011byelection/results/results.html'
+  %div#your
+    %h2 2011 By-Election Candidates
+    %div.maps
+      %a{ :href => '/ward/St_Vital_By-Election' }
+        %img{ :src => '/images/civicwards_thumb.png', :title => 'St. Vital by-election candidates.'}
+      %a{ :href => '/school_ward/Louis_Riel/Ward_2_By-Election' }
+        %img{ :src => '/images/schoolwards_thumb.png', :title => 'Louis Reil by-election school trustee candidates.'}
+      %a{ :href => '/school_ward/Winnipeg/Ward_1_By-Election' }
+        %img{ :src => '/images/schoolwards_thumb.png', :title => 'Winnipeg by-election school trustee candidates.'}
+    %div.links
+      %p
+        = link_to 'St. Vital City Council Candidates', '/ward/St_Vital_By-Election' 
+      %p.small
+        = link_to 'Role of a City Councillor', '/role_council'
+      %p
+        %br
+        %br
+        = link_to 'Louis Riel School Division Trustee Candidates', '/school_ward/Louis_Riel/Ward_2_By-Election' 
+      %p.small
+        = link_to 'Role of a School Trustee', '/role_trustee'
+      %p
+        %br
+        %br
+        %br
+        = link_to 'Winnipeg School Division Trustee Candidates',  '/school_ward/Winnipeg/Ward_1_By-Election' 
+      %p.small
+        = link_to 'Role of a School Trustee', '/role_trustee'

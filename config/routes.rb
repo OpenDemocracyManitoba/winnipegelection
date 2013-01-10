@@ -56,6 +56,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => 'info'
   
+  map.connect '/by_election_2011', :controller => 'info', :action => 'by_election_2011'
   map.connect '/ward/:ward_name', :controller => 'info', :action => 'ward'
   map.connect '/school_ward/:division_name/:ward_name', :controller => 'info', :action => 'school_ward'
   map.connect '/candidate/:candidate_name', :controller => 'info', :action => 'candidate'

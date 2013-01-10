@@ -6,7 +6,7 @@
       - if (t = yield(:title)) 
         = h yield(:title) + " - Winnipeg Election"
       - else
-        Winnipeg Election - Civic By-Election 2011
+        Winnipeg Election - Civic Election
     
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     %meta{'name'=>'keywords', :content => @meta_keywords}/
@@ -33,43 +33,6 @@
       %div.dropList
         %ul
           %li= link_to 'Home', root_path
-          :plain
-            <li class="oneCol"><a class="oneCol fly nohover" href="">Candidates<!--[if gte IE 7]><!--></a><!--<![endif]--> 
-              <!--[if lte IE 6]><table><tr><td><![endif]--> 
-              <div> 
-                <ul> 
-                  <li class="fly"><a class="fly nohover" href="#">Council Candidates<!--[if gte IE 7]><!--></a><!--<![endif]--> 
-                  <!--[if lte IE 6]><table><tr><td><![endif]--> 
-                    <ul> 
-                      <li><a href="/ward/St_Vital_By-Election/">St. Vital By-Elecion</a></li>
-                    </ul> 
-                  <!--[if lte IE 6]></td></tr></table></a><![endif]--> 
-                  </li> 
-                  <li class="fly"><a class="fly nohover" href="#">School Trustees<!--[if gte IE 7]><!--></a><!--<![endif]--> 
-                  <!--[if lte IE 6]><table><tr><td><![endif]--> 
-                    <ul> 
-                      <li class="fly"><a class="fly nohover" href="#">Louis Riel<!--[if gte IE 7]><!--></a><!--<![endif]--> 
-                        <!--[if lte IE 6]><table><tr><td><![endif]--> 
-                        <ul>
-                          <li><a href="/school_ward/Louis_Riel/Ward_2_By-Election">Ward 2 By-Election</a></li>
-                        </ul> 
-                        <!--[if lte IE 6]></td></tr></table></a><![endif]--> 
-                      </li> 
-                      <li class="fly"><a class="fly nohover" href="#">Winnipeg<!--[if gte IE 7]><!--></a><!--<![endif]-->  
-                        <!--[if lte IE 6]><table><tr><td><![endif]--> 
-                        <ul>
-                          <li><a href="/school_ward/Winnipeg/Ward_1_By-Election">Ward 1 By-Election</a></li>
-                        </ul> 
-                        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-                      </li>
-                    </ul> 
-                  <!--[if lte IE 6]></td></tr></table></a><![endif]--> 
-                  </li>
-                  
-                </ul> 
-              </div> 
-            <!--[if lte IE 6]></td></tr></table></a><![endif]--> 
-            </li>
           :plain
             <li class="oneCol"><a class="oneCol fly nohover" href="/election_info">Election Info<!--[if gte IE 7]><!--></a><!--<![endif]--> 
               <!--[if lte IE 6]><table><tr><td><![endif]--> 

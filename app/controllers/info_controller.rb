@@ -10,6 +10,9 @@ class InfoController < ApplicationController
     @days_until_election = (Date.parse("2010 October 27") - Time.zone.today).to_i
     @meta_description = "Get to know your mayoral, city council and school trustee candidates for the upcoming Winnipeg civic election."
   end
+  def by_election_2011
+    @meta_description = "Get to know your mayoral, city council and school trustee candidates for the upcoming Winnipeg civic election."
+  end
   def mayor
     @show_feedback = true
     @ward = Ward.mayoral.with_candidates.first
