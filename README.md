@@ -1,6 +1,6 @@
 ## WinnipegElection.ca
 
-WinnipegElection.ca is a citizen driven website created for the upcoming 2014 Winnipeg general election.
+WinnipegElection.ca is a citizen driven website originally created for the 2010 Winnipeg general election.
 
 This site was created by [Open Democracy Manitoba](http://opendemocracymanitoba.ca/). Our mission is to empower voters, helping them learn about the roles, issues, and visions of our representatives in order have a more accountable and respectful democracy.
 
