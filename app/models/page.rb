@@ -14,15 +14,16 @@ class Page < ActiveRecord::Base
     page_path(id: id, permalink: permalink_param)
   end
   
-  # Synonym for title. Helpful for ActiveAdmin which assumes a name property.
+  # Synonym for title for ActiveAdmin which assumes a name property.
   def name
     self.title
   end
   
-  # Finds page by id, but throws an exception is the permalink slug from the URL doesn't match the page permalink.
+  # Finds page by id, but throws an exception if the permalink slug from the
+  # URL doesn't match the page permalink.
   def self.find_page(params)
     page = find(params[:id])
-    raise ActiveRecord::RecordNotFound  unless page.permalink_param == params[:permalink]
+    raise ActiveRecord::RecordNotFound  if page.permalink_param != params[:permalink]
     page
   end
 end
