@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/:id' => 'pages#show'
+  get 'pages/:id/:permalink' => 'pages#show', as: :page
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
