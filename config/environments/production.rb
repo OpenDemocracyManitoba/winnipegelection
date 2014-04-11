@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # For the page caching gem:
+  config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public/cache"
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

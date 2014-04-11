@@ -15,3 +15,7 @@
 /log/*.log
 /tmp
 *.swp
+/public/cache/*
+
+# Ignore secrets
+/config/secrets.yml
