@@ -15,7 +15,8 @@
 /log/*.log
 /tmp
 *.swp
-/public/cache/*
 
-# Ignore secrets
+# Ignore secrets, assets and page cache
 /config/secrets.yml
+/public/assets/*
+/public/cache/*
