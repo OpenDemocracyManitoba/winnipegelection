@@ -36,3 +36,4 @@ gem 'actionpack-page_caching'
 
 gem 'slim-rails'
 gem 'rubocop'
+gem 'redcarpet'

@@ -151,6 +151,7 @@ GEM
     rake (10.2.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    redcarpet (2.3.0)
     responders (1.0.0)
       railties (>= 3.2, < 5)
     rubocop (0.20.1)
@@ -219,6 +220,7 @@ DEPENDENCIES
   polyamorous!
   rails (= 4.1.0)
   ransack!
+  redcarpet
   rubocop
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
