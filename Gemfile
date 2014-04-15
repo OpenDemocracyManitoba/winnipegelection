@@ -33,3 +33,5 @@ gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4.1'
 gem 'formtastic', github: 'justinfrench/formtastic'
 
 gem 'actionpack-page_caching'
+
+gem 'slim'
