@@ -35,3 +35,4 @@ gem 'formtastic', github: 'justinfrench/formtastic'
 gem 'actionpack-page_caching'
 
 gem 'slim'
+gem 'rubocop'
