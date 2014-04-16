@@ -81,6 +81,11 @@ GEM
       sass (>= 3.2.0)
       thor
     builder (3.2.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -212,6 +217,7 @@ PLATFORMS
 DEPENDENCIES
   actionpack-page_caching
   activeadmin!
+  carrierwave
   coffee-rails (~> 4.0.0)
   formtastic!
   jbuilder (~> 2.0)

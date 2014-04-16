@@ -20,3 +20,4 @@
 /config/secrets.yml
 /public/assets/*
 /public/cache/*
+/public/uploads/*
