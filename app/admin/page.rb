@@ -2,17 +2,28 @@ ActiveAdmin.register Page do
 
   permit_params :title, :content, :permalink, :show_title
   
-  # See permitted parameters documentation:
-  # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #  permitted = [:permitted, :attributes]
-  #  permitted << :other if resource.something?
-  #  permitted
-  # end
+  index do
+    column :id
+    column :title, sortable: :title do |page|
+      link_to page.title, admin_page_path(page)
+    end
+    column :content do |page|
+      truncate page.content
+    end
+    column :permalink do |page|
+      link_to page.permalink, page.friendly_path
+    end
+    default_actions
+  end
+
+  show do
+    h3 page.title
+    div do
+      markdown page.content
+    end
+    div do
+      link_to page.title + " On Site", page.friendly_path
+    end
+  end
   
 end
