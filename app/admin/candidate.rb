@@ -8,7 +8,7 @@ ActiveAdmin.register Candidate do
     f.inputs "Details", :multipart => true do
       f.input :name
       f.input :image, as: :file, :hint => f.object.image.present? \
-        ? f.template.image_tag(f.object.image.url)
+        ? f.template.image_tag(f.object.image.tiny.url)
         : f.template.content_tag(:span, 'no profile image yet')
       f.input :image_cache, as: :hidden
       f.input :remove_image, as: :boolean
@@ -31,4 +31,30 @@ ActiveAdmin.register Candidate do
 
     f.actions  
   end  
+
+  index do
+    column :id
+    column :name, sortable: true do |candidate|
+      link_to candidate.name, edit_admin_candidate_path(candidate)
+    end
+    column :image do |candidate|
+      image_tag candidate.image.tiny.url
+    end
+    column :email do |candidate|
+      mail_to candidate.email  if candidate.email.present?
+    end
+    column :phone_number
+    column :office_address do |candidate|
+      truncate candidate.office_address
+    end
+    column 'Online' do |c|
+      [:website, :council_site, :facebook, :twitter, :youtube, :linkedin].each do |site|
+        span do
+          # Link to all websites. Link text is first letter of site type. Title attribute is site type.
+          link_to_if c[site].present?, site.to_s[0].capitalize, c[site], title: site.to_s
+        end
+      end
+    end
+    default_actions
+  end
 end
