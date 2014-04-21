@@ -1,4 +1,4 @@
-ActiveAdmin.register Candidate do
+ActiveAdmin.register Person do
 
   permit_params :name, :office_address, :phone_number, :email,
                 :image, :website, :council_site, :facebook,
@@ -34,18 +34,18 @@ ActiveAdmin.register Candidate do
 
   index do
     column :id
-    column :name, sortable: true do |candidate|
-      link_to candidate.name, edit_admin_candidate_path(candidate)
+    column :name, sortable: true do |person|
+      link_to person.name, edit_admin_person_path(person)
     end
-    column :image do |candidate|
-      image_tag candidate.image.tiny.url
+    column :image do |person|
+      image_tag person.image.tiny.url
     end
-    column :email do |candidate|
-      mail_to candidate.email  if candidate.email.present?
+    column :email do |person|
+      mail_to person.email  if person.email.present?
     end
     column :phone_number
-    column :office_address do |candidate|
-      truncate candidate.office_address
+    column :office_address do |person|
+      truncate person.office_address
     end
     column 'Online' do |c|
       [:website, :council_site, :facebook, :twitter, :youtube, :linkedin].each do |site|

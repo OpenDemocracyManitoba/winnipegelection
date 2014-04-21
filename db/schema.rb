@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140416164439) do
+ActiveRecord::Schema.define(version: 20140421202539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,7 +49,16 @@ ActiveRecord::Schema.define(version: 20140416164439) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "candidates", force: true do |t|
+  create_table "pages", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "permalink"
+    t.boolean  "show_title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "people", force: true do |t|
     t.string   "name"
     t.string   "office_address"
     t.string   "phone_number"
@@ -61,15 +70,6 @@ ActiveRecord::Schema.define(version: 20140416164439) do
     t.string   "twitter"
     t.string   "youtube"
     t.string   "linkedin"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "pages", force: true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.string   "permalink"
-    t.boolean  "show_title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
