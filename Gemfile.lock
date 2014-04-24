@@ -53,8 +53,6 @@ GEM
       activesupport (= 4.1.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    actionpack-page_caching (1.0.2)
-      actionpack (>= 4.0.0, < 5)
     actionview (4.1.0)
       activesupport (= 4.1.0)
       builder (~> 3.1)
@@ -139,6 +137,7 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
+    railroady (1.1.1)
     rails (4.1.0)
       actionmailer (= 4.1.0)
       actionpack (= 4.1.0)
@@ -218,7 +217,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actionpack-page_caching
   activeadmin!
   carrierwave
   coffee-rails (~> 4.0.0)
@@ -228,6 +226,7 @@ DEPENDENCIES
   mini_magick
   pg
   polyamorous!
+  railroady
   rails (= 4.1.0)
   ransack!
   redcarpet

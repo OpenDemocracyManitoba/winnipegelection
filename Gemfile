@@ -32,10 +32,12 @@ gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
 gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4.1'
 gem 'formtastic', github: 'justinfrench/formtastic'
 
-gem 'actionpack-page_caching'
-
 gem 'slim-rails'
-gem 'rubocop'
 gem 'redcarpet'
 gem 'carrierwave'
 gem 'mini_magick'
+
+group :development, :test do
+  gem 'railroady'
+  gem 'rubocop'
+end
