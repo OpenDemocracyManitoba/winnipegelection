@@ -7,5 +7,7 @@ class CreateElectoralRaces < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :electoral_races, [:region_id, :election_id], unique: true
   end
 end

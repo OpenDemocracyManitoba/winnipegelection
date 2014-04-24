@@ -16,7 +16,8 @@ class ProfileImageUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-    ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
+    path = 'fallback/' + [version_name, 'default.png'].compact.join('_')
+    ActionController::Base.helpers.asset_path(path)
   end
 
   version :tiny do
@@ -39,5 +40,4 @@ class ProfileImageUploader < CarrierWave::Uploader::Base
   def extension_white_list
     %w(jpg jpeg gif png)
   end
-
 end

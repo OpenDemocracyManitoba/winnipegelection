@@ -60,6 +60,10 @@ ActiveRecord::Schema.define(version: 20140421212553) do
     t.datetime "updated_at"
   end
 
+  add_index "candidacies", ["electoral_race_id"], name: "index_candidacies_on_electoral_race_id", using: :btree
+  add_index "candidacies", ["person_id", "electoral_race_id"], name: "index_candidacies_on_person_id_and_electoral_race_id", unique: true, using: :btree
+  add_index "candidacies", ["person_id"], name: "index_candidacies_on_person_id", using: :btree
+
   create_table "elections", force: true do |t|
     t.string   "name"
     t.boolean  "is_active"
@@ -79,6 +83,7 @@ ActiveRecord::Schema.define(version: 20140421212553) do
   end
 
   add_index "electoral_races", ["election_id"], name: "index_electoral_races_on_election_id", using: :btree
+  add_index "electoral_races", ["region_id", "election_id"], name: "index_electoral_races_on_region_id_and_election_id", unique: true, using: :btree
   add_index "electoral_races", ["region_id"], name: "index_electoral_races_on_region_id", using: :btree
 
   create_table "pages", force: true do |t|
@@ -118,12 +123,12 @@ ActiveRecord::Schema.define(version: 20140421212553) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer  "region_type_id"
-    t.integer  "region_id_id"
+    t.integer  "region_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "regions", ["region_id_id"], name: "index_regions_on_region_id_id", using: :btree
+  add_index "regions", ["region_id"], name: "index_regions_on_region_id", using: :btree
   add_index "regions", ["region_type_id"], name: "index_regions_on_region_type_id", using: :btree
 
 end

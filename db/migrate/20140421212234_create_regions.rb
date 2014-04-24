@@ -5,7 +5,7 @@ class CreateRegions < ActiveRecord::Migration
       t.datetime :start_date
       t.datetime :end_date
       t.references :region_type, index: true
-      t.references :region_id, index: true
+      t.references :region, index: true
 
       t.timestamps
     end
