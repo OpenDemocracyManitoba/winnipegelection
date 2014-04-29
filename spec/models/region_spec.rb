@@ -17,8 +17,8 @@ describe Region do
     let(:region) do
       FactoryGirl.create(:region_with_children, child_count: ASSOCIATION_COUNT)
     end
-    subject            { region }
-    its(:sub_regions)  { is_expected.to have(ASSOCIATION_COUNT).items }
+    subject { region }
+    it      { is_expected.to have(ASSOCIATION_COUNT).sub_regions }
   end
 
   context 'when a region has electoral races' do
@@ -26,8 +26,8 @@ describe Region do
       FactoryGirl.create(:region_with_electoral_races,
                          electoral_race_count: ASSOCIATION_COUNT)
     end
-    subject                { region }
-    its(:electoral_races)  { is_expected.to have(ASSOCIATION_COUNT).items }
-    its(:elections)        { is_expected.to have(ASSOCIATION_COUNT).items }
+    subject { region }
+    it      { is_expected.to have(ASSOCIATION_COUNT).electoral_races }
+    it      { is_expected.to have(ASSOCIATION_COUNT).elections }
   end
 end

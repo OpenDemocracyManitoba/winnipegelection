@@ -6,9 +6,12 @@ describe Candidacy do
       FactoryGirl.build(:candidacy_with_person_and_electoral_race)
     end
     subject              { candidacy }
-    its(:person)         { is_expected.to be_a(Person) }
-    its(:electoral_race) { is_expected.to be_an(ElectoralRace) }
     it                   { is_expected.to be_valid }
+    
+    it 'has accessible associations of the correct type' do
+      expect(candidacy.person).to be_a(Person)
+      expect(candidacy.electoral_race).to be_a(ElectoralRace)
+    end
   end
 
   context 'when a candidacy has no associated person or electoral_race' do
