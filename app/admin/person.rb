@@ -33,7 +33,8 @@ ActiveAdmin.register Person do
   end  
 
   index do
-    column :id
+    selectable_column
+    id_column
     column :name, sortable: true do |person|
       link_to person.name, edit_admin_person_path(person)
     end
@@ -55,6 +56,7 @@ ActiveAdmin.register Person do
         end
       end
     end
+    column :updated_at
     default_actions
   end
 end
