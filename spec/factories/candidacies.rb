@@ -1,5 +1,3 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
   factory :candidacy do
     factory :candidacy_with_person_and_electoral_race do
