@@ -30,4 +30,12 @@ describe Region do
     it      { is_expected.to have(ASSOCIATION_COUNT).electoral_races }
     it      { is_expected.to have(ASSOCIATION_COUNT).elections }
   end
+
+  context 'when a region has a candidacy through an electoral race' do
+    let(:region) do
+      FactoryGirl.create(:region_with_candidacy_through_electoral_race)
+    end
+    subject { region }
+    it      { is_expected.to have(1).candidacies }
+  end
 end

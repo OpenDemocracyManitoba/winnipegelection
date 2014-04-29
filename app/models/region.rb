@@ -4,6 +4,8 @@ class Region < ActiveRecord::Base
   has_many :electoral_races, inverse_of: :region
   has_many :elections, through: :electoral_races
 
+  has_many :candidacies, through: :electoral_races
+
   # Self-Join For Sub-Regions / Parent Region
   has_many :sub_regions,
            class_name: 'Region',

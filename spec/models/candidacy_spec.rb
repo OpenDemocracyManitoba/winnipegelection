@@ -5,9 +5,9 @@ describe Candidacy do
     let(:candidacy) do
       FactoryGirl.build(:candidacy_with_person_and_electoral_race)
     end
-    subject              { candidacy }
-    it                   { is_expected.to be_valid }
-    
+    subject { candidacy }
+    it      { is_expected.to be_valid }
+    it      { is_expected.to have(1).regions }
     it 'has accessible associations of the correct type' do
       expect(candidacy.person).to be_a(Person)
       expect(candidacy.electoral_race).to be_a(ElectoralRace)

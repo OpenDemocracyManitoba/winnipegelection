@@ -7,7 +7,6 @@ describe ElectoralRace do
     end
     subject        { electoral_race }
     it             { is_expected.to be_valid }
-    
     it 'has accessible associations of the correct type' do
       expect(electoral_race.region).to be_a(Region)
       expect(electoral_race.election).to be_a(Election)
