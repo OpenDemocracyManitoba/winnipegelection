@@ -6,8 +6,8 @@ describe ElectoralRace do
       FactoryGirl.build(:electoral_race_with_region_and_election)
     end
     subject        { electoral_race }
-    its(:region)   { is_expected.to_not be_nil }
-    its(:election) { is_expected.to_not be_nil }
+    its(:region)   { is_expected.to be_a(Region) }
+    its(:election) { is_expected.to be_an(Election) }
     it             { is_expected.to be_valid }
   end
 
