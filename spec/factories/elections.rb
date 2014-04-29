@@ -15,5 +15,11 @@ FactoryGirl.define do
                     election: instance)
       end
     end
+
+    factory :election_with_candidacy_through_electoral_race do
+      after(:create) do |instance|
+        create(:electoral_race_with_candidacies, election: instance)
+      end
+    end
   end
 end

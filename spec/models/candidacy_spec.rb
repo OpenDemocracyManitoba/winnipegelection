@@ -8,6 +8,7 @@ describe Candidacy do
     subject { candidacy }
     it      { is_expected.to be_valid }
     it      { is_expected.to have(1).regions }
+    it      { is_expected.to have(1).elections }
     it 'has accessible associations of the correct type' do
       expect(candidacy.person).to be_a(Person)
       expect(candidacy.electoral_race).to be_a(ElectoralRace)

@@ -3,6 +3,7 @@ class Candidacy < ActiveRecord::Base
   belongs_to :person, inverse_of: :candidacies
 
   has_many :regions, through: :electoral_race
+  has_many :elections, through: :electoral_race
 
   validates :electoral_race, :person, presence: true
 end
