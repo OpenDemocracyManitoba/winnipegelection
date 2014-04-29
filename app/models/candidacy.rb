@@ -6,4 +6,8 @@ class Candidacy < ActiveRecord::Base
   has_many :elections, through: :electoral_race
 
   validates :electoral_race, :person, presence: true
+  
+  def name
+    "#{person.name} - #{electoral_race.name}"
+  end
 end
