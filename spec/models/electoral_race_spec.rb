@@ -16,4 +16,14 @@ describe ElectoralRace do
     subject              { electoral_race }
     it                   { is_expected.to_not be_valid }
   end
+
+  context 'when it has associated candidacies' do
+    let(:electoral_race) do
+      FactoryGirl.create(:electoral_race_with_candidacies,
+                         candidacy_count: ASSOCIATION_COUNT)
+    end
+    subject           { electoral_race }
+    its(:candidacies) { is_expected.to have(ASSOCIATION_COUNT).items }
+    its(:people)      { is_expected.to have(ASSOCIATION_COUNT).items }
+  end
 end

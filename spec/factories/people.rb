@@ -2,5 +2,6 @@
 
 FactoryGirl.define do
   factory :person do
+    name 'Wally Glutton'
   end
 end
