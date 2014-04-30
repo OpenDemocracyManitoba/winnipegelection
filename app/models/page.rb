@@ -1,7 +1,7 @@
 class Page < ActiveRecord::Base
   include Rails.application.routes.url_helpers
 
-  validates :permalink, presence: true
+  validates :title, :permalink, presence: true
 
   # Ensures that the permalink is URL encoded.
   def permalink_param

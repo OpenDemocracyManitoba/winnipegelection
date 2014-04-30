@@ -1,2 +1,3 @@
-h1 = @page.title
+- if @page.show_title
+  h1 = @page.title
 p = markdown(@page.content)
