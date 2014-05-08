@@ -39,7 +39,7 @@ gem 'mini_magick'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
-  gem 'capybara'
+  gem 'capybara', github: 'jnicklas/capybara', branch: 'master' # '2.2.1'
   gem 'factory_girl_rails'
   gem 'railroady'
   gem 'rubocop'
