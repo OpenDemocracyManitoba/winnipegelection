@@ -8,6 +8,8 @@ class ElectoralRace < ActiveRecord::Base
   validates :region, :election, presence: true
   
   def name
-    "#{region.name} - #{election.name}"
+    region_name = region.nil? ? 'unknown region' : region.name
+    election_name = election.nil? ? 'unknown election' : election.name
+    "#{region_name} - #{election_name}"
   end
 end
