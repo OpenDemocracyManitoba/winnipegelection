@@ -16,4 +16,14 @@ ActiveAdmin.register ElectoralRace do
     default_actions
   end
   
+  form do |f|
+    f.inputs "Electoral Race" do
+      f.input :region, as: :select, collection: Region.all.map{ |r| [r.name_with_type, r.id]}
+      f.input :election
+      f.input :polygon
+      f.input :seats_to_fill
+    end
+    f.actions
+  end
+  
 end

@@ -9,7 +9,7 @@ class ElectoralRace < ActiveRecord::Base
   
   def name
     region_name = region.nil? ? 'unknown region' : region.name_with_type
-    election_year = election.nil? ? 'unknown election' : election.election_date.year
-    "#{region_name} - #{election_year}"
+    election_name = election.nil? ? 'unknown election' : election.name
+    "#{region_name} - #{election_name}"
   end
 end
