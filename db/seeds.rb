@@ -47,7 +47,7 @@ Page.create!([
 ])
 
 division = Region.create!(name: 'Pembina Trails', start_date: nil, end_date: nil, region_type: school_division, region_id: nil, seats: nil)
-ward = Region.create!(name: 'Ward 1', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
+ward = Region.create!(name: '1', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 3)
 person = Person.create!(name: 'Dianne Zuk', office_address: '', phone_number: '895-4539', email: 'dizuk@shaw.ca', image: nil, website: 'http://dizuk.shawwebspace.ca/', council_site: '', facebook: 'http://www.facebook.com/profile.php?id=697166705', twitter: 'https://twitter.com/dizuk1', youtube: 'http://www.youtube.com/watch?v=n36PltSk-Ck', linkedin: '')
 questionnaire = %Q^**Why did you decide to run in the 2010 school board election?** 
@@ -154,7 +154,7 @@ candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_in
 person = Person.create!(name: 'Jim Komenda', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 2', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
+ward = Region.create!(name: '2', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 3)
 person = Person.create!(name: 'Tim Johnson', office_address: '', phone_number: '', email: 'teamjohnson6@gmail.com', image: nil, website: 'http://www.timjohnson.ca/', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^**Why did you decide to run in the 2010 school board election?** 
@@ -367,7 +367,7 @@ TS:  I believe our children deserve to have an education system that provides th
 
 My motto is:  “A better future with a STRONGER education^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 3', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
+ward = Region.create!(name: '3', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 3)
 person = Person.create!(name: 'Jacquie Field', office_address: '', phone_number: '269-7822 ', email: '', image: nil, website: 'http://www.jacquiefield.ca/', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^**Why did you decide to run in the 2010 school board election?** 
@@ -527,7 +527,7 @@ Caroline Mehra
 Vote: Caroline Mehra – October 27th/201^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
 division = Region.create!(name: 'River East - Transcona', start_date: nil, end_date: nil, region_type: school_division, region_id: nil, seats: nil)
-ward = Region.create!(name: 'Ward 1', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 2)
+ward = Region.create!(name: '1', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 2)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 2)
 person = Person.create!(name: 'Colleen Carswell', office_address: '', phone_number: '', email: 'colleencarswell@gmail.com', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^^
@@ -583,7 +583,7 @@ I would like to have the public to be made more aware of the important business 
 
 School should be a place of great achievement for our children, a place where they learn the necessary skills to become productive members of our society.  My aim is to make schools a safe place to build our children's future, and to keep our schools as cornerstones of the communities that they are a part of.^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 2', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 1)
+ward = Region.create!(name: '2', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 1)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
 person = Person.create!(name: 'Gurpreet Brar', office_address: '', phone_number: '990-1717', email: 'gurpreet@gurpreetbrar.ca', image: nil, website: 'http://www.gurpreetbrar.ca', council_site: '', facebook: 'http://www.facebook.com/pages/Gurpreet-Brar-for-School-Trustee-in-RET-Ward-2/138721906169496?ref=ts', twitter: 'http://twitter.com/gbrar4trustee', youtube: '', linkedin: '')
 questionnaire = %Q^^
@@ -617,7 +617,7 @@ I would like to see increased support in classrooms- making both the environment
 I have always been very involved in the River East Transcona community. I’m known to many young people as “Papa John” or “Big John” and even “Santa” to many preschoolers. Our family will be forever indebted to this community and they have been gracious enough to give me a purpose. I would be honoured to serve our community and advocate for the children for another four years. I believe only one thing happens when we cut corners in heathcare and education and it usually isn’t good. I have and will always act in what is in the best interests of the children. Thank you for giving me an opportunity to share my thoughts and experiences. I would like to dedicate this to my sons “Little” John (1991-2006) and James and their friends who have accepted me as their friend.
 ^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 3', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 1)
+ward = Region.create!(name: '3', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 1)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
 person = Person.create!(name: 'A J Falk', office_address: '', phone_number: '', email: 'falktrustee@gmail.com', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^**Why did you decide to run in the 2010 school board election?** 
@@ -650,7 +650,7 @@ candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_in
 person = Person.create!(name: 'Bob Fraser', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 4', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 2)
+ward = Region.create!(name: '4', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 2)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 2)
 person = Person.create!(name: 'Eva Prysizney', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^^
@@ -721,7 +721,7 @@ I will not bring a personal agenda to board business.   As a true independent ca
 
 I am concerned about the standard and quality of education.  No child should "fall through the cracks."   Students MUST have more than the basic skills to enable them to compete and indeed excel, not only in the workforce, but also as productive citizens of our society.   They deserve that chance.   You deserve that assurance.   I am committed to making it happen.  ^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 5', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 2)
+ward = Region.create!(name: '5', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 2)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 2)
 person = Person.create!(name: 'Peter Kotyk', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^**Why did you decide to run in the 2010 school board election?** 
@@ -1177,7 +1177,7 @@ person = Person.create!(name: 'Craig Johnson', office_address: '', phone_number:
 questionnaire = %Q^^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
 division = Region.create!(name: 'Seven Oaks', start_date: nil, end_date: nil, region_type: school_division, region_id: nil, seats: nil)
-ward = Region.create!(name: 'Ward 2', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 4)
+ward = Region.create!(name: '2', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 4)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 4)
 person = Person.create!(name: 'Cory Juan', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^**Why did you decide to run in the 2010 school board election?** 
@@ -1249,7 +1249,7 @@ candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_in
 person = Person.create!(name: 'Dennis Ruggles', office_address: '', phone_number: '', email: 'dennisruggles@7oaks.org', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 3', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 4)
+ward = Region.create!(name: '3', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 4)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 4)
 person = Person.create!(name: 'Teresa Jaworski', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^^
@@ -1304,7 +1304,7 @@ person = Person.create!(name: 'Richard Sawka', office_address: '', phone_number:
 questionnaire = %Q^^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
 division = Region.create!(name: 'Winnipeg', start_date: nil, end_date: nil, region_type: school_division, region_id: nil, seats: nil)
-ward = Region.create!(name: 'Ward 1', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
+ward = Region.create!(name: '1', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 3)
 person = Person.create!(name: 'Rita Hildahl', office_address: '', phone_number: '414-7706', email: 'info@ritahildahl.com', image: nil, website: 'http://www.ritahildahl.com/', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^**Why did you decide to run in the 2010 school board election?** 
@@ -1446,7 +1446,7 @@ It is essential we encourage increased public involvement in the developments of
 
 I continue to educate myself and bring my best efforts towards being a potential school trustee.  This is my first campaign to serve in this capacity of a responsible candidate. I am open towards new ideas and thoughts while bringing a fresh perspective on WSD issues.  I wish my fellow candidates good luck and hope every voter has the opportunity to vote in the civic election^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 2', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
+ward = Region.create!(name: '2', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 3)
 person = Person.create!(name: 'Rolf Salfert', office_address: '', phone_number: '', email: 'rsalfert@gmail.com', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^**Why did you decide to run in the 2010 school board election?** 
@@ -1646,7 +1646,7 @@ B) I would like to see more Aboriginal Teachers to deliver the basics at various
 A) I believe that I cannot change the status quo, but ask to deplete it.
 B) A foundation has to be built and as I said before. This must come from the statis quo   which we continually elect^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 3', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
+ward = Region.create!(name: '3', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 3)
 person = Person.create!(name: 'Sonia Prevost-Derbecker', office_address: '', phone_number: '', email: 'sonia.prevostderbecker@gmail.com', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^**Why did you decide to run in the 2010 school board election?** 
@@ -1806,7 +1806,7 @@ I definitely would like the Winnipeg School Division to be more transparent and 
 
 I am proud to have served as a school trustee for 15 years, and would be honored to continue.  One of my strongest beliefs is to be accountable to the people in my ward.  Their concerns are important to me and I believe they should have a voice in the decision making.  I am not afraid to speak up for issues that are important to my community and are important to our children's future^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 1 By-Election', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 1)
+ward = Region.create!(name: '1 By-Election', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 1)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
 person = Person.create!(name: 'Brenda Poersch', office_address: '', phone_number: '', email: '', image: nil, website: 'http://www.brendapoerschforschooltrustee.webs.com', council_site: '', facebook: 'http://www.facebook.com/profile.php?id=100003083911423', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^^
@@ -2069,7 +2069,7 @@ On November 26th, vote for someone who lives, breathes and bleeds public educati
 I am so pleased to have met so many concerned citizens on the campaign trial over the last month, and I would be greatly honoured to have the opportunity to meet more of my constituents as the newly elected School Board Trustee in Ward 1. Thank you for your consideration.^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
 division = Region.create!(name: 'Louis Riel', start_date: nil, end_date: nil, region_type: school_division, region_id: nil, seats: nil)
-ward = Region.create!(name: 'Ward 1', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 2)
+ward = Region.create!(name: '1', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 2)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 2)
 person = Person.create!(name: 'Louise Johnston', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^**Why did you decide to run in the 2010 school board election?** 
@@ -2190,7 +2190,7 @@ Support the arts....even youth bands  underfunded for practice space....in my wo
 KNOW ALL ABOUT THE DIFFERENCT NEIGHBORHOODS  in Ward # 1 Louis Riel School Division.  Bobby Wilson grew up in old St Vital / Norwood Grove areas.  Schools Glenwood and Glenlawn Collegiate modest 33 Clonard and 62 Ellesmere Avenue. Gordon Wilson and his two brothers all three from St Vital killed in the service for future public education and a peaceful workforce>  teenage bob  wilson joined the CNR FREIGHT and was sec_treas of cbrt&gw local #92. 
 THE WILSON + GRAVENOR TEENS  MOVED TO WINDSOR PARK   21 bolder bay and then 97 HANSFORD ROAD FOR THE LAST SIX PLUS YEARS  199  KITSON STREET  in norwood grove. All located in Ward # 1  Louis Riel School Division.  Accessible  24/7  1-204-2371948   boblessing@mts.ne^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 2', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 2)
+ward = Region.create!(name: '2', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 2)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 2)
 person = Person.create!(name: 'Mike Ducharme', office_address: '', phone_number: '781-2818', email: 'mjducharme@mts.net', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^**Why did you decide to run in the 2010 school board election?** 
@@ -2216,7 +2216,7 @@ candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_in
 person = Person.create!(name: 'Chris Sigurdson', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 3', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
+ward = Region.create!(name: '3', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 3)
 person = Person.create!(name: 'Robert Page', office_address: '', phone_number: '275-1303', email: 'robertpageforeducation@gmail.com', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^**Why did you decide to run in the 2010 school board election?** 
@@ -2354,7 +2354,7 @@ Given the role of technology in our lives, and the way it impacts our relationsh
 
 I have been regularly attending Louis Riel School board meetings since January of this year. In addition to meeting all of the members of the school board, I have had the opportunity to become familiar with how the meetings are run, the procedures and protocols involved, and the roles and expectations of school trustees at board meetings. With this already in place, I can immediately begin to focus on the task at hand, namely the needs of students, teachers, parents, and our entire community.^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 4', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 2)
+ward = Region.create!(name: '4', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 2)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 2)
 person = Person.create!(name: 'Tom Parker', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^^
@@ -2382,7 +2382,7 @@ I have been elected by acclamation and look forward to the next 4 years serving 
  
 Please call me at 257-3883 or 257-3921 should you need a ride to the polls on voting for school trustees in Wards 1,2 and 3 in Louis Riel School Division. I would be happy to assist you. ^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
-ward = Region.create!(name: 'Ward 2 By-Election', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 1)
+ward = Region.create!(name: '2 By-Election', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 1)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
 person = Person.create!(name: 'Mike Daoust', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^**Why did you decide to run in the 2011 school board election?** 

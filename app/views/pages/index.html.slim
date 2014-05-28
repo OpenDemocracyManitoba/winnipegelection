@@ -3,3 +3,13 @@ h2 Pages
 ul
   - @pages.each do |p|
     li = link_to p.title, p.friendly_path
+
+h2 Testing School Divisions
+
+ul
+  - @election.electoral_races.each do |er|
+    li
+      = "#{er.name} - #{er.seats_to_fill} Seats" 
+      ul
+        - er.candidacies.each do |c|
+          li = c.person.name
