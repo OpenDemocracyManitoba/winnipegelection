@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140528153257) do
+ActiveRecord::Schema.define(version: 20140528172430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20140528153257) do
 
   create_table "candidacies", force: true do |t|
     t.text     "questionnaire"
-    t.datetime "end_date"
+    t.date     "end_date"
     t.boolean  "is_incumbent"
     t.boolean  "is_winner"
     t.integer  "person_id"
@@ -68,8 +68,8 @@ ActiveRecord::Schema.define(version: 20140528153257) do
     t.string   "name"
     t.boolean  "is_active"
     t.boolean  "is_by_election"
-    t.datetime "writ_date"
-    t.datetime "election_date"
+    t.date     "writ_date"
+    t.date     "election_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -121,8 +121,8 @@ ActiveRecord::Schema.define(version: 20140528153257) do
 
   create_table "regions", force: true do |t|
     t.string   "name"
-    t.datetime "start_date"
-    t.datetime "end_date"
+    t.date     "start_date"
+    t.date     "end_date"
     t.integer  "region_type_id"
     t.integer  "region_id"
     t.datetime "created_at"
