@@ -1,10 +1,33 @@
-RegionType.create!([
+RegionType.destroy_all
+Region.destroy_all
+Person.destroy_all
+Page.destroy_all
+Election.destroy_all
+ElectoralRace.destroy_all
+Candidacy.destroy_all
+
+region_types = RegionType.create!([
   {name: "Mayoral", description: ""},
   {name: "School Division", description: ""},
   {name: "Council Ward", description: ""},
   {name: "School Ward", description: ""}
 ])
-Person.create!([
+
+regions = Region.create!([
+  {name: "City of Winnipeg", start_date: "1972-01-01", end_date: nil, region_type: region_types.first, region_id: nil, seats: 1}
+])
+
+elections = Election.create!([
+  {name: "2010 Winnipeg Civic Election", is_active: false, is_by_election: false, writ_date: "2010-09-21", election_date: "2010-10-27"},
+  {name: "2011 Winnipeg Civic By-Election", is_active: false, is_by_election: true, writ_date: "2011-10-21", election_date: "2011-11-26"},
+  {name: "2014 Winnipeg Civic Election", is_active: true, is_by_election: false, writ_date: "2014-09-16", election_date: "2014-10-22"}
+])
+
+electoral_races = ElectoralRace.create!([
+  {region: regions.first, election: elections.last, polygon: "", seats_to_fill: 1}
+])
+
+people = Person.create!([
   {name: "Brian Bowman", office_address: "", phone_number: "", email: "", image: nil, website: "http://www.bowmanforwinnipeg.ca/", council_site: "", facebook: "https://www.facebook.com/brian.bowman.5268", twitter: "https://twitter.com/BrianBowmanWpg", youtube: "https://www.youtube.com/channel/UCt8oHawY8e_NPJ6DzQ2qDNQ", linkedin: ""},
   {name: "Michel Fillion", office_address: "", phone_number: "", email: "", image: nil, website: "", council_site: "", facebook: "", twitter: "", youtube: "", linkedin: ""},
   {name: "Paula Havixbeck", office_address: "", phone_number: "", email: "paulaformayor@gmail.com", image: nil, website: "", council_site: "http://paulahavixbeck.com", facebook: "", twitter: "", youtube: "", linkedin: ""},
@@ -12,6 +35,9 @@ Person.create!([
   {name: "Michael Vogiatzakis", office_address: "", phone_number: "", email: "", image: nil, website: "", council_site: "", facebook: "https://www.facebook.com/profile.php?id=100008344472161&fref=ts", twitter: "", youtube: "", linkedin: ""},
   {name: "Gordon Warren", office_address: "", phone_number: "", email: "gordonwarren77@gmail.com", image: nil, website: "http://gordonwarren77.blogspot.ca/2014/05/warren-for-mayor.html", council_site: "", facebook: "", twitter: "http://twitter.com/gordonwarren77", youtube: "", linkedin: ""}
 ])
+
+people.each {|person| Candidacy.create!({questionnaire: "", end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_races.first}) }
+
 Page.create!([
   {title: "Press Mentions", content: "**RRC Projector** - October 25th, 2010\r\n\r\nTwo Red River College instructors hope their election website will encourage more students to show up at the polls on Oct. 27.\r\n\r\n**Winnipeg Free Press** - [October 23rd, 2010](http://www.winnipegfreepress.com/local/record-number-of-voters-itching-to-cast-ballot-105589158.html)\r\n\r\nInformation-technology instructors Kyle Geske and Jody Gills created the non-profit website winnipegelection.ca in July to provide voters with more information about mayoral, council and school-trustee candidates.\r\n\r\nAs of Friday, their repository included 1,082 election articles, compiled form a variety of Winnipeg media websites, as well as 83 questionnaires completed by candidates.\r\n\r\n**Winnipeg Filipino Journal** - October 22nd, 2010\r\n\r\nWinnipeg's newest citizen election website [WinnipegElection.ca](http://winnipegelection.ca) sent questionnaires to all trustees.\r\n\r\n**CBC TV News Manitoba** - [October 19th, 2010](http://www.cbc.ca/video/#/News/Local_News/Manitoba/1317902896/ID=1619825269)\r\n\r\nCo-Founder Jody Gillis was featured as part of a story on the effect of social media on election campaigns.\r\n\r\n**CBC TV News Manitoba** - [October 4th, 2010](http://www.cbc.ca/canada/manitoba/manitobacivicvotes2010/story/2010/10/03/man-advance-voting-civic-election.html)\r\n\r\nFeatured as part of a story on [advanced voting for the 2010 Winnipeg election](http://www.cbc.ca/canada/manitoba/manitobacivicvotes2010/story/2010/10/03/man-advance-voting-civic-election.html).\r\n\r\n**CBC Radio Noon Winnipeg** - [October 4th, 2010](http://www.cbc.ca/radionoonmanitoba/)\r\n\r\nCo-founder of [Winnipegelection.ca](http://winnipegelection.ca) Kyle Geske was interviewed by [Marilyn Maki of Radio Noon](http://www.cbc.ca/radionoonmanitoba/). [Listen to a portion of the interview](http://www.cbc.ca/manitoba/eal/media/oct15_2010.mp3) (as featured in a [CBC EAL](http://www.cbc.ca/manitoba/eal/2010/10/lesson-59-where-are-the-voters.html) podcast).\r\n\r\n**The Uniter** - [September 16th, 2010](http://uniter.ca/view/4558)\r\n\r\nAnyone serious about voting in the upcoming election will want to check out [www.winnipegelection.ca](http://winnipegelection.ca), a website that features the latest news, information about previous civic elections and info on how you can determine what your ward is if you don’t already know.\r\n\r\n**Uptown Magazine** - [September 9th, 2010](http://www.uptownmag.com/diversions/mobile/Vote-You-have--no-excuse-not-to--102463749.html)\r\n\r\nRecently launched, [Winnipegelection.ca](http://winnipegelection.ca) is a new online resource for Winnipeggers looking to get up to speed before heading to the polls. Along with gathering election news, the site also offers information on candidates for city council, linking you to their websites, email addresses, Facebook pages, Twitter accounts and, in some cases, their YouTube feeds.", permalink: "press-mentions", show_title: true},
   {title: "About Us", content: "## About Us\r\n\r\nWinnipegElection.ca is a *citizen created* resource for civic elections in Winnipeg, Manitoba.\r\n\r\nOur site is volunteer-run and was created in the spirit of openness, community and accountability.\r\n\r\n<br/>\r\n\r\n## Open Democracy Manitoba\r\n\r\nThe site was built by the volunteer efforts of Kyle Geske, Jody Gillis, Andrew Burton and Ken Harasym. Together these four friends founded [Open Democracy Manitoba](http://opendemocracymanitoba.ca), the community organization that maintains this website.\r\n\r\nThis website was originally built for the Winnipeg general election in October of 2010. In the fall of 2011 we created a similar website for the [Manitoba provincial election](http://manitobaelection.ca).\r\n\r\n<br/>\r\n\r\n## Our Mission\r\n\r\nOur mission is to empower voters, helping them learn about the roles, issues, and visions of our representatives in order have a more accountable and respectful democracy.\r\n\r\n<br/>\r\n\r\n## Contact?\r\n\r\nEmail: <winnipeg.election@gmail.com>\r\n\r\nTwitter: [@WpgElection](http://twitter.com/WpgElection)\r\n\r\nFacebook: [Winnipeg Election Fan Page](http://www.facebook.com/pages/Winnipeg-Election/145495908793867)\r\n\r\n<br/>\r\n\r\n*Learn to Question. Question to Learn.*", permalink: "about-us", show_title: true},
@@ -22,21 +48,4 @@ Page.create!([
   {title: "Role and Mandate of the Mayor", content: "The Mayor is the head of Council and the chief officer of the City. The responsibilities of the Mayor are listed under Section 57 to 60 of [The City of Winnipeg Charter](http://web2.gov.mb.ca/laws/statutes/2002/c03902e.php). The Mayor chairs the Executive Policy Committee, and is an ex officio member of each Committee of Council. The Mayor appoints:\r\n\r\n* a Deputy Mayor;\r\n* an Acting Deputy Mayor;\r\n* the Chairpersons for the Standing Committees of Council, if standing committees are established by Council; and\r\n* members of the Executive Policy Committee\r\n\r\nThe Deputy Mayor or Acting Deputy Mayor acts in the capacity of the Mayor in cases of his/her absence or unavailability.\r\n\r\nSource: [City of Winnipeg Municipal Manual](http://www.winnipeg.ca/clerks/pdfs/2013MunicipalManual.pdf) ![pdf](/images/pdf.png \"pdf\")", permalink: "role-of-the-mayor", show_title: true},
   {title: "The Role of a City Councillor", content: "Council is the governing body of the City and the custodian of its powers, both legislative and administrative. The City may exercise only those powers granted to it by legislation. \r\n\r\nPolicy making at the local level is limited and controlled by provincial government statute. [The City of Winnipeg Charter](http://web2.gov.mb.ca/laws/statutes/2002/c03902e.php) provides the majority of powers and authority to the City of Winnipeg. However, other statutes extend additional authority to City Council in its decision making process.\r\n\r\nThe composition of City Council is legislated under Part 3 of [The City of Winnipeg Charter](http://web2.gov.mb.ca/laws/statutes/2002/c03902e.php) and consists of 15 Councillors and the Mayor. Each Councillor represents an individual ward while the Mayor is elected by a vote of the city-at-large.\r\n\r\nCouncillors have a dual role, as they are members of Council (decisions affecting the whole city) and members of the Community Committees (local community issues).\r\n\r\nCity Council exercises its powers either by by-law or resolution passed at a regular or special meeting when a quorum is present. Pursuant to the Charter, Council has the authority to establish committees of Council and Council may, by by-law delegate a power, duty or function to a committee of Council.\r\n\r\nThe authority to make final decisions on the following matters remains with Council and cannot be delegated to any political or administrative level below Council: \r\n\r\n* authority to enact a by-law;\r\n* authority to approve an operating or capital budget;\r\n* authority to appoint, suspend or dismiss a statutory officer; or\r\n* authority to enter into a collective agreement in respect of employees;\r\n\r\nSource: [City of Winnipeg Municipal Manual](http://www.winnipeg.ca/clerks/pdfs/2013MunicipalManual.pdf) ![pdf](/images/pdf.png \"pdf\")\r\n", permalink: "role-of-a-city-councillor", show_title: true},
   {title: "The Role of a School Trustee", content: "The main functions of a school trustee include preparing for and participating in school board and committee meetings. Each school division has a school board made of school trustees. Policy is determined at public school board meetings and sets the direction for the school division.\r\n\r\nSchool Trustees also attend meetings of the committees on which they serve. Most school boards have a number of committees that deal with areas such as finance, personnel, curriculum, and facilities. Other committees can be formed to deal with special projects or emerging issues. These committees create reports that generally go to the school board before being passed as policy.\r\n\r\nSource: [2011 Civic Election School Trustee Guide](http://www.winnipeg.ca/clerks/docs/elections/2011ByElection/pdfs/SchoolTrusteeInfo.pdf) ![pdf](/images/pdf.png \"pdf\")", permalink: "role-of-a-school-trustee", show_title: true}
-])
-Candidacy.create!([
-  {questionnaire: "", end_date: nil, is_incumbent: false, is_winner: false, person_id: 1, electoral_race_id: 1},
-  {questionnaire: "", end_date: nil, is_incumbent: false, is_winner: false, person_id: 2, electoral_race_id: 1},
-  {questionnaire: "", end_date: nil, is_incumbent: false, is_winner: false, person_id: 3, electoral_race_id: 1},
-  {questionnaire: "", end_date: nil, is_incumbent: false, is_winner: false, person_id: 4, electoral_race_id: 1},
-  {questionnaire: "", end_date: nil, is_incumbent: false, is_winner: false, person_id: 5, electoral_race_id: 1},
-  {questionnaire: "", end_date: nil, is_incumbent: false, is_winner: false, person_id: 6, electoral_race_id: 1}
-])
-Region.create!([
-  {name: "City of Winnipeg", start_date: "1972-01-01", end_date: nil, region_type_id: 1, region_id: nil, seats: nil}
-])
-ElectoralRace.create!([
-  {region_id: 1, election_id: 1, polygon: "", seats_to_fill: nil}
-])
-Election.create!([
-  {name: "2014 Winnipeg Civic Election", is_active: true, is_by_election: false, writ_date: "2014-09-16", election_date: "2014-10-22"}
 ])
