@@ -17,4 +17,8 @@ class Region < ActiveRecord::Base
              inverse_of: :sub_regions
 
   validates :name, :region_type, presence: true
+  
+  def name_with_type
+    "#{name} - #{region_type.name}"
+  end
 end

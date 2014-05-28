@@ -48,12 +48,20 @@ ActiveAdmin.register Person do
     column :office_address do |person|
       truncate person.office_address
     end
-    column 'Online' do |c|
+    column 'Online' do |p|
       [:website, :council_site, :facebook, :twitter, :youtube, :linkedin].each do |site|
         span do
           # Link to all websites. Link text is first letter of site type. Title attribute is site type.
-          link_to_if c[site].present?, site.to_s[0].capitalize, c[site], title: site.to_s
+          link_to_if p[site].present?, site.to_s[0].capitalize, p[site], title: site.to_s
         end
+      end
+    end
+    column 'Most Recent Candidacy' do |p|
+      if p.candidacies.empty?
+        span { "Missing!" }
+      else
+        most_recent_candidacy = p.candidacies.last
+        link_to most_recent_candidacy.electoral_race.name, edit_admin_candidacy_path(most_recent_candidacy)
       end
     end
     column :updated_at
