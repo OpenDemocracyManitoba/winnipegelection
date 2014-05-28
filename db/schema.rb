@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140421212553) do
+ActiveRecord::Schema.define(version: 20140528153257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20140421212553) do
     t.text     "polygon"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "seats_to_fill"
   end
 
   add_index "electoral_races", ["election_id"], name: "index_electoral_races_on_election_id", using: :btree
@@ -126,6 +127,7 @@ ActiveRecord::Schema.define(version: 20140421212553) do
     t.integer  "region_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "seats"
   end
 
   add_index "regions", ["region_id"], name: "index_regions_on_region_id", using: :btree
