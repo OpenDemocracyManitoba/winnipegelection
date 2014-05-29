@@ -4,14 +4,10 @@ ul
   - @pages.each do |p|
     li = link_to p.title, p.friendly_path
 
-h2 Testing School Divisions
-
 - @elections.each do |e|
-  h3 = e.name
-  ul
-    - e.electoral_races.each do |er|
-      li
-        = "#{er.name} - #{er.seats_to_fill} Seats" 
-        ul
-          - er.candidacies.each do |c|
-            li = c.person.name
+  h2 = e.name
+  - e.electoral_races.each do |er|
+    h3 = "#{er.region.name_with_type} - #{er.seats_to_fill} Seats" 
+    ul
+      - er.candidacies.each do |c|
+        li = c.person.name
