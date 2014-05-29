@@ -46,6 +46,8 @@ Page.create!([
   {title: "The Role of a School Trustee", content: "The main functions of a school trustee include preparing for and participating in school board and committee meetings. Each school division has a school board made of school trustees. Policy is determined at public school board meetings and sets the direction for the school division.\r\n\r\nSchool Trustees also attend meetings of the committees on which they serve. Most school boards have a number of committees that deal with areas such as finance, personnel, curriculum, and facilities. Other committees can be formed to deal with special projects or emerging issues. These committees create reports that generally go to the school board before being passed as policy.\r\n\r\nSource: [2011 Civic Election School Trustee Guide](http://www.winnipeg.ca/clerks/docs/elections/2011ByElection/pdfs/SchoolTrusteeInfo.pdf) ![pdf](/images/pdf.png \"pdf\")", permalink: "role-of-a-school-trustee", show_title: true}
 ])
 
+# School Divisions, Wards and Trustee Candidates from 2010
+
 division = Region.create!(name: 'Pembina Trails', start_date: nil, end_date: nil, region_type: school_division, region_id: nil, seats: nil)
 ward = Region.create!(name: '1', start_date: nil, end_date: nil, region_type: school_ward, parent_region: division, seats: 3)
 electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 3)
@@ -2540,4 +2542,1400 @@ questionnaire = %Q^^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
 person = Person.create!(name: 'Edna Sears', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
 questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+
+# Mayoral and Council Candidates from 2010
+
+ward = Region.create!(name: 'Charleswood - Tuxedo', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Dashi Zargani', office_address: '', phone_number: '801-8912', email: 'dashiforcouncil@hotmail.com', image: nil, website: 'http://dashi.moonbooks.net/', council_site: '', facebook: 'http://www.facebook.com/group.php?gid=140714212635519&ref=mf', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+I decided to run in the 2010 civic election because I believe people need to be more directly connected to city hall. What do I mean by this statement? I mean that I am running so that people will have someone at city hall who will respond to the concerns of citizens in their ward and have a vision for the greater good of all citizens.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+I bring a varied and extensive people background to my role as city councilor. I have worked in my own community as president of the Iraqi Community Centre and know first hand the difficulties many people face here in the city. My experience as a businessman has allowed me to hear the concerns of many in our ward who are striving to improve services for our citizens. Winnipeg is a diverse city and I believe I have the ability to to talk and listen to a wide range of people in and out of my ward to make Winnipeg a better city. At the end of the day civic government is all about people and improving their lives as well as responding to their concerns.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+There are many issues our city faces: Criminal activity by gangs, such as drug dealing and car theft, and the problem of poverty in our city. Their is a need to improve housing for many and the current level of people using food banks needs to be addressed. I choose these problems because they are issues that effect the quality of life of all citizens and all people deserve to live with dignity and respect.
+
+The other issue is the need to continue to upgrade our city streets and sidewalks. Some of the streets and roads in Charleswood have not been repaired in many years. And finally, The issue of fair taxation needs to be addressed.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+I want to show I am an active and open city councilor.
+
+I want to hear from citizens their issues and concerns by meeting with them in a town hall setting or even smaller venues on a regular basis.
+
+I want to work at reducing taxes not increasing them. We can do this by making the delivery of present services more efficiently.
+
+I want to work to make Winnipeg a safe city for all citizens and to make Winnipeg a proud city; we have accomplished much in the past ten years and we can do more to make Winnipeg a prosperous and vigorous modern 21st century city^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Jarret Hannah', office_address: '3418 Roblin Blvd, Winnipeg, MB  R3R 0C7 ', phone_number: '981-7488', email: 'jarret@votehannah.com', image: nil, website: 'http://www.votehannah.com', council_site: '', facebook: 'http://www.facebook.com/profile.php?id=556626016', twitter: '', youtube: 'http://www.youtube.com/watch?v=26uw-2sVGpI', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Wendy Lenton', office_address: '', phone_number: '', email: 'lentonvote@mts.net', image: nil, website: 'http://www.votewendy.ca/', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Paula Havixbeck', office_address: '5606 Roblin Blvd. Winnipeg MB R3R 0H2', phone_number: '318-2100', email: 'paula@votepaula.ca', image: nil, website: 'http://www.votepaula.ca/', council_site: '', facebook: 'http://www.facebook.com/pages/Paula-Havixbeck/132513406768759', twitter: 'http://twitter.com/PaulaHavixbeck', youtube: 'http://www.youtube.com/watch?v=8cc4jbqVhH4', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2010 Winnipeg election?**
+
+I am running for City Council because I am a person of action and I want to make a significant contribution to improve our ward and our city. I am passionate about being involved and giving to the community and when there are things to be done I step up and do them.  I am an excellent communicator and able to foster a balance and appreciation of the interests in a community while looking at the whole picture on a city-wide level. 
+
+**Is there anything in particular you would like to change in our city? In your ward?**
+
+Based on my priorities above, I would like to see city-wide changes on issues related to public safety, recreation facilities, infrastructure, poverty, revitalizing downtown, business, agriculture, capital region relationships, and taxes, to name a few. Most of all, I’d like to see a long-range plan for our city.  I do business planning with clients and am constantly getting them to look forward, set goals, and that helps them get where they’re going. We need to do this as a City.
+
+**Do you have any other comments regarding your candidacy?**
+
+I am committed to the community and to public service, which is why I’m running for City Council. The ward needs a strong presence on Council and former Councillor Bill Clement left a legacy, and I’m committed to continuing on with his legacy by serving the residents of this ward. I respectfully as for your vote on October 27^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Steve Szego', office_address: '', phone_number: '292-7456', email: 'steve@szego2010.com', image: nil, website: 'http://www.szego2010.com', council_site: '', facebook: 'http://www.facebook.com/group.php?gid=142500559105113&ref=search', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+I decided to run because I feel I can make a difference. I am passionate about this ward and a fully committed to representing it full time. I am a big proponent of community efforts and I believe investing in communities pays off on a larger scale. Safe, strong communities, lead to safe,strong neighbourhoods, which then lead to a safe strong city.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+I have extensive customer service experience  and am used to dealing with the public on many issues that arise. I have presided on a board where I have learned that teamwork is vital, and have been involved in project management where I listen and engage and try to seek the best solution before making a decision.  
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+The major issues I like to stand for are traffic safety and the community clubs. I want to be part of affordable recreation. I have a vested interest as a constituent first, and want to do things for the community that I actually have control over. Crime is a very big concern and I feel a need for stronger police presence but with greater support and resources to enable them to do their job effectively. I actually speak to officers .Most break and enters or car thefts involve property and items that can be replaced. If someone is speeding or driving reckless in the neighbourhood, the result can lead to more severe consequences such as a fatality. That is lost forever.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+ I would love to be part of a cultural change. We have a great city. We need to move forward and support initiatives that make our city stronger. People have to believe in the city to make this happen and I want to be part of that. I am fortunate to live in and hopefully represent a great ward. I don't want to "'change" anything as much as enhance an already great area even more.
+
+**5. Do you have any other comments regarding your candidacy?**
+
+I only want to say that this is a very exciting time for our ward, but changes are coming to the entire city. I seek to represent not only my fine ward, but I also want to see what is best for all wards. I take pride in this city and I want to spread that pride to as many people as possible. I truly feel that I am the best candidate to represent us and if given the opportunity I will not disappoint. I will not offer any promises, but I will deliver results. Results that our constituents can be proud of^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Timothy Martin', office_address: '', phone_number: '885-4643', email: 'TimothyMartin2010@hotmail.com', image: nil, website: 'http://www.timothyamartin.com', council_site: '', facebook: 'http://www.facebook.com/pages/Elect-Timothy-A-Martin-for-Charleswood-Tuxedo/143636199004603?ref=ts', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+When I heard that Bill Clement had passed away, I realized it was vital to find someone as qualified as possible to represent us as councillor.  I would like to combine my professional experience as a real estate and small business lawyer, with my 46 years in our community, to be a knowledgeable, experienced and approachable advocate for our ward.  I know that I can serve as an independent, unbiased representative.  My agenda is simply to make our community the best it can be.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+I grew up in Charleswood and have lived here all my life. My family has been involved in so many of Charleswood’s organizations since the 1960’s.  My wife and I and our two step-daughters live here and attended our schools.  I have practiced law for 18 years, 16 years in private practice in our community; dealing with issues such as senior’s estate planning, real estate and small business law.  This gives me valuable experience in dealing with community issues, the City, Province, courts, community committee meetings and municipal councils.  I’m used to helping the public navigate the complexities of bureaucracies and get results.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+Infrastructure:   We need a careful watch over preserving what we value in our community, while overseeing improved roads and traffic flow, inevitable infill development, and development of new communities in open spaces.  This includes ensuring Kapyong Barracks is redeveloped in a manner that compliments the existing neighbourhood.  Transparency: I feel strongly about increased transparency in government, and believe an honest government has nothing to hide.  Fiscal responsibility:  I want to see value for my tax dollar, but see a careful need to balance that with preserving and renewing an aging infrastructure.
+
+**4. Is there anything in particular you would like to change in our city?**
+
+I would like to see more forward thinking and planning.  For example, proper roads should precede development.  I look forward to hearing the proposals from the Infrastructure Funding Council, as to alternatives to funding infrastructure renewal, aside from relying entirely on property taxes.  
+
+In your ward?  Roads and drainage need more attention.  Traffic lights are needed by the senior’s centres on Grant.  Intersections and roads leading to Wilkes need improvement and traffic control.  Completion of the inner perimeter (for us, extending the Parkway South to Wilkes and beyond) will allow access to new communities being developed, relieve congestion on Kenaston and spare Charleswood homeowners who live South of Grant excessive volumes of traffic.  Whyte Ridge has traffic and traffic light design problems that need to be addressed, as well as playground maintenance issues.  Community centres need attention, and discussions need to be entered into as to how to have them best serve our community. 
+
+**5. Do you have any other comments regarding your candidacy?**
+
+It is my intention to scale back my law practice to make serving our community my full time priority.  I would like to set up a community advisory panel to assist me by providing their perspectives and advice from a broad range of representatives.^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Livio Ciaralli', office_address: '', phone_number: '', email: 'votelivio@gmail.com', image: nil, website: 'http://www.votelivio.com', council_site: '', facebook: '', twitter: 'http://twitter.com/VoteLivio', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+The idea that UniCity had run its course and that the City needed a new Direction and a New Funding Formula crystallized. It provides the solution to mnay of our problems.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+With an engineering background and being a Contractor for 20 years, I understand processes from Design to Tendering and bid approvals. This experience isn't taught from a book. its acquired over many years.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+Municipal Funding Formual  - important  to get our independence in how we spend our money and what we want to Plan for the City in the next 50 years.
+
+Community Funding Formula - as you probably guessed, the money must trickle down to the grassroots so they can complete projects that bring immediate relief and provide a positive impact to our neighborhoods.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+I would like our City to stop chasing this vision that we must become some sort of cosmopolitan metropolitan metropolis. The beauty of Winnipeg is that it is small and a great place to raise your family and do your work. 
+
+**5. Do you have any other comments regarding your candidacy**
+
+The only thing i ask voters is that they look at what one is willing to sacrifice for them rather than the other way around. I am taking a stand and will Set an Example so people can regain some confidence in their governance.^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'Daniel McIntyre', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Keith Bellamy', office_address: '1318 Portage Ave, Winnipeg, MB  R3G 0V3', phone_number: '963-6310', email: 'keithbellamy@gmail.com', image: nil, website: 'http://keithbellamy.ca', council_site: '', facebook: 'http://www.facebook.com/bellamy.danielmac?ref=ts', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'John Cardoso', office_address: '828 Notre Dame Av Winnipeg, MB Canada R3A 0H3 ', phone_number: '228-9000', email: 'john@johncardoso.ca', image: nil, website: 'http://johncardoso.ca/', council_site: '', facebook: 'http://www.facebook.com/group.php?gid=103630266361127&ref=search', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Cindy Gilroy-Price', office_address: '819 Sargent Ave, Winnipeg, MB R3E 0B9', phone_number: '781-6230', email: 'info@cindygilroy-price.ca', image: nil, website: 'http://www.cindygilroy-price.ca', council_site: '', facebook: 'http://www.facebook.com/pages/Elect-Cindy-Gilroy-Price-for-City-Council-for-Daniel-McIntyre/139023256124257', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Harvey Smith', office_address: '546 Sargent Avenue, Winnipeg MB  R3B 3M4', phone_number: '289-1843', email: '', image: nil, website: 'http://www.voteharveysmith.net/', council_site: 'http://winnipegcity.com/', facebook: 'http://www.facebook.com/pages/Elect-Harvey-Smith-for-Daniel-McIntyre-Ward/151496278212616?v=info', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Lito Taruc', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: 'http://www.facebook.com/pages/Vote-Lito-Taruc-City-Councillor/162348070442317?ref=search', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'Elmwood - East Kildonan', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Rod Giesbrecht', office_address: '', phone_number: '661-5984', email: 'ragiesbrecht@shaw.ca', image: nil, website: 'http://www.rodgiesbrecht.com', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+I am running to provide a hard working and experienced choice to the neighbourhood that I grew up and live in to make it a better place.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+12 years as their school trustee & numerous other service experiences from helping those who need a hand up to encouraging & building community clubs.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+Crime - people need to feel safe leaving their own homes for the community to improve, Health - a Wellness Centre at Concordia Hospital is a big need as well as improved active transportation options & recycling, Residential Streets - Molson street is a horrible example of neglect and their is so much more.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+Reverse the tradition of neglect of public facilities - ice rinks, community centres, parks - these all contribute to the quality of life we all enjoy.
+
+**5. Do you have any other comments regarding your candidacy?**
+
+The support given to me by the community has been wonderful.  As their city councillor I will bring a local, strong work ethic and years of experience that makes me unique among the choices people have.  Thanks for your support^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Nelson Sanderson', office_address: '', phone_number: '999-0291', email: 'jnasanderson@gmail.com', image: nil, website: '', council_site: '', facebook: 'http://www.facebook.com/pages/Nelson-Sanderson-for-City-Councillor-Elmwood-East-Kildonan-Ward/105609459497558?ref=search', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Shaneen Robinson', office_address: '', phone_number: '414-9030', email: 'robinsoncampaign@gmail.com', image: nil, website: 'http://www.shaneenrobinson.ca/', council_site: '', facebook: 'http://www.facebook.com/pages/Shaneen-Robinson-for-Next-ElmwoodEast-Kildonan-City-Councillor/114291435271317?ref=ts', twitter: 'http://twitter.com/shaneenthescene', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+I am a lifelong resident of Elmwood/East Kildonan and I see the need for a new vision and direction for our area.  This ward is full of great people who deserve to have opportunities and strong leadership who will work for everyone.  Over the years I have seen our neighbourhood lose important community resources such as Kelvin Community Centre and Youth for Christ and we face losing more if we don’t start having our voices heard at city hall right now.  I am passionate, motivated and determined and I don’t want to risk this great community being ignored any longer and that is why I have put my name forward to run.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+I have been an activist for people and important issues since I was just a child and as I’ve grown older I have learned that we must stand together as a community to create positive change-my strength is bringing people together.  I studied communications/journalism because I wanted to advocate for the rights of all people and our environment and bring about awareness and concern.  I am an award winning journalist/writer/emcee and activist who always stands up for what is right.  I feel my experience working well with everyone and my values and dedication will help me in my leadership.  My love for this neighbourhood and my relationship with the people in this community will guide me at city hall. 
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+The issues that top my list are Crime/Safety, Opportunities for Youth and Seniors, Infrastructure, Green Initiatives, Transportation, Strong Leadership and Transparency/Accountability at City Hall.  I chose these issues because as a resident that is what I feel needs to be addressed, but most importantly—this is what the citizens of Elmwood/East Kildonan want. 
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+I want to see a fair and just city where everyone has the opportunities to be successful, feel safe and be proud of their city. 
+
+**5. Do you have any other comments regarding your candidacy?**
+
+I want to work for the people of this neighbourhood and once elected I promise to dedicate my life to being a strong leader who is always accountable to the citizens of this ward.^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Thomas Steen', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+There are a number of reasons that compelled me to run as City Councilor. It is difficult to say which one was the most important since they all influenced me in making my decision to run. As an immigrant I have felt so grateful to the people of Winnipeg who welcomed me into their hearts and homes. As a result I have always felt a strong need to repay the hospitality the people of this city have shown me. I also believe that the city is at a turning point. I have sensed in the last few years that the city has made a noticeable positive change. I want to be part of a city council that continues to move the city forward.  Finally as a candidate in the last federal election I made a real connection with the people in the Elmwood – East Kildonan area.  When I was asked to consider running as a councilor by some of the residents of Elmwood – East Kildonan I felt honoured, seriously considered the request and was ultimately convinced to accept the challenge. 
+
+**2. What experience will you bring to complement your role as councillor?**
+
+Community Involvement
+
+I founded a charity, the Amadeus Steen foundation in memory of our son which funds worthwhile projects for children and youths. Understanding Public Service is essential for a city councilor.  
+
+Commitment to Excellence
+
+As a professional athlete I understood the type of commitment and drive that it takes to excel at the highest level. As a City Councilor I will demand the same standard of excellence for myself, the city administration and in the services we provide to the citizens of Winnipeg.  
+
+Leadership 
+
+As Captain of the Winnipeg Jets players I was called upon by, fans, and team management, to motivate the players on the team to perform to their best of their abilities. In the same way I will provide leadership at city hall with my fellow councilors and ensure that we are focused on our goal, which is to provide excellent services to the citizens.     
+
+Vision 
+
+As a professional hockey scout I had to analyze the potential of up and coming hockey talent to determine their potential as professional. As City Councilors we are called upon to evaluate new ideas and program and quickly discern what fits with the long term plans and needs of Winnipeg.    
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+From my discussions with community leaders and the residents of Elmwood-East Kildonan I have developed a platform that is resonating throughout the ward. If elected I am committed to the following: 
+
+
+* Ensuring the safety of our streets and homes through proven crime prevention programs that work closely with the community and the Winnipeg Police Services.
+
+* Working with all levels of government in order to access infrastructure funds to maintain streets and services in Elmwood – E.K.   
+
+* Developing and maintaining recreational spaces and programs.
+
+* Demanding value for our tax dollars.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+City of Winnipeg
+
+As I already mentioned I believe that the City of Winnipeg is at a turning point. We are moving in the right direction in terms of creating a positive environment. We need to continue this and finds ways to encourage more investment. We also need to have proven crime prevention programs implemented which work very closely with the community and Winnipeg Police Services to ensure that our streets and neighborhoods are safe for all. At the same time we need to create a positive environment for city employees so that they are motivated to provide excellent services. If we can maintain this momentum over time we can create a prosperous and safe city with affordable quality services. 
+
+Elmwood – East Kildonan     
+
+This is an area of the city that has been underrepresented by its elected officials in the past. There is a real opportunity this election to make a change from this pattern and in turn send a strong message that this area wants to contribute and be part of the revitalization of the city.  
+
+**5. Do you have any other comments regarding your candidacy?**
+
+I would like to say how enjoyable and important it is for me to be part of the democratic process. I would love to represent Elmwood East Kildonan on City Council and look forward to being able to serve the citizens of Winnipeg with enthusiasm and dedication in the coming term. ^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Gordon Warren', office_address: '', phone_number: '', email: 'gordvw@live.com', image: nil, website: 'http://www.winnipegcommunityforum.info/', council_site: '', facebook: 'http://www.facebook.com/profile.php?id=100001596338616&ref=ts', twitter: 'http://twitter.com/Gord4ElmEK', youtube: 'http://www.youtube.com/user/Gord4CityCouncil?feature=mhum', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+Mayor Katz wants to entrust our water & sewage treatment to Veolia, a French-based multinational conglomerate with an abysmal health & safety record & a notorious reputation that includes bribery of public officials, illegal political contributions, kickbacks, price-fixing & fraudulent accounting.
+
+[http://documents.foodandwaterwatch.org/PrivatizationInFrance.pdf](http://documents.foodandwaterwatch.org/PrivatizationInFrance.pdf)
+
+After watching Judy Wasylycia-Leis struggle in her mayoral bid, I felt compelled to join her in the quest to save our waterways & enter the race for Winnipeg City Council.
+
+"All that is necessary for the triumph of evil is that good men (and women) do nothing."   Edmund Burke
+
+**2. What experience will you bring to complement your role as councillor?**
+
+In addition to my educational experience, I have spent many years working with developmentally challenged people through numerous organizations in various capacities.  
+
+During the past 4 years, I have engaged in activism by partnering with groups & individuals to work against ethically challenged people (i.e. City Hall Caucus, OlyWest, True North Inc. & BODIES: THE EXHIBITION).  
+
+The combination of these two disciplines plus my devotion to Green issues in the past decade have provided me with a solid ethical foundation as well as exceptional communication & networking skills.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+I believe that seeding, growing & protecting our communities must be Elmwood - East Kildonan’s #1 priority.  In order for that to happen, it is vitally important for the new city councillor to be tirelessly dedicated to ending the cycle of waste and urban decay that is perpetuated by City Hall.
+
+The major issues I stand for are ending waste and corruption at City Hall.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+If Mayor Katz has taught Winnipeggers anything, it is that private interests must be kept separate from public interests.  Whether it’s Sam’s dealings with Crocus, the MTS Centre cash giveaway to Mark Chipman, Sam’s Goldeyes parking arrangement, the Asper stadium-mall-Bomber deal, or the more crucial secret water/waste management contract with Veolia, we (City Council) can’t allow private, commercial interests to compromise Winnipeg’s public interests ever again.
+
+In regards to changing the Elmwood – East Kildonan ward, I would like to instill a sense of community & public safety in every single neighbourhood.  Every person should have a safe place to grow, be loved & realize one’s own potential.  Every citizen should be free to leave their home to walk the streets, 24/7, without the fear of being robbed or assaulted.  This can happen if we, the electorate, collectively choose to reverse the cycle of waste & urban decay.
+
+**5. Do you have any other comments regarding your candidacy?**
+
+I am the first and only candidate (mayoral, councilor or trustee) to construct an online forum to gather facts & opinions from local residents; it’s the official website!  The YouTube channel features a complete campaign speech.  This endeavour utilizes all available multi-media:  Email, Facebook, Twitter/my blog, YouTube, Newsfeeds plus press coverage to further the campaign.  
+
+I don’t waste contributors’ money on yard signs because these serve no constructive purpose. Legal tags (graffiti) are what they are.  It will be the voters of Elmwood & East Kildonan who mark my territory if I am elected. 
+
+I do visit shut-ins, ride buses & travel to malls & community centres to discuss the issues & encourage people to vote, but I don’t do trick-or-treat at people’s doorsteps—it’s passé & an unwelcome intrusion to most people.  The electorate is better served by the aforementioned technologies & open forums^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'Fort Rouge - East Fort Garry', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Jenny Gerbasi', office_address: '3-901 Dorchester Ave. Winnipeg, Manitoba, R3M 0Y5', phone_number: '942-5655', email: 'mail@voteforjenny.ca', image: nil, website: 'http://www.voteforjenny.ca', council_site: 'http://jennygerbasi.ca', facebook: 'http://www.facebook.com/#!/group.php?gid=125650754137946', twitter: 'http://twitter.com/jennygerbasi', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+ 
+City Council needs people who are not afraid to stand on principle and who work hard for their constituents.  I have the experience, knowledge and energy to be a mentor for newer councilors.  I also have many goals that have not yet been achieved under the current Mayor and Council. 
+
+**2. What experience will you bring to complement your role as councilor?**
+ 
+In my 12 years on council I have served as part of the “government” side and also as a strong voice holding the Mayor to account as opposition.  Both of these roles are needed.  I have Chaired many committees from Accessibility to Heritage to Protection and Community Services and am currently representing the city on National issues on the board of the Federation of Canadian Municipalities.  I was a community health nurse for 11 years and raised 3 children to adulthood.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+ 
+Infrastructure and Community Safety are very big issues.  I would like to see existing infrastructure fixed and see the development of rapid transit.   We need to keep our neighborhoods vibrant, healthy and safe which means police presence but also means crime prevention by addressing the root causes of crime.   
+ 
+I believe we must address environmental concerns such as climate change and take action on sustainable transportation and waste minimization.
+ 
+I believe we must do something about the lack of affordable rental accommodation due to condo conversions and also create affordable downtown housing as part of a downtown revitalization plan.
+ 
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+ 
+I  would like to see our city  be environmentally, socially and financially sustainable for the sake of future generations.
+ 
+I would like to see a more open and inclusive way of  governing the city.  By this, I mean a more collaborative and cooperative approach by working with neighborhood groups, citizens, non profits, business and labour rather than the top down approach we have now.
+ 
+I would like to see a better planned city with a planning department that has the capacity to do neighborhood planning and consultation better.
+ 
+In my ward I would like to see better police presence, adequate investment in fixing existing streets and sidewalks, adequate maintenance of parks and recreation facilities.  
+ 
+I would like city council to  address the issue of the severe shortage and the loss of affordable rental accommodation due to condo conversions. 
+ 
+I would like to see more done to revitalize downtown including creating affordable housing so more people can live there.
+
+**5. Do you have any other comments regarding your candidacy?**
+
+I would like to have more safeguards in place to ensure honesty, integrity and transparency.  For example the 30 year contract for Water and Waste upgrades with Veolia should not have been kept secret.  The creation of a new Water Utility has not been properly explained or justified. 
+ 
+I have called for the Province to create stronger Conflict of Interest Guidelines for municipal governments including the creation of an Ethics Commissioner^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Shane Nestruck', office_address: '381 Arnold Ave Winnipeg, MB', phone_number: '510-8828', email: 'shanedn@mts.net', image: nil, website: 'http://www.electnestruck2010.com/', council_site: '', facebook: 'http://www.facebook.com/#!/pages/Shane-Nestruck/115236605186014?ref=search', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+Winnipeg's history is one of incredible Vision and Optimism, in Business, The Arts, and in Political Leadership. When I moved here in 1978 it was the greatest city on the prairies and known and respected across the continent!. Since then it has been declining and has lost that reputation.
+
+Ten years ago this decline started to bother me and I became more politically involved. I have become convinced that Winnipeg's and Manitoba's biggest problem is lack of political vision and lack of confidence in the city's potential that is … unfortunately... often exacerbated by the very people we elect to govern this city and province.
+
+I have traveled extensively in my work as a musician. That experience has convinced me that Winnipeg , situated at the centre of the continent with the cheapest and most reliable electric power on the continent, has the most exciting potential as a city of the future, but without leadership without Optimism and Vision and BELIEF in that potential , we are doomed to continue moldering along in mediocrity.
+ 
+**2. What experience will you bring to complement your role as councillor?**
+ 
+The main activity of a  musician is communication about all the wonders and difficulties of life through music. Without words and dealing only in the momentary existence of our creations, our integrity - the truthfulness of our message and our commitment to it – becomes obvious to the audience.
+
+Music also demands listening skills of the highest level.
+ 
+As a TEACHER, my ideas and communications through words, actions, and energy, were judged daily by the most critical and sensitive part of our society, our children and youth. Also my understanding, gained from those youthful associates gave me more and greater empathy with other people. Mentoring, a better concept than 'teaching', is the art of leading students to discovery and giving them the tools to understand.
+Politicians would be wise to aspire to being listeners,communicators and community mentors.
+
+As a BUSINESSMAN, owner of a music store and repair shop in Montreal, and as a musical entrepreneur, I have had to develop many skills, and most importantly a down to earth understanding of the need for planning and astute investment.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+ 
+Integrity & Transparency, : A politician or a government that stops governing in the interests of the voters and constituents, has no integrity!
+
+At all levels in this country Partisan Politics and the interests of Parties and their financial supporters, have taken precedence over the real needs of the voters.
+
+When the Doer government ( the NDP party) chose money and its own needs over the city... selling the Waverley West lands and increasing urban sprawl, the cancer of this city - I awoke to the abomination that party politics had become.
+
+Since then the over zealous partisanship of 'my' councillor and the actions of EPC, 'The 'Mayor's Cabinet' which meets behind closed doors and returns to City Council with a majority, plus the continued boondoggles happening all over town have motivated me to offer the voters a serious change in both the motivations and understanding of their representative.
+
+The LAST thing we need at City Hall is a government of blind NDP zealots, or 'Business at all cost' Conservatives. What we need is INDEPENDENTS who vote on every issue in the interests of their constituents.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+The Way 'things' are done. I will use the Bike Path on Assiniboine Ave as an example of HOW the city could -  do better, save money &  actually achieve positive and constructive ends. If the city had consulted with the public, and not gone on a blind crusade for bicyclists, it might have  discovered that what was needed was a safer environment for bicyclists on the streets..   Study of situations in other cities, would have brought to light that a change in the speed limit to 30 kph in the whole area south of Broadway with speed bumps and a little enforcement of the rights and responsibilities of bicyclists would have provided that “safer environment” for everyone 
+
+However, If and when  a bicycle path is an appropriate plan, car traffic can be separated from Bike traffic with those movable concrete curbstones we see all over town in parking lots and sometimes on the streets. The cost of that sort of re-design of a street is minimal compared with the boondoggle on Assiniboine. This procedure: Consult, Study, Think, then Plan. Would improve many aspects of our city, save a lot of money, and respect instead of aggravate citizens.
+ 
+**5. Do you have any other comments regarding your candidacy?**
+ 
+The Cities Agenda' Most of Winnipeg problems come down to access to tax revenues! You cannot trace where your Provincial taxes go or how well they are used. The Cities Agenda – giving cities more direct, reliable and predictable sources of funds to run the city – e.g 75% of Sales Tax & 20% of Income Tax collected in the city is the most serious and plausible solution to our city's woes.
+
+Between this Municipal election and the Provincial election next year, city councillors must lobby hard for this issue. Because Winnipeggers represent 75% of the electorate in Manitoba we can put The Cities Agenda at forefront of the next provincial election. 
+
+While the mayoralty candidates discuss 'solutions', make promises and argue over details which they have no ability to finance, I'd prefer to be 'straight' with you and discuss the source of those problems and the way we can move toward solving them. 
+
+Democracy was born in cities in Greece over 2000 years ago. It is time the more direct and accountable democracy of city government regained its significance again^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Ian Rabb', office_address: '723 Osborne Street Winnipeg, MB R3L 2C1', phone_number: '414-9499', email: 'info@ianrabb.com', image: nil, website: 'http://ianrabb.com/', council_site: '', facebook: 'http://www.facebook.com/pages/Ian-Rabb/132798390100122', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'Mynarski', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Greg Littlejohn', office_address: '', phone_number: '802-8528', email: 'electgreg@hotmail.com', image: nil, website: 'http://www.greglittlejohn.ca/', council_site: '', facebook: 'http://www.facebook.com/pages/Greg-Littlejohn/143850568958670?v=wall', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+I first ran in Mynarski in 2006 and always planned to run again. In many ways our campaign for change has never ended. Over the past four years our supporters have become our friends. Together [we have achieved a great deal](http://www.greglittlejohn.ca/about/in-the-community/), not just in St. John’s where I live with my wife Nona, but throughout Mynarski Ward.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+In addition to my solid record of community volunteerism, I have seven years experience working for the City of Winnipeg on streets repairs and sewer construction while I was a university student.
+
+I have a law degree from the University of Manitoba and a degree in geography specializing in economic development from the University of Winnipeg.
+ 
+I have been practicing law in North Winnipeg for over a decade and have considerable experience in dealing with civic matters and other issues of concern to the community.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+Crime is the major issue. Many other issues are directly related to crime, such as concerns about the efficiency and effectiveness of our police services, and operations of our city community centres and recreational services.
+ 
+The poor condition of many of our streets and infrastructure, as well as the maintenance of our urban forest is another major concern.
+ 
+Housing is also a major issue as many people are finding it increasingly difficult to meet this basic need, especially low income housing.  
+ 
+There are other issues of concern to residents, but I selected these three because they are most often mentioned.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+The economic redevelopment of Selkirk Avenue is something I am committed to working on with local businesses and other groups working on plans for this once prime commercial district.
+ 
+I will continue to work with others on the actions necessary to restore Winnipeg’s pride in the North End. 
+ 
+I also have a long term vision for the revitalization of our inner city. I would like to see the removal of the CPR yards to begin within the next 10 years.  A first step would be a feasibility study that looked at various options. I think we should build a sustainable community using smart building design for housing, recreation, business and transportation.
+
+**5. Do you have any other comments regarding your candidacy?**
+
+I have witnessed a significant change in Mynarski since I first ran here four years ago, which has inspired me with optimism for the future.
+ 
+There are many young families and couples renovating homes and attracting others to our neighbourhoods.
+ 
+As well, there is a huge population of young people growing up here who intend to stay. This generation is achieving higher levels of education and getting better paying jobs than the generation before.
+ 
+This young and expanding market is exactly what profitable businesses need to become established here.
+ 
+As an independent candidate, not beholding to any political party or association, I will put the interests of Mynarski first to build on the positive momentum in our community^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Ross Eadie', office_address: '530 Polson Ave, Winnipeg MB  R2W 0N9 ', phone_number: '963-8683', email: 'ross@rosseadie.ca', image: nil, website: 'http://www.rosseadie.ca/', council_site: '', facebook: 'http://www.facebook.com/pages/Ross-Eadie/7733811314?v=info&ref=search', twitter: 'http://twitter.com/rosseadie', youtube: 'http://www.youtube.com/rosseadie', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Jenny Motkaluk', office_address: '1385 Main Street, Winnipeg, MB R2W 3T9', phone_number: '415-5805', email: 'jenny@jennyforcouncil.com', image: nil, website: 'http://www.jennyforcouncil.com/', council_site: '', facebook: 'http://www.facebook.com/pages/Vote4Jenny/126080587434988', twitter: 'http://twitter.com/Vote4Jenny', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+As a girl who grew up in this neighbourhood and now as a Mom of a girl who is currently growing up in this neighbourhood, I have a vested interest in making sure that our city and the ward of Mynarski in particular are properly represented. It is important to me that we send someone who is not merely educated and qualified, but someone who understands the needs and concerns of the citizens of this ward first hand.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+I will bring my experience of having grown up and lived here in addition to my education at McGill University and University of British Columbia.  Further to that, I bring more than 15 years experience in negotiating between goverment agencies, universities and large and small companies.  I also will continue to maintain and grow my large network of associates that include friends, neighbours, community leaders and business leaders throughout North America.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+The single biggest issue of this election according to the residents, community groups and business owners in the ward of Mynarski is crime. I intend to continue working toward getting a cop on every corner to get control of the petty crime that is rampant in this city.
+ 
+Secondly, over the years our business districts have suffered and declined to a terrible state of affairs. No one can deny this.  This absolutely has to change. Our community is filled with many young families and those families want to shop local and not always have to drive away to some other area to find shops, services and entertainment.
+ 
+The third priority and this is very important to all of us living here in Mynarski, not just other parts of Winnipeg, is livable neighbourhoods.
+ 
+A neighbourhood should be pleasant and relaxing, not nervewracking, ill kept or dangerous. 
+A good city councillor should always be aware of the condition of the ward and everything in it. Including, the state of the playgrounds and roads and infrastructure. A good city councillor must go to city hall and fight for the good of the ward as well as the city.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+I would like to change the reputation of our city and that of Mynarski. It hurts my feelings everytime I hear Winnipeg and Mynarski, The North End especially, described with any of these words; "poverty ridden"; "warzone"; "murder city".
+
+This makes people think twice before visiting here, living here, investing here and certainly before moving here.
+We have to get to work on fixing that.
+
+**5. Do you have any other comments regarding your candidacy?**
+
+As much work as this election is, it has been the most fun I have ever had. I can't say enough about what a priviledge it is to be meeting so many different people and hearing so many incredible stories. I have had so many wonderful compliments that I am often overwhelmed. Thanks to everyone who has talked to me and helped me so far^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'David Polsky', office_address: '1815 Main Street Winnipeg, MB R2V 2A2', phone_number: '415-6905', email: 'electpolsky@hotmail.com', image: nil, website: 'http://www.davidpolsky.ca/', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+As the only candidate seeking election in Mynarski Ward who is a life long resident of North Winnipeg and I have developed a clear understanding and awareness of the problems faced by the residents of our community. I believe I have the ability and leadership skills needed to influence, engage and to be a strong voice at City Hall on behalf of residents in our community. The residents and neighbourhood groups can count on me working continuously on their behalf making the necessary improvements for a safe, flourishing and robust community with a brighter future! I also believe being a City Councillor will allow me an opportunity to give back to my community.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+I believe my 51 years of experience and knowledge of working with residents, neighbourhood associations, community leaders and other elected government officials will allow me to bring my dedication, commitment and leadership capabilities into focus towards working together with everyone for a better, safer and healthier community.   
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+Firstly crime and safety is the most important issue and I am committed to making sure there is an increased presence of police, bike and foot patrols in our community. I will work towards the installation of “surveillance cameras” along Main Street and Selkirk Avenue and in other problem areas. I am also supportive of existing and new community citizen patrol programs like C.O.P.P. and Powerline. There is also the need to ensure better security lighting will be placed along residential areas that are experiencing problems with gangs, drug dealers and prostitution within neighbourhoods.
+
+Secondly I heard many concerns from residents about the condition of our infrastructure; whether it was roads, sidewalks, curbs and back lanes.  I am committed to ensuring Mynarski Ward receives its fair share of capital funding to address the problems as crumbling infrastructure which impacts our vehicles, our ability to get to places we need to go, the value of our homes and our ability to walk safely.
+Finally I am further committed to addressing the issues of affordable housing, investigating a rebate system for recycling participation, expanding community center family programming, renewal of neighbourhood parks, the elimination of wasteful spending at City Hall.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+I would like an opportunity to bring back the historical sense of success and pride to Winnipeg’s north end. I would like to accomplish having the residents of Mynarski Ward take pride in their community, to feel safe in their neighbourhoods and celebrate their successes with each other. Our community is full of resourceful citizens, many who have started their neighbourhood efforts in this regard; but they need a caring City Councillor who is willing to work with them in achieving a brighter future.
+
+**5. Do you have any other comments regarding your candidacy?**
+
+
+Party politics is not the answer; it truly takes an independent representative who is able to work with all political parties to get things done at City Hall. This is especially true when dealing with the Provincial and Federal governments’ in requesting their support and assistance in providing funding for projects like the revitalization of our parks, housing and infrastructure renewal.
+
+I also understand being a City Councillor is not for the faint of heart nor a part time endeavor. It requires assurance that your Councillor is prepared to help pile sandbags along the riverbanks of Scotia Street when flooding is upon us. That they will be there when you call for help or come to see first hand the problems you’re experiencing. It’s important your Councillor can provide the kind of representation you need when it comes to defending our community at City Hall. 
+
+I make this personal pledge to you, with your support and vote on Wednesday, October 27, 2010 you can count on me being the hardest working City Councillor in Winnipeg, being there when you need me and working continuously on your behalf!^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Trevor Mueller', office_address: '', phone_number: '589-1714', email: 'electmueller@gmail.com', image: nil, website: 'http://trevormueller.weebly.com/', council_site: '', facebook: 'http://www.facebook.com/pages/Elect-Trevor-Mueller-Mynarski-Ward-Winnipeg/154077284616273', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2010 Winnipeg election?**
+
+To say I am frustrated with how our politicians have been acting is an understatement, blatant dishonesty, back room deals, no consultation, disappearing services, this is not the way it should be at any level.  Aren’t politicians supposed to be our advocates, representing and bringing forward out needs?  I don’t see that anymore, in fact I really don’t see politicians at all, except for that 5 second sound bite on the
+news while the city catches fire behind them.  Well the city isn’t just smouldering, or burning its in a raging firestorm of crime, violence, bureaucratic red tape and mismanagement that stops anything from ever getting done.  My friend was murdered this summer, how many others this fall, how many more before change comes that makes a difference, a difference that we need right now.  Events in the city continue to worsen, and it's drawn me now to focus on helping bring the voice of our neighbours back into the forefront at city hall.
+
+**What experience will you bring to complement your role as councillor?**
+
+I am sure others may bring wonderful skills, but I have to say I get things done, I will work with everyone and I can build consensus to resolve issues.  I have spent a lifetime doing just this working one on one with people of all ages and all backgrounds.  this for you. For 15 years I have served with CASARA Winnipeg, an organization that assists the police and military in rescue operations, the last 5 of
+which I have been on the board.  More locally I spent the last year on the board of District #3 CFCA (Citizens For Crime Awareness (Neighbourhood Watch)) and helped the start of the new Faraday residents association.  We will need these skills to get our communities thriving again and I want to be the one to do it for you.
+
+**What are the major issues you would like to stand for and why did you choose these issues?**
+
+Personal safety and crime reduction are the main issues I stand for. We see evidence of it everyday, so much so we're running out of terms to describe it, chaotic, frightening, fatiguing, exhausting, enough
+already.  Police need the tools now and the support to end this but it will take much more than just money and additional officers, and it won’t happen over night. It will take our own commitment too, our own resolve and our own engagement in the community.  I will help the growth of the WPS community support unit that will actively work with our community groups and organizations to find and solve our issues.  We to start acting now before more of our friends and family are touched by this.
+
+**Is there anything in particular you would like to change in our city? In your ward?**
+
+We must have open and public disclosure at City Hall so we can start to dream big again and have our citizens actively engaged and wanting it.  Malls and new stadiums with or with a roof and a public express route to match just doesn’t seen to resonate anymore with the issues at hand.  I want to see the redevelopment of Main street past Higgins, of Selkirk and Dufferin, I want to see businesses return and thrive, I want people to be safe again in there own homes.
+
+**Do you have any other comments**
+
+Age is not an issue, nor is rhetoric, ability and the forthrightness to work with the people and get things done is all that should matter.  If we can send 20 year olds to war then we can surely work with a 35 year old on council^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'John Petrinka', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'North Kildonan', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Jeff Browaty', office_address: '', phone_number: '663-4157', email: '', image: nil, website: '', council_site: 'http://www.jeffbrowaty.com', facebook: 'http://www.facebook.com/pages/Re-Elect-Jeff-Browaty-2010/125183614194069?ref=ts', twitter: 'http://twitter.com/jbrowaty', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+I am running for office because I want to give back to my community. I choose to live in Winnipeg and North Kildonan and I want to help make it one of the most desirable places to live. I ran for office because I believed North Kildonan and northeast Winnipeg had been ignored for too long. We pay our share of taxes, but didn't get our share of the benefits. With projects like the Chief Peguis Trail extension, the Bronx Park Community Centre replacement, the Northeast Pioneer's Greenway pedestrian/bike trail between Raleigh and Gateway, the replacement of the Disraeli instead of a total closure and the Henderson Library expansion that's starting to change.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+Prior to running for Council I worked as a real estate appraiser specializing in commercial, industrial and multi-family properties. This has given me a good background in dealing with property matters and a solid understanding of property assessment, acquisition and sale matters. I also did an internship in 2001-2002 with the University of Manitoba's Transportation Institute where I worked on various projects for the province and city. My term on council has also served as a great learning experience serving for two years on both the Standing Policy Committee on Infrastructure Renewal and Public Works and Standing Policy Committee on Property & Development. Understanding the City bureaucracy in order to get results for constituents requires a fair bit of on-the-job training and I believe I have gained a lot of experience in doing that.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+I stand for the renewal of Winnipeg's infrastructure, public safety, efficient delivery of civic services and fair taxation. Allowing our roads to crumble and not addressing them will only lead to larger repair bills in the future--we need to address our infrastructure now. Everyone deserves to feel safe in their homes and in their communities--ensuring a police presence in all areas of the city, not just downtown and the north end needs to be a priority. Finding ways to deliver civic services in the most efficient manner possible needs to be a constant process and while progress has been made, there is still room for improvement. Of every tax dollar raised, only 7.25 cents goes to municipal governments in Canada. Rather than increasing property taxes, I believe we should get a fixed portion of the current 7% PST. I also believe education taxes should be removed from property tax bills.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+I would really like to see Winnipeg's defeatist attitude change. I am a proud Winnipegger and I choose to live here. This won't happen with a single change but from strong leadership. We don't need to settle for second-best. In North Kildonan, one of the biggest complaints I hear is about the shortage of stores and restaurants. While there are limited opportunities to add new retail options due to a lack of available land, some older properties like the River East Plaza (Safeway mall) and the Springfield Heights mall on Rothesay are prime for renewal. I would also like to see Harbourview/Kil-Cona Park receive the attention it deserves as the major quadrant park in northeast Winnipeg. If re-elected I will work to find ways to develop the Harbourview pavilion area and make the dog park the city's premier off-leash facility.
+
+**5. Do you have any other comments regarding your candidacy?**
+
+It has been an absolute honour to serve the residents of North Kildonan for the past four years. If re-elected I am committed to continuing to provide prompt and proficient service to constituents contacting my office and working with residents to improve civic services^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Brian Olynik', office_address: '', phone_number: '415-5898', email: 'olynikbj@shaw.ca', image: nil, website: 'http://www.brianolynik.ca', council_site: '', facebook: 'http://www.facebook.com/group.php?gid=141514522539064&ref=search', twitter: '', youtube: 'http://www.youtube.com/watch?v=9v29MzXfsUU', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+ 
+My family and I have  lived in this wonderful area of the City  all our lives.  I am passionate about keeping North Kildonan vibrant in terms of community and economic development.  I have represented residents as a school trustee for the River East Transcona School Division  for 17 years , and want to continue to represent all the residents and ensure everyone receives the best service from City Hall.  As well, my years of supporting the community  as a volunteer at Gateway Community Centre  have kept me in touch with the residents as to their concerns as well as their ideas for improvement.   I am approachable and available to communicate with everyone and am committed to go to work for all the residents of North Kildonan.   
+
+ 
+**2. What experience will you bring to complement your role as councillor?**
+
+One of my strengths is my knowledge of public safety and policing issues, having worked more than 20 years as a teacher and counselor in the correctional system. That experience and knowledge will help in developing strategies to combat crime and increase safety.  I also have sound business knowledge  having worked many years as a professional agent for a major real estate firm in the NK area.  As a 17-year member of the Board of Trustees at River East/Transcona School Division, I was part of a team which  lead  multi-union negotiations affecting 2,000 full and part-time employees; and produced  budgets over $160,000,000.  Experience at that level is critical in working and representing the residents of North Kildonan at Winnipeg City Council when decisions are required about major expenditures and projects.  I also believe that communication and transparency is key to developing a vibrant North Kildonan.    In that regard, I am available and approachable to all the residents and will seek their input into the services and development that affect our community.   
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+ 
+Over the past several months, I have had extensive contact with the community by meeting residents personally and also by receiving many phone calls and emails.  The major issues are crime and safety; lack of transparency and communication from the City; poor infrastructure of our roads and sidewalks, as well as inefficient snow clearing on roads/sidewalks, especially in the areas with high concentrations of senior citizens’ homes.  There is also a need for more development at our local parks and walking trails; as well as business development including restaurants, shopping and local services. 
+ 
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+I will hold public meetings inviting input from residents to hear their ideas so we, as a team, can ensure the viable and sustainable development of the community.
+
+I will work with the Whellams Lane Tenants’ Association to halt development of  apartment buildings on their street. There is an elementary and junior high school at Whellams Lane and Henderson Hwy.  The traffic is extremely heavy, especially during the rush hour.  New development  will add to that issue by increasing traffic.  I am  not against development and will work with developers to locate other spaces for residential units in the area. 
+
+I am committed to improving communication and will respond to residents about their issues from water main breaks, road repairs , littering and lack of traffic signs to slow speed on busy streets, to major projects such as the Chief Peguis Trail extension.  
+
+As a parent and former volunteer and coach at Gateway Community Centre – I know it is important to invest in our youth and families. I will develop additional amenities at Harbourview Recreation Complex such as swimming and wading pools.  As well, the off leash dog area at Kil-Cona Park will be upgraded.   
+
+**5. Do you have any other comments regarding your candidacy?**
+
+I have appreciated and sincerely thank all North Kildonan residents who have contacted me and have provided their support for my candidacy for Councillor..  For those residents who do not know me, please visit my website at [www.brianolynik.ca](http://www.brianolynik.ca), email me at <olynikbj@shaw.ca> or call my election office at 415-5898.  I will return your call and would like to hear from you.  I would appreciate your support - please vote for me on October 27.  Thank you!^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Wendy Pasaluko-Plas', office_address: '', phone_number: '471-5375', email: 'wpasaluko@hotmail.ca', image: nil, website: 'http://www.wendyfornorthkildonan.ca', council_site: '', facebook: 'http://www.facebook.com/group.php?gid=160447207315014&ref=mf', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+Well I decided to run in this year’s City Election because my mother told me, "If you don’t like the way things are done, then do it yourself!" So I am listening to her words from the past.  I am not happy with the way things have been done in my community and I believe that I can make a difference for the better. I know that it is hard work but I am not afraid. I am up to the challenge. 
+
+**2. What experience will you bring to complement your role as councillor?**
+
+I have worked in the Insurance Industry for over 25 years I understand people’s concerns when it comes to replacement cost values of their homes, the difference between a tax assessment value and a rebuilding value. I understand the effects of break and enter thefts and vandalism and how this can affect families, from feeling safe in their home and their neighbourhood.  
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+The effect of the Chief Peguis Trail Expansion, how this financial cost of over $110 million will burden taxpayers and their families for decades. How will this affect the safety of our children, pedestrians and drivers.
+
+We need to focus on increased Neighbourhood Watch, Citizens for Crime Awareness Programs, Block Parents Programs and Anti-Graffiti Groups. We as a community need to work together with our Winnipeg Police Services in our area to make a difference.
+
+We need to review the Police patrols that are assigned to North Kildonan in order to ensure that services are there to keep our community safe and assistance is available in time of n complete the Northeast Pioneers Greenway path, so people of the community can enjoy the green space, while chatting with a friend on a walk, jogging or riding their bike with children in tow. 
+
+We need to develop Harbour View and Kilcona Park to make it a viable space. We should look to create a recreational space to celebrate reunions, have a family picnic, celebrate a birthday or just share a day in the sun with family or friends
+
+Bring small business to our community to keep us going and vital part of the city.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+I would like to help and encourage the people of Winnipeg, to realize the wonderful treasures we offer in our Great City. From our beautiful parks and trails, too many of our theatre and entertainment facilities, such as the Art Gallery or Pantages Playhouse or the Fringe Festival, or encourage families to see a Hockey or Baseball game, just to name a few ideas. We are made up of diverse people and cultures. Each bringing their own expression of beliefs, cuisine, heritage, dance, music and this can be celebrated in our city.  You just have to explore.  
+
+**5. Do you have any other comments regarding your candidacy?**
+
+I like to consider myself as the tortoise from the story of “The tortoise and the hare(s).” I may have been slow to start at the starting line but I will work hard, consider the pros and cons and finish the race. I do this with passion.  
+
+You can visit my website at [www.wendyfornorthkildonan.ca](www.wendyfornorthkildonan.ca^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'Old Kildonan', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Robert Chennells', office_address: '17-2595 Main St., PO Box 50025, Winnipeg, MB R2V 1M5', phone_number: '612-2245', email: 'info@robertchennells.ca', image: nil, website: 'http://www.robertchennells.ca/', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+As a 30 year resident of Old Kildonan, I have experienced the area’s vibrant and dynamic climate, and feel that this energy has hit a plateau. I would like to renew that energy and promote the area as a positive community to live in.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+As owner of a commercial contracting company specializing in retail professional and restaurant interior renovations, I have developed a great level of understanding of budgets, tenders and open communication with companies across Canada. Through personal experiences as a father, partner, volunteer, pilot, musician and friend, I bring trust, patience, dedication and approachability to City Hall.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+I feel the following are some key issues that I would like to see addressed for the ward:
+
+* a. Promoting the area for more commercial development which would ease the taxpayer’s burden on school taxes, as we do not have a large commercial base to draw on at the moment.
+
+* b. Upgrading the current infrastructure for safety concerns and better traffic flow
+
+* c. A higher police presence and promoting the need for a new police district station to serve the area as well as be in a location to easily support the nearby wards as well.
+
+* d. Upgrades to our community centres, development of splash pads/wading pools and increasing the number of bike & walking paths to promote active living.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+I would like to see the City plan not just for the immediate future but also the put fore thought into the distant future as well when city planning. This city has such potential, as was shown in the past.  City Council has to take the step to make Winnipeg accessible to people, businesses and industries. I believe the City has started this process, but needs to push forward and increase the momentum. We have to promote that Winnipeg is a great city and not be shy about, be blatant without being rude.  Support the Bombers, Moose and Goldeyes even if they are a having a tough season, as they are our teams and representatives and ambassadors of the City as well.  Support the galleries, theatre, culture and people of Winnipeg. 
+
+**5. Do you have any other comments regarding your candidacy?**
+
+My run for Councillor is not for a job, but to make a better life and area for families like mine. The residents of this ward require a person sitting at City Hall who will represent their interests and concerns. A City Councillors responsibilities are to ensure that Winnipeg and it’s wards are looked after in the most appropriate way and be accountable to it’s residents^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Devi Sharma', office_address: '646 Leila Ave, Winnipeg, MB  R2V 3N7 ', phone_number: '339-9202', email: 'votesharma@mts.net', image: nil, website: 'http://www.votesharma.ca/', council_site: '', facebook: 'http://www.facebook.com/pages/Elect-Devi-Sharma-to-Winnipeg-City-Council/107803482616274', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Casey Jones', office_address: '675 Jefferson Ave, Winnipeg, MB  R2V 0P5', phone_number: '414-9199', email: 'info@caseyjones.ca', image: nil, website: 'http://www.caseyjones.ca/', council_site: '', facebook: 'http://www.facebook.com/pages/Elect-Casey-Jones-For-Old-Kildonan-in-Winnipeg-October-27-2010/147537438600471', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'Point Douglas', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Mike Pagtakhan', office_address: '', phone_number: '', email: 'pagtakhan2010@gmail.com', image: nil, website: 'http://www.mikepagtakhan.ca', council_site: 'http://www.mikepagtakhan.ca/', facebook: 'http://www.facebook.com/pages/Re-Elect-Councillor-Mike-Pagtakhan/136358786397783?ref=search', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2010 Winnipeg election?**
+
+Since being elected in 2002, I have worked alongside so many awesome citizens to help propel the civic ward of Point Douglas into a place that has new homes being built in its older areas, dilapidated playgrounds are being replaced with new play structures, where a new regional recreation facility at 90 Sinclair has been built, a new Sinclair Park Community Centre is currently being constructed and where Main Street is seeing a rebirth with the completion of the new WRHA building, the soon to be completed United Way building at Main & Pacific and the construction of the new Youth Centre for Excellence at Main & Higgins. I am running again, because there is still more homes that need to be built in the inner city, our community centres need major upgrades and renovations, we need more recreational programming for children in our comunity, the rapid transit network needs to be expanded into Northwest Winnipeg, and I would like to establish McPhillips Street as a Business Improvement Zone.
+
+**What experience will you bring to complement your role as councillor?**
+
+The path from idea to reality is a long winding path, that requires perseverance, ingenuity, and creativity.  I know how to stick handle issues thru City Hall and have an advanced understanding of procedure.  My experience with Chairing several committees of Council such as the Standing Policy Committee on Protection & Community Services, the Citizens Equity Committee, the Winnipeg Housing & Rehabilitation Corporation, and being a member of several community organizations such as the Exchange District Business Improvement Zone, the Winnipeg Public Library Board, the Fred Douglas Foundation, and the Winnipeg Arts Council, have provided me with diverse and indepth avenues to demonstrate that I have a proven track record of making things happen: more books and computers in all Winnipeg Libraries, new homes being built in the inner city, the redevelopment of Old Market Square park, creating youth intern opportunities at City Hall, keeping our Arts & Culture fully funded, and investing in our community centres.
+
+**What are the major issues you would like to stand for and why did you choose these issues?**
+
+In the older areas of Pt. Douglas, stabalizing those neighbourhoods is a critical issue that is in part achieved with creating good housing stock, and upgrading our community centres with meaningful recreational infrastructure such as a skateboard park amenities, outdoor basketball courts, augmented with more recreational programming.  Keeping our neighbourhoods safe is another key issue.  Establishing a visible foot patrol presence in neighbourhoods is a strategy I will work with our Winnipeg Police Service to implement in neighbourhoods with higher incidents of crime.
+
+**Is there anything in particular you would like to change in our city? In your ward?**
+
+I want to see Northwest Winnipeg become more connected to both the UofW and UofM.  I see this occuring with the expansion of the Rapid Transit network along McPhillips.  This is a medium to long range vision, but advocacy needs to start now so that planning can take place to make this vision a reality!
+
+**Do you have any other comments regarding your candidacy?**
+
+Both mayoral candidates are discussing new revenues for our City, and this topic will continue to be discussed even more so after the election on Wed. Oct. 27th.  I strongly believe that our Provincial and Federal governments have a responsibility to provide growth income sharing with Winnipeg, the capital city of Manitoba.  Capital cities afterall are the growth engines of our country!  I will continue to be a strong advocate and call upon the area MLA's and MP's to champion growth revenue sharing for Winnipeg.  At the same time, I believe Winnipeggers desire to see more public investments in their communities and are likely ready for some form of affordable tax increase. I also know that being accountable and keeping citizen confidence for such a plan requires meaningful public consultation that I will fight to ensure takes place^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Herman Holla', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: 'http://www.facebook.com/profile.php?id=100001541363907&ref=ts', twitter: '', youtube: 'http://www.youtube.com/watch?v=XnRO1GcRo6o', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Dean Koshelanyk', office_address: '', phone_number: '269-3071', email: 'DeanKoshelanyk@shaw.ca', image: nil, website: '', council_site: '', facebook: 'http://www.facebook.com/pages/Dean4PointDouglas/161287593886424', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2010 Winnipeg election?**
+
+No candidate has expressed an interest in doing anything other then simple maintaining the status quo in our city. Decreasing crime, fixing our roads, maintaining our community centres are all great things. However these should be worked on constantly by our elected officials, not just at election time. In order for our city to move forward we need new fresh ideas and our ward desperately needs a councilor that will put the people of our ward as his top priority when making council decisions.
+
+**What experience will you bring to complement your role as councillor?**
+
+I have worked in and around the ward volunteering on my community centre board, hockey and soccer boards, coaching various sports teams and as a member of the GCWCC Plan 2025 committee which helped to set the focus for growth for our community centres for the next number of years. I have a background as a team lead in software quality assurance managing multiple concurrent projects and deadlines. I actively research the many issues and concerns that arise in our city and have worked with others to implement possible remedies.
+
+**What are the major issues you would like to stand for and why did you choose these issues?**
+
+* Crime
+* Traffic flow and safety
+* Transparency/Accountability
+ 
+As a citizen of my ward, these are the most frustrating things that bother me, these are the things most talked about over coffee with a friend or pretty much anywhere you go and talk to people. People are just as tired of the petty repeat crimes as they are scared of the more violent crimes in our city.
+
+**Is there anything in particular you would like to change in our city? In your ward?**
+
+We are going to add one second to the yellow light timings. We are going to start using mobile radar camera data to increase the safety of our construction zones and school and park areas.  We are going to get police walking the beat throughout our ward. We are going to develop better bus service to get around our ward. As a councilor, every single expense will be listed online in detail so that residents know what the money is being spent on and they will see a lot more of that money being spent on actual ward activities.  I want to extend and greatly enhance the downtown walkway system using it to become a massive showcase for the various art and artists we have in our city.
+
+**Do you have any other comments regarding your candidacy?**
+
+People have grown very tired of changes that take place with seemingly little consultation, people have grown tired of hearing only negatives about Winnipeg from “outsiders”. Many new technologies allow us to communicate with residents right in their homes. If we can successfully engage people in a more meaningful and useful manner, our city will start to become the place we all want it to be. If elected I will continue to be heavily involved in and around our ward and city and will take the voice of our residents back to city hall to make this the city we can all be proud of^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'River Heights - Fort Garry', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'John Orlikow', office_address: '', phone_number: '453-1818', email: 'reelect@orlikow.ca', image: nil, website: 'http://reelect.orlikow.ca/', council_site: 'http://www.orlikow.ca', facebook: 'http://www.facebook.com/group.php?gid=62276715114', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Michael Kowalson', office_address: '1705 Corydon Ave, Winnipeg MB  R3N 0J9 ', phone_number: '414-9414', email: 'info@kowalson.ca', image: nil, website: 'http://www.kowalson.ca', council_site: '', facebook: 'http://www.facebook.com/pages/Michael-Kowalson/140387885981190?ref=search', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'St. Boniface', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Dan Vandal', office_address: '126 Marion St., Winnipeg, MB R2H 0T4 ', phone_number: '890-5288', email: 'danvandalcampaign2010@gmail.com', image: nil, website: '', council_site: 'http://www.danvandal.ca', facebook: 'http://www.facebook.com/event.php?eid=131240633593119', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Christopher Watt', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'St. Charles', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Shawn Dobson', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+I felt that the people in my Ward were left in the dark.  Decisions were being made at City Hall without any apparent  consultation with the residents.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+The most pressing need in this City is infrastructure.  I will use my experience as a construction  carpenter to help find a long term solution to this problem.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+Transparency and Community Clubs. Transparency will bring trust back to City Hall and active Community Clubs will  bring our community together. 
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+I would like to change the (walk) lights at intersections to numbers and increase the time allowed so that seniors and the disabled have adequate time to cross.  
+   
+**5. Do you have any other comments regarding your candidacy?**
+
+I am independent and do not belong to any political party.  I will support all good ideas and will not play party politics^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Grant Nordman', office_address: '110 – 3393 Portage Avenue', phone_number: '888-7735', email: 'rgn@mts.net', image: nil, website: 'http://www.grantnordman.com/election', council_site: 'http://www.grantnordman.com', facebook: 'http://www.facebook.com/profile.php?id=697483159', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+It has been my honour to represent the citizens of St. Charles Ward at
+Winnipeg City Hall for the last four years.  I am proud of the
+progress that council has made during this term, and I feel that we
+need to continue moving Winnipeg in the right direction.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+* Resident of the area for 48 years.  Grew up, raised my family, ran
+my businesses in St. Charles Ward.
+
+* 10 Years Experience as President/CEO of the Assiniboia Chamber of Commerce.
+
+* 4 Years as City Councillor (serving on Winnipeg's Committee on
+Protection and Community Services & Mayor’s Seniors’ Advisory
+Committee among others).
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+In consultation with the residents of St. Charles Ward, I have the
+following priorities:
+
+* Serving seniors through the Mayor's Seniors' Advisory Committee,
+construction of affordable housing for seniors, sidewalk maintenance,
+snow clearing and recreation.
+
+* Repairing & improving our roads, back-lanes, community clubs & playgrounds.
+
+* Supporting Winnipeg's Police Officers, Firefighters and Paramedics by giving them the tools they need to keep us safe!
+
+* Working WITH the business community to grow our city, create jobs and
+develop new opportunities like CentrePort.
+
+* Voting to keep your property taxes low. Our friends and neighbours on
+fixed incomes CANNOT afford to pay more property taxes.
+
+I WILL NOT VOTE TO RAISE YOUR PROPERTY TAX RATE !
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+* Greater availability of affordable seniors’ housing in West Winnipeg.
+
+* Change city policy on gravel back-lanes to allow funding for
+appropriate maintinance.
+
+* 1% of Manitoba’s PST revenue dedicated to road and bridge repair.
+
+**5. Do you have any other comments regarding your candidacy?**
+
+Experience counts.  I have dedicated the last four years of my life to
+dealing with the serious issues facing the City of Winnipeg and St.
+Charles residents, and I will continue to do so if you support me with
+your vote on election day^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Lloyd Finlay', office_address: '', phone_number: '', email: 'lfinlay1@mts.net', image: nil, website: '', council_site: '', facebook: 'http://www.facebook.com/profile.php?id=100001391032424', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+I'm running to make a difference and to provide a voice for the ward of St Charles.
+
+As your councillor I will make ever effort to keep the constituents informed about the activities at city hall.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+I have extensive experience in management and organizations of unions and associations through out the province.
+
+I have an clear view of the needs of the ward as I'm a long term resident of the ward.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+We need to bring back Community Policing
+
+Refurbish our parks Plan for affordable senior housing - not the kind of housing proposed for Oblate Field  on St Charles.
+
+Provide addional support for our community clubs
+
+Promote community and programming
+
+Attend to infrastructures - streets and bridges. 
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+We need to start planning and not developing in the Knee jerk fashion we have now.
+
+When a proposal such as the expansion of Polo Park is put forward, we need to involve the public in a consultation. Further we need to conduct an environmental study  to investigate how such a development would impact the surrounding communities and the existing traffic patterns^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'St. James - Brooklands', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Scott Fielding', office_address: '2371 Ness Ave Winnipeg, MB R3J 1A5', phone_number: '272-0452', email: 'reelectscottfielding@gmail.com', image: nil, website: 'http://www.scottfielding.ca', council_site: 'http://www.scottfielding.ca', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+I want my daughters to inherit the strong, vibrant community that I grew up in.  I was born and raised in St. James where I continue to live with my wife Michelle and daughters Paige and Brynn.  I have been involved in many community organizations and want to make a difference by enhancing the quality of life and making the community safer for the residents of St. James-Brooklands-Weston.
+
+I feel I have accomplished much over the past 4 years but there is still much more work to be done and I have the passion and energy to make our community an even better place to live, work and raise a family.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+I am a graduate from the University of Manitoba with an Advanced Bachelor of Arts degree in Economics and Political Studies at the University of Manitoba.
+
+I worked for the Government of Manitoba in a variety of capacities and have over 10 years experience working in the private sector. 
+
+I have always been an active member of the community. I served as Bourkevale Community Club’s fund-raising chairperson for three years, have been an active member of the Assiniboia Chamber of Commerce and served on the Winnipeg Convention Centre Board of Directors.  I am currently the Chair of Finance for the City of Winnipeg, the Past Chair of Property, Planning & Development and sit on the Board of Directors for the Assiniboine Park Conservancy and the St. James Biz.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+I feel there are 4 main issues:
+
+Fighting Crime & Safety:
+
+* Put more police officers on the street
+* Support for more police cadets so our police can be on the street
+* Continue to lobby the federal and provincial governments to fix the revolving door justice system
+* Support local crime prevention programs
+
+Roads & Infrastructure:
+
+* Make the improvements necessary around Polo Park to ease traffic congestion and improve the roads
+* Continue to work hard to have more evening and weekend construction so jobs get done quicker
+* More funding for our roads, bridges and sidewalks
+* More funding to fix our gravel back lanes.  (This would include changing the bylaw to allow for gravel to be added to lanes, having lanes graded more frequently and buy more graders)
+
+Enhancing our Recreation & Community Facilities:
+
+* Commit funding to upgrade 8 more parks and playgrounds
+* Establishing a new facility for the St. James – Assiniboia 55+ Centre
+* Committed funding for 2 new splash pads
+* Provide more funding to expand the Weston Community Centre
+* Providing funding to upgrade the tennis courts at Silver & Collegiate
+* Provide funding for an outdoor basketball court for the Eldon Ross pool area
+* Continue to fund and support all 6 community centres in the ward
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+I would like to make both the community and the City safer for our citizens.  More investments into our roads, infrastructure, community and recreational facilities create a sense of pride for our citizens and I believe we must continue to make the upgrades. 
+
+**5. Do you have any other comments regarding your candidacy?**
+
+Accountability & Transparency:
+
+* Continue to host town hall meetings
+* Continue to provide an annual newsletter to taxpayers
+* Post expenses online on a monthly basis
+* Continue to keep an updated website that includes all speeche^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Fred Morris', office_address: '', phone_number: '795-1583', email: 'mdmorris2@hotmail.com', image: nil, website: '', council_site: '', facebook: 'http://www.facebook.com/group.php?gid=116396295075199&v=info&ref=search', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2010 Winnipeg election?**
+
+I decided to run because I feel that I can do a better job dealing with our ward issues. The main issues in this ward have usually received very little attention. I am an Independent thinker who will not be let any Mayors concerns dominate those of my Ward. 
+
+**What experience will you bring to complement your role as councillor?**
+
+I have a university degree in Economics. I  have extensive experience in the restaurant and delivery business. I have worked in both management and non management. I have always lived in or near the ward.
+
+**What are the major issues you would like to stand for and why did you choose these issues?**
+
+There are a variety of local issues. We need;
+
+* another Open House on the Sturgeon Creek Community Club Project
+* the beautification of the St. James Civic Center parking lot
+* the rehabilitation of the Portage Avenue at Route 90  Pedestrian Underpass
+* a half signal Traffic Light at Logan and Dee
+* a public library in the Brooklands and Weston area.
+
+**Is there anything in particular you would like to change in our city? In your ward?**
+
+I would like to change the way we schedule regular City Hall meetings. Their times should never conflict. They should be held in the evening. More of these meetings should be held away from City Hall. If we had more accessible meetings, we would eliminate  the problems of poor consultations.
+
+**Do you have any other comments regarding your candidacy?**
+
+I feel that I can be an effective Independent Councillor. I have no current ties with Labour, Business, or any political party. I will work for my ward^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Deanne Crothers', office_address: '1853A Portage Avenue, Winnipeg, MB, R3J 0G8', phone_number: '889-0418', email: 'deannecrothers@gmail.com', image: nil, website: 'http://www.votedeanne.ca', council_site: '', facebook: 'http://www.facebook.com/deannecrothers', twitter: 'http://twitter.com/VoteForDeanne', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+I am running because I’m frustrated with the lack of practical planning and the habit of sacrificing the well being of the city’s people for dubious gains.
+
+City hall needs to be listening to the people it represents. It should be communicating more clearly on important issues with the public. It seems to me that decisions are being made to support projects that the public is clearly asking for more information on. The Veolia deal as an example. I’m not interested in having more high priced projects, (i.e. the water park), until the places and services of this city are brought up to date and maintained. Quality of life for Winnipeg people should be a significant part of decision-making at city hall.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+My previous work as an Adult Literacy Instructor brought me into contact with a variety of people, many of whom were struggling with issues in their lives that were holding them back from succeeding. I learned to be a good listener, developed a deeper sense of empathy for others, and how to look at a problem from several angles to find the solution that worked best for that person, with that person. These three skills go a long way when you are problem solving and better yet, everyone feels good about it at the end of the day.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+My top three concerns are proper support for community initiatives, infrastructure and the issue of crime. I feel that with a stronger sense of community within wards, and a city hall possessing the vision to promote this, many of the issues we face would be less critical or non-existent. This requires effort on both the part of the citizenry and city.  A stronger sense of community from actively involved residents would have implications on the level of crime in neighbourhoods where people are engaged over what takes place on their streets. Time and money spent at this level is a good investment and will, I believe, be less expensive in the long run, allowing for funds to be reallocated to other city concerns.  Infrastructure is again tied to the quality of every day life for the city's people, whether it affects the roads they drive or bike on, the city owned buildings they spend time in or the operation of basic services such as water and sewer.  We can't afford to keep patching things together-we need vision.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+I would really like to see the city develop a comprehensive plan that would address the city’s development over the next 5-12 years.  The first 5 would be spent taking care of the great features of this city that exist, but are poorly cared for or simply neglected. The next 7 would be spent developing a few, far-sighted additions to what the city has to offer and doing those few things very well.  Winnipeg is unique. We should be making the most of what we have because it’s worth taking care of. With a clear vision and a good, solid plan we could be the example of what a healthy, cultured, innovative city should be. 
+
+As for my ward, I’d love to see a St. James-Brooklands farmer’s market. It would be a great opportunity to develop community appreciation and there is nothing like seeing people in your area on a regular basis to deepen that sense of connection and responsibility one has for the place in which they live.
+
+**5. Do you have any other comments regarding your candidacy?**
+
+I am just like many other St. James-Brooklands residents. I work, pay my taxes, worry about my kids, feel like I never have enough time to do as much as I would like, but try to take in as much as I can of what this city has to offer. There are things about Winnipeg and my ward that I love and there are things that I despair over. I believe that if enough councillors at city hall have the will to find solutions by working together, through healthy debate and the spirit of cooperation, the city could quickly begin to improve the lives of all of its citizens. If given the opportunity, I intend to represent the people of my ward in this fashion^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'St. Norbert', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Louise May', office_address: '2445 Pembina Hwy, Winnipeg, MB  R3T 2H4 ', phone_number: '799-4076', email: 'info@louisemay.ca', image: nil, website: 'http://www.louisemay.ca/', council_site: '', facebook: 'http://www.facebook.com/group.php?gid=120287021349531', twitter: 'http://twitter.com/StNorbertLouise', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Justin Swandel', office_address: '', phone_number: '960-8683', email: 'jswandel@hotmail.com', image: nil, website: 'http://www.swandel.ca', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'St. Vital', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Gord Steeves', office_address: '', phone_number: '', email: 'gordsteevescampaign2010@shaw.ca', image: nil, website: 'http://steeves2010.com', council_site: 'http://www.gordsteeves.com', facebook: 'http://www.facebook.com/profile.php?id=100001622583689', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2010 Winnipeg election?**
+
+I've had the privilege of serving as the city councillor for the St. Vital ward since 2000.  I grew up in St. Vital, and have called it home my entire life.  My wife and I are proud to be raising our children here.  St. Vital and its people are near and dear to me - and there is no better way to affect change than by serving in public office.  I have a list of specific projects I want to complete this term in St. Vital.
+
+**What experience will you bring to complement your role as councillor?**
+
+I now have ten years experience as the city councillor for this ward, and previous experience as an area school trustee before that.  In my role as councillor, I have been entrusted with the chairmanship of the Protection and Community Services committee and most recently the Planning, Property and Development committee, which has afforded me a very hands on experience with countless numbers of major city issues.  I serve as Acting Deputy Mayor, giving me the opportunity to serve as an ambassador for the city for many special events.  I am also a lawyer, and have always been very involved in my community.  I have spent years building strong relationships within the community, and together we've been able to do a lot of good work here in St. Vital.
+
+**What are the major issues you would like to stand for and why did you choose these issues?**
+
+The main issues for me have been and continue to be public safety, infrastructure and community improvement.  We need safe, thriving neighbourhoods in which to raise our families.  
+
+**Is there anything in particular you would like to change in our city? In your ward?**
+
+I would like to see a decrease in crime in the city as a whole, as well as in my ward.  Being a father of young children, it's especially important to me that we raise our children in a safe environment.
+
+**Do you have any other comments regarding your candidacy?**
+
+The last ten years as the councillor for St. Vital have been the best ten years of my professional life, and if again given the opportunity, it will be my pleasure to continue to serve the people of St. Vital and the city of Winnipeg^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'Transcona', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Russ Wyatt', office_address: '', phone_number: '222-2930', email: 'wyattforcouncil@gmail.com', image: nil, website: 'http://www.russwyatt.com', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Vlad Kowalyk', office_address: '', phone_number: '224-3792', email: 'vlad2@shaw.ca', image: nil, website: 'http://vlad4council.weebly.com/', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+There was a sense of frustration within the community due to the residents’ concerns not being acknowledged or addressed.  I decided to run because allowing the incumbent to win by acclamation would only increase the frustration level but more importantly residents must always have a choice of representation. 
+
+**2. What experience will you bring to complement your role as councillor?**
+
+As a professional engineer I will bring the following to compliment my role as councillor:
+
+* A strong code of ethics stressing honesty, integrity and public interest/safety
+* a strong problem solving background 
+* the ability to set and work within budgets
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+* Responsibility and communication
+
+Residents in existing neighbourhoods concerns are not being acknowledged or addressed and changes are being made without public consultation.
+ 
+* Safety
+
+Police resources allocated to Transcona need to stay in the area on patrol and to enforce traffic laws. 
+ 
+A safer truck route network is needed
+ 
+* Community
+
+Green spaces and civic recreational facilities are not being maintained/upgraded
+ 
+* Infrastructure
+
+Roadways/sidewalks in existing neighbourhoods are crumbling and tree maintenance is almost non-existent
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+Day Street, a non regional residential collector roadway running through the heart of Transcona and lined with schools, churches and residences needs to be re-designated so that heavy equipment and semi trailer trucks are restricted from operating along it^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = city_of_winnipeg
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Judy Wasylycia-Leis', office_address: '650 Portage Ave., Winnipeg, MB  R3C 0G6', phone_number: '777-5839', email: '', image: nil, website: 'http://www.judyformayor.com', council_site: '', facebook: 'http://www.facebook.com/group.php?gid=345670435188&ref=mf', twitter: 'http://twitter.com/judy4mayor', youtube: 'http://www.youtube.com/user/judy4mayor', linkedin: '')
+questionnaire = %Q^** Why did you decide to run in the 2010 Winnipeg election?**
+
+The short answer is that I'm running because I love this city. It gives me tremendous pride to call Winnipeg home, but I also believe that this city I care about so much has some deep-rooted challenges that I don't think we can ignore any longer. We need to start doing better at City Hall, and I'm running because I know that a stronger city is within reach if we get serious about facing our challenges head on. We can't fix everything overnight, but we can start tomorrow on a plan to make things better. That's true whether we're talking about beginning to reinvest in our infrastructure, whether we're talking about giving every kid the chance at a bright future and steering them away from crime, or whether we're talking about building a rapid-transit system or rejuvenating our downtown. With some new direction at City Hall we can really start to make things happen.
+
+** What experience will you bring to complement your role as mayor?**
+
+I've been proud to have spent my adult career working on behalf of Winnipeggers. It gave me immense pride to represent Winnipeg families as a member of parliament in Ottawa. I know from experience how much is possible when you're willing to leverage the privilege you have as an elected official to work in partnership with people in the community to get things done. I've served as a provincial cabinet minister and before that, worked with a number of community organizations here in the city. I've tried my best to make public service my life's work, and I'm running for mayor because I know in my heart that we could be doing so much more for Winnipeg families at City Hall with a different approach and an open door.
+
+** What are the major issues you would like to stand for and why did you choose these issues?**
+
+First, I think Winnipeggers deserve to know that City Hall is looking after their interests. I've made it a key commitment in this campaign to bring back transparency and openness at City Hall, and that means a number of things. First, it means we don't negotiate backroom sewage deals with foreign companies that would tie our hands for decades, and on a more immediate basis it means a mayor who's out in the community showing leadership, being engaged and listening to the concerns of Winnipeggers. I also believe we need to end the neglect of our crumbling infrastructure and start to reinvest. I've put a plan on the table to do that. I've been transparent with Winnipeggers about what it would cost: about $27 next year for the average household. Those additional monies would be tied directly to infrastructure, parks and public spaces and community safety. I'm also proud of the crime-reduction platform we've announced. Winnipeg has gone six years without a comprehensive crime plan, and that needs to change. We need more policing, but we also need a mayor who understands the need to invest in the things that cause crime in our community in the first place. 
+
+** Is there anything in particular you would like to change in our city?**
+
+If I had to pick one thing it's this: I believe Winnipeg can and should be a place where people here can go to bed at night knowing that their city is a little bit stronger than the day before. When I think of my 21-year-old son Joe, I know that if he sees his city moving in the right direction and getting stronger day by day, then he'll stay here and enjoy a great quality of life. I want people in this city to know in their hearts that their city is on the right track, whether they're a young family, whether they're a senior citizen who has lived here their entire life, or whether they're new to our community. As Mayor, it will be my job to show Winnipeggers that we're on track and headed in the right direction, and it's a responsibility I take seriously. 
+
+** Do you have any other comments regarding your candidacy?**
+
+I'm just incredibly grateful for the energy and enthusiasm I've seen from every corner of our city during this campaign. I feel very privileged to be a candidate in this election, but ultimately, this is not just about me. It's about people coming together to decide the future of their city, and it's about the belief that we truly can make Winnipeg stronger. I am amazed by the energy out there, whether it's people on our Facebook page sharing their ideas for a better city, or the ideas people have when I meet them on their doorstep. The people of this city know that a stronger city is within reach, and I'm grateful to everyone who casts a ballot in this election and has a stake in Winnipeg's future.^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Sam Katz', office_address: '1 – 883 Notre Dame Avenue, Winnipeg MB R3E 0M4 ', phone_number: '774-9898', email: 'info@reelectsam.ca', image: nil, website: 'http://www.reelectsam.ca/', council_site: '', facebook: 'http://www.facebook.com/group.php?gid=138423792856769&ref=search', twitter: 'http://twitter.com/ReElectSam', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: true, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Rav Gill', office_address: '67 Lansdowne Avenue Winnipeg, MB R2W 0G2', phone_number: '333-5061', email: '', image: nil, website: 'http://rav4mayor.com/index.html', council_site: '', facebook: '', twitter: 'http://twitter.com/rav4mayor', youtube: '', linkedin: '')
+questionnaire = %Q^** Why did you decide to run in the 2010 Winnipeg election?**
+
+First I would like to thank you for setting up this website and providing a quick reference point for busy Winnipeggers to evaluate and scrutinize the nominated candidates in an unbiased fashion.  I decided to run for mayor to give back to this city through the public sector.  I chose to live in Winnipeg and now I’m choosing to make Winnipeg a better place to live, work, and invest for everyone.  This means making Winnipeg safer, improving traffic and public transportation, and bringing businesses and jobs to Winnipeg.  The first step is to stop our young people and entrepreneurs from leaving Winnipeg because they believe our city doesn’t offer the amenities, culture, and economic opportunities other cities do.  I believe I have the ambition, vision, and ability to get this done working with all council members regardless of where they sit on the political spectrum.
+
+** What experience will you bring to complement your role as mayor?**
+
+I firmly believe this is a people person job first, so I equate experience with how well does the candidate know the people in Winnipeg?  As well, how in touch is the candidate with the needs of all Winnipeggers?  In real estate I’ve been fortunate enough to work with our citizens from all areas, of all income levels, and of all ages.  This has given me an inside perspective on their needs for safe neighbourhoods, affordable housing, traffic, public transportation, and many other issues we are dealing with in this election.  In the private sector I have also owned and operated my own businesses, as well I assisted many other Winnipeggers establish their own small or large business, across every ward in the city.  This has given me an intimate knowledge of their concerns (taxation, zoning, etc.) to bring to city hall.  My other experiences include property development, management, and financing.
+
+** What are the major issues you would like to stand for and why did you choose these issues?**
+
+Reducing crime and making all neighbourhoods safer is the biggest issue.  In particular my focus has been on cracking down on gang activity.  I chose this issue because having an area where criminals feel free to conduct their activity while residents don’t feel comfortable enjoying their neighbourhood is a standard of living I find unacceptable.  In the private sector I was able to convert many gang houses into affordable housing for working Peggers, making a significant impact for the entire block.  As mayor I’d like to continue this work with a dedicated police gang unit and a Crime Free Housing program, both which have proven effective in reducing crime attributed to gang activity.  I am also focusing on traffic, infrastructure, and a long term rapid transit system.  Some of our city’s biggest priorities need to include completing the inner ring road to divert traffic from downtown, and developing a light rail transit system.  My other focus is developing our downtown into a true urban neighbourhood that people of all incomes can live, work, and play in.  I have the experience of moving people and businesses downtown and would like to continue this work as mayor.
+
+** Is there anything in particular you would like to change in our city?**
+
+It’s unfortunate some people in our city have a defeatist attitude and don’t embrace our city with the same pride like the other half of our citizens I’ve met during the campaign.  This is evident in our low voter turnout of 38% in 2006.  It’s not that they don’t love our city, it’s because they don’t see our city providing all the amenities other cities have and don’t believe any mayor can bring about the visionary change they desire.  I choose to live in Winnipeg and I’m proud of it.  This is something I can change with strong leadership that never settles for second best or doing something on the cheap.  
+
+** Do you have any other comments regarding your candidacy?**
+
+It’s up the voters to decide who they trust with their tax dollars and who they want to be their mayor for the next 4 years.  Now more than ever each voter can easily research what each candidate is offering, and decide if that candidate can get it done.  The mayor only gets one vote at council but is still in position to make some real changes to our city.  I’ll also say I have enjoyed meeting so many people, especially people who never felt represented at city hall before or never voted before because they didn’t support any of the candidates.  I’m proudly running my campaign as an independent and don’t believe partisan politics have a place in the mayor’s office.  I find most Winnipeggers want someone working for them, and not a political party when making decisions.  Lastly, get out there and vote people^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Brad Gross', office_address: '', phone_number: '803-1811', email: '', image: nil, website: 'http://bradgrossformayor.com/', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2010 Winnipeg election?**
+
+I feel Sam is not serving Winnipeg tax payers properly.
+
+**What experience will you bring to complement your role as mayor?**
+
+Business owner and running the city like a business.
+
+**What are the major issues you would like to stand for and why did you choose these issues?**
+
+Traffic lights to many, solar lights and increasing the light for street lamps, red light cameras are gone if I am mayor, (the money goes to Texas millions gets sent out of the community). Lowering taxes for seniors, small business owners would get 15 per cent off for each full time position they create and the deduction would come off the Winnipeg Personal property tax. Vacant schools will be used to home the homeless. I will expropriate the Winnipeg Park-ade back which was clear title and generating over 2 million dollars in revenue and not sold through the tendering process, I will build a parkade in the Osborne area.
+
+**Is there anything in particular you would like to change in our city?**
+
+Get traffic moving quicker, and Red light cameras gone, not selling city assets, tighter spending.
+
+**Do you have any other comments regarding your candidacy?**
+
+We pay 17 taxes in this city not including income tax, I feel we should be able to balance the budget and create revenue for the city^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+ward = Region.create!(name: 'St. Vital By-Election', start_date: nil, end_date: nil, region_type: council_ward, parent_region: nil, seats: 1)
+electoral_race = ElectoralRace.create!(region: ward, election: wpg_2010, polygon: '', seats_to_fill: 1)
+person = Person.create!(name: 'Harry Wolbert', office_address: '', phone_number: '294-6062', email: 'hwolbert@shaw.ca', image: nil, website: 'http://www.harrywolbertforcitycouncil.blogspot.com', council_site: '', facebook: 'http://www.facebook.com/harry.wolbert', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^### Questionnaire Response from the October 2010 General Election
+
+*Harry Wolbert also ran in the 2010 Winnipeg election in this ward. The following is his October 2010 response to our general election questionnaire.*
+
+**1. Why did you decide to run in the 2010 Winnipeg election?**
+
+I have decided to run because I did not like the direction in which the current mayor and council have been taking our city. Winnipeg has once again (for the third year in a row) been designated as the Violent Crime Capital of Canada. This is unacceptable! Our City’s current approach to this and other issues just aren’t working. The current mayor and City Council have said that the poor are not their responsibility. I disagree. Our city does have a role to play in poverty reduction. The time has come for some new faces on city council with some fresh, new ideas.
+
+**2. What experience will you bring to complement your role as councillor?**
+
+I am a recognized leader in my community. I will bring the same passion, commitment and leadership skills to City Council that I make use of in my daily work as an advocate for the poor and persons with disabilities.
+
+**3. What are the major issues you would like to stand for and why did you choose these issues?**
+
+There are three issues. We need to start getting tough on crime while at the same time dealing with some of its “root causes” such as poverty, homelessness and gangs. Crime is not a Conservative or Liberal issue. Rather, crime is an issue that affects us all! In the late 1990’s my wife Valerie was the victim of a violent crime. Gang members had murdered her first husband in our city’s core area. We also need to do some about our city’s crumbling infrastructure. If there’s money for a helicopter and football stadium, then there should be the resources to maintain our roads, bridges and community centres. The final issue that I hope to champion is accountability in government. Our City Council needs to be more open, honest and transparent. If I’m elected, there will be no more secret, back-room deals.
+
+**4. Is there anything in particular you would like to change in our city? In your ward?**
+
+I would change the way that I as a politician communicate with the citizens of the St. Vital Ward. If elected, I would hold between 3 – 4 townhall meetings each year in order to connect with the residents of St.Vital and to discuss the issues that are of interest and concern to them. They would not just be hearing from their local politician at election time. I believe that politicians are to be servants of the people.
+
+**5. Do you have any other comments regarding your candidacy?**
+
+It is time for a new “vision” for the City of Winnipeg. My vision for the City is one, which includes all of its citizens (rich and poor, newcomers, Aboriginals, persons with disabilities, university students, seniors, etc.) I would like to propose that Winnipeg City Council adopt the following goal: In 10 years, Winnipeg will become the most inclusive and accessible city in all of Canada. Adopting that goal would bring out the best in all Winnipeggers. This City could be a leader and a role model for Canada and for the rest of the World^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Greg Nordman', office_address: '', phone_number: '930-5301', email: 'gregnordman@gmail.com', image: nil, website: 'http://www.gregnordman.ca', council_site: '', facebook: 'http://www.facebook.com/groups/258932427483998/', twitter: 'http://twitter.com/GregNordman', youtube: '', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2011 Winnipeg by-election?**
+
+St. Vital Ward is home to almost 60 000 people.  For too long, persons
+running for councillor have operated under the belief that the job of
+representing this community involves showing up for a couple of
+meetings a week and afterwards focus on the running of their private
+business.  A good councillor is one who realizes that mere attendance
+at meetings is only the tip of the proverbial job iceberg.  A good
+councillor is one who knows that they have to be personally available
+to the public to listen to their concerns and voice them within
+committees, meetings and in council.  A good councillor is one who
+dedicates their full attention to what is going on both within city
+hall and within the communities they represent.  Greg would argue that
+the number of people the councillor for St. Vital will represent,
+along with the complexity of being a councillor in Winnipeg today,
+means the public needs to have someone who will dedicate their time to
+them first and always over anything else.
+
+
+**What experience will you bring to compliment your role as Councillor?**
+
+Greg has worked for many years in the Hospitality Industry including
+managing several restaurants in Winnipeg & Toronto.  Greg’s constant
+attention to efficiency and cost controls, balanced against customer
+service and quality, has ensured each and every one of these
+restaurants were a successful endeavor during his tenure as their
+manager. For the past 12 years he has held the position of Sales and
+Service Representative with a large coffee and vending company.
+
+Sports are a big part of Greg’s life.  Since the mid 90’s, Greg has
+been a very active member in the amateur sporting community in the St.
+Vital area of Winnipeg, especially through his development of the
+Bonivital Soccer Club.  In the course of his community involvement,
+Greg Nordman has received six volunteer of the year awards from four
+different community associations.
+
+Greg has also been involved in both the improvement of existing, and
+development of new, sports infrastructure in Winnipeg. This includes
+the construction of the new indoor soccer facility at the University
+of Manitoba and the Memorial Park Soccer complex in St. Vital.
+
+Greg’s broad background makes him an excellent candidate to represent
+and service the citizens of St. Vital Ward as their full-time city
+councillor.
+
+
+**What are the major issues you would like to stand for and why did you choose these issues?**
+
+A SAFE ST. VITAL
+
+* Will support results focused policing
+* Create Community Forums on Crime Prevention
+* Establish the St. Vital Youth Advisory Committee
+
+FAST TRACK ST. MARY’S
+
+* Extra lane to speed up  your rush hour commute
+* Pave gravel back lanes on an expedited basis
+* Continue with traffic light  synchronization
+
+ACTIVE LIVING & COMMUNITY PROGRAMS
+
+* Increase active living programs for older adults
+* Maintain & expand recreation programs & facilities for persons of all ages
+* Quarterly meetings at seniors residences
+
+A GREEN ST. VITAL
+
+* Support introduction of composting & organic collection
+* Develop plans for bike paths separated from roadways
+* Support Rapid Transit
+
+YOUR FULL TIME CITY COUNCILLOR
+
+* Greg will dedicate his full attention to his duties at City Hall.
+He will not run a business or maintain a professional practice while
+he is your councillor.
+
+
+**Is there anything in particular you would like to change in our city? In your ward?**
+
+a) in your ward?
+With only two major river crossings to the inner city, Greg would like
+to improve the flow of traffic, particularly at rush hours, on St.
+Mary’s Road north of St. Anne’s.
+
+b) in the city?
+Greg believes that any new sporting facilities built in Winnipeg need
+to be designed to support multi-use, and multi-age, activities.  This
+will get the maximum use out of these facilities at a reduced cost as
+compared to utilizing multiple single purpose sites.  Having better
+multi-use facilities will also help, indirectly, reduce youth crime by
+providing a centre for sporting activities for youth.
+
+
+**Do you have any other comments regarding your candidacy?**
+
+
+Greg will dedicate his full attention to his duties at City Hall.  He
+will not run a business or maintain a professional practice while he
+is your councillor.  Greg will be your full-time city councillor.^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Terry Wachniak', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Mike Ducharme', office_address: '', phone_number: '', email: 'voteducharme@gmail.com', image: nil, website: 'http://www.voteducharme.blogspot.com', council_site: '', facebook: '', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2011 Winnipeg by-election?**
+
+I have been present and serving St. Vital residents in public service, community organizations and business for over 27 years.  My family has served St. Vital as well, including my father Gerry, Uncle Albert and Grandfather Louis.  I was raised in St. Vital and attended Windsor School & Glenlawn Collegiate.  We know the community of St. Vital very well and the people of St. Vital even better.
+
+This election provided the opportunity to serve in a more prominent role and do more for St. Vital by bringing strong experienced representation to City Hall.   I and my family before felt that we should always give back to the community.
+
+**What experience will you bring to compliment your role as Councillor?**
+
+I have tremendous experience serving the community beginning with 29 years at Ducharme Agencies Ltd. Nine years as a trustee of the Louis Riel School Board and was Board Chair in 2005-2006.  On your school board I was also vice chair, chair of finance, and chair of negotiations.  I served on the LRSD Policy, Building Maintenance & Transportation, Education, and Lunch Program Review committees. 
+
+Right out of juniors at the St. Vital Curling Club I began coaching and coached in four provincial junior championships.  I served on the club executive and was President in 1999-2000.  I started with St. Boniface/St. Vital Rotary in 1993. I have worked on charitable events for St. Amant Centre and began working with Jocelyn House Inc. from the time they opened their doors in 1984.  In the late 1990’s I developed the Live Out Loud wall climb for Jocelyn House.  
+
+This exciting event brought together diverse groups such as Vertical Adventures, the Alpine Club of Canada and Mountain Equipment Co-op at St. Vital Centre to raise over $50,000 for a very worthwhile local organization.
+
+**What are the major issues you would like to stand for and why did you choose these issues?**
+
+After four elections in 13 months St. Vital is looking for an experienced voice to engage the public after losing a long term councillor.  St. Vital is Winnipeg’s largest ward with issues as diverse as this incredible community. 
+
+During my campaign at the doors the public has raised concerns around our community centres & public green spaces, public safety, local improvements & infrastructure, and traffic & transportation.  
+
+**Is there anything in particular you would like to change in our city? In your ward?**
+
+With the size of St. Vital, it will take a candidate with deep roots and knowledge of the community to tackle the many diverse issues that St. Vital presents.  I understand the concerns of residents of Elm Park having grown up on Kingston Crescent and am committed to preserving the Canoe Club green space.
+
+I have heard the concerns of the Dakota community.  St. Vital is Winnipeg’s largest ward and must have a local police presence.  The recent closure of the Dakota Community Police office is short sighted and I will work hard with the community to restore this service to St. Vital.
+
+Traffic and infrastructure are long term issues that require hard work, an understanding of public finance and long term thinking to resolve.  I commit to meeting with the community to review the existing strategic plan, listen to what you have to say and advance proposals that make sense for St. Vital.
+
+**Do you have any other comments regarding your candidacy?**
+
+I have worked hard to ensure that St. Vital is served by Winnipeg’s leading school division.  I have worked hard to ensure that Ducharme Agencies Ltd. offers the best service and value to residents.  I have worked hard to ensure that we are all served by strong vibrant community organizations that place the needs of St. Vital first.
+
+With your kind support I hope to bring this record of service to City Hall as your new councillor on November 26. 
+
+For more information about my campaign and background go to my website at: www.voteducharme.blogspot.com^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Hammad Khan', office_address: '', phone_number: '272-3270', email: 'votekhan2011@gmail.com', image: nil, website: 'http://votekhan2011.ca', council_site: '', facebook: 'http://www.facebook.com/pages/Hammad-Khan-for-St-Vital/256825241034619', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2011 Winnipeg by-election?**
+
+I have always believed that we deserve the strongest representation possible, standing up for the real issues facing our families. Our neighbourhoods deserve to be green, safe, healthy and strong. With the problems we face on our major arteries, green spaces, back lanes, in our community police stations and community centers, I felt as though I had the opportunity to make a real difference. If I am elected St. Vital’s next City Councilor, I will put the needs of our neighbourhoods first, and ensure St. Vital is a great place to raise our families. 
+
+**What experience will you bring to compliment your role as Councillor?**
+
+I have a wealth of experience in the private sector, currently I’m the owner of H.K. Enterprises LTD, an international consulting firm based in Winnipeg specializing in e-commerce. I’ve also been a manager at Convergys, and a fundraiser for Canadian Diabetes as well as the United Way. I’ve also been part of the public sector as an operations manager for Statistics Canada. 
+
+**What are the major issues you would like to stand for and why did you choose these issues?**
+
+My three major issues are safety, infrastructure and community centres. 
+
+1. I want to protect our community safety police stations. They are overworked, understaffed and constantly under the threat of closure, which I will make sure doesn’t happen. They are the first and most important contact when there are security issues in the community. They help to create alliances between St. Vital residents and the police force, and just their presence is enough to make citizens feel more secure in their surroundings. 
+2. Our infrastructure defines how we get around and as a city councillor I would work to make sure our roads stay in a good state and I will lead the process of paving back lanes.  People must also be able to move around within St. Vital efficiently. I will push to have Phase II of rapid transit include St. Vital. Synchronizing traffic lights and getting construction crews to work around the clock to finish repairs will help get people to work on time and home quickly. 
+
+**Is there anything in particular you would like to change in our city? In your ward?**
+
+St. Vital is a great place to live but there are some changes I would to see. First, our community has for far been forced to deal with unacceptable infrastructure in the form of unpaved back lanes, run down streets and backed up traffic. I believe I am the best candidate to address these serious problems. It is also important that people living in our ward feel safe. We CAN’T have our community police stations closed. They serve an important function and I will fight to make sure they stay open. I want our ward to have the finest schools, the best programs and the safest neighbourhoods. St. Vital ought to be the example other wards want to follow. If we succeed in making our area stronger, then Winnipeg as a whole will prosper.
+
+**Do you have any other comments regarding your candidacy?**
+
+I am asking the people of St. Vital to vote for a strong voice for themselves and their families. We need a strong voice for the true issues facing our community, building better more sustainable roads, paving our back lanes, improving our transit, keeping our community police stations working efficiently, supporting our community centres and growing our green spaces. St. Vital is the best community to live in, and I believe I can give it the strongest voice possible. I hope that on November 26th you vote for a strong voice for a strong community. I ask you to vote for me, Hammad Khan, to be the next City Councilor in St. Vital.^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Brian Mayes', office_address: '', phone_number: '231-3660', email: 'info@mayes2011.com', image: nil, website: 'http://www.mayes2011.com', council_site: '', facebook: 'http://www.facebook.com/pages/Brian-Mayes-for-St-Vital-City-Council/114714158637900', twitter: 'http://twitter.com/mayes4council', youtube: '', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2011 Winnipeg by-election?**
+
+I have always been interested in municipal politics.  I like the idea of making a difference at the grassroots level as opposed to a top-down approach.  I have chosen to pursue politics because I believe in the power of democracy. I believe I have the experience, education, and passion for the job.  I grew up in St. Vital and I am now raising my family in St. Vital.  It's a wonderful community with vibrant businesses and culture, and yet it is also rich with park land, cross-country ski trails, tobogganing runs, picnicking areas, and other green spaces from the Seine River to St. Vital Park and beyond.  I'd like to play a part in preserving these aspects for the future of our children.  People knew me as a hard-working, fiscally responsible, and innovative school trustee. But I was also sensitive to budgetary concerns and keeping costs down. If elected as city councillor, St. Vital constituents can expect the same work ethic they have seen from me as I have canvassed door-to-door.  Constituents can also expect that I will use my passion for city politics to make St. Vital an even better place to live.
+
+**What experience will you bring to compliment your role as Councillor?**
+
+I have a bachelors degree in Public Administration, a Masters Degree in Industrial Relations, and a law degree.  I also have elected experience as a school trustee in Brandon.  I have worked as a civil servant and for over a decade as a lawyer.  I have owned my own business and I know something about the challenges small business owners face. I also have extensive experience as a director managing the large provincial budgets of the Deposit Guarantee Corporation of Manitoba and Workers Compensation Board of Manitoba. Given my broad-based expertise, education, and experience, and the fact that I am a resident in the ward, I am able to understand issues from a number of different perspectives. 
+As a school trustee I stood for a number of things.  I was in favour of getting junk food out of schools.  I also helped introduce educational pamphlets about cultural diversity.  I got funding to increase speech language pathology services.  As budget chair, a role which I relished, I was known as a fair and fiscally responsible leader.  I'll use my expertise and experience to make constituent voices heard at city hall.
+
+
+**What are the major issues you would like to stand for and why did you choose these issues?**
+
+1. Infrastructure. Crumbling roads, sidewalks, and back lane winter maintenance all need attention.  We need to reduce St. Vital traffic, too, through a) red light synchronizing, b) lane expansion, and c) the introduction of a super express bus.
+2. Crime.  St. Vital is a wonderful community; nevertheless there are some issues that need to be addressed.  Having knocked on tens of thousands of doors in St. Vital, I hear that youth gangs are the main concern. We need to fund police budgets and youth crime prevention programs.
+3. Green space.  In St. Vital we have it all. We have diversity, vibrant businesses, libraries, and green space.  I'd like to ensure our spaces, such as the Canoe Club and around the Seine River remain green.
+4. Diversity. St. Vital is a cosmopolitan diverse ward and we should celebrate that.  Studies show that diverse welcoming communities are healthy prosperous communities.  If elected, I would strive to promote and support programs that highlight this important aspect of our ward.
+5. User fees. I've been going door-to-door since this campaign began. I'm hearing that people don't want user fees.  If elected I would work hard for my constituents to oppose user fees. 
+
+**Is there anything in particular you would like to change in our city? In your ward?**
+
+It's hard to imagine changing anything in a fantastic ward like St. Vital where I grew up, and I have chosen to live and raise my family.  However, we need to address some major infrastructure problems like crumbling roads, back lanes with inadequate snow removal, and certainly rush-hour congestion on Dunkirk and St. Mary's Road.  I've discussed infrastructure and of course crime as two of my major issues.  As a former school trustee, appointed director on large provincial boards, St. Vital business owner, and St. Vital resident, I understand city politics and community needs from different balanced perspectives.  As I have already mentioned, we need to increase the funding of police and crime prevention programs. The other thing we need to examine is the funding of our community centres.  Community centres are the lifeblood of our youth.  We need to invest in them and provide more opportunities for youth to get active in recreational programs, and involved in charitable community projects.  St. Vital constituents can expect me to work hard for them.  I will also be attentive to improving the quality of life of families, seniors, and all people in this ward and in the city more broadly.
+
+**Do you have any other comments regarding your candidacy?**
+
+I've mentioned repeatedly that I work hard.  I am not running for City Council because I want to supplement my income.  I have the experience, education, and expertise to do the job. I have been working full-time on this campaign for the last eight weeks.  If elected I would be your full-time city councillor.  Constituents can expect the same work that they have seen from me during this campaign.  I have knocked on tens of thousands of doors and I have spoken with many people more than once.  It's been fun to reconnect with former teachers, classmates, and even babysitters, who still live in the ward.  And despite the rain and the snow, this has been a thoroughly rewarding and exciting process.  I enjoy meeting people, hearing their concerns, and in a small way contributing to the community that I love.  I hope on Saturday, November 26, you will consider voting for Brian Mayes, the fifth name on the ballot.  I will work hard for my constituents, I will budget responsibly, I will listen, and I will be engaged because I live in St. Vital and I love this ward^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Steven Hennessey', office_address: '', phone_number: '219-5334', email: 'steven@votehennessey.ca', image: nil, website: 'http://www.votehennessey.ca', council_site: '', facebook: 'http://www.facebook.com/pages/Steven-Hennessey/112590002172364', twitter: 'http://twitter.com/stevenhennessey', youtube: '', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2011 Winnipeg by-election?**
+
+There are a number of reasons I am running in this election. We have seen a movement away from community engagement and citizen involvement. While decisions are being made downtown, citizens are being left out. I want to change that and believe that I would be the best voice for St.Vital because I want to see the future of the City of Winnipeg driven by our citizens’ needs, and not by the few. 
+
+We are also a vibrant, growing community and need to remain inclusive. With our diverse and multi-cultural community, we must remain an accessible and supportive to help our city grow. I have yet to see the city adequately support these needs. Our future relies on our ability to meet these demands and I know I can help address these needs. 
+
+I am also running because our safety concerns have become paramount in the past five years. We have seen the police as the only fix to our growth in crime. I believe we need to take a multi-governmental and community approach to in order to help the police be more effective in controlling our crime rate. I want our streets and neighborhoods safer for everyone. 
+
+**What experience will you bring to compliment your role as Councillor?**
+
+As an avid volunteer on committees and boards, and as a student advocate in university, I bring a wealth of community service experience. Politics and volunteerism are in my family and I have a history of advocacy and work experience that provide me with a firm basis to serve the community as a whole. 
+
+I also have worked in the Health, Post-Secondary, Social Services and Government fields and understand the importance of working with different groups, organizations and people. We will need to work closer with other levels of government in order to solve our infrastructure deficit. The role of partnerships and collaborations will be vital to our growth of our communities and neighborhoods. 
+
+As a single dad of two daughters, I know the importance of family and raising our children in a safe and vibrant city. I have a working knowledge of the safety and security field and understand what we require to make our city safe. I have also worked with youth and know how important recreation and educational programs are to the empowerment and rearing of our kids. 
+
+
+**What are the major issues you would like to stand for and why did you choose these issues?**
+
+We need to increase our recreation and arts programs for our youth. We cannot continue to create inaccessible and limited opportunities for our youth in Winnipeg. This will ultimately help with some of our crime and safety issues in the city. More importantly, to engage our future is to engage our youth. We must do what we can to assure a strong foundation for our children as we move into the future.
+
+I want to move forward our Rapid Transit System and create a city with corridors of transit that move people from their homes to all areas of the city. To effectively reduce our traffic congestion, we need alternate forms of travel. We cannot rely solely on vehicles to transport us to work and across the city. A viable, long-term vision of transit upgrades and alternatives will help our city move in the right direction.
+
+Our crime and safety concerns cannot be solved by the City of Winnipeg alone. We need a forum on safety that involves all levels of government, non-profit organizations, business, cultural and spiritual groups, youth, seniors and families. We can no longer sit by and allow our community to be driven by fear and complacency. 
+
+
+**Is there anything in particular you would like to change in our city? In your ward?**
+
+I would like to revise our transit system so that we can better meet the needs of our constituents. With a renewed transit schedule, we can continue to move people to their destinations in a timely and efficient fashion. Neighborhood and community forums on transit will help address this issue. 
+
+Our community police centers need to remain open and accessible. We should move towards maintaining and re-opening our centres with a focus on community involvement and input. Allowing more police officers to go into our schools and neighborhoods will benefit everyone. This will also help move our Citizens Action Network forward with an emphasis on community awareness and engagement. 
+
+I would like to see a better working relationship with the province and federal governments so we can address the needs of our citizens. A forum with the all levels of government will help City of Winnipeg come up with long-term sustainable funding to address our infrastructure needs.
+
+An emphasis on advisory councils for youth and seniors in St.Vital will help the City of Winnipeg directly meet the needs of the constituents. This should be a city-wide initiative attached to community centres or external organizations. 
+
+
+**Do you have any other comments regarding your candidacy?**
+
+
+I believe I am the strongest candidate in this race for several reasons. I live in St.Vital. There are four candidates who do not. It is important we have local and continued representation. We need someone who understands the ward from a citizen's perspective. 
+
+I do not have business or political interests helping me. I believe in working for the community as a whole, and want to represent everyone, regardless of their politics. As a non card carrying member of any political party and a non-business person, I can represent the broadest of community interests.
+
+I am also a new, fresh face and voice and not one that has already been driven by political or business interests. We need someone who can go in and work at our issues without other business or private practices lingering in the background. 
+
+This election is not about personal opportunity or gain. This election is about a passion to work for the community as a citizen. We require someone who can objectively make decisions at City Hall while balancing the needs of the constituents. I will be your real voice for St.Vital and Winnipeg. ^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Beverley Watson', office_address: '', phone_number: '451-1106', email: 'info@beverleywatson.com', image: nil, website: 'http://www.beverleywatson.com', council_site: '', facebook: 'http://www.facebook.com/BeverleyWatsonforCityCouncil', twitter: '', youtube: '', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2011 Winnipeg by-election?**
+
+I am passionate about this city.  We moved here from Northern Manitoba over 25 years ago to seek out the opportunities that a larger city could offer.  And we found them.  I have been very active in the community for many years, and simply want to do more to make this city greater than ever.   
+When the position of City Councillor for St. Vital became available, I knew my name had to appear on that ballot.  
+My registration papers were turned in to City Hall on October 18th, Person’s Day; 82 years to the day that women were finally declared as “persons” and could exercise their right to vote and to run for elected office.  I was also born in 1960, the year that Aboriginal people were recognized as persons and realized the same rights.  Running in this election is significant to me on many levels.  I can, and will, make a positive contribution to this ward and to my city.
+
+**What experience will you bring to compliment your role as Councillor?**
+
+I am a business owner, a former broadcaster, and a community volunteer.  I excelled in management studies at the University of Manitoba.  I am skilled in managing budgets; have a knack for marketing; and am a dynamic public speaker.  
+My community involvement is extensive.  Currently, I am the Chair of the Board for the Women’s Enterprise Centre, a board member with the Downtown Biz and Uniquely Manitoba.  Recent board positions have also included Vice-Chair of the Board of Governors at Red River College and President of the Aboriginal Chamber of Commerce.  I have also served on the boards of Big Brothers/Big Sisters, Habitat for Humanity, the Manitoba School Improvement Program, and Economic Development Winnipeg.
+
+I have cycled thousands of miles to raise money for Habitat for Humanity Cycle of Hope, and completed a full marathon to raise money for Manitobans with intellectual disabilities.  
+
+I am energetic, tenacious, vocal and articulate.  I am ready, willing and able to represent St. Vital at City Hall.
+
+
+**What are the major issues you would like to stand for and why did you choose these issues?**
+
+SAFETY:  The one and only police station in St. Vital is slated to be shut down next spring.  St. Vital needs a voice at City Hall and needs to take immediate action to reverse the decision.  Police presence is essential for all communities.  In addition, we need to expand the Downtown Watch concept to various locations in St. Vital.  Having police and watch patrols in our neighbourhoods will deter vandals.  
+
+TRAFFIC CONGESTION:  We need to schedule roadwork more efficiently, and NOT on two of the limited northbound routes at the same time.  We need to review limiting left turns and parking at peak hours.  Plus, we must consider REDUCING the number of cars on the road by encouraging cycling (when appropriate), carpooling, and bus use.  Currently, transit schedules and routes are simply not sufficient and must be revamped immediately.  
+
+COMMUNITY INVOLVEMENT:  We must ensure that the members of the community are heard and are engaged.  I would:
+
+1. Set up regularly scheduled town hall meetings to encourage input
+2. Establish a Seniors Advisory Council
+3. Establish a Youth Advisory Council to engage young people
+4. Schedule regular neighbourhood walks and gatherings throughout the full term, not just at election time.
+
+
+**Is there anything in particular you would like to change in our city? In your ward?**
+
+First, we need to address safety and crime issues.  People need to feel safe where they live, where they work, and where they play.  We need to tackle panhandling.  We need a stronger, more visible police presence, and we need to enhance the downtown patrol programs.  And we need to involve more groups to take action help eradicate such horrible living conditions for our poorest residents.
+  
+As for crime, the federal crime bill has been criticized as too harsh.  The local police chief’s plan has been criticized for being too weak.  We don’t like the status quo, yet alternative solutions are not being presented.   
+
+Secondly, we need to improve our transportation systems.  Rapid transit has been discussed for years now, and suddenly there is a realization that it needs to be funded.  And so now we’re trying to do that 25 cents at a time.  We need a better transit system period, and we need it now. 
+
+Finally, we need to maintain and protect our green space.  A recommendation has been tabled to sell off some of the city’s golf courses to residential or commercial developers.  We need a better plan than to pave paradise.
+
+
+**Do you have any other comments regarding your candidacy?**
+
+About my family…
+I grew up in Thompson; daughter of a miner, and 2nd oldest of 9 children (my mother is a saint). I married my high school sweetheart Rick and moved to Winnipeg over 25 years ago.  We had a home in Garden City where our boys grew up, then a condo in Downtown Winnipeg before choosing St. Vital as our new home 3 years ago.  I have been married to Rick for 32 years.  Our two sons Steven and Michael are both chefs right here in Winnipeg.  Steven and his wife Melanie are proud parents of Owen, my 1 year old grandson. ^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Marty Green', office_address: '', phone_number: '', email: '', image: nil, website: 'http://www.onforeignsoil.com/better_bus_system/', council_site: '', facebook: '', twitter: '', youtube: 'http://www.youtube.com/watch?v=3GDfEjVlZLs', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2011 Winnipeg by-election?**
+
+I’m running for City Council for one reason only: to fix the bus system.  I have a plan to fix the bus system without spending 2 billion dollars. The City says my plan won’t work because it doesn’t take into account the needs of the elderly and the handicapped. I don’t want to sound like the Grinch Who Stole Christmas, but if you design a system to cater to the needs of the elderly and the handicapped, then that’s who’s going to ride your busses. If you want to attract the ridership of busy people who need to get from A to B in a hurry, then you’ve got to design your system for their needs. It means a little more walking and a lot less waiting. I’ve calculated the timing and laid out all the routes on my website where you can check it out at http://www.onforeignsoil.com/better_bus_system/
+You can also see me advocating for my bus plan on YouTube at http://www.youtube.com/watch?v=3GDfEjVlZLs
+
+
+**Do you have any other comments regarding your candidacy?**
+
+Other than my plan to fix the bus system, I am most interested in finding areas where the existing system of regulations and bylaws creates a disincentive for people to do the right thing. I have a vague suspicion that the lack of affordable housing would be corrected by the free market if not for the adverse affect of certain regulations. And I don't think people should pay more property taxes because they improve their homes. And although I am concerned with crime in Winnipeg, I strongly oppose the omnibus crime bill. I believe all the "get-tough" rhetoric is merely playing to the peanut gallery, and the only ones to suffer would be small-time offenders who didn't have the savvy to play the system.
+^
+candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)
+person = Person.create!(name: 'Carl Osato', office_address: '', phone_number: '', email: '', image: nil, website: '', council_site: '', facebook: '', twitter: 'http://twitter.com/osatopm', youtube: '', linkedin: '')
+questionnaire = %Q^**Why did you decide to run in the 2011 Winnipeg by-election?**
+
+Living in St. Vital and having managed at SilverCity St. Vital for 9 years I felt that this is a great time to try and make a difference.  I believe that we can do better as a council and move the city forward.  I would like to say that I will be a councillor that will be available.  I know that there is a disconnect with city council and the residents.  This is evident by the immense amount of voter apathy, and let’s not blames the voter in this; the politicians are the ones who need to work harder to connect with the community.  I held an Open House during my campaign to offer a chance for residents to come down and meet me and my team along with some local charities and businesses. As your councillor I will do more of these. I have always brought a positive fresh look at anything I take on and doing it on a bigger scale would be extremely exciting.  Even more important to me is getting a chance to make a difference and that would be a fantastic honour and responsibility that I am very much looking forward to.  
+
+**What experience will you bring to compliment your role as Councillor?**
+
+Back in 2006 when I ran in Old Kildonan, I ran because I thought I could make a change.  Running against an incumbent, I was trounced but learned a lot about the process.  I knew that my chances of winning were slim but the experience would be well worth the effort.  Being a very successful manager at Cineplex Entertainment gives me an immense amount of experience in talking and dealing with the public.  It also teaches you to manage the numbers.  Both are needed and are key to having a good councillor. When I was in RRC, I managed CMOR, the campus radio station to one of its best years ever.  Being a Business Admin student doing a position designed for CreCom students, this was an achievement that I will always speak proudly of.  I have also started my own Real Estate Business, Osato Property Management that in its initial stages has been very remarkable.  I have been very successful in everything I have done and have done it with a great passion for keeping it positive.  This experience will bring a fresh new look into council.
+
+
+**What are the major issues you would like to stand for and why did you choose these issues?**
+
+* Safety - Creating more efficiency within our Fire, Paramedic and Police Services
+* Health - Everything from food to bike paths to eco-friendly options in our city
+* Community - Creation of the Community Awareness Network (C.A.N.) 
+
+I will work with residents of St. Vital to create the Community Awareness Network.  CAN will be a community run organization that will be designed to work on Health and Safety issues within St. Vital.  Being proactive with our residents is important in how we go about fighting Crime.  Together we can work on the issues within St. Vital and drive our area forward in regard to all three issues.  CAN would also keep the residents of St. Vital involved in the issues that are being discussed at City Hall.  
+
+**Is there anything in particular you would like to change in our city? In your ward?**
+
+I really would like to see more of a connection with the residents and the City Council.  I can tell you that there is a BIG disconnect with the majority of residents and this needs to change.  I would promise to have a permanent office within St. Vital.  I promise to do monthly newsletters for residents to find out what is going on in the ward.  I will also push to work on getting better transit and road work within St. Vital.  The focus on that infrastructure would also include working on our unpaved back lanes within the ward.  As a city, we need to move forward with our transportation plans, ensuring we are planning properly and using our space efficiently and effectively.  This will also include improving our transit system and moving forward with Rapid Transit.  I would like to make City Hall more transparent, ensuring that the people of Winnipeg know what is going on with their tax dollars.  
+
+**Do you have any other comments regarding your candidacy?**
+
+I do not belong to any political party and I believe that party politics should stay out of council.  Being involved with a party and having their supporters, you might be inclined to vote a certain way based of party policy.  This should not play a role in decision making; you should judge each decision on its own merit and weigh the options based off of what is best for your ward and the city, not what your party objectives.  We deal with two levels of government and using the same supporters and assets could lead to leaning a certain way on issues.  I appreciate everyone who has put their hat in the ring for this seat, but unless you have firsthand knowledge and actually live in the ward, then you should not be in charge of running it at City Hall.  Last but not least, we need to keep things positive, we need to work together to move forward.  We need to change from going to “Not Bad”, two negative words, to “Pretty Good”, two positive words.  This is what I bring to the race^
 candidacy = Candidacy.create!(questionnaire: questionnaire, end_date: nil, is_incumbent: false, is_winner: false, person: person, electoral_race: electoral_race)

@@ -6,10 +6,12 @@ ul
 
 h2 Testing School Divisions
 
-ul
-  - @election.electoral_races.each do |er|
-    li
-      = "#{er.name} - #{er.seats_to_fill} Seats" 
-      ul
-        - er.candidacies.each do |c|
-          li = c.person.name
+- @elections.each do |e|
+  h3 = e.name
+  ul
+    - e.electoral_races.each do |er|
+      li
+        = "#{er.name} - #{er.seats_to_fill} Seats" 
+        ul
+          - er.candidacies.each do |c|
+            li = c.person.name
