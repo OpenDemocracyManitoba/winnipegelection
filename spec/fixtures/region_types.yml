@@ -1,5 +1,5 @@
-<% ['mayoral', 'school_division', 'council_ward', 'school_ward'].each do |region_type| %>
-<%= region_type %>:
+<% ['mayoral', 'school division', 'council ward', 'school ward'].each do |region_type| %>
+<%= region_type.parameterize('_') %>:
   name: <%= region_type.capitalize %>
   description: "Description of the <%= region_type.capitalize %> Region Type."
 <% end %>

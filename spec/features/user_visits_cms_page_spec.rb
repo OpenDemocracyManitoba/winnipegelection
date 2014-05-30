@@ -1,10 +1,6 @@
 require 'spec_helper'
 
 feature 'User vists a CMS page' do
-  fixtures :elections
-  
-  let(:election) { elections(:winnipeg_2010_election) }
-  
   given(:page_with_displayed_title) do
     FactoryGirl.create(:page, show_title: true)
   end
@@ -12,7 +8,6 @@ feature 'User vists a CMS page' do
   scenario 'they see the page contents' do
     visit page_with_displayed_title.friendly_path
     expect(page).to have_content page_with_displayed_title.content
-    expect(election.name).to eq "Mayoral"
   end
   
   scenario 'they see the page title for pages with displayed titles' do
