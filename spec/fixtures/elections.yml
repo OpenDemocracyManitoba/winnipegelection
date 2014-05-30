@@ -1,0 +1,20 @@
+winnipeg_2010_election:
+  name: "2010 Winnipeg Civic Election"
+  is_active: false
+  is_by_election: false
+  writ_date: "2010-09-21"
+  election_date: "2010-10-27"
+
+winnipeg_2011_by_election:
+  name: "2011 Winnipeg By-Election"
+  is_active: false
+  is_by_election: true
+  writ_date: "2011-10-21"
+  election_date: "2011-11-26"
+
+winnipeg_2014_election:
+  name: "2014 Winnipeg Civic Election"
+  is_active: true
+  is_by_election: false
+  writ_date: "2014-09-16"
+  election_date: "2014-10-22"

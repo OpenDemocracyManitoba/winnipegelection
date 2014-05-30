@@ -1,0 +1,53 @@
+# One Mayoral Region. No parent or children regions.
+
+city_of_winnipeg:
+  name: "City of Winnipeg"
+  start_date: "1972-01-01"
+  region_type: mayoral
+  seats: 1
+  
+# School Division Region. No parent region.
+
+pembina_trails_school_division:
+  name: 'Pembina Trails'
+  region_type: school_division
+
+# Two child regions for above School Division.
+  
+school_ward_1_pembina_trails:
+  name: '1'
+  region_type: school_ward
+  parent_region: pembina_trails_school_division
+  seats: 3
+  
+school_ward_2_pembina_trails:
+  name: '2'
+  region_type: school_ward
+  parent_region: pembina_trails_school_division
+  seats: 3
+  
+# School Division Region. No parent region.
+  
+louis_riel_school_division:
+  name: 'Louis Riel'
+  region_type: school_division
+  
+# One child region for above School Division.
+
+school_ward_1_louis_riel:
+  name: '1'
+  region_type: school_ward
+  parent_region: louis_riel_school_division
+  seats: 2
+  
+# Two council wards. No parent regions.
+
+st_vital_counil_ward:
+  name: "St. Vital"
+  region_type: council_ward
+  seats: 1
+
+point_douglas_council_ward:
+  name: "Point Douglas"
+  region_type: council_ward
+  seats: 1
