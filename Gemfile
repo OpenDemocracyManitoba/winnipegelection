@@ -41,6 +41,8 @@ gem 'seed_dump'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'rspec', '>= 3.0.0.beta2'
+  gem 'guard-rspec', '~> 4.2.9'
   gem 'capybara', github: 'jnicklas/capybara', branch: 'master' # '2.2.1'
   gem 'factory_girl_rails'
   gem 'railroady'

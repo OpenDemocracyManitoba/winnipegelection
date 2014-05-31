@@ -5,9 +5,9 @@ city_of_winnipeg_2010_election_race:
   election: winnipeg_2010_election
   seats_to_fill: 1
   
-city_of_winnipeg_2011_election_race:
+city_of_winnipeg_2014_election_race:
   region: city_of_winnipeg
-  election: winnipeg_2011_election
+  election: winnipeg_2014_election
   seats_to_fill: 1
 
 # Three electoral races for council ward of st vital.
