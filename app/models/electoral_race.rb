@@ -6,7 +6,7 @@ class ElectoralRace < ActiveRecord::Base
   has_many :people, through: :candidacies
 
   validates :region, :election, presence: true
-  
+
   def name
     region_name = region.nil? ? 'unknown region' : region.name_with_type
     election_name = election.nil? ? 'unknown election' : election.name

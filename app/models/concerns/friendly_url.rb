@@ -21,7 +21,7 @@ module FriendlyURL
   end
 
   private
-  
+
   def controller_name
     self.class.to_s.tableize
   end

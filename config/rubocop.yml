@@ -1,14 +1,17 @@
 AllCops:
   Exclude:
-    - db/**
-    - config/**
-    - script/**
-    - bin/**
-    - test/**
-    - app/admin/**
+    - db/**/*
+    - config/**/*
+    - script/**/*
+    - bin/**/*
+    - test/**/*
+    - app/admin/**/*
 
 Encoding:
   Enabled: false
 
 Documentation:
+  Enabled: false
+
+RedundantSelf:
   Enabled: false

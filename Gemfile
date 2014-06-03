@@ -45,5 +45,5 @@ group :development, :test do
   gem 'capybara', github: 'jnicklas/capybara', branch: 'master' # '2.2.1'
   gem 'factory_girl_rails'
   gem 'railroady'
-  gem 'rubocop'
+  gem 'rubocop', github: 'bbatsov/rubocop', branch: 'master'
 end
