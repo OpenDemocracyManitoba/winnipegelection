@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   get 'pages/:id/:slug', to: 'pages#show', as: :page
-  get 'candidate/:candidate_name', to: 'candidates#redirect_show'
-  get 'candidate/:id/:slug', to: 'candidates#show', as: 'candidate', constraints: {id: /\d+/}
+  get 'candidate/:name_slug', to: 'people#redirect_show'
+  get 'people/:id/:slug', to: 'people#show', as: 'person', constraints: {id: /\d+/}
 
   root to: 'pages#index'
 
