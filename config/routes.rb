@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  get 'pages/:id/:permalink' => 'pages#show', as: :page
 
-  get 'candidate/:candidate_name' => 'candidates#redirect_show'
-  get 'candidate/:id/:candidate_name' => 'candidates#show', as: 'candidate'
+  get 'pages/:id/:slug', to: 'pages#show', as: :page
+  get 'candidate/:candidate_name', to: 'candidates#redirect_show'
+  get 'candidate/:id/:slug', to: 'candidates#show', as: 'candidate', constraints: {id: /\d+/}
 
   root to: 'pages#index'
 

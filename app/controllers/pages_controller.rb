@@ -5,6 +5,6 @@ class PagesController < ApplicationController
   end
 
   def show
-    @page = Page.find_page(params)
+    @page = Page.friendly_find(params)
   end
 end
