@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get 'pages/:id/:permalink' => 'pages#show', as: :page
 
+  get 'candidate/:candidate_name' => 'candidates#redirect_show'
+  get 'candidate/:id/:candidate_name' => 'candidates#show', as: 'candidate'
+
   root to: 'pages#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
