@@ -12,6 +12,10 @@ feature 'User visits the home page' do
   end
 
   scenario 'they see the site header' do
-    expect(page).to have_content '2014 Winnipeg Civic Election'
+    expect(page).to have_css('header h1', text: '2014 Winnipeg Civic Election')
+  end
+
+  scenario 'they see the number of days until the election' do
+    expect(page).to have_css('.days_until_election', text: /\d+ Days Until The Election/)
   end
 end

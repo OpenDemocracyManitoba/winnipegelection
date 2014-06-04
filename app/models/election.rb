@@ -4,6 +4,18 @@ class Election < ActiveRecord::Base
   has_many :candidacies, through: :electoral_races
 
   validates :name, presence: true
+
+  def days_until_election
+    (self.election_date - Date.today).to_i
+  end
+
+  def has_election_passed?
+    days_until_election < 0
+  end
+
+  def is_election_today?
+    days_until_election.zero?
+  end
   
   #### CLASS METHODS
     
