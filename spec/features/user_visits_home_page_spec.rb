@@ -14,7 +14,7 @@ feature 'User visits the home page' do
   end
 
   scenario 'they see the number of days until the election' do
-    Timecop.freeze( Time.local(2014, 10, 1, 12, 0 ,0) ) do
+    Timecop.freeze( Time.local(2014, 10, 1, 12, 0, 0) ) do
       visit "/"
       expect(page).to have_css('.days_until_election', text: '21 Days Until The Election')
     end
