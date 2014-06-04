@@ -4,4 +4,10 @@ class Election < ActiveRecord::Base
   has_many :candidacies, through: :electoral_races
 
   validates :name, presence: true
+  
+  #### CLASS METHODS
+    
+  def self.active_election
+    find_by(is_active: true)
+  end
 end

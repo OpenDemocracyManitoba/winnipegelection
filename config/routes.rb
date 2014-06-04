@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'candidate/:name_slug', to: 'people#redirect_show'
   get 'people/:id/:slug', to: 'people#show', as: 'person', constraints: {id: /\d+/}
 
-  root to: 'pages#index'
+  root to: 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
