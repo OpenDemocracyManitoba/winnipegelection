@@ -7,12 +7,9 @@ describe 'fixtures' do
       # begin
       klass = table_name.to_s.classify.constantize
       klass.send(:all).each do |object|
-        unless object.valid?
-          puts "#{klass.name} #{object} is invalid: "\
-               "#{object.errors.full_messages.join(', ')}"
-          puts(object.inspect)
-        end
-        expect(object).to be_valid
+        expect(object).to be_valid, "#{klass.name} #{object} is invalid: "\
+                                    "#{object.errors.full_messages.join(', ')}"\
+                                    "#{object.inspect}"
       end
       # rescue NameError
       # Probably a has and belongs to many mapping table
