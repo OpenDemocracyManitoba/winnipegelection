@@ -13,13 +13,15 @@ describe Person do
 
   context 'when class is augmented with FriendlyURL concern' do
     it_behaves_like FriendlyURL do
-      let(:object_of_described_class) { FactoryGirl.create(:person, name: 'Test Slug') }
+      let(:object_of_described_class) do
+        FactoryGirl.create(:person, name: 'Test Slug')
+      end
     end
 
     let(:person) { FactoryGirl.create(:person, name: 'Walter Glutton') }
 
     it 'returns a friendly url path' do
-      expect(person.friendly_path).to match %r"^/people/\d+/walter-glutton$"
+      expect(person.friendly_path).to match %r{^/people/\d+/walter-glutton$}
     end
   end
 end

@@ -46,5 +46,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'railroady'
   gem 'rubocop', github: 'bbatsov/rubocop', branch: 'master'
+  gem 'guard-rubocop'
   gem 'timecop'
 end

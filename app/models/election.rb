@@ -9,16 +9,16 @@ class Election < ActiveRecord::Base
     (self.election_date - Date.today).to_i
   end
 
-  def has_already_occured?
+  def already_occured?
     days_until_election < 0
   end
 
-  def is_today?
+  def today?
     days_until_election.zero?
   end
-  
+
   #### CLASS METHODS
-    
+
   def self.active_election
     find_by(is_active: true)
   end

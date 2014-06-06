@@ -144,6 +144,9 @@ GEM
     guard-rspec (4.2.9)
       guard (~> 2.1)
       rspec (>= 2.14, < 4.0)
+    guard-rubocop (1.1.0)
+      guard (~> 2.0)
+      rubocop (~> 0.20)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -309,6 +312,7 @@ DEPENDENCIES
   factory_girl_rails
   formtastic!
   guard-rspec (~> 4.2.9)
+  guard-rubocop
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick
