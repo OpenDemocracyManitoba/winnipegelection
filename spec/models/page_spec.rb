@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'concerns/friendly_url_spec'
 
 describe Page do
   context 'when class is augmented with FriendlyURL concern' do

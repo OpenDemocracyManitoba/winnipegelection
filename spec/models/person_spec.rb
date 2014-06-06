@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'concerns/friendly_url_spec'
 
 describe Person do
   context 'when a person has candidaces' do
