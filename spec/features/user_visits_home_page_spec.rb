@@ -23,7 +23,6 @@ feature 'User visits the home page' do
     end
 
     scenario 'they see the names of electoral races for the active election' do
-      pending 'fail: The page.all css query is returning no results.'
       visit '/'
       electoral_races_on_page = page.all('.electoral_race')
       expect(electoral_races_on_page.count).to eq(5)
