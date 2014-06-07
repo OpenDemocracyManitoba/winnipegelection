@@ -1,5 +1,11 @@
 header
-  h1 = @active_election.name
+  h1 = active_election.name
 
 p.days_until_election
-  | #{@active_election.days_until_election} Days Until The Election
+  | #{active_election.days_until_election} Days Until The Election
+
+ul
+  - active_election.electoral_races.each do |electoral_race|
+    li.electoral_race
+      h1
+        | electoral_race
