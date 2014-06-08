@@ -22,10 +22,18 @@ feature 'User visits the home page' do
                                text: /\d+ Days Until The Election/)
     end
 
-    scenario 'they see the names of electoral races for the active election' do
-      visit '/'
-      electoral_races_on_page = page.all('.electoral_race')
-      expect(electoral_races_on_page.count).to eq(5)
+    context 'MVH - Minimum Viable Homepage' do
+      scenario 'they see the mayoral candidates for the active election' do
+      end
+
+      scenario 'they can navigate to a candidates page' do
+      end
+
+      scenario 'they see a listing of CMS pages' do
+      end
+
+      scenario 'they can nvaigate to a CMS page' do
+      end
     end
 
     after(:all) do
