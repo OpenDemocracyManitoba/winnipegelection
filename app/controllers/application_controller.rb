@@ -9,4 +9,9 @@ class ApplicationController < ActionController::Base
     @active_election ||= Election.active_election
   end
   helper_method :active_election
+
+  def cms_pages
+    @cms_pages ||= Page.cms_pages
+  end
+  helper_method :cms_pages
 end
