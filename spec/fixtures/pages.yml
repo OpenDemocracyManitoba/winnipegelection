@@ -2,8 +2,16 @@ about:
   title: 'About Us'
   content: 'Lorem Ipsum and more and that and on and on. Halcyon.'
   permalink: 'about us'
+  show_title: true
 
 press:
   title: 'Press Releases and Mentions'
   content: 'Bragging Ipsum and more and that and on and on. Halcyon.'
   permalink: 'press releases and mentions'
+  show_title: true
+
+page_with_show_title_false:
+  title: 'You should not see this title'
+  content: 'Lorem ipsum away...'
+  permalink: 'you should not see this title'
+  show_title: false
