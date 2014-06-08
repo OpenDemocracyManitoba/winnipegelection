@@ -4,7 +4,7 @@ module FriendlyURL
   # Builds a friendly URL that includes the permalink
   # Used like this: link_to page.title, page.friendly_path
   def friendly_path
-    "/#{controller_name}/#{self.id}/#{self.slug}"
+    "/#{controller_name}/#{self.id}/#{slug_for_friendly_url}"
   end
 
   module ClassMethods
@@ -12,7 +12,7 @@ module FriendlyURL
     # URL doesn't match the page permalink.
     def friendly_find(params)
       object = find(params[:id])
-      if object.slug != params[:slug]
+      if object.slug_for_friendly_url != params[:slug]
         fail ActiveRecord::RecordNotFound
       else
         object

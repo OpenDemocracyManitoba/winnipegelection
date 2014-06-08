@@ -1,6 +1,4 @@
 class Person < ActiveRecord::Base
-  include FriendlyURL
-
   has_many :candidacies, inverse_of: :person
   has_many :electoral_races, through: :candidacies
 
@@ -10,7 +8,8 @@ class Person < ActiveRecord::Base
 
   mount_uploader :image, ProfileImageUploader
 
-  def slug
+  include FriendlyURL
+  def slug_for_friendly_url
     name.parameterize
   end
 end
