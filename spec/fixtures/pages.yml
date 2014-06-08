@@ -1,0 +1,9 @@
+about:
+  title: 'About Us'
+  content: 'Lorem Ipsum and more and that and on and on. Halcyon.'
+  permalink: 'about us'
+
+press:
+  title: 'Press Releases and Mentions'
+  content: 'Bragging Ipsum and more and that and on and on. Halcyon.'
+  permalink: 'press releases and mentions'
