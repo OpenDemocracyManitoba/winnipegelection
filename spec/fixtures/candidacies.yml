@@ -1,0 +1,11 @@
+dark_vadar_mayoral_2014:
+  questionnaire: 'I am Darth ipsum.'
+  is_incumbent: true
+  person: darth_vadar
+  electoral_race: city_of_winnipeg_2014_election_race
+
+luke_skywalker_mayoral_2014:
+  questionnaire: ''
+  is_incumbent: false
+  person: luke_skywalker
+  electoral_race: city_of_winnipeg_2014_election_race

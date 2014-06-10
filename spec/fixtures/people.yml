@@ -1,0 +1,7 @@
+darth_vadar:
+  name: 'Darth Vadar'
+  email: 'dvadar@deathstar.gov'
+
+luke_skywalker:
+  name: 'Luke Skywalker'
+  email: 'luke.skywalker@theforce.org'
