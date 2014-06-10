@@ -19,7 +19,7 @@ feature 'User visits a CMS page' do
     FactoryGirl.create(:page, show_title: false)
   end
 
-  scenario 'they do not see the page title for pages with displayed titles' do
+  scenario 'they do not see the page title for pages without displayed titles' do
     visit page_without_displayed_title.friendly_path
     expect(page).to_not have_content page_without_displayed_title.title
   end
