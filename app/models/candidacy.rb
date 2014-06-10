@@ -7,7 +7,7 @@ class Candidacy < ActiveRecord::Base
 
   validates :electoral_race, :person, presence: true
 
-  def name
+  def name_with_electoral_race
     person_name = person.nil? ? 'unknown candidate' : person.name
     "#{person_name} - #{electoral_race_name}"
   end
