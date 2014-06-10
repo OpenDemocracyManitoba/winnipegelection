@@ -6,4 +6,9 @@ p.days_until_election
 
 ul
   - cms_pages.each do |cms_page|
-    li = link_to cms_page.title, cms_page.friendly_path, class: 'cms_page'
+    li = link_to cms_page.title, cms_page.friendly_path, class: 'cms-page'
+
+div.candidate-cards
+  - active_election.candidacies.each do |candidacy|
+    div.candidate-card
+      p.name = link_to candidacy.person.name, candidacy.person.friendly_path, class: 'candidate'

@@ -1,7 +1,6 @@
 class PeopleController < ApplicationController
   def show
-    @candidate = Person.friendly_find(params)
-    render text: @candidate.name
+    @person = Person.friendly_find(params)
   end
 
   def redirect_show

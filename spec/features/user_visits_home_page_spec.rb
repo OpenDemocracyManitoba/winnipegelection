@@ -17,12 +17,12 @@ feature 'User visits the home page' do
     let(:first_page) { Page.first }
 
     scenario 'they see the correct number of CMS page links' do
-      cms_page_links = page.all('a.cms_page')
+      cms_page_links = page.all('a.cms-page')
       expect(cms_page_links.count).to eq(3)
     end
 
     scenario 'they can read a title from a cms page link' do
-      expect(page).to have_css('a.cms_page', text: first_page.title)
+      expect(page).to have_css('a.cms-page', text: first_page.title)
     end
 
     scenario 'they can navigate to a CMS page' do
@@ -47,10 +47,21 @@ feature 'User visits the home page' do
     end
 
     context 'MVH - Minimum Viable Homepage' do
+      let(:first_candidate) { Candidacy.first }
       scenario 'they see the mayoral candidates for the active election' do
+        candidate_cards = page.all('.candidate-card')
+        expect(candidate_cards.count).to eq(Candidacy.count)
       end
 
-      scenario 'they can navigate to a candidates page' do
+      scenario 'they can read a name from a candidate card link' do
+        expect(page).to have_css('a.candidate',
+                                 text: first_candidate.person.name)
+      end
+
+      scenario 'they can navigate to a candidate page' do
+        pending 'Implementing candidate/person partial'
+        click_link(first_candidate.person.name)
+        expect(page).to have_content(first_candidate.person.name)
       end
     end
 
