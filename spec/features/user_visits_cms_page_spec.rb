@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'User vists a CMS page' do
+feature 'User visits a CMS page' do
   given(:page_with_displayed_title) do
     FactoryGirl.create(:page, show_title: true)
   end
