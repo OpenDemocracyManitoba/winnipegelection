@@ -11,6 +11,7 @@ class Candidacy < ActiveRecord::Base
     person_name = person.nil? ? 'unknown candidate' : person.name
     "#{person_name} - #{electoral_race_name}"
   end
+  alias_method :to_s, :name_with_electoral_race
 
   def electoral_race_name
     electoral_race.nil? ? 'unknown electoral race' : electoral_race.name
