@@ -8,6 +8,12 @@ div.flow-it
         | The Election is Today!
       - elsif active_election.days_until_election > 0
         | #{pluralize(active_election.days_until_election,'Day')} Until The Election!
+    br
+    br 
+    h2 Previous Election Results
+    ul
+      li = link_to '2010 Election Results', 'http://www.winnipeg.ca/clerks/docs/elections/2010Election/results/winnipeg.html'
+      li = link_to '2011 By-Election Results', 'http://www.winnipeg.ca/clerks/docs/elections/2011byelection/results/results.html'
 
   div.one-column.medium-row
     h2 Election Information
