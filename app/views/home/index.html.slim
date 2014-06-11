@@ -1,14 +1,31 @@
-header
-  h1 = active_election.name
+div.flow-it
+  div.one-column.medium-row
+    h2 Election Countdown
+    p
+      | On <strong>Wednesday October 22 of 2014</strong> the citizens of Winnipeg go to the polls to elect their Mayor, their City Councillors and their School Trustees.
+    p.days-until-election
+      - if active_election.days_until_election == 0
+        | The Election is Today!
+      - elsif active_election.days_until_election > 0
+        | #{pluralize(active_election.days_until_election,'Day')} Until The Election!
 
-p.days_until_election
-  | #{active_election.days_until_election} Days Until The Election
+  div.one-column.medium-row
+    h2 Election Information
+    ul
+      - cms_pages.each do |cms_page|
+        li = link_to cms_page.title, cms_page.friendly_path, class: 'cms-page'
 
-ul
-  - cms_pages.each do |cms_page|
-    li = link_to cms_page.title, cms_page.friendly_path, class: 'cms-page'
+  div.one-column.medium-row.social
+    h2 Social Media
+    | <iframe src="http://www.facebook.com/plugins/likebox.php?id=145495908793867&amp;width=237&amp;connections=8&amp;stream=false&amp;header=false&amp;height=272" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:237px; height:272px;" allowTransparency="true"></iframe>
+    p
+      | <a href="http://twitter.com/WpgElection" class="twitter-follow-button">Follow @WpgElection</a>
 
-div.candidate-cards
-  - active_election.candidacies.each do |candidacy|
-    div.candidate-card
-      p.name = link_to candidacy.person.name, candidacy.person.friendly_path, class: 'candidate'
+h2 Mayoral Candidates
+
+div.flow-it
+  div.candidate-cards
+    - active_election.candidacies.each do |candidacy|
+      div.candidate-card
+        p.name = link_to candidacy.person.name, candidacy.person.friendly_path, class: 'candidate'
+
