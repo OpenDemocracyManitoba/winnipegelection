@@ -42,7 +42,7 @@ feature 'User visits the home page' do
     end
 
     scenario 'they see the number of days until the election' do
-      expect(page).to have_css('.days_until_election',
+      expect(page).to have_css('.days-until-election',
                                text: /\d+ Days Until The Election/)
     end
 
