@@ -366,10 +366,10 @@ p.article-notice {
 @media all and (max-width: 959px) {
   header {
     background-image: none;
-    padding-top: 1em;
-    height: 100px;
+    padding-top: 0.5em;
+    height: auto;
     h1 {
-      margin-top: 0.5em;
+      margin-top: 0.25em;
     }
   }
   #container {
