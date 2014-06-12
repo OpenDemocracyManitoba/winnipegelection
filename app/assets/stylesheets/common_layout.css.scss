@@ -229,7 +229,7 @@ p.article-notice {
       position: absolute;
     }
     .election-website, .website {
-      margin-top: 3em;
+      margin-top: 1.15em;
     }
   }
 }
@@ -241,30 +241,26 @@ p.article-notice {
     margin: 10px;
     width: 288px;
     border: 1px solid #e4e4e4;
-    min-height: 170px;
+    min-height: 150px;
     padding-left: 10px;
     background-color: #eeeeee;
     float: left;
     p {
       margin-left: 0;
-      color: #333333;
+      color: #333;
     }
     p.name {
-      margin: 1em 0;
-      font-size: 11.5px;
-      a {
-        font-size: 11.5px;
-      }
-      .incumbent-link {
-        a {
-          font-style: italic;
-          font-size: 10px;
-        }
-      }
+      margin: 1.5em 0;
+    }
+    p.incumbent {
+      margin: 3em 0 0 0;
+      font-style: italic;
+      font-size: 0.9em;
+      color: #777;
     }
     .election-website, .website {
       color: #999999;
-      font-size: 0.8em;
+      font-size: 0.9em;
       margin-bottom: 1em;
     }
     .phone, .candidate-party, .news, .address, .qanda {
@@ -299,26 +295,8 @@ p.article-notice {
       a img {
         border-bottom: 2px solid $link-color;
       }
-    }
-  }
-}
-
-.politicians {
-  .show-constituency {
-    min-height: 208px;
-    .constituency {
-      margin-top: 10px;
-      a {
-        font-weight: bold;
-        font-size: 1.2em;
-      }
-      .since {
-        font-size: 0.75em;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-      a, .since {
-        color: #777788;
+      img {
+        margin-right: 5px;
       }
     }
   }

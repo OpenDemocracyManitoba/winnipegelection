@@ -3,6 +3,7 @@ div.flow-it
     h2 Election Countdown
     p
       | On <strong>Wednesday October 22 of 2014</strong> the citizens of Winnipeg go to the polls to elect their Mayor, their City Councillors and their School Trustees.
+    br
     p.days-until-election
       - if active_election.days_until_election == 0
         | The Election is Today!
@@ -29,9 +30,6 @@ div.flow-it
 
 h2 Mayoral Candidates
 
-div.flow-it
-  div.candidate-cards
-    - active_election.candidacies.each do |candidacy|
-      div.candidate-card
-        p.name = link_to candidacy.person.name, candidacy.person.friendly_path, class: 'candidate'
-
+.flow-it
+  .candidate-cards
+    = render active_election.candidacies

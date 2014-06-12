@@ -1,0 +1,25 @@
+.candidate-card
+  .image
+    = image_tag candidacy.person.image
+  p.name
+    strong
+      = link_to candidacy.person.name, candidacy.person.friendly_path, class: 'candidate'
+  - if candidacy.is_incumbent
+    p.incumbent incumbent
+  - else
+    p.incumbent &nbsp;
+  p.election-website
+    - if !candidacy.person.website?
+      = link_to 'Election Website', candidacy.person.website
+    - else
+      | Election Website
+  p.icons
+    - [:email, :facebook, :youtube, :twitter].each do |social_site|
+      - if candidacy.person[social_site].present? && social_site == :email
+        = link_to image_tag("icons/#{social_site}_active.jpg"), 'mailto:' + candidacy.person[social_site]
+      - elsif candidacy.person[social_site].present?
+        = link_to image_tag("icons/#{social_site}_active.jpg"), candidacy.person[social_site]
+      - else
+        = image_tag("icons/#{social_site}_inactive.jpg")
+  - if candidacy.person.phone_number?
+    p.phone Phone: #{candidacy.person.phone_number}

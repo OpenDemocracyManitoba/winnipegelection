@@ -12,4 +12,10 @@ class Person < ActiveRecord::Base
   def slug_for_friendly_url
     name.parameterize
   end
+
+  # TODO: NEEDS TESTS. Must ensure that the order of candidacies
+  # actually agrees with associated electoral_race/election.
+  def most_recent_candidacy
+    candidacies.last
+  end
 end
