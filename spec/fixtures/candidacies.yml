@@ -9,3 +9,9 @@ luke_skywalker_mayoral_2014:
   is_incumbent: false
   person: luke_skywalker
   electoral_race: city_of_winnipeg_2014_election_race
+
+tyrion_lannister_mayoral_2010:
+  questionnaire: ''
+  is_incumbent: false
+  person: tyrion_lannister
+  electoral_race: city_of_winnipeg_2010_election_race

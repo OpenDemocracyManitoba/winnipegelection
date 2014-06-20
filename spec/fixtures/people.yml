@@ -5,3 +5,7 @@ darth_vadar:
 luke_skywalker:
   name: 'Luke Skywalker'
   email: 'luke.skywalker@theforce.org'
+
+tyrion_lannister:
+  name: 'Tyrion Lannister'
+  email: 't.lannister@soiaf.wes'

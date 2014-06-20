@@ -50,7 +50,10 @@ feature 'User visits the home page' do
       given(:first_candidate) { Candidacy.first }
       scenario 'they see the mayoral candidates for the active election' do
         candidate_cards = page.all('.candidate-card')
-        expect(candidate_cards.count).to eq(Candidacy.count)
+        active_candidates = Candidacy.includes(electoral_race: :election)
+                                     .where(elections: { is_active: true })
+                                     .count
+        expect(candidate_cards.count).to eq(active_candidates)
       end
 
       scenario 'they can read a name from a candidate card link' do
