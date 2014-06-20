@@ -9,7 +9,7 @@
   - else
     p.incumbent &nbsp;
   p.election-website
-    - if !candidacy.person.website?
+    - if candidacy.person.website?
       = link_to 'Election Website', candidacy.person.website
     - else
       | Election Website
