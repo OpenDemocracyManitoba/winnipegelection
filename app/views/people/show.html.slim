@@ -1,2 +1,20 @@
-.candidate-cards
-  = render @person.most_recent_candidacy
+- unless @is_running_in_active_election
+  .flow-it
+    .three-columns class="notice"
+      p
+        strong #{@person.name} is not running in the #{active_election.name}
+      p
+        em.small The information on this page is from the #{@person.most_recent_candidacy.electoral_race.election.name}.
+div.one-column-flow
+  .candidate-cards
+    = render @person.most_recent_candidacy
+.two-columns-early-shrink
+  - if @person.most_recent_candidacy.questionnaire?
+    h2 Questionnaire Response
+    .questionnaire = markdown(@person.most_recent_candidacy.questionnaire)
+  - else
+    h2 More Information Coming Soon
+    p Watch this space for:
+    ul
+      li Candidate News Mentions
+      li Candidate Questionnaire Responses

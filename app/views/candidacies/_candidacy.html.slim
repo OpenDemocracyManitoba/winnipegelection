@@ -22,4 +22,4 @@
       - else
         = image_tag("icons/#{social_site}_inactive.jpg")
   - if candidacy.person.phone_number?
-    p.phone Phone: #{candidacy.person.phone_number}
+    p.phone Phone: #{link_to candidacy.person.phone_number, 'tel:' + candidacy.person.phone_number}
