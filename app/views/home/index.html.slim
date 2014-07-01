@@ -32,6 +32,4 @@ h2 Mayoral Candidates
 
 .flow-it
   .candidate-cards
-    - active_election.electoral_races.each do |er|
-      - if er.name == 'Mayoral: City of Winnipeg - 2014 Winnipeg Civic Election'
-        = render er.candidacies
+    = render active_election.candidacies
