@@ -19,17 +19,24 @@ div.flow-it
   div.one-column.medium-row
     h2 Election Information
     ul
-      - cms_pages.each do |cms_page|
+      - cms_pages.sort {|a,b| a.title <=> b.title}.each do |cms_page|
         li = link_to cms_page.title, cms_page.friendly_path, class: 'cms-page'
+    h2 Coming Soon!
+    ul
+      li Candidate News Mentions
+      li Council Candidates
+      li School Trustee Candidates
 
   div.one-column.medium-row.social
-    h2 Social Media
+    h2 Be Our Friend
     | <iframe src="http://www.facebook.com/plugins/likebox.php?id=145495908793867&amp;width=237&amp;connections=8&amp;stream=false&amp;header=false&amp;height=272" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:237px; height:272px;" allowTransparency="true"></iframe>
     p
       | <a href="http://twitter.com/WpgElection" class="twitter-follow-button">Follow @WpgElection</a>
 
-h2 Mayoral Candidates
+h2 2014 Registered Mayoral Candidates
 
 .flow-it
   .candidate-cards
-    = render active_election.candidacies
+    - active_election.electoral_races.each do |er|
+      - if er.name == 'Mayoral: City of Winnipeg - 2014 Winnipeg Civic Election'
+        = render er.candidacies

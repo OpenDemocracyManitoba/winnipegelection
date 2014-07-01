@@ -1,10 +1,9 @@
 - unless @is_running_in_active_election
   .flow-it
     .three-columns class="notice"
+      p The information on this page was collected for the #{@person.most_recent_candidacy.electoral_race.election.name}.
       p
-        strong #{@person.name} is not running in the #{active_election.name}.
-      p
-        em.small The information on this page is from the #{@person.most_recent_candidacy.electoral_race.election.name}.
+        em.small Once a person officially registers for the 2014 Winnipeg Election their information will be updated.
 div.one-column-flow
   .candidate-cards
     = render @person.most_recent_candidacy
