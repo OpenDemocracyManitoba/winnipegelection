@@ -35,11 +35,11 @@ feature 'User visits a Person page' do
 
   scenario 'they see an warning if the person is not in active election' do
     visit tyrion_lannister.friendly_path
-    expect(page).to have_content('Tyrion Lannister is not running')
+    expect(page).to have_content('information on this page was collected')
   end
 
   scenario 'they do not see a warning if the person is in active election' do
     visit darth_vadar.friendly_path
-    expect(page).to_not have_content('Darth Vadar is not running')
+    expect(page).to_not have_content('information on this page was collected')
   end
 end

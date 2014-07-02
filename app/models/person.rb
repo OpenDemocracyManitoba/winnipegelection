@@ -16,7 +16,8 @@ class Person < ActiveRecord::Base
   # TODO: NEEDS TESTS. Must ensure that the order of candidacies
   # actually agrees with associated electoral_race/election.
   def most_recent_candidacy
-    #@most_recent_candidacy ||= candidacies.Candidacy.includes(electoral_race: :election).order(elections: :election).last
+    # candidacies.includes(electoral_race: :election)
+    # .order(elections: :election).last
     @most_recent_candidacy ||= candidacies.last
   end
 end
