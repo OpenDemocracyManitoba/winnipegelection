@@ -3,3 +3,9 @@
   name: <%= region_type.capitalize %>
   description: "Description of the <%= region_type.capitalize %> Region Type."
 <% end %>
+
+# Friendly URL Region Type
+
+friendly_url_region_type:
+  name: "Test"
+  description: "Used to test the Friendly URL concern."

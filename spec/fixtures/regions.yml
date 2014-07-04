@@ -57,3 +57,10 @@ point_douglas_council_ward:
   name: "Point Douglas"
   region_type: council_ward
   seats: 1
+
+# Friendly URL Region
+
+friendly_url_region:
+  name: "Slug"
+  region_type: friendly_url_region_type
+  seats: 1

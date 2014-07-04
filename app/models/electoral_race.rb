@@ -12,4 +12,9 @@ class ElectoralRace < ActiveRecord::Base
     election_name = election.nil? ? 'unknown election' : election.name
     "#{region_name} - #{election_name}"
   end
+
+  include FriendlyURL
+  def slug_for_friendly_url
+    region.nil? ? 'unknown region' : region.name_with_type.parameterize
+  end
 end

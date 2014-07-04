@@ -68,3 +68,9 @@ ward_2_louis_reil_2014_election_race:
   election: winnipeg_2014_election
   seats_to_fill: 2
 
+# Friendly URL Electoral Race
+
+friendly_url_electoral_race:
+  region: friendly_url_region
+  election: winnipeg_2014_election
+  seats_to_fill: 1

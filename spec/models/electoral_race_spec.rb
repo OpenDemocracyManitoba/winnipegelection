@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'concerns/friendly_url_spec'
 
 describe ElectoralRace do
   context 'when an electoral race has an associated region and election' do
@@ -28,4 +29,19 @@ describe ElectoralRace do
     it      { is_expected.to have(ASSOCIATION_COUNT).candidacies }
     it      { is_expected.to have(ASSOCIATION_COUNT).people }
   end
+
+  context 'when class is augmented with FriendlyURL concern' do
+    it_behaves_like FriendlyURL do
+      let(:object_of_described_class) do
+        electoral_races(:friendly_url_electoral_race)
+      end
+    end
+
+    let(:electoral_race) { electoral_races(:city_of_winnipeg_2014_election_race) }
+
+    it 'returns a friendly url path' do
+      expect(electoral_race.friendly_path).to match %r{^/electoral_races/\d+/mayoral-city-of-winnipeg$}
+    end
+  end
+
 end
