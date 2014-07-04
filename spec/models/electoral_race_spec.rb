@@ -37,10 +37,13 @@ describe ElectoralRace do
       end
     end
 
-    let(:electoral_race) { electoral_races(:city_of_winnipeg_2014_election_race) }
+    let(:electoral_race) {
+      electoral_races(:city_of_winnipeg_2014_election_race)
+    }
 
     it 'returns a friendly url path' do
-      expect(electoral_race.friendly_path).to match %r{^/electoral_races/\d+/mayoral-city-of-winnipeg$}
+      regexp = %r{^/electoral_races/\d+/mayoral-city-of-winnipeg$}
+      expect(electoral_race.friendly_path).to match regexp
     end
   end
 
