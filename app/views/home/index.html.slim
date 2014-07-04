@@ -1,16 +1,11 @@
 div.flow-it
   div.one-column.medium-row
-    h2 Election Countdown
+    h2 Winnipeg Election 2014
     p
       | On <strong>Wednesday October 22 of 2014</strong> the citizens of Winnipeg go to the polls to elect their Mayor, their City Councillors and their School Trustees.
+    p
+      | This website is a citizen created resource designed to help you learn about the candidates in the upcoming 2014 Winnipeg General Election.
     br
-    p.days-until-election
-      - if active_election.days_until_election == 0
-        | The Election is Today!
-      - elsif active_election.days_until_election > 0
-        | #{pluralize(active_election.days_until_election,'Day')} Until The Election!
-    br
-    br 
     h2 Previous Election Results
     ul
       li = link_to '2010 Election Results', 'http://www.winnipeg.ca/clerks/docs/elections/2010Election/results/winnipeg.html'
@@ -28,8 +23,14 @@ div.flow-it
       li School Trustee Candidates
 
   div.one-column.medium-row.social
-    h2 Be Our Friend
-    | <iframe src="http://www.facebook.com/plugins/likebox.php?id=145495908793867&amp;width=237&amp;connections=8&amp;stream=false&amp;header=false&amp;height=272" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:237px; height:272px;" allowTransparency="true"></iframe>
+    h2 Election Countdown
+    div.days-until-election
+      - if active_election.days_until_election == 0
+        p The Election is Today!
+      - elsif active_election.days_until_election > 0
+        p.days = pluralize(active_election.days_until_election,'Day')
+        p Until The Election!
+    | <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FWinnipeg-Election%2F145495908793867&amp;width=270&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=61535010545" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:270px; height:80px;" allowTransparency="true"></iframe>
     p
       | <a href="http://twitter.com/WpgElection" class="twitter-follow-button">Follow @WpgElection</a>
 
