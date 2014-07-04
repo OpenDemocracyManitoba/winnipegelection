@@ -43,7 +43,8 @@ feature 'User visits the home page' do
 
     scenario 'they see the number of days until the election' do
       expect(page).to have_css('.days-until-election',
-                               text: /\d+ Days Until The Election/)
+                               text: /Until the Election/)
+      expect(page).to have_css('.days', text: /\d+ Days/)
     end
 
     context 'MVH - Minimum Viable Homepage' do
