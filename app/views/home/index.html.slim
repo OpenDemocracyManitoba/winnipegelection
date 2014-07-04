@@ -12,15 +12,13 @@ div.flow-it
       li = link_to '2011 By-Election Results', 'http://www.winnipeg.ca/clerks/docs/elections/2011byelection/results/results.html'
 
   div.one-column.medium-row
-    h2 Election Information
-    ul
-      - cms_pages.sort {|a,b| a.title <=> b.title}.each do |cms_page|
-        li = link_to cms_page.title, cms_page.friendly_path, class: 'cms-page'
-    h2 Coming Soon!
-    ul
-      li Candidate News Mentions
-      li Council Candidates
-      li School Trustee Candidates
+    h2 Find Your Candidates
+    div.mini-map
+      p.map = link_to image_tag('maps/city_thumb.png'), '/'
+      p.link = link_to 'Mayoral Canidates'
+    div.mini-map
+      p.map = link_to image_tag('maps/civicwards_thumb.png'), '/'
+      p.link = link_to 'Council Canidates'
 
   div.one-column.medium-row.social
     h2 Election Countdown
@@ -34,10 +32,19 @@ div.flow-it
     p
       | <a href="http://twitter.com/WpgElection" class="twitter-follow-button">Follow @WpgElection</a>
 
-h2 2014 Registered Mayoral Candidates
+  div.one-column.medium-row
+    h2 Election Information
+    ul
+      - cms_pages.sort {|a,b| a.title <=> b.title}.each do |cms_page|
+        li = link_to cms_page.title, cms_page.friendly_path, class: 'cms-page'
+    h2 Coming Soon!
+    ul
+      li Candidate News Mentions
+      li Council Candidates
+      li School Trustee Candidates
 
-.flow-it
-  .candidate-cards
-    - active_election.electoral_races.each do |er|
-      - if er.name == 'Mayoral: City of Winnipeg - 2014 Winnipeg Civic Election'
-        = render er.candidacies
+- active_election.electoral_races.each do |er|
+  h2 = "#{er.region.name} #{er.region.region_type.name} Race"
+  .flow-it
+    .candidate-cards
+      = render er.candidacies

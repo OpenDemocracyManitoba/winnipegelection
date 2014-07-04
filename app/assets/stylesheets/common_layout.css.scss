@@ -442,3 +442,20 @@ div.questionnaire {
         margin-bottom: 0;
     }
 }
+
+.mini-map {
+    overflow: auto;
+    zoom: 1;
+    margin-bottom: 5px;
+    p.map, p.link {
+        float: left;
+    }
+    p.link {
+        margin-top: 21px;
+        margin-left: 20px;
+    }
+    p.map {
+        maring-left: 2px;
+    }
+}
+
