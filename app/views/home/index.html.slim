@@ -1,13 +1,10 @@
 div.flow-it
   div.one-column.medium-row
     h2 Winnipeg Election 2014
-    p
-      | On <strong>Wednesday October 22 of 2014</strong> the citizens of Winnipeg go to the polls to elect their Mayor, their City Councillors and their School Trustees.
-    p
-      | This website is a citizen created resource designed to help you learn about the candidates in the upcoming 2014 Winnipeg General Election.
-    br
-    h2 Previous Election Results
+    p On <strong>Wednesday October 22 of 2014</strong> the citizens of Winnipeg go to the polls to elect their Mayor, their City Councillors and their School Trustees.
     ul
+      - cms_pages.sort {|a,b| a.title <=> b.title}.each do |cms_page|
+        li = link_to cms_page.title, cms_page.friendly_path, class: 'cms-page'
       li = link_to '2010 Election Results', 'http://www.winnipeg.ca/clerks/docs/elections/2010Election/results/winnipeg.html'
       li = link_to '2011 By-Election Results', 'http://www.winnipeg.ca/clerks/docs/elections/2011byelection/results/results.html'
 
@@ -28,15 +25,12 @@ div.flow-it
       - elsif active_election.days_until_election > 0
         p.days = pluralize(active_election.days_until_election,'Day')
         p Until the Election!
+    p This website is a citizen created resource designed to help you learn about the candidates in the upcoming 2014 Winnipeg General Election.
     | <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FWinnipeg-Election%2F145495908793867&amp;width=270&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=61535010545" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:270px; height:80px;" allowTransparency="true"></iframe>
     p
       | <a href="http://twitter.com/WpgElection" class="twitter-follow-button">Follow @WpgElection</a>
 
-  div.one-column.medium-row
-    h2 Election Information
-    ul
-      - cms_pages.sort {|a,b| a.title <=> b.title}.each do |cms_page|
-        li = link_to cms_page.title, cms_page.friendly_path, class: 'cms-page'
+  div.one-column.short-row
     h2 Coming Soon!
     ul
       li Candidate News Mentions
