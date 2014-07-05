@@ -17,6 +17,7 @@ describe Person do
       let(:object_of_described_class) do
         FactoryGirl.create(:person, name: 'Test Slug')
       end
+      let(:test_slug) { 'test-slug' }
     end
 
     let(:person) { FactoryGirl.create(:person, name: 'Walter Glutton') }

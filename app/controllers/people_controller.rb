@@ -2,7 +2,7 @@ class PeopleController < ApplicationController
   def show
     @person = Person.friendly_find(params)
     @most_recent_candidacy = @person.most_recent_candidacy
-    @most_recent_election = @most_recent_candidacy.electoral_race.election
+    @most_recent_election = @person.most_recent_election
     @is_running_in_active_election = active_election == @most_recent_election
   end
 

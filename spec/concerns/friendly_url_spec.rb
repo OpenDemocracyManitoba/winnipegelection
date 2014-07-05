@@ -4,7 +4,7 @@ shared_examples_for FriendlyURL do
   context 'class methods' do
     it 'can find an object by id and slug' do
       object = described_class.friendly_find(id: object_of_described_class,
-                                             slug: 'test-slug')
+                                             slug: test_slug)
       expect(object).to be_a described_class
     end
 

@@ -48,23 +48,14 @@ feature 'User visits the home page' do
     end
 
     context 'MVH - Minimum Viable Homepage' do
-      given(:first_candidate) { Candidacy.first }
-      scenario 'they see the mayoral candidates for the active election' do
-        candidate_cards = page.all('.candidate-card')
-        active_candidates = Candidacy.includes(electoral_race: :election)
-                                     .where(elections: { is_active: true })
-                                     .count
-        expect(candidate_cards.count).to eq(active_candidates)
+      scenario 'they see a link to mayoral candidates' do
+        expect(page).to have_css('a', text: 'Mayoral Candidates')
       end
 
-      scenario 'they can read a name from a candidate card link' do
-        expect(page).to have_css('a.candidate',
-                                 text: first_candidate.person.name)
-      end
-
-      scenario 'they can navigate to a person page' do
-        click_link(first_candidate.person.name)
-        expect(page).to have_content(first_candidate.person.name)
+      scenario 'they can navigate to the mayoral candidates page' do
+        click_link('Mayoral Candidates')
+        mayoral_race = electoral_races(:city_of_winnipeg_2014_election_race)
+        expect(page).to have_content(mayoral_race.name)
       end
     end
 

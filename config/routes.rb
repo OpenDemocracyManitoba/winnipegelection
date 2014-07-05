@@ -2,9 +2,12 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  get 'pages/:id/:slug', to: 'pages#show', as: :page
+  get 'pages/:id/:slug', to: 'pages#show', as: :page, constraints: {id: /\d+/}
   get 'candidate/:name_slug', to: 'people#redirect_show'
+  get 'pages/:id/candidate/:name_slug', to: 'people#redirect_show', constraints: {id: /\d+/}
   get 'people/:id/:slug', to: 'people#show', as: 'person', constraints: {id: /\d+/}
+  get 'electoral_races/:id/:slug', to: 'electoral_races#show', as: :electoral_race, constraints: {id: /\d+/}
+  get 'electoral_races/council', to: 'electoral_races#council', as: :electoral_races_council
 
   root to: 'home#index'
 

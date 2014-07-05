@@ -9,3 +9,7 @@ luke_skywalker:
 tyrion_lannister:
   name: 'Tyrion Lannister'
   email: 't.lannister@soiaf.wes'
+
+jamie_lannister:
+  name: 'Jamie Lannister'
+  email: 'j.lannister@soiaf.wes'

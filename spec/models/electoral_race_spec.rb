@@ -12,6 +12,10 @@ describe ElectoralRace do
       expect(electoral_race.region).to be_a(Region)
       expect(electoral_race.election).to be_a(Election)
     end
+    it 'has a composite name via region and election' do
+      electoral_race.election.election_date = Date.parse('2014-10-22')
+      expect(electoral_race.name).to eq('Mayoral: Winnipeg - 2014')
+    end
   end
 
   context 'when an electoral race has no associated region or election' do
@@ -35,6 +39,7 @@ describe ElectoralRace do
       let(:object_of_described_class) do
         electoral_races(:friendly_url_electoral_race)
       end
+      let(:test_slug) { 'test-slug-2014' }
     end
 
     let(:electoral_race) {
@@ -42,7 +47,7 @@ describe ElectoralRace do
     }
 
     it 'returns a friendly url path' do
-      regexp = %r{^/electoral_races/\d+/mayoral-city-of-winnipeg$}
+      regexp = %r{^/electoral_races/\d+/mayoral-city-of-winnipeg-2014$}
       expect(electoral_race.friendly_path).to match regexp
     end
   end

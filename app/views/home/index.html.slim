@@ -4,18 +4,25 @@ div.flow-it
     p On <strong>Wednesday October 22 of 2014</strong> the citizens of Winnipeg go to the polls to elect their Mayor, their City Councillors and their School Trustees.
     ul
       - cms_pages.sort {|a,b| a.title <=> b.title}.each do |cms_page|
-        li = link_to cms_page.title, cms_page.friendly_path, class: 'cms-page'
+        - unless cms_page.title.match(/Role/)
+          li = link_to cms_page.title, cms_page.friendly_path, class: 'cms-page'
       li = link_to '2010 Election Results', 'http://www.winnipeg.ca/clerks/docs/elections/2010Election/results/winnipeg.html'
       li = link_to '2011 By-Election Results', 'http://www.winnipeg.ca/clerks/docs/elections/2011byelection/results/results.html'
 
   div.one-column.medium-row
     h2 Find Your Candidates
     div.mini-map
-      p.map = link_to image_tag('maps/city_thumb.png'), '/'
-      p.link = link_to 'Mayoral Canidates'
+      .map = link_to image_tag('maps/city_thumb.png'), @mayoral_race.friendly_path
+      .links 
+        p 
+          strong = link_to 'Mayoral Candidates', @mayoral_race.friendly_path
+        p.small = link_to 'Role of the Mayor', '/pages/16/role-and-mandate-of-the-mayor'
     div.mini-map
-      p.map = link_to image_tag('maps/civicwards_thumb.png'), '/'
-      p.link = link_to 'Council Canidates'
+      .map = link_to image_tag('maps/civicwards_thumb.png'), electoral_races_council_path
+      .links
+        p 
+          strong = link_to 'Council Candidates', electoral_races_council_path
+        p.small = link_to 'Role of a City Councillor', '/pages/17/the-role-of-a-city-councillor'
 
   div.one-column.medium-row.social
     h2 Election Countdown
@@ -34,11 +41,5 @@ div.flow-it
     h2 Coming Soon!
     ul
       li Candidate News Mentions
-      li Council Candidates
       li School Trustee Candidates
-
-- active_election.electoral_races.each do |er|
-  h2 = "#{er.region.name} #{er.region.region_type.name} Race"
-  .flow-it
-    .candidate-cards
-      = render er.candidacies
+      li Candidate Questionnaires

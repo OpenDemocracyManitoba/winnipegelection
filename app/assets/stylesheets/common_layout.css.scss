@@ -448,14 +448,17 @@ div.questionnaire {
     overflow: auto;
     zoom: 1;
     margin-bottom: 5px;
-    p.map, p.link {
+    .map, .links {
         float: left;
     }
-    p.link {
+    .links {
         margin-top: 21px;
         margin-left: 20px;
+        p {
+            margin: 0;
+        }
     }
-    p.map {
+    .map {
         maring-left: 2px;
     }
 }
