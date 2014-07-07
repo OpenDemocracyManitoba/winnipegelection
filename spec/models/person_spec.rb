@@ -26,4 +26,25 @@ describe Person do
       expect(person.friendly_path).to match %r{^/people/\d+/walter-glutton$}
     end
   end
+
+  context 'when a Person receives a message.' do
+    describe '#most_recent_candidacy' do
+      let(:person) { people(:darth_vadar) }
+      let(:candidacy) { candidacies(:darth_vadar_mayoral_2014) }
+
+      it 'returns the most recent candidacy for this Person' do
+        expect(person.most_recent_candidacy).to eq(candidacy)
+      end
+    end
+
+    describe '#most_recent_election' do
+      let(:person) { people(:darth_vadar) }
+      let(:election) { elections(:winnipeg_2014_election) }
+
+      it 'returns the most recent Election this Person ran in' do
+        expect(person.most_recent_election).to eq(election)
+      end
+    end
+
+  end
 end
