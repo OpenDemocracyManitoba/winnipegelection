@@ -13,6 +13,42 @@ feature 'User visits the home page' do
     expect(page).to have_css('header h1', text: '2014 Winnipeg Civic Election')
   end
 
+  scenario 'they see a link to mayoral candidates' do
+    expect(page).to have_css('a', text: 'Mayoral Candidates')
+  end
+
+  scenario 'they can navigate to the mayoral candidates page' do
+    click_link('Mayoral Candidates')
+    mayoral_race = electoral_races(:city_of_winnipeg_2014_election_race)
+    expect(page).to have_content(mayoral_race.name)
+  end
+
+  scenario 'they see a link to council candidates' do
+    expect(page).to have_css('a', text: 'Council Candidates')
+  end
+
+  scenario 'they can navigate to the council candidates page' do
+    click_link('Council Candidates')
+    st_vital_race = electoral_races(:st_vital_2014_election_race)
+    expect(page).to have_content(st_vital_race.name)
+  end
+
+  context 'before the active election has occured' do
+    before(:all) do
+      Timecop.freeze(Time.local(2014, 10, 1, 12, 0, 0))
+    end
+
+    scenario 'they see the number of days until the election' do
+      expect(page).to have_css('.days-until-election',
+                               text: /Until the Election/)
+      expect(page).to have_css('.days', text: /\d+ Days/)
+    end
+
+    after(:all) do
+      Timecop.return
+    end
+  end
+
   context 'interacting with CMS page links' do
     given(:first_page) { Page.first }
 
@@ -33,34 +69,6 @@ feature 'User visits the home page' do
     scenario 'they navigate to the correct CMS page' do
       click_link(first_page.title)
       expect(page).to have_content(first_page.title)
-    end
-  end
-
-  context 'before the active election has occured' do
-    before(:all) do
-      Timecop.freeze(Time.local(2014, 10, 1, 12, 0, 0))
-    end
-
-    scenario 'they see the number of days until the election' do
-      expect(page).to have_css('.days-until-election',
-                               text: /Until the Election/)
-      expect(page).to have_css('.days', text: /\d+ Days/)
-    end
-
-    context 'MVH - Minimum Viable Homepage' do
-      scenario 'they see a link to mayoral candidates' do
-        expect(page).to have_css('a', text: 'Mayoral Candidates')
-      end
-
-      scenario 'they can navigate to the mayoral candidates page' do
-        click_link('Mayoral Candidates')
-        mayoral_race = electoral_races(:city_of_winnipeg_2014_election_race)
-        expect(page).to have_content(mayoral_race.name)
-      end
-    end
-
-    after(:all) do
-      Timecop.return
     end
   end
 end
