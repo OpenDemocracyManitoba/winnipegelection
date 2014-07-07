@@ -27,7 +27,7 @@ describe Person do
     end
   end
 
-  context 'when a Person receives a message.' do
+  context 'when a Person has election history' do
     describe '#most_recent_candidacy' do
       let(:person) { people(:darth_vadar) }
       let(:candidacy) { candidacies(:darth_vadar_mayoral_2014) }
