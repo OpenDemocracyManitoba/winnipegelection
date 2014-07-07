@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140528172430) do
+ActiveRecord::Schema.define(version: 20140707173239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,39 @@ ActiveRecord::Schema.define(version: 20140528172430) do
   add_index "electoral_races", ["election_id"], name: "index_electoral_races_on_election_id", using: :btree
   add_index "electoral_races", ["region_id", "election_id"], name: "index_electoral_races_on_region_id_and_election_id", unique: true, using: :btree
   add_index "electoral_races", ["region_id"], name: "index_electoral_races_on_region_id", using: :btree
+
+  create_table "news_articles", force: true do |t|
+    t.string   "title"
+    t.datetime "publication_date"
+    t.string   "google_news_url"
+    t.string   "url"
+    t.string   "moderation"
+    t.text     "rejection_reason"
+    t.integer  "news_source_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "news_articles", ["news_source_id"], name: "index_news_articles_on_news_source_id", using: :btree
+
+  create_table "news_mentions", force: true do |t|
+    t.text     "summary"
+    t.integer  "person_id"
+    t.integer  "news_article_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "news_mentions", ["news_article_id"], name: "index_news_mentions_on_news_article_id", using: :btree
+  add_index "news_mentions", ["person_id", "news_article_id"], name: "index_news_mentions_on_person_id_and_news_article_id", unique: true, using: :btree
+  add_index "news_mentions", ["person_id"], name: "index_news_mentions_on_person_id", using: :btree
+
+  create_table "news_sources", force: true do |t|
+    t.string   "name"
+    t.string   "base_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pages", force: true do |t|
     t.string   "title"

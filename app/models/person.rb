@@ -1,6 +1,7 @@
 class Person < ActiveRecord::Base
   has_many :candidacies, inverse_of: :person
   has_many :electoral_races, through: :candidacies
+  has_many :news_mentions, inverse_of: :person
 
   validates :name, presence: true
   validates :website, :council_site, :facebook, :twitter, :youtube, :linkedin,
