@@ -47,7 +47,6 @@ feature 'User visits an Electoral Race page' do
   end
 
   context 'for an electoral race without candidacies' do
-    pending
     before(:each) do
       visit electoral_race.friendly_path
     end
@@ -57,6 +56,7 @@ feature 'User visits an Electoral Race page' do
     end
 
     scenario 'they see a no-candidates-registered message' do
+      pending
       expect(page).to have_content('no registered candidates')
     end
   end
