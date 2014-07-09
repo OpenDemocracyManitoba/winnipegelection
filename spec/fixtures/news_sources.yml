@@ -1,0 +1,7 @@
+empire_daily:
+  name: 'Empire Daily'
+  base_url: 'http://empiredaily.com'
+
+westeros_mail:
+  name: 'Westeros Mail'
+  base_url: 'http://westerosmail.com'
