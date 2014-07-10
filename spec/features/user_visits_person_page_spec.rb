@@ -24,8 +24,20 @@ feature 'User visits a Person page' do
     end
 
     scenario 'they do not see a warning if the person is in active election' do
-      visit darth_vadar.friendly_path
       expect(page).to_not have_content('information on this page was collected')
+    end
+
+    scenario 'they see the correct related articles link' do
+      expect(page).to have_content('2 Related Articles')
+    end
+
+    scenario 'they see the correct number of news articles' do
+      expect(page.all(:css, '.news_article').size).to eq(2)
+    end
+
+    scenario 'they can see news article titles' do
+      article = news_articles(:vadar_alone_in_mayoral_race)
+      expect(page).to have_content(article.title)
     end
   end
 

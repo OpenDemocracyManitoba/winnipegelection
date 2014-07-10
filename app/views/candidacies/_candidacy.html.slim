@@ -22,4 +22,5 @@
       - else
         = image_tag("icons/#{social_site}_inactive.jpg")
   - if candidacy.person.phone_number?
-    p.phone Phone: #{link_to candidacy.person.phone_number, 'tel:' + candidacy.person.phone_number}
+    p.phone Phone: #{ link_to candidacy.person.phone_number, 'tel:' + candidacy.person.phone_number }
+  p.news_articles= link_to pluralize(candidacy.person.approved_news_articles.count, 'Related Article'), candidacy.person.friendly_path

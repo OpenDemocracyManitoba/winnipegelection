@@ -29,4 +29,10 @@ class Person < ActiveRecord::Base
   def most_recent_election
     most_recent_candidacy.electoral_race.election
   end
+
+  def approved_news_mentions
+    news_mentions.includes(:news_article)
+                 .where(news_articles: { moderation: 'approved'  })
+                 .order('news_articles.publication_date DESC')
+  end
 end

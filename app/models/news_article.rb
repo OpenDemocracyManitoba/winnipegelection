@@ -4,4 +4,8 @@ class NewsArticle < ActiveRecord::Base
   has_many :people, through: :news_mentions
 
   validates :news_source, presence: true
+
+  def pretty_date
+    publication_date.blank? ? '' : publication_date.strftime('%A, %d %B %Y')
+  end
 end
