@@ -10,6 +10,11 @@ class ApplicationController < ActionController::Base
   end
   helper_method :active_election
 
+  def active_council_races_order_by_region_name
+    @active_council_races ||= Election.active_council_races_order_by_region_name
+  end
+  helper_method :active_council_races_order_by_region_name
+
   def cms_pages
     @cms_pages ||= Page.cms_pages
   end
