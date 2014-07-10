@@ -1,7 +1,13 @@
 class Person < ActiveRecord::Base
   has_many :candidacies, inverse_of: :person
   has_many :electoral_races, through: :candidacies
-  has_many :news_mentions, inverse_of: :person
+  has_many :news_mentions, inverse_of: :person, dependent: :destroy
+  has_many :news_articles, through: :news_mentions
+  has_many :approved_news_articles,
+           -> { where news_articles: { moderation: 'approved' } },
+           through: :news_mentions,
+           class_name: 'NewsArticle',
+           source: :news_article
 
   validates :name, presence: true
   validates :website, :council_site, :facebook, :twitter, :youtube, :linkedin,

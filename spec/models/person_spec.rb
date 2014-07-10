@@ -47,4 +47,13 @@ describe Person do
     end
 
   end
+
+  describe 'associated news mentions and news articles' do
+    it 'differentiates between all news articles and approved articles' do
+      darth = people(:darth_vadar)
+      approved_articles = darth.approved_news_articles
+      all_articles = darth.news_articles
+      expect(all_articles.count).to be > (approved_articles.count)
+    end
+  end
 end
