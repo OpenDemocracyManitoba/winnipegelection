@@ -12,6 +12,8 @@ div.one-column-flow
     h2 Questionnaire Response
     .questionnaire = markdown(@person.most_recent_candidacy.questionnaire)
   h2 News that Mentions #{@person.name}
+  - if @person.approved_news_mentions.count.zero?
+    p No related news articles found.
   - @person.approved_news_mentions.each do |mention|
     div.news_article 
       h3= link_to mention.news_article.title, mention.news_article.url

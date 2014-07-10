@@ -52,14 +52,21 @@ feature 'User visits a Person page' do
     end
   end
 
-  context 'Person not running in active election' do
+  context 'Person not running in active election with no news mentions' do
+    before(:each) do
+      visit tyrion_lannister.friendly_path
+    end
+
     given(:tyrion_lannister) do
       people(:tyrion_lannister)
     end
 
     scenario 'they see an warning if the person is not in active election' do
-      visit tyrion_lannister.friendly_path
       expect(page).to have_content('information on this page was collected')
+    end
+
+    scenario 'they see a message about no news articles' do
+      expect(page).to have_content('No related news articles found.')
     end
   end
 
