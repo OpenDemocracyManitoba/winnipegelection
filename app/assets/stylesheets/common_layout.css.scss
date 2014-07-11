@@ -386,10 +386,12 @@ p.article-notice {
     }
   }
   #container {
-    width: 320px;
+    width: 100%;
   }
-  .three-columns, .two-columns {
-    width: 278px;
+  .three-columns, .two-columns, .one-column,
+  .candidate-cards .candidate-card {
+    width: auto;
+    float: none;
   }
   .two-column-flow {
     width: 320px;
