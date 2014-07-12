@@ -1,15 +1,15 @@
-vadar_drinks_tea_mentions_vadar:
+vadar_drinks_tea_mention:
   summary: 'Lorem ipsum tea drinking Vadar.'
   person: darth_vadar
   news_article: vadar_drinks_tea
   
-vadar_alone_in_mayoral_race_mentions_vadar:
+vadar_alone_in_mayoral_race_mentionr:
   summary: 'Lorem ipsum Darth Vadar is forever alone.'
   person: darth_vadar
   news_article: vadar_alone_in_mayoral_race
 
 vadar_and_luke_reunite_mentions_vadar:
-  summary: 'Lorem ipsum Vadar was happy to see his son.'
+  summary: 'Lorem ipsum Vadar was unhappy to see his son.'
   person: darth_vadar
   news_article: vadar_and_luke_reunite
   
