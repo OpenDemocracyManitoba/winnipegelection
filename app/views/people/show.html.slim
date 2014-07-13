@@ -17,6 +17,6 @@ div.one-column-flow
   - @person.approved_news_mentions.each do |mention|
     div.news_article 
       h3= link_to mention.news_article.title, mention.news_article.url
-      p= mention.news_article.pretty_date
-      p= raw mention.summary
+      p.date= mention.news_article.pretty_date
+      p.summary= raw mention.summary
 
