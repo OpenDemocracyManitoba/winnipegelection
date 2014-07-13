@@ -4,29 +4,28 @@ class NewsMention < ActiveRecord::Base
 
   validates :person, :news_article, presence: true
 
-  GOOGLE_NEWS_URL_1 = 'http://news.google.ca/news?pz=1&cf=all&ned=ca&hl=en&as_maxm=3&q='
-  GOOGLE_NEWS_URL_2 = '&as_qdr=a&as_drrb=q&as_mind=25&as_minm=2&cf=all&as_maxd=27&scoring=r&output=rss&num=50'
-  def self.gnews_search_for(name)
-    # query = URI.escape('"' + name + '"' + ' location:winnipeg')
-    query = URI.escape(name + ' location:winnipeg')
-    puts query
-    find_url = GOOGLE_NEWS_URL_1 + query + GOOGLE_NEWS_URL_2
-    puts find_url
-    cfeed_raw = FeedNormalizer::FeedNormalizer.parse open(find_url)
+  def self.gnews_search_for(location, name, alternative_name = false)
+    query = "\"#{name}\""
+    query += " OR \"#{alternative_name}\""  if alternative_name
+
+    gnews_url = 'http://news.google.ca/news?ned=ca&hl=en&as_drrb=q' \
+                '&as_qdr=a&scoring=r&output=rss&num=75' \
+                "&geo=#{location}&q=#{URI.escape(query)}"
+    cfeed_raw = FeedNormalizer::FeedNormalizer.parse(open(gnews_url))
     feed = []
 
     cfeed_raw.entries.each do |entry_raw|
-      entry = {}
-      title_elements = entry_raw.title.split('-')
-      entry[:source] = title_elements.pop
-      entry[:title] = (title_elements).join
+      entry                    = {}
+      title_elements           = entry_raw.title.split('-')
+      entry[:source]           = title_elements.pop
+      entry[:title]            = title_elements.join
       entry[:publication_date] = entry_raw.date_published
-      description = Nokogiri::HTML::fragment(entry_raw.description)
-      summary = description.xpath('.//font[@size=-1]')
-      entry[:summary] = summary[1].inner_html
-      #entry[:google_news_url] = entry_raw.urls[0]
-      entry[:url] = URI.unescape(entry_raw.urls[0].split('url=')[1])
-      entry[:moderation] = 'approved'
+      description              = Nokogiri::HTML.fragment(entry_raw.description)
+      summary                  = description.xpath('.//font[@size=-1]')
+      entry[:summary]          = summary[1].inner_html
+      url                      = entry_raw.urls[0].split('url=')[1]
+      entry[:url]              = URI.unescape(url)
+      entry[:moderation]       = 'new'
       feed << entry
     end
 
