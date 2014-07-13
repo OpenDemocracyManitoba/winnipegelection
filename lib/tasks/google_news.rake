@@ -13,7 +13,10 @@ namespace :gnews do
     auto_approved = 0
 
     people.each do |person|
-     rss_articles = NewsMention.gnews_search_for(person.name)
+     also_known_as = person.also_known_as.blank? ? false : person.also_known_as
+     rss_articles = NewsMention.gnews_search_for('winnipeg', 
+                                                 person.name, 
+                                                 also_known_as)
 
      Rails.logger.info "Looking for mentions of #{person.name}."
      Rails.logger.info "  !! #{rss_articles.count} Articles Found !!"
