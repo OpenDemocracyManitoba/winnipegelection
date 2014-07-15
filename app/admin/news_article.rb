@@ -12,6 +12,34 @@ ActiveAdmin.register NewsArticle do
     news_articles.rejected
   end
 
+  batch_action :destroy, false
+
+  batch_action :pend do |selection|
+    NewsArticle.find(selection).each do |news_article|
+      news_article.moderation = 'pending'
+      news_article.save
+    end
+    redirect_to :back
+  end
+
+  batch_action :reject do |selection|
+    NewsArticle.find(selection).each do |news_article|
+      news_article.moderation = 'rejected'
+      news_article.save
+    end
+    redirect_to :back
+  end
+
+  batch_action :approve do |selection|
+    NewsArticle.find(selection).each do |news_article|
+      news_article.moderation = 'approved'
+      news_article.save
+    end
+    redirect_to :back
+  end
+
+
+
   controller do
     def change_moderation
       @news_article = NewsArticle.find(params[:id])
@@ -28,6 +56,7 @@ ActiveAdmin.register NewsArticle do
   end
 
   index do
+    selectable_column
     column :id
     column :title
     column :url do |news_article|
