@@ -25,7 +25,8 @@ class NewsMention < ActiveRecord::Base
       entry[:summary]          = summary[1].inner_html
       url                      = entry_raw.urls[0].split('url=')[1]
       entry[:url]              = URI.unescape(url)
-      entry[:moderation]       = 'approved'
+      entry[:base_url]         = URI.join(url, '/').to_s
+      entry[:moderation]       = 'new'
       feed << entry
     end
 

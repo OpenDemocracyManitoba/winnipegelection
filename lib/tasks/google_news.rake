@@ -23,28 +23,31 @@ namespace :gnews do
 
       mention_count = 0
       rss_articles.each do |rss_article|
-        begin
-          current_article = NewsArticle.find_or_create_by_url(rss_article.except(:summary, :source))
-        rescue Exception => e
-          raise e
-        else
-          if !current_article.people.include?(person)
-            mention_count += 1
-            total_mentions += 1
-            mention = NewsMention.new(person: person,
-                                  news_article: current_article,
-                                  summary: rss_article[:summary])
-            if !mention.save
-             Rails.logger.error "news error: mention for #{current_article.title} did not save"
+          current_article = NewsArticle.find_or_create_by_url(rss_article.except(:summary, :source, :base_url))
+          current_news_source = NewsSource.find_or_create_by_name({ name: rss_article[:source],
+                                                                    base_url: rss_article[:base_url],
+                                                                    is_local_source: false })
+        if !current_article.people.include?(person)
+          mention_count += 1
+          total_mentions += 1
+          mention = NewsMention.new(person: person,
+                                news_article: current_article,
+                                summary: rss_article[:summary])
+          if !mention.save
+           Rails.logger.error "news error: mention for #{current_article.title} did not save"
+          end
+        end
+
+        if current_article.moderation =='new'
+          if current_news_source.is_local_source
+            if current_article.news_mentions.size > 1
+              current_article.moderation = 'approved'
+              auto_approved += 1
             end
+          else 
+            current_article.moderation = 'suspect'
           end
-          # auto approve articles that mention more than one candidate.
-          # Rails.logger.info "#{current_article.title} Mentions: #{current_article.news_mentions.size}"
-          if current_article.moderation == 'new' && current_article.news_mentions.size > 1
-            current_article.moderation = 'approved'
-            current_article.save
-            auto_approved += 1
-          end
+          current_article.save
         end
       end
       Rails.logger.info "  !! #{mention_count} new mentions. !!" unless mention_count.zero?
