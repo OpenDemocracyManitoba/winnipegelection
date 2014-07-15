@@ -2,14 +2,14 @@ ActiveAdmin.register NewsArticle do
   permit_params :title, :publication_date, :url, :moderation, :rejection_reason, :news_source_id
 
   scope :all, default: true
-  scope :new do |news_articles|
-    news_articles.where(moderation: 'new')
+  scope :pending do |news_articles|
+    news_articles.pending
   end
   scope :approved do |news_articles|
-    news_articles.where(moderation: 'approved')
+    news_articles.approved
   end
   scope :rejected do |news_articles|
-    news_articles.where(moderation: 'rejected')
+    news_articles.rejected
   end
 
   controller do
@@ -17,6 +17,9 @@ ActiveAdmin.register NewsArticle do
       @news_article = NewsArticle.find(params[:id])
       @news_article.moderation = params[:moderation]
       @news_article.save
+      @pending_count = NewsArticle.pending.count
+      @approved_count = NewsArticle.approved.count
+      @rejected_count = NewsArticle.rejected.count
 
       respond_to do |format|
         format.js
@@ -30,12 +33,12 @@ ActiveAdmin.register NewsArticle do
     column :url do |news_article|
       link_to truncate(news_article.url), news_article.url
     end
-    column :moderation 
+    column :moderation
     column :moderate do |news_article|
       reject  = link_to 'Reject', admin_change_moderation_path(id: news_article.id, moderation: 'rejected'), method: :patch, remote: true
-      new     = link_to 'New', admin_change_moderation_path(id: news_article.id, moderation: 'new'), method: :patch, remote: true
+      pending = link_to 'Pending', admin_change_moderation_path(id: news_article.id, moderation: 'pending'), method: :patch, remote: true
       approve = link_to 'Approve', admin_change_moderation_path(id: news_article.id, moderation: 'approved'), method: :patch, remote: true
-      "#{new} #{reject} #{approve}".html_safe
+      "#{pending} #{reject} #{approve}".html_safe
     end
 
     column :mentions do |news_article|
@@ -43,6 +46,6 @@ ActiveAdmin.register NewsArticle do
     end
     column :publication_date
     column :created_at
-    actions defaults: true 
+    actions defaults: true
   end
 end

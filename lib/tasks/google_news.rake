@@ -43,7 +43,7 @@ namespace :gnews do
           end
         end
 
-        if (current_article.moderation =='new' && 
+        if (current_article.moderation =='pending' && 
            current_news_source.is_local_source &&
            current_article.news_mentions.size > 1)
           current_article.moderation = 'approved'

@@ -28,7 +28,7 @@ class NewsMention < ActiveRecord::Base
       url                      = entry_raw.urls[0].split('url=')[1]
       entry[:url]              = URI.unescape(url)
       entry[:base_url]         = URI.join(url, '/').to_s.chop
-      entry[:moderation]       = 'new'
+      entry[:moderation]       = 'pending'
       feed << entry
     end
 
