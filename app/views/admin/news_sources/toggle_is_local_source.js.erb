@@ -1,0 +1,7 @@
+var status_tag = $("#news_source_<%= @news_source.id %> .status_tag").first();
+
+if (status_tag.html() == "Yes") {
+    status_tag.html("No").removeClass("yes").addClass("no");
+} else {
+    status_tag.html("Yes").removeClass("no").addClass("yes");
+}
