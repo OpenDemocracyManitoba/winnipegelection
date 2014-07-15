@@ -1,6 +1,7 @@
 ActiveAdmin.register NewsSource do
   permit_params :name, :base_url, :is_local_source
-  scope :all, :default => true
+
+  scope :all, default: true
   scope :local do |news_sources|
     news_sources.where(is_local_source: true)
   end

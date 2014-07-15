@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   patch 'admin/news_sources/:id/toggle_is_local_source', to: 'admin/news_sources#toggle_is_local_source', as: 'admin_toggle_is_local_source'
+  patch 'admin/news_articles/:id/change_moderation/:moderation', to: 'admin/news_articles#change_moderation', as: 'admin_change_moderation'
 
   get 'pages/:id/:slug', to: 'pages#show', as: :page, constraints: {id: /\d+/}
   get 'candidate/:name_slug', to: 'people#redirect_show'

@@ -1,0 +1,2 @@
+var moderation_tag = $("#news_article_<%= @news_article.id %> .col-moderation").first();
+moderation_tag.html("<%= @news_article.moderation %>");

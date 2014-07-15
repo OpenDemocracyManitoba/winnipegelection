@@ -29,7 +29,7 @@ namespace :gnews do
                                                                   is_local_source: false })
         
         next  if current_news_source.is_local_source === false
-        rss_article[:source] = current_news_source
+        rss_article[:news_source] = current_news_source
         current_article = NewsArticle.find_or_create_by_url(rss_article.except(:summary, :source, :base_url))
 
         if !current_article.people.include?(person)
