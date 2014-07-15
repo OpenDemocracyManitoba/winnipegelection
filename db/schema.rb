@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140715165145) do
+ActiveRecord::Schema.define(version: 20140715193009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,7 +90,6 @@ ActiveRecord::Schema.define(version: 20140715165145) do
   create_table "news_articles", force: true do |t|
     t.string   "title"
     t.datetime "publication_date"
-    t.string   "google_news_url"
     t.string   "url"
     t.string   "moderation"
     t.text     "rejection_reason"
