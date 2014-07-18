@@ -4,7 +4,8 @@ class NewsSource < ActiveRecord::Base
   validates :name, :base_url, presence: true
   validates :is_local_source, inclusion: { in: [true, false] }
 
-  def self.find_or_create_by_name(news_source)
-    find_by(name: news_source[:name]) || create(news_source)
+  def self.find_or_create(news_source)
+    find_by(name: news_source[:name],
+            base_url: news_source[:base_url]) || create(news_source)
   end
 end

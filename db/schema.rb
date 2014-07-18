@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140715193009) do
+ActiveRecord::Schema.define(version: 20140718165357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -120,6 +120,8 @@ ActiveRecord::Schema.define(version: 20140715193009) do
     t.datetime "updated_at"
     t.boolean  "is_local_source"
   end
+
+  add_index "news_sources", ["name", "base_url"], name: "index_news_sources_on_name_and_base_url", unique: true, using: :btree
 
   create_table "pages", force: true do |t|
     t.string   "title"

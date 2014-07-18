@@ -24,9 +24,9 @@ namespace :gnews do
 
       mention_count = 0
       rss_articles.each do |rss_article|
-        current_news_source = NewsSource.find_or_create_by_name({ name: rss_article[:source],
-                                                                  base_url: rss_article[:base_url],
-                                                                  is_local_source: false })
+        current_news_source = NewsSource.find_or_create({ name: rss_article[:source],
+                                                          base_url: rss_article[:base_url],
+                                                          is_local_source: false })
         
         next  if current_news_source.is_local_source === false
         rss_article[:news_source] = current_news_source
