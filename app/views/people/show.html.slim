@@ -11,9 +11,12 @@ div.one-column-flow
   - if @person.most_recent_candidacy.questionnaire?
     h2 Questionnaire Response
     .questionnaire = markdown(@person.most_recent_candidacy.questionnaire)
-  - else
-    h2 More Information Coming Soon
-    p Watch this space for:
-    ul
-      li Candidate News Mentions
-      li Candidate Questionnaire Responses
+  h2 News that Mentions #{@person.name}
+  - if @person.approved_news_mentions.count.zero?
+    p No related news articles found.
+  - @person.approved_news_mentions.each do |mention|
+    div.news_article 
+      h3= link_to mention.news_article.title, mention.news_article.url
+      p.date= mention.news_article.pretty_date
+      p.summary= raw mention.summary
+

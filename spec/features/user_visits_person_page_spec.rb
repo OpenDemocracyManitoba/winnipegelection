@@ -24,8 +24,20 @@ feature 'User visits a Person page' do
     end
 
     scenario 'they do not see a warning if the person is in active election' do
-      visit darth_vadar.friendly_path
       expect(page).to_not have_content('information on this page was collected')
+    end
+
+    scenario 'they see the correct related articles link' do
+      expect(page).to have_content('2 Related Articles')
+    end
+
+    scenario 'they see the correct number of news articles' do
+      expect(page.all(:css, '.news_article').size).to eq(2)
+    end
+
+    scenario 'they can see news article titles' do
+      article = news_articles(:vadar_alone_in_mayoral_race)
+      expect(page).to have_content(article.title)
     end
   end
 
@@ -40,14 +52,21 @@ feature 'User visits a Person page' do
     end
   end
 
-  context 'Person not running in active election' do
+  context 'Person not running in active election with no news mentions' do
+    before(:each) do
+      visit tyrion_lannister.friendly_path
+    end
+
     given(:tyrion_lannister) do
       people(:tyrion_lannister)
     end
 
     scenario 'they see an warning if the person is not in active election' do
-      visit tyrion_lannister.friendly_path
       expect(page).to have_content('information on this page was collected')
+    end
+
+    scenario 'they see a message about no news articles' do
+      expect(page).to have_content('No related news articles found.')
     end
   end
 

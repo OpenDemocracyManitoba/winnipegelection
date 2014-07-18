@@ -1,0 +1,11 @@
+var moderation_tag = $("#news_article_<%= @news_article.id %> .col-moderation").first();
+moderation_tag.html("<%= @news_article.moderation %>");
+
+var pending_count_tag = $(".scopes .pending span").first();
+pending_count_tag.html("(<%= @pending_count %>)");
+
+var approved_count_tag = $(".scopes .approved span").first();
+approved_count_tag.html("(<%= @approved_count %>)");
+
+var rejected_count_tag = $(".scopes .rejected span").first();
+rejected_count_tag.html("(<%= @rejected_count %>)");

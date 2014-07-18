@@ -1,10 +1,6 @@
 class ElectoralRacesController < ApplicationController
   def council
-    @electoral_races = active_election.electoral_races
-                                      .includes(region: :region_type)
-                                      .where(region_types:
-                                             { name: 'Council Ward' })
-                                      .order('regions.name')
+    @electoral_races = active_council_races_order_by_region_name
   end
 
   def show
