@@ -13,10 +13,10 @@ namespace :gnews do
     auto_approved = 0
 
     people.each do |person|
-     rss_articles = NewsMention.gnews_search_for(person.name, 
+     rss_articles = NewsMention.gnews_search_for(person.name,
                                                  person.also_known_as,
                                                  'winnipeg')
-     rss_articles += NewsMention.gnews_search_for(person.name, 
+     rss_articles += NewsMention.gnews_search_for(person.name,
                                                  person.also_known_as)
 
      Rails.logger.info "Looking for mentions of #{person.name}."
@@ -27,7 +27,7 @@ namespace :gnews do
         current_news_source = NewsSource.find_or_create({ name: rss_article[:source],
                                                           base_url: rss_article[:base_url],
                                                           is_local_source: false })
-        
+
         next  if current_news_source.is_local_source === false
         rss_article[:news_source] = current_news_source
         current_article = NewsArticle.find_or_create_by_url(rss_article.except(:summary, :source, :base_url))
@@ -43,7 +43,7 @@ namespace :gnews do
           end
         end
 
-        if (current_article.moderation =='pending' && 
+        if (current_article.moderation =='pending' &&
            current_news_source.is_local_source &&
            current_article.news_mentions.size > 1)
           current_article.moderation = 'approved'
