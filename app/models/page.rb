@@ -1,4 +1,6 @@
+
 class Page < ActiveRecord::Base
+  belongs_to :navigation_heading
   validates :title, :permalink, presence: true
 
   scope :cms_pages, -> { all }
@@ -11,5 +13,9 @@ class Page < ActiveRecord::Base
   # Synonym for title for ActiveAdmin which assumes a name property.
   def name
     title
+  end
+
+  def url
+    Rails.application.routes.url_helpers.page_path(self, permalink)
   end
 end

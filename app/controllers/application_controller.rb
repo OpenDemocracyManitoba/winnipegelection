@@ -3,6 +3,12 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_filter :load_nav
+
+  def load_nav
+    @nav_headings = NavigationHeading.all
+  end
+
   private
 
   def active_election
