@@ -20,6 +20,9 @@ html
       header
         h1 = link_to active_election.name, '/'
         h3 A Citizen Created Election Resource
+
+      = render :partial => 'layouts/menu'
+
       #main
         == yield
       footer
