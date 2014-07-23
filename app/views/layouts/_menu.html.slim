@@ -1,10 +1,25 @@
-nav.menu
-  ul
-    li = link_to "Home", root_path
-    - for heading in @nav_headings do
-      li 
-        a href=heading.url = heading.name
-        - unless heading.items.empty?
-	        ul id="p#{heading.id}"
-	          - for item in heading.items do
-	            li: a href = item.url = item.name
+input#menu-toggle type="checkbox"
+
+#menu-trigger
+  label for="menu-toggle"
+    span.icon-bar
+    span.icon-bar
+    span.icon-bar
+
+nav.menu-holder
+  - for heading in @nav_headings do
+    input.submenu id="submenu#{heading.id}" type="checkbox"
+  end
+  div.menu
+    ul
+      li = link_to "Home", root_path
+      - for heading in @nav_headings do
+        li class=('has-sub' unless heading.items.empty?) 
+          a href=heading.url = heading.name
+          label for="submenu#{heading.id}"
+          ul id="p#{heading.id}"
+            li.back
+              a = heading.name
+              label for="submenu#{heading.id}"
+            - for item in heading.items do
+              li: a href = item.url = item.name
