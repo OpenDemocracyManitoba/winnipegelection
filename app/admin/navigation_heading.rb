@@ -1,6 +1,6 @@
 ActiveAdmin.register NavigationHeading do
 
-  permit_params :name
+  permit_params :name, :url
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
