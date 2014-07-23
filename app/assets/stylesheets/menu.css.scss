@@ -1,0 +1,84 @@
+$background-color: #eee;
+
+@mixin drop-shadow($ho, $vo, $b, $a) {
+  -o-box-shadow: $ho $vo $b rgba(0, 0, 0, $a);
+  -icab-box-shadow: $ho $vo $b rgba(0, 0, 0, $a);
+  -khtml-box-shadow: $ho $vo $b rgba(0, 0, 0, $a);
+  -moz-box-shadow: $ho $vo $b rgba(0, 0, 0, $a);
+  -webkit-box-shadow: $ho $vo $b rgba(0, 0, 0, $a);
+  box-shadow: $ho $vo $b rgba(0, 0, 0, $a);
+}
+
+@mixin rounded($tl, $tr, $br, $bl) {
+  -o-border-radius: $tl $tr $br $bl;
+  -icab-border-radius: $tl $tr $br $bl;
+  -khtml-border-radius: $tl $tr $br $bl;
+  -moz-border-radius: $tl $tr $br $bl;
+  -webkit-border-top-right-radius: $tr;
+  -webkit-border-top-left-radius: $tl;
+  -webkit-border-bottom-right-radius: $br;
+  -webkit-border-bottom-left-radius: $bl;
+  border-radius: $tl $tr $br $bl;
+}
+
+.menu {
+	background-color: $background-color;
+	margin: 0 9px 15px 9px;
+	padding-left: 20px;
+	border: 1px solid #ddd;
+	@include rounded(5px, 5px, 2px, 2px);
+	@include drop-shadow( 0px, 2px, 5px, 0.2 );
+	overflow: auto;
+
+	ul {
+		list-style: none;
+	}
+
+	a {
+		display: block;
+		color: #444;
+		font-size: 12px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	> ul {
+		float: left;
+
+		> li {
+			float: left;
+
+			> a {
+				line-height: 25px;
+				color: #2B4270;
+				font-weight: bold;
+			}
+		}
+
+		> li:hover ul {
+			display: block;
+		}
+
+		ul {
+			display: none;
+			position: absolute;
+			background-color: $background-color;
+			@include rounded( 0px, 0px, 5px, 5px);
+			@include drop-shadow( 0px, 2px, 5px, 0.2 );
+			border: 1px solid #ddd;
+			border-top: none;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			z-index: 1;
+
+			a {
+				line-height: 20px;
+			}
+
+			li:hover > a {
+				background-color: #fcfcfc;
+				color: #000;
+			}
+		}
+	}
+}

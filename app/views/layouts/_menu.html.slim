@@ -1,9 +1,10 @@
-nav
+nav.menu
   ul
     li = link_to "Home", root_path
     - for heading in @nav_headings do
       li 
         a = heading.name
-        ul id="p#{heading.id}"
-          - for item in heading.items do
-            li: a href = item.url = item.name 
+        - unless heading.items.empty?
+          ul id="p#{heading.id}"
+            - for item in heading.items do
+              li: a href = item.url = item.name
