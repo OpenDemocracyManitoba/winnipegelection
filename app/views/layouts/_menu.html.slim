@@ -7,12 +7,12 @@ input#menu-toggle type="checkbox"
     span.icon-bar
 
 nav.menu-holder
-  - for heading in @nav_headings do
+  - for heading in nav_headings do
     input.submenu id="submenu#{heading.id}" type="checkbox"
 
   div.menu
     ul
-      - for heading in @nav_headings do
+      - for heading in nav_headings do
         li class=('has-sub' unless heading.items.empty?) 
           a href=heading.url = heading.name
           label for="submenu#{heading.id}"

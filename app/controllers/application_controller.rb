@@ -3,12 +3,6 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_filter :load_nav
-
-  def load_nav
-    @nav_headings = NavigationHeading.order(:display_order)
-  end
-
   private
 
   def active_election
@@ -25,4 +19,9 @@ class ApplicationController < ActionController::Base
     @cms_pages ||= Page.cms_pages
   end
   helper_method :cms_pages
+
+  def nav_headings
+    @nav_headings ||= NavigationHeading.order(:display_order)
+  end
+  helper_method :nav_headings
 end
