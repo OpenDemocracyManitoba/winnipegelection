@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140724141339) do
+ActiveRecord::Schema.define(version: 20140724160101) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,9 +81,11 @@ ActiveRecord::Schema.define(version: 20140724141339) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "seats_to_fill"
+    t.integer  "navigation_heading_id"
   end
 
   add_index "electoral_races", ["election_id"], name: "index_electoral_races_on_election_id", using: :btree
+  add_index "electoral_races", ["navigation_heading_id"], name: "index_electoral_races_on_navigation_heading_id", using: :btree
   add_index "electoral_races", ["region_id", "election_id"], name: "index_electoral_races_on_region_id_and_election_id", unique: true, using: :btree
   add_index "electoral_races", ["region_id"], name: "index_electoral_races_on_region_id", using: :btree
 
@@ -158,10 +160,7 @@ ActiveRecord::Schema.define(version: 20140724141339) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "also_known_as"
-    t.integer  "navigation_heading_id"
   end
-
-  add_index "people", ["navigation_heading_id"], name: "index_people_on_navigation_heading_id", using: :btree
 
   create_table "region_types", force: true do |t|
     t.string   "name"

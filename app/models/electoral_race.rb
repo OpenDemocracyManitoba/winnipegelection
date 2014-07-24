@@ -1,4 +1,5 @@
 class ElectoralRace < ActiveRecord::Base
+  belongs_to :navigation_heading
   belongs_to :region, inverse_of: :electoral_races
   belongs_to :election, inverse_of: :electoral_races
 
