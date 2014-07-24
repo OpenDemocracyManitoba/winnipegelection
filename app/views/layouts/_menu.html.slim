@@ -9,7 +9,7 @@ input#menu-toggle type="checkbox"
 nav.menu-holder
   - for heading in @nav_headings do
     input.submenu id="submenu#{heading.id}" type="checkbox"
-  end
+    
   div.menu
     ul
       li = link_to "Home", root_path
@@ -22,4 +22,4 @@ nav.menu-holder
               a = heading.name
               label for="submenu#{heading.id}"
             - for item in heading.items do
-              li: a href = item.url = item.name
+              li = link_to item.name, item.friendly_path

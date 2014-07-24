@@ -14,8 +14,4 @@ class Page < ActiveRecord::Base
   def name
     title
   end
-
-  def url
-    Rails.application.routes.url_helpers.page_path(self, permalink)
-  end
 end

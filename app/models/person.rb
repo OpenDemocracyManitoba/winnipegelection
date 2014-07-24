@@ -37,8 +37,4 @@ class Person < ActiveRecord::Base
                  .where(news_articles: { moderation: 'approved'  })
                  .order('news_articles.publication_date DESC')
   end
-
-  def url
-    Rails.application.routes.url_helpers.person_path(self, slug_for_friendly_url)
-  end
 end
