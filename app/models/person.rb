@@ -1,6 +1,5 @@
 
 class Person < ActiveRecord::Base
-  belongs_to :navigation_heading
   has_many :candidacies, inverse_of: :person
   has_many :electoral_races, through: :candidacies
   has_many :news_mentions, inverse_of: :person, dependent: :destroy

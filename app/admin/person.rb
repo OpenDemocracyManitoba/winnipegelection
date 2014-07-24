@@ -3,11 +3,10 @@ ActiveAdmin.register Person do
   permit_params :name, :office_address, :phone_number, :email,
                 :image, :website, :council_site, :facebook,
                 :twitter, :youtube, :linkedin, :remove_image,
-                :also_known_as, :navigation_heading_id
+                :also_known_as
 
   form :html => { :enctype => 'multipart/form-data' } do |f|
     f.inputs "Details", :multipart => true do
-      f.input :navigation_heading
       f.input :name
       f.input :also_known_as
       f.input :image, as: :file, :hint => f.object.image.present? \
