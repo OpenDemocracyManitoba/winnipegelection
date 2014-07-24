@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :load_nav
 
   def load_nav
-    @nav_headings = NavigationHeading.all
+    @nav_headings = NavigationHeading.order(:display_order)
   end
 
   private
