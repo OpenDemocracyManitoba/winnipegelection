@@ -73,8 +73,15 @@ $mobile-nav-width: 261px;
       }
     }
 
-    > li.has-sub:hover ul {
-      display: block;
+    > li.has-sub:hover {
+      > .no-link {
+        text-decoration: none;
+        cursor: default;
+      }
+
+      ul {
+        display: block;
+      }
     }
 
     ul {
@@ -303,5 +310,26 @@ $mobile-nav-width: 261px;
 
   .submenu:checked ~ .menu {
     left: -$mobile-nav-width;
+  }
+
+  /* Hardcoded subnav id's, add more if needed */
+  #submenu0:checked ~ .menu #p0,
+  #submenu1:checked ~ .menu #p1,
+  #submenu2:checked ~ .menu #p2,
+  #submenu3:checked ~ .menu #p3,
+  #submenu4:checked ~ .menu #p4,
+  #submenu5:checked ~ .menu #p5,
+  #submenu6:checked ~ .menu #p6,
+  #submenu7:checked ~ .menu #p7,
+  #submenu8:checked ~ .menu #p8,
+  #submenu9:checked ~ .menu #p9,
+  #submenu10:checked ~ .menu #p10,
+  #submenu11:checked ~ .menu #p11 {
+    visibility: visible; 
+
+    -webkit-transition: none;
+    -o-transition: none;
+    -moz-transition: none;
+    transition: none;
   }
 }

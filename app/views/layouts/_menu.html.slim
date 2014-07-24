@@ -7,18 +7,18 @@ input#menu-toggle type="checkbox"
     span.icon-bar
 
 nav.menu-holder
-  - for heading in nav_headings do
-    input.submenu id="submenu#{heading.id}" type="checkbox"
+  - (0..11).each do |n|
+    input.submenu id="submenu#{n}" type="checkbox"
 
   div.menu
     ul
-      - for heading in nav_headings do
+      - nav_headings.each_with_index do |heading, n|
         li class=('has-sub' unless heading.items.empty?) 
-          a href=heading.url = heading.name
-          label for="submenu#{heading.id}"
-          ul id="p#{heading.id}"
+          a href=(heading.url if heading.url?) class=('no-link' unless heading.url?) = heading.name
+          label for="submenu#{n}"
+          ul id="p#{n}"
             li.back
               a = heading.name
-              label for="submenu#{heading.id}"
+              label for="submenu#{n}"
             - for item in heading.items do
               li = link_to item.name, item.friendly_path
