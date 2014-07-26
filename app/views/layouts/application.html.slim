@@ -21,7 +21,7 @@ html
         h1 = link_to active_election.name, '/'
         h3 A Citizen Created Election Resource
 
-      = render :partial => 'layouts/menu'
+      = render :partial => 'layouts/menu' unless nav_headings.empty?
 
       #main
         == yield
