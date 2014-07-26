@@ -71,14 +71,14 @@ $mobile-nav-width: 261px;
         color: #2B4270;
         font-weight: bold;
       }
-    }
 
-    > li.has-sub:hover {
-      > .no-link {
+      > a.no-link {
         text-decoration: none;
         cursor: default;
       }
+    }
 
+    > li.has-sub:hover {
       ul {
         display: block;
       }
