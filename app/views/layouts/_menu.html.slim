@@ -14,7 +14,10 @@ nav.menu-holder
     ul
       - nav_headings.each_with_index do |heading, n|
         li class=('has-sub' unless heading.items.empty?) 
-          a href=(heading.url if heading.url?) class=('no-link' unless heading.url?) = heading.name
+          - if heading.url?
+            a href=heading.url = heading.name
+          - else
+            a href="#" class='no-link' = heading.name
           label for="submenu#{n}"
           ul id="p#{n}"
             li.back
