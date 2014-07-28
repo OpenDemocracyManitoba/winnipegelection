@@ -1,0 +1,14 @@
+home:
+  name: 'Home'
+  url: '/'
+  display_order: 1.0
+
+candidates:
+  name: 'Candidates'
+  url: ''
+  display_order: 2.0
+
+about:
+  name: 'About'
+  url: ''
+  display_order: 3.0

@@ -11,7 +11,7 @@ nav.menu-holder
     input.submenu id="submenu#{n}" type="checkbox"
 
   div.menu
-    ul
+    ul.primary
       - nav_headings.each_with_index do |heading, n|
         li class=('has-sub' unless heading.items.empty?) 
           - if heading.url?
@@ -19,7 +19,7 @@ nav.menu-holder
           - else
             a href="#" class='no-link' = heading.name
           label for="submenu#{n}"
-          ul id="p#{n}"
+          ul.secondary id="p#{n}"
             li.back
               a = heading.name
               label for="submenu#{n}"
