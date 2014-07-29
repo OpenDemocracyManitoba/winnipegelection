@@ -124,7 +124,6 @@ feature 'User visits the home page' do
         expect(page.status_code).to be(200)
         expect(page).to have_css('#main h1', text: about_page.title)
       end
-      
     end
   end
 end

@@ -37,34 +37,41 @@ $mobile-nav-width: 261px;
   margin-top: 10px;
 }
 
+li.has-sub:hover ~ li.close {
+
+}
+
 .menu {
   background-color: $background-color;
+  height: 25px;
   margin-left: 9px;
   margin-right: 9px;
   margin-bottom: 15px;
   padding-left: 20px;
   border: 1px solid #ddd;
-  @include rounded(5px, 5px, 2px, 2px);
+  @include rounded(5px, 5px, 5px, 5px);
   @include drop-shadow( 0px, 2px, 5px, 0.2 );
-  overflow: auto;
 
   ul {
     list-style: none;
   }
 
-  a {
+  a, li.close a {
     display: block;
     color: #444;
     font-size: 12px;
+    font-weight: normal;
     padding-left: 15px;
     padding-right: 15px;
   }
 
   > ul {
     float: left;
+    position: relative;
 
     > li {
       float: left;
+      white-space: nowrap;
 
       > a {
         line-height: 25px;
@@ -76,6 +83,18 @@ $mobile-nav-width: 261px;
         text-decoration: none;
         cursor: default;
       }
+    }
+
+    > li.close {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: -25px;
+      width: 100%;
+      height: 25px;
+
+      background: $background-color;
+      @include rounded( 5px, 5px, 0px, 0px);
     }
 
     > li.has-sub:hover {
@@ -161,6 +180,14 @@ $mobile-nav-width: 261px;
   } 
 }
 
+// iPad in portait
+@media only screen and (max-width: 768px) and (min-width: 768px), 
+            screen and (max-width: 1024px) and (min-width: 1024px) {
+  .menu > ul > li.has-sub:hover ~ li.close {
+    display: block;
+  }
+}
+
 // Mobile only
 @media only screen and (max-width: 639px) {
   #menu-trigger {
@@ -209,7 +236,6 @@ $mobile-nav-width: 261px;
         width: $mobile-nav-width;
         height: 50px;
         border-bottom: 1px solid #ddd;
-        white-space: nowrap;
 
         a {
           font-size: 18px;
