@@ -9,6 +9,7 @@ city_of_winnipeg_2014_election_race:
   region: city_of_winnipeg
   election: winnipeg_2014_election
   seats_to_fill: 1
+  navigation_heading: candidates
 
 # Three electoral races for council ward of st vital.
 
@@ -26,6 +27,7 @@ st_vital_2014_election_race:
   region: st_vital_council_ward
   election: winnipeg_2014_election
   seats_to_fill: 1
+  navigation_heading: candidates
 
 # Two electoral races for council ward of point douglas.
 

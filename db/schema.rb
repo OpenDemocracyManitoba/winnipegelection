@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140718165357) do
+ActiveRecord::Schema.define(version: 20140724160101) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,11 +81,21 @@ ActiveRecord::Schema.define(version: 20140718165357) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "seats_to_fill"
+    t.integer  "navigation_heading_id"
   end
 
   add_index "electoral_races", ["election_id"], name: "index_electoral_races_on_election_id", using: :btree
+  add_index "electoral_races", ["navigation_heading_id"], name: "index_electoral_races_on_navigation_heading_id", using: :btree
   add_index "electoral_races", ["region_id", "election_id"], name: "index_electoral_races_on_region_id_and_election_id", unique: true, using: :btree
   add_index "electoral_races", ["region_id"], name: "index_electoral_races_on_region_id", using: :btree
+
+  create_table "navigation_headings", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "url"
+    t.float    "display_order"
+  end
 
   create_table "news_articles", force: true do |t|
     t.string   "title"
@@ -130,7 +140,10 @@ ActiveRecord::Schema.define(version: 20140718165357) do
     t.boolean  "show_title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "navigation_heading_id"
   end
+
+  add_index "pages", ["navigation_heading_id"], name: "index_pages_on_navigation_heading_id", using: :btree
 
   create_table "people", force: true do |t|
     t.string   "name"

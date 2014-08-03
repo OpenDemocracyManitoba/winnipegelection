@@ -1,4 +1,6 @@
+
 class Page < ActiveRecord::Base
+  belongs_to :navigation_heading
   validates :title, :permalink, presence: true
 
   scope :cms_pages, -> { all }

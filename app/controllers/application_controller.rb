@@ -19,4 +19,9 @@ class ApplicationController < ActionController::Base
     @cms_pages ||= Page.cms_pages
   end
   helper_method :cms_pages
+
+  def nav_headings
+    @nav_headings ||= NavigationHeading.order(:display_order)
+  end
+  helper_method :nav_headings
 end

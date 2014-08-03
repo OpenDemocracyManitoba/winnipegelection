@@ -1,0 +1,29 @@
+input#menu-toggle type="checkbox"
+
+#menu-trigger
+  label for="menu-toggle"
+    span.icon-bar
+    span.icon-bar
+    span.icon-bar
+
+nav.menu-holder
+  - (0..11).each do |n|
+    input.submenu id="submenu#{n}" type="checkbox"
+
+  div.menu
+    - nav_headings.each_with_index do |heading, n|
+      ul.primary
+        li class=('has-sub' unless heading.items.empty?) 
+          - if heading.url?
+            a href=heading.url = heading.name
+          - else
+            a href="#" class='no-link' = heading.name
+          label for="submenu#{n}"
+          ul.secondary id="p#{n}"
+            li.back
+              a = heading.name
+              label for="submenu#{n}"
+            - for item in heading.items do
+              li = link_to item.name, item.friendly_path
+        li class='close'
+          a href='#' close x

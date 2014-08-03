@@ -1,6 +1,6 @@
 ActiveAdmin.register ElectoralRace do
 
-  permit_params :region_id, :election_id, :polygon, :seats_to_fill
+  permit_params :region_id, :election_id, :polygon, :seats_to_fill, :navigation_heading_id
   
   index do
     selectable_column
@@ -18,6 +18,7 @@ ActiveAdmin.register ElectoralRace do
   
   form do |f|
     f.inputs "Electoral Race" do
+      f.input :navigation_heading
       f.input :region, as: :select, collection: Region.all.map{ |r| [r.name_with_type, r.id]}
       f.input :election
       f.input :polygon
