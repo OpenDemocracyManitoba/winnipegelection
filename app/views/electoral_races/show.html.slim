@@ -1,6 +1,6 @@
 h2 = @electoral_race.name
 p.small
-  em Candidates are displayed in random order.
+  em = @electoral_race.candidacy_order_message
 .flow-it
   .candidate-cards
     = render @electoral_race.candidacies

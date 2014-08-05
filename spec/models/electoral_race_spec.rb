@@ -32,6 +32,27 @@ describe ElectoralRace do
     subject { electoral_race }
     it      { is_expected.to have(ASSOCIATION_COUNT).candidacies }
     it      { is_expected.to have(ASSOCIATION_COUNT).people }
+
+    describe '#candidacy_order_message' do
+      it 'returns a message about the random order of candidates' do
+        expect(electoral_race.candidacy_order_message).to \
+          eq(ElectoralRace::CANDIDATES_RANDOMIZED)
+      end
+    end
+  end
+
+  context 'when an electoral race has zero associated candidacies' do
+    let(:electoral_race) do
+      ElectoralRace.first
+    end
+
+    describe '#candidacy_order_message' do
+      it 'returns a message stating that there are no candidates' do
+        electoral_race.candidacies = []
+        expect(electoral_race.candidacy_order_message).to \
+          eq(ElectoralRace::NO_REGISTERED_CANDIDATES)
+      end
+    end
   end
 
   context 'when class is augmented with FriendlyURL concern' do

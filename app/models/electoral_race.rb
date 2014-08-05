@@ -1,5 +1,5 @@
 class ElectoralRace < ActiveRecord::Base
-  belongs_to :navigation_heading
+  belongs_to :navigation_heading, inverse_of: :electoral_races
   belongs_to :region, inverse_of: :electoral_races
   belongs_to :election, inverse_of: :electoral_races
 
@@ -8,10 +8,18 @@ class ElectoralRace < ActiveRecord::Base
 
   validates :region, :election, presence: true
 
+  NO_REGISTERED_CANDIDATES = 'There are no registered candidates in this' \
+                             'electoral race.'
+  CANDIDATES_RANDOMIZED = 'Candidates are displayed in random order.'
+
   def name
     region_name = region.nil? ? 'unknown region' : region.name_with_type
     year = election.nil? ? 'unknown election' : election.election_date.year
     "#{region_name} - #{year}"
+  end
+
+  def candidacy_order_message
+    candidacies.empty? ? NO_REGISTERED_CANDIDATES : CANDIDATES_RANDOMIZED
   end
 
   include FriendlyURL

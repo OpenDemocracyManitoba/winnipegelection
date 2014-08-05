@@ -56,7 +56,6 @@ feature 'User visits an Electoral Race page' do
     end
 
     scenario 'they see a no-candidates-registered message' do
-      pending
       expect(page).to have_content('no registered candidates')
     end
   end
