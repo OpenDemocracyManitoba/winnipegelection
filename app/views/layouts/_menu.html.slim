@@ -13,7 +13,7 @@ nav.menu-holder
   div.menu
     - nav_headings.each_with_index do |heading, n|
       ul.primary
-        li class=('has-sub' unless heading.items.empty?) 
+        li class=('has-sub' unless heading.items.empty?)
           - if heading.url?
             a href=heading.url = heading.name
           - else

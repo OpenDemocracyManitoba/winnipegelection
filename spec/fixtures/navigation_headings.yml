@@ -5,8 +5,19 @@ home:
 
 candidates:
   name: 'Candidates'
-  url: ''
   display_order: 2.0
+
+mayoral_candidates:
+  name: 'Mayoral'
+  url: '/'
+  display_order: 1.0
+  parent_heading: candidates
+
+council_candidates:
+  name: 'Council'
+  url: '/electoral_races/council'
+  display_order: 2.0
+  parent_heading: candidates
 
 about:
   name: 'About'
