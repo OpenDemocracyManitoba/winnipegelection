@@ -32,6 +32,8 @@ div.flow-it
       - elsif active_election.days_until_election > 0
         p.days = pluralize(active_election.days_until_election,'Day')
         p Until the Election!
+      - else
+        p = "The most recent election was held on #{active_election.election_date}."
     p This website is a citizen created resource designed to help you learn about the candidates in the upcoming 2014 Winnipeg General Election.
     | <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FWinnipeg-Election%2F145495908793867&amp;width=270&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=61535010545" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:270px; height:80px;" allowTransparency="true"></iframe>
     p
