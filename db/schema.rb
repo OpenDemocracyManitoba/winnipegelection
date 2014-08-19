@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140724160101) do
+ActiveRecord::Schema.define(version: 20140807125823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -95,7 +95,10 @@ ActiveRecord::Schema.define(version: 20140724160101) do
     t.datetime "updated_at"
     t.string   "url"
     t.float    "display_order"
+    t.integer  "navigation_heading_id"
   end
+
+  add_index "navigation_headings", ["navigation_heading_id"], name: "index_navigation_headings_on_navigation_heading_id", using: :btree
 
   create_table "news_articles", force: true do |t|
     t.string   "title"
