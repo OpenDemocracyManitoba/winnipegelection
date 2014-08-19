@@ -19,6 +19,10 @@ feature 'User visits a Person page' do
       expect(page).to have_content(darth_vadar.name)
     end
 
+    scenario "they see the person's name in the browser title" do
+      expect(page).to have_title(darth_vadar.name)
+    end
+
     scenario 'they see questionnaire if a person has replied' do
       expect(page).to have_css('h2', text: 'Questionnaire Response')
     end

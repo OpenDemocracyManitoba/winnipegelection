@@ -17,6 +17,10 @@ feature 'User visits an Electoral Race page' do
     scenario 'they see the electoral race name' do
       expect(page).to have_content(city_of_winnipeg_2014.name)
     end
+
+    scenario 'they see the electoral race name in the browser title' do
+      expect(page).to have_title(city_of_winnipeg_2014.name)
+    end
   end
 
   context 'for an electoral race with candidacies' do
