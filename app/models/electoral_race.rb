@@ -12,10 +12,16 @@ class ElectoralRace < ActiveRecord::Base
                              'electoral race.'
   CANDIDATES_RANDOMIZED = 'Candidates are displayed in random order.'
 
+  def region_name_with_type
+    region.nil? ? 'unknown region' : region.name_with_type
+  end
+
+  def election_year
+    election.nil? ? 'unknown election' : election.year
+  end
+
   def name
-    region_name = region.nil? ? 'unknown region' : region.name_with_type
-    year = election.nil? ? 'unknown election' : election.election_date.year
-    "#{region_name} - #{year}"
+    "#{region_name_with_type} - #{election_year}"
   end
 
   def candidacy_order_message

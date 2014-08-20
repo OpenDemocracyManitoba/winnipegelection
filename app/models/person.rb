@@ -1,4 +1,3 @@
-
 class Person < ActiveRecord::Base
   has_many :candidacies, inverse_of: :person
   has_many :electoral_races, through: :candidacies
@@ -31,9 +30,18 @@ class Person < ActiveRecord::Base
     most_recent_candidacy.electoral_race.election
   end
 
+  def most_recent_region
+    most_recent_candidacy.electoral_race.region
+  end
+
   def approved_news_mentions
     news_mentions.includes(:news_article)
                  .where(news_articles: { moderation: 'approved'  })
                  .order('news_articles.publication_date DESC')
+  end
+
+  def name_for_title
+    "#{name} - #{most_recent_region.name_with_parent} - " \
+    "Winnipeg Election #{most_recent_election.year}"
   end
 end

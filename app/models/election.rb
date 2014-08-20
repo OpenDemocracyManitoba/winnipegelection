@@ -17,6 +17,8 @@ class Election < ActiveRecord::Base
     days_until_election.zero?
   end
 
+  delegate :year, to: :election_date
+
   #### CLASS METHODS
 
   def self.active_election
