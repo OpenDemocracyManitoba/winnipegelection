@@ -12,7 +12,7 @@ SitemapGenerator::Sitemap.create do
   Page.find_each do |page|
     add page.friendly_path,
         lastmod: page.updated_at,
-        priority: 0.5,
+        priority: 0.8,
         changefreq: 'weekly'
   end
 
@@ -33,10 +33,10 @@ SitemapGenerator::Sitemap.create do
 
   ElectoralRace.includes(:election, region: :region_type).each do |electoral_race|
     if electoral_race.election.is_active
-      priority = 0.8
+      priority = 0.9
       changefreq = 'daily'
     else
-      priority = 0.6
+      priority = 0.7
       changefreq = 'yearly'
     end
     add electoral_race.friendly_path,
