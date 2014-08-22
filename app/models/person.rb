@@ -44,14 +44,4 @@ class Person < ActiveRecord::Base
     "#{name} - #{most_recent_region.name_with_parent} - " \
     "Winnipeg Election #{most_recent_election.year}"
   end
-
-  def self.with_candidacy_in_active_election
-    includes(candidacies: { electoral_race: :election })
-    .where(elections: { is_active: true })
-  end
-
-  def self.without_candidacy_in_active_election
-    includes(candidacies: { electoral_race: :election })
-    .where(elections: { is_active: false })
-  end
 end
