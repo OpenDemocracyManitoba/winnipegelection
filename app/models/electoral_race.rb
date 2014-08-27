@@ -16,12 +16,18 @@ class ElectoralRace < ActiveRecord::Base
     region.nil? ? 'unknown region' : region.name_with_type
   end
 
-  def election_year
-    election.nil? ? 'unknown election' : election.year
+  delegate :year, to: :election, allow_nil: true
+  delegate :region_type_name, to: :region, allow_nil: true
+  delegate :name_with_parent, to: :region, prefix: true
+  delegate :name, to: :region, prefix: true
+
+  def name_with_type_and_year
+    "#{region_name_with_type} - #{year}"
   end
+  alias_method :name, :name_with_type_and_year
 
   def name
-    "#{region_name_with_type} - #{election_year}"
+    name_with_type_and_year
   end
 
   def candidacy_order_message
@@ -30,6 +36,6 @@ class ElectoralRace < ActiveRecord::Base
 
   include FriendlyURL
   def slug_for_friendly_url
-    name.parameterize
+    name_with_type_and_year.parameterize
   end
 end

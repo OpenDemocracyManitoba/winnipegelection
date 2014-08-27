@@ -5,6 +5,8 @@ class Election < ActiveRecord::Base
 
   validates :name, presence: true
 
+  delegate :year, to: :election_date
+
   def days_until_election
     (self.election_date - Date.today).to_i
   end
@@ -16,8 +18,6 @@ class Election < ActiveRecord::Base
   def today?
     days_until_election.zero?
   end
-
-  delegate :year, to: :election_date
 
   #### CLASS METHODS
 

@@ -26,8 +26,12 @@ class Person < ActiveRecord::Base
                                           .last
   end
 
+  def most_recent_electoral_race
+    most_recent_candidacy.electoral_race
+  end
+
   def most_recent_election
-    most_recent_candidacy.electoral_race.election
+    most_recent_electoral_race.election
   end
 
   def most_recent_region
@@ -41,7 +45,7 @@ class Person < ActiveRecord::Base
   end
 
   def name_for_title
-    "#{name} - #{most_recent_region.name_with_parent} - " \
+    "#{name} - #{most_recent_region.name_with_parent_and_type} - " \
     "Winnipeg Election #{most_recent_election.year}"
   end
 end
