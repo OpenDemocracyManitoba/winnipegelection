@@ -5,20 +5,24 @@
       p The information on this page was collected for the #{@person.most_recent_candidacy.electoral_race.election.name}.
       p
         em.small Once a person officially registers for the 2014 Winnipeg Election their information will be updated.
-div.one-column-flow
+.flow-it
   .candidate-cards
     = render @person.most_recent_candidacy
-.two-columns-early-shrink
-  - if @person.most_recent_candidacy.questionnaire?
-    h2 Questionnaire Response
-    .questionnaire = markdown(@person.most_recent_candidacy.questionnaire)
-  h2 News that Mentions #{@person.name}
-  p.small.grey News articles are automatically gathered from #{ link_to 'Google News', 'http://news.google.ca' } by searching for the full names of the candidates in the upcoming election. See #{link_to 'faq', '/pages/13/frequently-asked-questions#news'} for more details.
-  - if @person.approved_news_mentions.count.zero?
-    p No related news articles found.
-  - @person.approved_news_mentions.each do |mention|
-    div.news_article
-      h3= link_to mention.news_article.title, mention.news_article.url
-      p.date= mention.news_article.pretty_date
-      p.summary= raw mention.summary
+  .two-columns-early-shrink.candidate-height
+    h2= @person.name
+    p 
+      #{@person.name}'s candidacy in the #{link_to @person.most_recent_candidacy.formal_race_description, @person.most_recent_electoral_race.friendly_path}.
+  .three-columns
+    - if @person.most_recent_candidacy.questionnaire?
+      h2 Questionnaire Response
+      .questionnaire = markdown(@person.most_recent_candidacy.questionnaire)
+    h2 News that Mentions #{@person.name}
+    p.small.grey News articles are automatically gathered from #{ link_to 'Google News', 'http://news.google.ca' } by searching for the full names of the candidates in the upcoming election. See #{link_to 'faq', '/pages/13/frequently-asked-questions#news'} for more details.
+    - if @person.approved_news_mentions.count.zero?
+      p No related news articles found.
+    - @person.approved_news_mentions.each do |mention|
+      div.news_article
+        h3= link_to mention.news_article.title, mention.news_article.url
+        p.date= mention.news_article.pretty_date
+        p.summary= raw mention.summary
 
