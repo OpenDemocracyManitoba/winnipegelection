@@ -199,6 +199,10 @@ header {
   height: 235px;
 }
 
+.candidate-height {
+    min-height: 134px;
+}
+
 .article {
   margin-bottom: 2em;
   h3 {
@@ -238,8 +242,8 @@ p.article-notice {
     @include drop-shadow(0, 2px, 5px, 0.2);
     margin: 10px;
     width: 288px;
-    border: 1px solid #e4e4e4;
     min-height: 154px;
+    border: 1px solid #e4e4e4;
     padding-left: 10px;
     background-color: #eeeeee;
     float: left;
