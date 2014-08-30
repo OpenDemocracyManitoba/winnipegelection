@@ -48,27 +48,4 @@ feature 'User visits the home page' do
       Timecop.return
     end
   end
-
-  context 'interacting with CMS page links' do
-    given(:first_page) { Page.first }
-
-    scenario 'they see the correct number of CMS page links' do
-      cms_page_links = page.all('a.cms-page')
-      expect(cms_page_links.count).to eq(3)
-    end
-
-    scenario 'they can read a title from a cms page link' do
-      expect(page).to have_css('a.cms-page', text: first_page.title)
-    end
-
-    scenario 'they can navigate to a CMS page' do
-      within('#main') { click_link(first_page.title) }
-      expect(page.status_code).to be(200)
-    end
-
-    scenario 'they navigate to the correct CMS page' do
-      within('#main') { click_link(first_page.title) }
-      expect(page).to have_content(first_page.title)
-    end
-  end
 end
