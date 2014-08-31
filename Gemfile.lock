@@ -323,6 +323,7 @@ DEPENDENCIES
   guard-rubocop
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   mini_magick
   nokogiri
   pg

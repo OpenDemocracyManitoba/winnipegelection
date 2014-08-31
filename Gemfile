@@ -40,6 +40,7 @@ gem 'validate_url'
 gem 'nokogiri'
 gem 'feed-normalizer'
 gem 'sitemap_generator'
+gem 'kaminari'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'

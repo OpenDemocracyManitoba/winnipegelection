@@ -4,6 +4,7 @@ class PeopleController < ApplicationController
     @most_recent_candidacy = @person.most_recent_candidacy
     @most_recent_election = @person.most_recent_election
     @is_running_in_active_election = active_election == @most_recent_election
+    @news_mentions = @person.approved_news_mentions.page(params[:page])
   end
 
   def redirect_show
