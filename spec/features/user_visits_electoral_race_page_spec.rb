@@ -2,12 +2,12 @@ require 'spec_helper'
 
 feature 'User visits an Electoral Race page' do
   context 'for any electoral race' do
-    before(:each) do
-      visit city_of_winnipeg_2014.friendly_path
-    end
-
     given(:city_of_winnipeg_2014) do
       electoral_races(:city_of_winnipeg_2014_election_race)
+    end
+
+    before(:each) do
+      visit city_of_winnipeg_2014.friendly_path
     end
 
     scenario 'the page successfully loads' do
@@ -24,15 +24,15 @@ feature 'User visits an Electoral Race page' do
   end
 
   context 'for an electoral race with candidacies' do
-    before(:each) do
-      visit city_of_winnipeg_2014.friendly_path
-    end
-
     given(:city_of_winnipeg_2014) do
       electoral_races(:city_of_winnipeg_2014_election_race)
     end
     given(:mayoral_person) { people(:darth_vadar) }
     given(:active_candidates) { 2 }
+
+    before(:each) do
+      visit city_of_winnipeg_2014.friendly_path
+    end
 
     scenario 'they see the correct number of mayoral candidates' do
       candidate_cards = page.all('.candidate-card')
@@ -55,16 +55,25 @@ feature 'User visits an Electoral Race page' do
   end
 
   context 'for an electoral race without candidacies' do
-    before(:each) do
-      visit electoral_race.friendly_path
-    end
-
     given(:electoral_race) do
       electoral_races(:point_douglas_2014_election_race)
     end
 
     scenario 'they see a no-candidates-registered message' do
+      visit electoral_race.friendly_path
       expect(page).to have_content('There are 0 candidates')
+    end
+  end
+
+  context 'for an electoral race from a non-active election' do
+    given(:electoral_race) do
+      electoral_races(:city_of_winnipeg_2010_election_race)
+    end
+
+    scenario 'they see a not-active-electoral-ward message' do
+      visit electoral_race.friendly_path
+      expect(page).to have_content('The information on this page was ' \
+                                   'collected for the 2010 Winnipeg Civic Election.')
     end
   end
 end
