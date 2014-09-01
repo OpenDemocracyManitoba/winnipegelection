@@ -32,11 +32,15 @@ feature 'User visits an Electoral Race page' do
       electoral_races(:city_of_winnipeg_2014_election_race)
     end
     given(:mayoral_person) { people(:darth_vadar) }
+    given(:active_candidates) { 2 }
 
     scenario 'they see the correct number of mayoral candidates' do
       candidate_cards = page.all('.candidate-card')
-      active_candidates = 2
       expect(candidate_cards.count).to eq(active_candidates)
+    end
+
+    scenario 'they see the correct candidate number message' do
+      expect(page).to have_text("There are #{active_candidates} candidates")
     end
 
     scenario 'they can read a name from a candidate card link' do
@@ -60,7 +64,7 @@ feature 'User visits an Electoral Race page' do
     end
 
     scenario 'they see a no-candidates-registered message' do
-      expect(page).to have_content('no registered candidates')
+      expect(page).to have_content('There are 0 candidates')
     end
   end
 end

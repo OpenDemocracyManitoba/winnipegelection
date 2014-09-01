@@ -8,34 +8,29 @@ class ElectoralRace < ActiveRecord::Base
 
   validates :region, :election, presence: true
 
-  NO_REGISTERED_CANDIDATES = 'There are no registered candidates in this' \
-                             'electoral race.'
-  CANDIDATES_RANDOMIZED = 'Candidates are displayed in random order.'
-
-  def region_name_with_type
-    region.nil? ? 'unknown region' : region.name_with_type
-  end
-
   delegate :year, to: :election, allow_nil: true
   delegate :region_type_name, to: :region, allow_nil: true
   delegate :name_with_parent, to: :region, prefix: true
+  delegate :name_with_parent_and_type, to: :region, prefix: true, allow_nil: true
   delegate :name, to: :region, prefix: true
 
-  def name_with_type_and_year
-    "#{region_name_with_type} - #{year}"
+  def name_with_type_parent_and_year
+    "#{region_name_with_parent_and_type} - #{year}"
   end
-  alias_method :name, :name_with_type_and_year
+  alias_method :name, :name_with_type_parent_and_year
 
-  def name
-    name_with_type_and_year
-  end
-
-  def candidacy_order_message
-    candidacies.empty? ? NO_REGISTERED_CANDIDATES : CANDIDATES_RANDOMIZED
+  include ActionView::Helpers::TextHelper
+  def candidates_and_seats_message
+    seats_phrase = if seats_to_fill == 1
+                     ''
+                   else
+                     "competing for #{pluralize seats_to_fill, 'seats'}"
+                   end
+    "There are #{pluralize candidacies.size, 'candidates'} #{seats_phrase} in this race."
   end
 
   include FriendlyURL
   def slug_for_friendly_url
-    name_with_type_and_year.parameterize
+    name_with_type_parent_and_year.parameterize
   end
 end

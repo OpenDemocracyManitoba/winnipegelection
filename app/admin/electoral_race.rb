@@ -6,7 +6,7 @@ ActiveAdmin.register ElectoralRace do
     selectable_column
     id_column
     column :name, sortable: true do |electoral_race|
-      link_to electoral_race.name_with_type_and_year,
+      link_to electoral_race.name_with_type_parent_and_year,
               edit_admin_electoral_race_path(electoral_race)
     end
     column :seats_to_fill
