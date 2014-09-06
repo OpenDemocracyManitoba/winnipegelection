@@ -4,5 +4,6 @@ class HomeController < ApplicationController
                                    .includes(region: :region_type)
                                    .where(region_types: { name: 'Mayoral' })
                                    .first
+    @latest_news_articles = NewsArticle.approved.most_recent
   end
 end

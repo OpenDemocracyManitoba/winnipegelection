@@ -26,4 +26,8 @@ class NewsArticle < ActiveRecord::Base
   def self.rejected
     where(moderation: 'rejected')
   end
+
+  def self.most_recent(number_of_articles = 5)
+    order(:publication_date).reverse_order.limit(number_of_articles)
+  end
 end

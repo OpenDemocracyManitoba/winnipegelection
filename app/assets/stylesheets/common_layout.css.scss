@@ -193,10 +193,12 @@ header {
 
 .medium-row {
   height: 350px;
+  overflow: hidden;
 }
 
 .short-row {
   height: 235px;
+  overflow: hidden;
 }
 
 .candidate-height {
@@ -475,7 +477,14 @@ div.questionnaire {
         }
     }
     .map {
-        maring-left: 2px;
+        margin-left: 2px;
     }
 }
 
+ul.home_latest_news {
+    margin-left: 18px;
+
+    li {
+        margin-bottom: 1em;
+    }
+}
