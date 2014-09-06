@@ -16,4 +16,16 @@ ActiveAdmin.register Candidacy do
     column :updated_at
     default_actions
   end
+
+  form do |f|
+    f.inputs "Candidacy" do
+      f.input :electoral_race, as: :select, collection: ElectoralRace.all.sort_by(&:name)
+      f.input :person, as: :select, collection: Person.order(:name).all
+      f.input :questionnaire
+      f.input :end_date
+      f.input :is_incumbent
+      f.input :is_winner
+    end
+    f.actions
+  end
 end

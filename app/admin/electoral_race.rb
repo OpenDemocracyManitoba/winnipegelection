@@ -20,7 +20,7 @@ ActiveAdmin.register ElectoralRace do
   form do |f|
     f.inputs "Electoral Race" do
       f.input :navigation_heading
-      f.input :region, as: :select, collection: Region.all.map{ |r| [r.name_with_type, r.id]}
+      f.input :region, as: :select, collection: Region.all.map{ |r| [r.name_with_parent_and_type, r.id]}
       f.input :election
       f.input :polygon
       f.input :seats_to_fill
