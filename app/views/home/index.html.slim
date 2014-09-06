@@ -44,6 +44,7 @@ div.flow-it
     ul.home_latest_news
       - @latest_news_articles.each do |article|
         li= link_to article.title, article.url
+    p.small.grey Articles are #{link_to 'gathered from Google News', '/pages/13/frequently-asked-questions#news'}.
 
   div.one-column.medium-row
     h2 2014 Election Calendar
