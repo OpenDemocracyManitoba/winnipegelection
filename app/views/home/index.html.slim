@@ -44,7 +44,7 @@ div.flow-it
     ul.home_latest_news
       - @latest_news_articles.each do |article|
         li
-          p = link_to article.title.chop + '.' , article.url
+          p = link_to truncate(article.title.chop + '.', length: 65) , article.url
           p.small.grey #{article.news_source.name} - #{article.publication_date.to_formatted_s(:short)}
     p.small.grey Articles are #{link_to 'gathered from Google News', '/pages/13/frequently-asked-questions#news'}.
 
