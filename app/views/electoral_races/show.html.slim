@@ -9,8 +9,6 @@ br
       p For details on the most recent election #{link_to 'return to our home page', '/'}.
 p
   = @electoral_race.candidates_and_seats_message
-.flow-it
-  .candidate-cards
-    = render @electoral_race.candidacies
+= render @electoral_race
 p.small
   em Candidates are displayed in random order.

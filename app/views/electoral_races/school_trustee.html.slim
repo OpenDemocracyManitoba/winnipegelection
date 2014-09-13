@@ -1,0 +1,10 @@
+- title "2014 School Trustee Candidates - Winnipeg Election"
+br
+h2 2014 School Trustee Candidates - All Wards
+p.small
+  em Wards are displayed in alphabetical order by School Division. Candidates are displayed in random order.
+br
+br
+- @electoral_races.each do |electoral_race|
+  h2 = electoral_race.name
+  = render electoral_race

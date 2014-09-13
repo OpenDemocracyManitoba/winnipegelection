@@ -5,11 +5,6 @@ p.small
   em Wards are displayed in alphabetical order. Candidates are displayed in random order.
 br
 br
-- @electoral_races.each do |er|
-  h2 = er.name
-  - if er.candidacies.count.zero?
-    p There are currently no candidates registered in this electoral race.
-  - else
-    .flow-it
-      .candidate-cards
-        = render er.candidacies
+- @electoral_races.each do |electoral_race|
+  h2 = electoral_race.name
+  = render electoral_race
