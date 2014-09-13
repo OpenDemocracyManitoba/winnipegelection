@@ -465,7 +465,7 @@ div.questionnaire {
 .mini-map {
     overflow: auto;
     zoom: 1;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     .map, .links {
         float: left;
     }
@@ -478,6 +478,9 @@ div.questionnaire {
     }
     .map {
         margin-left: 2px;
+        img {
+            height: 90px;
+        }
     }
 }
 
@@ -485,6 +488,9 @@ ul.home_latest_news {
     margin-left: 18px;
 
     li {
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
+        p {
+            margin-bottom: 0;
+        }
     }
 }
