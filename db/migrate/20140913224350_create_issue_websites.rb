@@ -4,7 +4,7 @@
       t.string :title
       t.string :description
       t.string :url
-      t.reference :election
+      t.references :election
 
       t.timestamps
     end
