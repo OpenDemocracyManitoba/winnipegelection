@@ -6,22 +6,21 @@ div.flow-it
     br
     h2 Voter Countdown
     div.days-until-election
-      - if active_election.days_until_election == 0
-        p The Election is Today!
-      - elsif active_election.days_until_election > 0
+      - if active_election.days_until_election >= 0
         div.flip-counter
-          div.splitFlap
-            / span.top = active_election.days_until_election.to_s[0]
-            / span.bottom = active_election.days_until_election.to_s[0]
-            span.top = 0
-            span.bottom = 0
-          div.splitFlap
-            span.top = active_election.days_until_election.to_s[1]
-            span.bottom = active_election.days_until_election.to_s[1]
+          div.splitFlap.tens-place
+            span.top = days_until_active_election_tens_place
+            span.bottom = days_until_active_election_tens_place
+          div.splitFlap.ones-place
+            span.top = days_until_active_election_ones_place
+            span.bottom = days_until_active_election_ones_place
           span.days = 'Day'.pluralize(active_election.days_until_election)
-        p.until-election Until the election!
+          - if active_election.days_until_election == 0
+            p Election today!
+          - else
+            p Until the election!
       - else
-        p = "The most recent election was held on #{active_election.election_date}."
+        p = "The most recent election was held on #{active_election_date_in_english}."
 
   div.one-column.medium-row
     h2 Find Your Candidates
