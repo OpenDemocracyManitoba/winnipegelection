@@ -98,7 +98,7 @@ footer {
 }
 
 
-header {
+header.site {
   background: url(image-path('winnipeg_skyline.gif')) no-repeat bottom right;
   padding: 25px 10px 0 10px;
   height: 80px;
@@ -359,7 +359,7 @@ p.article-notice {
 }
 
 @media all and (max-width: 959px) {
-  header {
+  header.site {
     background-image: none;
     padding-top: 0.5em;
     height: auto;
@@ -379,7 +379,7 @@ p.article-notice {
 }
 
 @media all and (max-width: 639px) {
-  header {
+  header.site {
     background: none;
     padding-top: 0.5em;
     height: auto;

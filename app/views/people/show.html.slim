@@ -9,13 +9,14 @@
   .candidate-cards
     = render @person.most_recent_candidacy
   .two-columns-early-shrink.candidate-height
-    h2= @person.name
-    p
-      #{@person.name}'s candidacy in the #{link_to @person.most_recent_candidacy.formal_race_description, @person.most_recent_electoral_race.friendly_path}.
+    h2 #{@person.name}
+    p Candidate in the #{link_to @person.most_recent_candidacy.formal_race_description, @person.most_recent_electoral_race.friendly_path}.
+    p There are #{link_to(pluralize(@news_mentions.size.to_i, 'recent news articles'), '#recent_news')} that mention #{@person.name}. 
   .three-columns
     - if @person.most_recent_candidacy.questionnaire?
       h2 Questionnaire Response
       .questionnaire = markdown(@person.most_recent_candidacy.questionnaire)
+  .three-columns#recent_news
     h2 News that Mentions #{@person.name}
     p.small.grey News articles are automatically gathered from #{ link_to 'Google News', 'http://news.google.ca' } by searching for the full names of the candidates in the upcoming election. See #{link_to 'faq', '/pages/13/frequently-asked-questions#news'} for more details.
     - if @person.approved_news_mentions.empty?
