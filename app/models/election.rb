@@ -41,9 +41,4 @@ class Election < ActiveRecord::Base
                    .order('regions.name')
                    .sort_by { |er| er.region_name_with_parent }
   end
-
-  def self.active_election_with_electoral_races
-    active_election.electoral_races
-                   .includes(region: :region_type)
-  end
 end
