@@ -1,0 +1,8 @@
+- if electoral_race.candidacies.empty?
+  p There are currently no candidates registered in this electoral race.
+- else
+  .flow-it
+    .candidate-cards
+      = render electoral_race.candidacies
+br
+br

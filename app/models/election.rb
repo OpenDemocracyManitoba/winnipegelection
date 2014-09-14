@@ -6,6 +6,8 @@ class Election < ActiveRecord::Base
 
   validates :name, presence: true
 
+  delegate :year, to: :election_date
+
   def days_until_election
     (self.election_date - Date.today).to_i
   end
@@ -22,5 +24,20 @@ class Election < ActiveRecord::Base
 
   def self.active_election
     find_by(is_active: true)
+  end
+
+  def self.active_council_races_order_by_region_name
+    active_election.electoral_races
+                   .includes(region: :region_type)
+                   .where(region_types: { name: 'Council Ward' })
+                   .order('regions.name')
+  end
+
+  def self.active_school_trustee_races_order_by_region_name
+    active_election.electoral_races
+                   .includes(region: :region_type)
+                   .where(region_types: { name: 'School Ward' })
+                   .order('regions.name')
+                   .sort_by { |er| er.region_name_with_parent }
   end
 end

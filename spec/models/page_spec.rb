@@ -12,6 +12,7 @@ describe Page do
       let(:object_of_described_class) do
         FactoryGirl.create(:page, title: 'Test Slug')
       end
+      let(:test_slug) { 'test-slug' }
     end
 
     let(:page) { FactoryGirl.create(:page, title: 'Duck Soup') }

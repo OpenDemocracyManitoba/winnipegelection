@@ -1,9 +1,69 @@
-header
-  h1 = active_election.name
+- title "Winnipeg Election 2014 - Winnipeg Civic Election"
+div.flow-it
+  div.one-column.medium-row
+    h2 Winnipeg Election 2014
+    p On <strong>Wednesday October 22 of 2014</strong> the citizens of Winnipeg go to the polls to elect their Mayor, their City Councillors and their School Trustees.
+    br
+    h2 Voter Countdown
+    div.days-until-election
+      - if active_election.days_until_election == 0
+        p The Election is Today!
+      - elsif active_election.days_until_election > 0
+        p.days = pluralize(active_election.days_until_election,'Day')
+        p Until the Election!
+      - else
+        p = "The most recent election was held on #{active_election.election_date}."
 
-p.days_until_election
-  | #{active_election.days_until_election} Days Until The Election
+  div.one-column.medium-row
+    h2 Find Your Candidates
+    div.mini-map
+      .map = link_to image_tag('maps/city_thumb.png'), @mayoral_race.friendly_path
+      .links
+        p
+          strong = link_to 'Mayoral Candidates', @mayoral_race.friendly_path
+        p.small = link_to 'Role of the Mayor', '/pages/16/role-and-mandate-of-the-mayor'
+    div.mini-map
+      .map = link_to image_tag('maps/civicwards_thumb.png'), electoral_races_council_path
+      .links
+        p
+          strong = link_to 'Council Candidates', electoral_races_council_path
+        p.small = link_to 'Role of a City Councillor', '/pages/17/the-role-of-a-city-councillor'
+    div.mini-map
+      .map = link_to image_tag('maps/schoolwards_thumb.png'), electoral_races_school_trustee_path
+      .links
+        p
+          strong = link_to 'Trustee Candidates', electoral_races_school_trustee_path
+        p.small = link_to 'Role of a School Trustee', '/pages/18/the-role-of-a-school-trustee'
 
-ul
-  - cms_pages.each do |cms_page|
-    li = link_to cms_page.title, cms_page.friendly_path, class: 'cms_page'
+  div.one-column.medium-row.social
+    h2 The Twitter Conversation
+    = render 'twitter'
+
+  div.one-column.medium-row
+    h2 Latest Election News
+    ul.home_latest_news
+      - @latest_news_articles.each do |article|
+        li
+          p = link_to truncate(article.title.chop + '.', length: 65) , article.url
+          p.small.grey #{article.news_source.name} - #{article.publication_date.to_formatted_s(:short)}
+    p.small.grey Articles are #{link_to 'gathered from Google News', '/pages/13/frequently-asked-questions#news'}.
+
+  div.one-column.medium-row
+    h2 2014 Election Calendar
+    | <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=270&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=b71puq97c63k4lunhtapbqsp2g%40group.calendar.google.com&amp;color=%238D6F47&amp;ctz=America%2FWinnipeg" style=" border-width:0 " width="280" height="270" frameborder="0" scrolling="no"></iframe>
+    br
+    br
+    p.small
+      = link_to 'Visit full-page Calendar for details.', '/pages/20/election-calendar'
+
+  div.one-column.medium-row
+    h2 WinnipegElection.ca
+    p A citizen created resource designed to help you learn about the candidates in the upcoming 2014 Winnipeg General Election.
+    p Built by #{link_to 'Open Democracy Manitoba', '/pages/11/about-us'}. 
+    br
+    br
+    | <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FWinnipeg-Election%2F145495908793867&amp;width=270&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=61535010545" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:270px; height:80px;" allowTransparency="true"></iframe>
+    br
+    br
+    p
+      | <a href="http://twitter.com/WpgElection" class="twitter-follow-button">Follow @WpgElection</a>

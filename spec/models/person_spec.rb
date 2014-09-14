@@ -17,12 +17,43 @@ describe Person do
       let(:object_of_described_class) do
         FactoryGirl.create(:person, name: 'Test Slug')
       end
+      let(:test_slug) { 'test-slug' }
     end
 
     let(:person) { FactoryGirl.create(:person, name: 'Walter Glutton') }
 
     it 'returns a friendly url path' do
       expect(person.friendly_path).to match %r{^/people/\d+/walter-glutton$}
+    end
+  end
+
+  context 'when a Person has election history' do
+    describe '#most_recent_candidacy' do
+      let(:person) { people(:darth_vadar) }
+      let(:candidacy) { candidacies(:darth_vadar_mayoral_2014) }
+
+      it 'returns the most recent candidacy for this Person' do
+        expect(person.most_recent_candidacy).to eq(candidacy)
+      end
+    end
+
+    describe '#most_recent_election' do
+      let(:person) { people(:darth_vadar) }
+      let(:election) { elections(:winnipeg_2014_election) }
+
+      it 'returns the most recent Election this Person ran in' do
+        expect(person.most_recent_election).to eq(election)
+      end
+    end
+
+  end
+
+  describe 'associated news mentions and news articles' do
+    it 'differentiates between all news articles and approved articles' do
+      darth = people(:darth_vadar)
+      approved_articles = darth.approved_news_articles
+      all_articles = darth.news_articles
+      expect(all_articles.count).to be > (approved_articles.count)
     end
   end
 end

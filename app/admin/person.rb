@@ -2,11 +2,13 @@ ActiveAdmin.register Person do
 
   permit_params :name, :office_address, :phone_number, :email,
                 :image, :website, :council_site, :facebook,
-                :twitter, :youtube, :linkedin, :remove_image
+                :twitter, :youtube, :linkedin, :remove_image,
+                :also_known_as
 
   form :html => { :enctype => 'multipart/form-data' } do |f|
     f.inputs "Details", :multipart => true do
       f.input :name
+      f.input :also_known_as
       f.input :image, as: :file, :hint => f.object.image.present? \
         ? f.template.image_tag(f.object.image.tiny.url)
         : f.template.content_tag(:span, 'no profile image yet')
@@ -29,15 +31,16 @@ ActiveAdmin.register Person do
       f.input :linkedin
     end
 
-    f.actions  
-  end  
+    f.actions
+  end
 
   index do
     selectable_column
     id_column
-    column :name, sortable: true do |person|
+    column :name, sortable: :name do |person|
       link_to person.name, edit_admin_person_path(person)
     end
+    column :also_known_as
     column :image do |person|
       image_tag person.image.tiny.url
     end

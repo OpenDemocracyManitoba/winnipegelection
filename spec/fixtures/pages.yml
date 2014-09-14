@@ -3,6 +3,7 @@ about:
   content: 'Lorem Ipsum and more and that and on and on. Halcyon.'
   permalink: 'about us'
   show_title: true
+  navigation_heading: about
 
 press:
   title: 'Press Releases and Mentions'

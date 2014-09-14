@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140913224350) do
+ActiveRecord::Schema.define(version: 20140807125823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,20 +81,60 @@ ActiveRecord::Schema.define(version: 20140913224350) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "seats_to_fill"
+    t.integer  "navigation_heading_id"
   end
 
   add_index "electoral_races", ["election_id"], name: "index_electoral_races_on_election_id", using: :btree
+  add_index "electoral_races", ["navigation_heading_id"], name: "index_electoral_races_on_navigation_heading_id", using: :btree
   add_index "electoral_races", ["region_id", "election_id"], name: "index_electoral_races_on_region_id_and_election_id", unique: true, using: :btree
   add_index "electoral_races", ["region_id"], name: "index_electoral_races_on_region_id", using: :btree
 
-  create_table "issues_websites", force: true do |t|
-    t.string   "title"
-    t.string   "description"
+  create_table "navigation_headings", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "url"
-    t.integer  "election_id"
+    t.float    "display_order"
+    t.integer  "navigation_heading_id"
+  end
+
+  add_index "navigation_headings", ["navigation_heading_id"], name: "index_navigation_headings_on_navigation_heading_id", using: :btree
+
+  create_table "news_articles", force: true do |t|
+    t.string   "title"
+    t.datetime "publication_date"
+    t.string   "url"
+    t.string   "moderation"
+    t.text     "rejection_reason"
+    t.integer  "news_source_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "news_articles", ["news_source_id"], name: "index_news_articles_on_news_source_id", using: :btree
+  add_index "news_articles", ["url"], name: "index_news_articles_on_url", unique: true, using: :btree
+
+  create_table "news_mentions", force: true do |t|
+    t.text     "summary"
+    t.integer  "person_id"
+    t.integer  "news_article_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "news_mentions", ["news_article_id"], name: "index_news_mentions_on_news_article_id", using: :btree
+  add_index "news_mentions", ["person_id", "news_article_id"], name: "index_news_mentions_on_person_id_and_news_article_id", unique: true, using: :btree
+  add_index "news_mentions", ["person_id"], name: "index_news_mentions_on_person_id", using: :btree
+
+  create_table "news_sources", force: true do |t|
+    t.string   "name"
+    t.string   "base_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "is_local_source"
+  end
+
+  add_index "news_sources", ["name", "base_url"], name: "index_news_sources_on_name_and_base_url", unique: true, using: :btree
 
   create_table "pages", force: true do |t|
     t.string   "title"
@@ -103,7 +143,10 @@ ActiveRecord::Schema.define(version: 20140913224350) do
     t.boolean  "show_title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "navigation_heading_id"
   end
+
+  add_index "pages", ["navigation_heading_id"], name: "index_pages_on_navigation_heading_id", using: :btree
 
   create_table "people", force: true do |t|
     t.string   "name"
@@ -119,6 +162,7 @@ ActiveRecord::Schema.define(version: 20140913224350) do
     t.string   "linkedin"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "also_known_as"
   end
 
   create_table "region_types", force: true do |t|

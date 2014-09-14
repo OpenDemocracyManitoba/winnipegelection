@@ -1,6 +1,13 @@
 class Person < ActiveRecord::Base
   has_many :candidacies, inverse_of: :person
   has_many :electoral_races, through: :candidacies
+  has_many :news_mentions, inverse_of: :person, dependent: :destroy
+  has_many :news_articles, through: :news_mentions
+  has_many :approved_news_articles,
+           -> { where news_articles: { moderation: 'approved' } },
+           through: :news_mentions,
+           class_name: 'NewsArticle',
+           source: :news_article
 
   validates :name, presence: true
   validates :website, :council_site, :facebook, :twitter, :youtube, :linkedin,
@@ -11,5 +18,34 @@ class Person < ActiveRecord::Base
   include FriendlyURL
   def slug_for_friendly_url
     name.parameterize
+  end
+
+  def most_recent_candidacy
+    @most_recent_candidacy ||= candidacies.includes(electoral_race: :election)
+                                          .order('elections.election_date')
+                                          .last
+  end
+
+  def most_recent_electoral_race
+    most_recent_candidacy.electoral_race
+  end
+
+  def most_recent_election
+    most_recent_electoral_race.election
+  end
+
+  def most_recent_region
+    most_recent_candidacy.electoral_race.region
+  end
+
+  def approved_news_mentions
+    news_mentions.includes(:news_article)
+                 .where(news_articles: { moderation: 'approved'  })
+                 .order('news_articles.publication_date DESC')
+  end
+
+  def name_for_title
+    "#{name} - #{most_recent_region.name_with_parent_and_type} - " \
+    "Winnipeg Election #{most_recent_election.year}"
   end
 end

@@ -1,0 +1,29 @@
+darth_vadar_mayoral_2014:
+  questionnaire: 'I am Darth ipsum in 2014.'
+  is_incumbent: true
+  person: darth_vadar
+  electoral_race: city_of_winnipeg_2014_election_race
+
+darth_vadar_mayoral_2010:
+  questionnaire: 'I am Darth ipsum in 2010.'
+  is_incumbent: false
+  person: darth_vadar
+  electoral_race: city_of_winnipeg_2010_election_race
+
+luke_skywalker_mayoral_2014:
+  questionnaire: ''
+  is_incumbent: false
+  person: luke_skywalker
+  electoral_race: city_of_winnipeg_2014_election_race
+
+tyrion_lannister_mayoral_2010:
+  questionnaire: ''
+  is_incumbent: false
+  person: tyrion_lannister
+  electoral_race: city_of_winnipeg_2010_election_race
+
+jamie_lannister_council_2014:
+  questionnaire: ''
+  is_incumbent: false
+  person: jamie_lannister
+  electoral_race: st_vital_2014_election_race

@@ -4,11 +4,12 @@ city_of_winnipeg_2010_election_race:
   region: city_of_winnipeg
   election: winnipeg_2010_election
   seats_to_fill: 1
-  
+
 city_of_winnipeg_2014_election_race:
   region: city_of_winnipeg
   election: winnipeg_2014_election
   seats_to_fill: 1
+  navigation_heading: candidates
 
 # Three electoral races for council ward of st vital.
 
@@ -26,7 +27,8 @@ st_vital_2014_election_race:
   region: st_vital_council_ward
   election: winnipeg_2014_election
   seats_to_fill: 1
-  
+  navigation_heading: candidates
+
 # Two electoral races for council ward of point douglas.
 
 point_douglas_2010_election_race:
@@ -38,7 +40,7 @@ point_douglas_2014_election_race:
   region: point_douglas_council_ward
   election: winnipeg_2014_election
   seats_to_fill: 1
-  
+
 # Two electoral races for school ward of Ward 1 (Louis Reil)
 
 ward_1_louis_reil_2010_election_race:
@@ -50,7 +52,7 @@ ward_1_louis_reil_2014_election_race:
   region: school_ward_1_louis_riel
   election: winnipeg_2014_election
   seats_to_fill: 2
-  
+
 # Three electoral races for school ward of Ward 2 (Louis Reil)
 
 ward_2_louis_reil_2010_election_race:
@@ -68,3 +70,9 @@ ward_2_louis_reil_2014_election_race:
   election: winnipeg_2014_election
   seats_to_fill: 2
 
+# Friendly URL Electoral Race
+
+friendly_url_electoral_race:
+  region: friendly_url_region
+  election: winnipeg_2014_election
+  seats_to_fill: 1

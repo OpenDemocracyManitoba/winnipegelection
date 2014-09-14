@@ -1,0 +1,14 @@
+- title @electoral_race.name
+br
+h2 = @electoral_race.name
+br
+- unless @electoral_race.in_active_election?
+  .flow-it
+    .three-columns class="notice"
+      p The information on this page was collected for the #{@electoral_race.election_name}.
+      p For details on the most recent election #{link_to 'return to our home page', '/'}.
+p
+  = @electoral_race.candidates_and_seats_message
+= render @electoral_race
+p.small
+  em Candidates are displayed in random order.

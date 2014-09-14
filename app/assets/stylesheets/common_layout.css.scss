@@ -1,0 +1,496 @@
+$link-color: #3b59bb;
+$line-height: 1.3;
+
+@mixin drop-shadow($ho, $vo, $b, $a) {
+  -o-box-shadow: $ho $vo $b rgba(0, 0, 0, $a);
+  -icab-box-shadow: $ho $vo $b rgba(0, 0, 0, $a);
+  -khtml-box-shadow: $ho $vo $b rgba(0, 0, 0, $a);
+  -moz-box-shadow: $ho $vo $b rgba(0, 0, 0, $a);
+  -webkit-box-shadow: $ho $vo $b rgba(0, 0, 0, $a);
+  box-shadow: $ho $vo $b rgba(0, 0, 0, $a);
+}
+
+@mixin rounded($tl, $tr, $br, $bl) {
+  -o-border-radius: $tl $tr $br $bl;
+  -icab-border-radius: $tl $tr $br $bl;
+  -khtml-border-radius: $tl $tr $br $bl;
+  -moz-border-radius: $tl $tr $br $bl;
+  -webkit-border-top-right-radius: $tr;
+  -webkit-border-top-left-radius: $tl;
+  -webkit-border-bottom-right-radius: $br;
+  -webkit-border-bottom-left-radius: $bl;
+  border-radius: $tl $tr $br $bl;
+}
+
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
+  vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6, {
+  margin: 0 0 0.5em 10px;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: Georgia, "Bitstream Charter", serif;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-family: Georgia, "Bitstream Charter", serif;
+}
+
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-size: 14px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  img {
+    border: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin-bottom: 1em;
+  margin-left: 10px;
+}
+
+#container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+footer {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 25px;
+  padding-top: 20px;
+  font-size: 10px;
+  color: #bbbbbb;
+  clear: both;
+}
+
+
+header {
+  background: url(image-path('winnipeg_skyline.gif')) no-repeat bottom right;
+  padding: 25px 10px 0 10px;
+  height: 80px;
+  margin-right: 14px;
+  h1 {
+    font-size: 41px;
+    margin: -10px 0 0 0;
+    a {
+      color: #202040;
+      font-family: Georgia, "Bitstream Charter", serif;
+    }
+  }
+  h3 {
+    font-size: 1.2em;
+    color: #4a4a6f;
+    margin: 0.5em 0 0 0;
+  }
+  h1, h3 {
+    font-style: italic;
+  }
+}
+
+#main {
+  margin-top: 1em;
+  h2.title {
+    margin-top: 10px;
+  }
+}
+
+.flow-it {
+  width: 100%;
+  overflow: hidden;
+  zoom: 1;
+  margin-bottom: 1em;
+}
+
+.non-column {
+  margin-left: 10px;
+}
+
+.one-column, .two-columns, .three-columns, .two-columns-early-shrink {
+  @include drop-shadow(0, 2px, 5px, 0.2);
+  margin: 10px;
+  border: 1px solid #e4e4e4;
+  padding: 10px;
+  float: left;
+  background-color: #eeeeee;
+  color: #333333;
+  p {
+    margin-bottom: 1em;
+    margin-left: 0;
+  }
+}
+
+.non-column, .one-column, .two-columns, .three-columns, .two-columns-early-shrink {
+  line-height: $line-height;
+  ul, ol {
+    margin-left: 2em;
+    margin-bottom: 1em;
+  }
+  h1, h2, h3, h4 {
+    margin-bottom: 1em;
+    margin-left: 0;
+  }
+}
+
+.three-columns {
+  width: 918px;
+}
+
+.two-columns {
+  width: 598px;
+}
+
+.two-columns-early-shrink {
+  width: 598px;
+}
+
+.one-column {
+  width: 278px;
+}
+
+.two-column-flow {
+  width: 640px;
+  float: left;
+}
+
+.one-column-flow {
+  width: 320px;
+  float: left;
+}
+
+.medium-row {
+  height: 350px;
+  overflow: hidden;
+}
+
+.short-row {
+  height: 235px;
+  overflow: hidden;
+}
+
+.candidate-height {
+    min-height: 134px;
+}
+
+.article {
+  margin-bottom: 2em;
+  h3 {
+    margin-bottom: 5px;
+  }
+  p.date {
+    font-size: 0.75em;
+    margin-bottom: 1.1em;
+  }
+  p.summary {
+    font-size: 0.9em;
+  }
+  p.summary, p.summary b, p.summary em, p.date {
+    font-family: Georgia, "Bitstream Charter", serif;
+  }
+}
+
+p.article-notice {
+  color: #666666;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+.candidate-cards {
+  .candidate-card {
+    p.name {
+    }
+    .election-website, .website {
+    }
+  }
+}
+
+.candidate-cards {
+  .candidate-card {
+    position: relative;
+    @include drop-shadow(0, 2px, 5px, 0.2);
+    margin: 10px;
+    width: 288px;
+    min-height: 154px;
+    border: 1px solid #e4e4e4;
+    padding-left: 10px;
+    background-color: #eeeeee;
+    float: left;
+    p {
+      margin-left: 0;
+      color: #333;
+    }
+    p.name {
+      position: absolute;
+      margin: 1em 0;
+    }
+    p.incumbent {
+      margin: 2.5em 0 0 0;
+      font-style: italic;
+      font-size: 0.8em;
+      color: #777;
+    }
+    .election-website, .website {
+      color: #999999;
+      font-size: 0.85em;
+      margin: 1em 0;
+    }
+    .phone, .candidate-party, .news, .address, .qanda {
+      font-size: 0.75em;
+      margin-bottom: 0.7em;
+    }
+    .qanda {
+      span {
+        color: #14510f;
+      }
+    }
+    .image {
+      @include drop-shadow(1px, 1px, 8px, 0.3);
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: center;
+      width: 117px;
+      background-color: #dbdbda;
+      padding: 4px 0 2px 0;
+      img {
+        height: 104px;
+      }
+      p {
+        margin: 0;
+        font-size: 0.8em;
+        font-weight: bold;
+      }
+    }
+    .icons {
+      margin-bottom: 10px;
+      a img {
+        border-bottom: 2px solid $link-color;
+      }
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.news_article {
+  font-size: 0.9em;
+  h3 {
+      margin-bottom: 0;
+  }
+  .date {
+      font-family: Georgia, "Bitstream Charter", serif;
+      margin-top: 0;
+      font-size: 0.9em;
+  }
+}
+
+.breadcrumbs {
+  margin-left: 10px;
+  color: #999999;
+  font-size: 0.9em;
+  a {
+    color: lighten($link-color, 13);
+  }
+}
+
+.visible-block-when-mobile {
+  display: none;
+}
+
+.grey {
+  color: #777777;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.tiny {
+  font-size: 0.5em;
+}
+
+#main {
+  position: relative;
+  #feedback {
+    @include drop-shadow(0, 2px, 4px, 0.2);
+    margin: 1em 0 1em 10px;
+    padding: 1em 1em 0.1em 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    background-color: #eeffaa;
+  }
+}
+
+@media all and (max-width: 959px) {
+  header {
+    background-image: none;
+    padding-top: 0.5em;
+    height: auto;
+    h1 {
+      margin-top: 0.25em;
+    }
+  }
+  #container {
+    width: 640px;
+  }
+  .three-columns {
+    width: 598px;
+  }
+  .two-columns-early-shrink {
+    width: 278px;
+  }
+}
+
+@media all and (max-width: 639px) {
+  header {
+    background: none;
+    padding-top: 0.5em;
+    height: auto;
+    h1 {
+      margin-top: 0;
+      font-size: 2.7em;
+      text-align: right;
+    }
+    h3 {
+      font-size: 1.03em;
+    }
+  }
+  #container {
+    width: 320px;
+  }
+  .three-columns, .two-columns {
+    width: 278px;
+  }
+  .two-column-flow {
+    width: 320px;
+  }
+  .visible-block-when-mobile {
+    display: block;
+  }
+  .hidden-block-when-mobile {
+    display: none;
+  }
+  #main {
+    #feedback {
+      position: static;
+      width: auto;
+    }
+    p.breadcrumbs {
+      margin-top: 10px;
+    }
+  }
+}
+
+.one-column, .two-columns, .three-columns {
+  table {
+    font-size: 0.9em;
+    margin: 1.5em 0;
+    tr {
+      border: 1px solid #999999;
+    }
+    td,th {
+      padding: 5px;
+    }
+    th {
+      color: #444444;
+      background-color: #dddddd;
+      text-align: left;
+    }
+  }
+}
+
+div#questionnaires p, div#questionnaires em, div#questionnaires strong, div#questionnaires a {
+  font-family: arial, sans-serif;
+  font-size: 13px;
+}
+
+div.questionnaire {
+  font-size: 0.9em;
+}
+
+.notice {
+  background-color: #eeffaa;
+  border: 1px solid #efffaf;
+  margin-bottom: 1.5em;
+}
+
+.days-until-election {
+    color: green;
+    font-size: 21px;
+    margin-bottom: 30px;
+    margin-top: -12px;
+    .days {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+}
+
+.mini-map {
+    overflow: auto;
+    zoom: 1;
+    margin-bottom: 10px;
+    .map, .links {
+        float: left;
+    }
+    .links {
+        margin-top: 21px;
+        margin-left: 20px;
+        p {
+            margin: 0;
+        }
+    }
+    .map {
+        margin-left: 2px;
+        img {
+            height: 90px;
+        }
+    }
+}
+
+ul.home_latest_news {
+    margin-left: 18px;
+
+    li {
+        margin-bottom: 0.5em;
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

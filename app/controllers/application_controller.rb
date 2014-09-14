@@ -10,8 +10,24 @@ class ApplicationController < ActionController::Base
   end
   helper_method :active_election
 
+  def active_council_races_order_by_region_name
+    @active_council_races ||= Election.active_council_races_order_by_region_name
+  end
+  helper_method :active_council_races_order_by_region_name
+
+  def active_school_trustee_races_order_by_region_name
+    @active_school_trustee_races ||=
+      Election.active_school_trustee_races_order_by_region_name
+  end
+  helper_method :active_school_trustee_races_order_by_region_name
+
   def cms_pages
     @cms_pages ||= Page.cms_pages
   end
   helper_method :cms_pages
+
+  def nav_headings
+    @nav_headings ||= NavigationHeading.parent_navigation_headings
+  end
+  helper_method :nav_headings
 end

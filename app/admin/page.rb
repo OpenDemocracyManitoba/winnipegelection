@@ -1,6 +1,6 @@
 ActiveAdmin.register Page do
 
-  permit_params :title, :content, :permalink, :show_title
+  permit_params :title, :content, :permalink, :show_title, :navigation_heading_id
   
   index do
     column :id

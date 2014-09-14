@@ -18,13 +18,25 @@ class Region < ActiveRecord::Base
 
   validates :name, :region_type, presence: true
 
+  delegate :name, to: :region_type, prefix: true, allow_nil: true
+
   def name_with_type
-    name_with_type = "#{region_type.name}: #{name}"
+    "#{region_type_name}: #{name}"
+  end
 
+  def name_with_parent
     if parent_region.present?
-      name_with_type += " (#{parent_region.name_with_type})"
+      "#{parent_region.name} - #{name}"
+    else
+      name
     end
+  end
 
-    name_with_type
+  def name_with_parent_and_type
+    if parent_region.present?
+      "#{parent_region.name_with_type} - #{name_with_type}"
+    else
+      name_with_type
+    end
   end
 end

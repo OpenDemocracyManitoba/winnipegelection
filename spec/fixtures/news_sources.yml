@@ -1,0 +1,14 @@
+empire_daily:
+  name: 'Empire Daily'
+  base_url: 'http://empiredaily.com'
+  is_local_source: true
+
+westeros_mail:
+  name: 'Westeros Mail'
+  base_url: 'http://westerosmail.com'
+  is_local_source: true
+
+neverland_post:
+  name: 'Neverland Post'
+  base_url: 'http://neverneverlandpost.news'
+  is_local_source: false
