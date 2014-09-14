@@ -25,9 +25,11 @@ class ElectoralRace < ActiveRecord::Base
     seats_phrase = if seats_to_fill == 1
                      ''
                    else
-                     "competing for #{pluralize seats_to_fill, 'seats'}"
+                     "competing for #{pluralize seats_to_fill, 'seat'} "
                    end
-    "There are #{pluralize candidacies.size, 'candidates'} #{seats_phrase} in this race."
+    are_or_is = candidacies.size == 1 ? 'is' : 'are'
+    "There #{are_or_is} #{pluralize candidacies.size, 'candidate'}" \
+    " #{seats_phrase}in this race."
   end
 
   def in_active_election?

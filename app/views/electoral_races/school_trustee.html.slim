@@ -6,5 +6,6 @@ p.small
 br
 br
 - @electoral_races.each do |electoral_race|
-  h2 = electoral_race.name
+  h2= electoral_race.name
+  p= electoral_race.candidates_and_seats_message
   = render electoral_race

@@ -39,6 +39,11 @@ describe ElectoralRace do
         expect(electoral_race.candidates_and_seats_message).to \
           eq('There are 2 candidates competing for 3 seats in this race.')
       end
+      it 'return a shorter message when seat count is one' do
+        electoral_race.seats_to_fill = 1
+        expect(electoral_race.candidates_and_seats_message).to \
+          eq('There are 2 candidates in this race.')
+      end
     end
   end
 
