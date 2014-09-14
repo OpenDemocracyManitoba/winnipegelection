@@ -21,6 +21,14 @@
         = link_to image_tag("icons/#{social_site}_active.jpg"), candidacy.person[social_site]
       - else
         = image_tag("icons/#{social_site}_inactive.jpg")
+    - if candidacy.questionnaire.present?
+      = link_to image_tag("icons/questionnaire_active.jpg"), candidacy.person.friendly_path
+    - else
+      = image_tag("icons/questionnaire_inactive.jpg")
   p.news News: #{ link_to pluralize(candidacy.person.approved_news_articles.count, 'Related Article'), candidacy.person.friendly_path }
   - if candidacy.person.phone_number?
     p.phone Phone: #{ link_to candidacy.person.phone_number, 'tel:' + candidacy.person.phone_number }
+  - if candidacy.questionnaire.present?
+    p.questionnaire 
+      span Questionnaire: 
+      | #{link_to "#{candidacy.person.first_name}'s platform", candidacy.person.friendly_path}.

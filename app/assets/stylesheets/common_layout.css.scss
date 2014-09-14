@@ -1,5 +1,6 @@
 $link-color: #3b59bb;
 $line-height: 1.3;
+$candidate-height: 170px;
 
 @mixin drop-shadow($ho, $vo, $b, $a) {
   -o-box-shadow: $ho $vo $b rgba(0, 0, 0, $a);
@@ -202,7 +203,7 @@ header.site {
 }
 
 .candidate-height {
-    min-height: 134px;
+    min-height: $candidate-height - 20;
 }
 
 .article {
@@ -244,7 +245,7 @@ p.article-notice {
     @include drop-shadow(0, 2px, 5px, 0.2);
     margin: 10px;
     width: 288px;
-    min-height: 154px;
+    min-height: $candidate-height;
     border: 1px solid #e4e4e4;
     padding-left: 10px;
     background-color: #eeeeee;
@@ -266,15 +267,16 @@ p.article-notice {
     .election-website, .website {
       color: #999999;
       font-size: 0.85em;
-      margin: 1em 0;
+      margin: 0.9em 0;
     }
-    .phone, .candidate-party, .news, .address, .qanda {
+    .phone, .candidate-party, .news, .address, .questionnaire {
       font-size: 0.75em;
       margin-bottom: 0.7em;
     }
-    .qanda {
+    .questionnaire {
       span {
-        color: #14510f;
+        font-weight: bold;
+        color: #2F7C24;
       }
     }
     .image {

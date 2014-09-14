@@ -48,4 +48,8 @@ class Person < ActiveRecord::Base
     "#{name} - #{most_recent_region.name_with_parent_and_type} - " \
     "Winnipeg Election #{most_recent_election.year}"
   end
+
+  def first_name
+    name.split(' ').first
+  end
 end
