@@ -8,6 +8,13 @@ class ElectoralRacesController < ApplicationController
   end
 
   def show
-    @electoral_race = ElectoralRace.friendly_find(params)
+    @electoral_race = ElectoralRace.includes(candidacies: :person )
+                                   .friendly_find(params)
+  end
+
+  def show_json
+    @electoral_race = ElectoralRace.includes(candidacies: :person )
+                                   .find(params[:id])
+    render json: @electoral_race, include: [:region, candidacies: {include: :person}]  
   end
 end

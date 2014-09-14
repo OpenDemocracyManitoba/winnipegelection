@@ -28,6 +28,7 @@ class Election < ActiveRecord::Base
   def self.active_council_races_order_by_region_name
     active_election.electoral_races
                    .includes(region: :region_type)
+                   .includes(candidacies: :person )
                    .where(region_types: { name: 'Council Ward' })
                    .order('regions.name')
   end
@@ -35,8 +36,14 @@ class Election < ActiveRecord::Base
   def self.active_school_trustee_races_order_by_region_name
     active_election.electoral_races
                    .includes(region: :region_type)
+                   .includes(candidacies: :person )
                    .where(region_types: { name: 'School Ward' })
                    .order('regions.name')
                    .sort_by { |er| er.region_name_with_parent }
+  end
+
+  def self.active_election_with_electoral_races
+    active_election.electoral_races
+                   .includes(region: :region_type)
   end
 end
