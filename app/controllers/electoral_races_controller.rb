@@ -1,6 +1,7 @@
 class ElectoralRacesController < ApplicationController
   def council
     @electoral_races = active_council_races_order_by_region_name
+
     respond_to do |format|
       format.html
       format.json {
@@ -12,6 +13,7 @@ class ElectoralRacesController < ApplicationController
 
   def school_trustee
     @electoral_races = active_school_trustee_races_order_by_region_name
+
     respond_to do |format|
       format.html
       format.json {
