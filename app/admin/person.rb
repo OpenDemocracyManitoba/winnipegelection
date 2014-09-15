@@ -3,7 +3,7 @@ ActiveAdmin.register Person do
   permit_params :name, :office_address, :phone_number, :email,
                 :image, :website, :council_site, :facebook,
                 :twitter, :youtube, :linkedin, :remove_image,
-                :also_known_as
+                :also_known_as, :email_other
 
   form :html => { :enctype => 'multipart/form-data' } do |f|
     f.inputs "Details", :multipart => true do
@@ -18,6 +18,7 @@ ActiveAdmin.register Person do
 
     f.inputs "Contact" do
       f.input :email
+      f.input :email_other
       f.input :phone_number
       f.input :office_address
     end
