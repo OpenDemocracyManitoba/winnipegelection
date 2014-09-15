@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   patch 'admin/news_articles/:id/change_moderation/:moderation', to: 'admin/news_articles#change_moderation', as: 'admin_change_moderation'
 
   get 'candidate/:name_slug', to: 'people#redirect_show'
+  get 'trustee_candidate/:name_slug', to: 'people#redirect_show'
   get 'pages/:id/candidate/:name_slug', to: 'people#redirect_show', constraints: {id: /\d+/}
 
   get 'pages/:id/:slug', to: 'pages#show', as: :page, constraints: {id: /\d+/}
