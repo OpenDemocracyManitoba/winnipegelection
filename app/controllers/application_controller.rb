@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   private
+  def api_authenticate
+    authenticate_or_request_with_http_token do |token, options|
+      token == Rails.application.secrets.json_api_token
+    end
+  end
 
   def active_election
     @active_election ||= Election.active_election

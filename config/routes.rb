@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   #JSON API ROUTES
   get 'electoral_races/:id', to: 'electoral_races#show_json', format: true, constraints: {id: /\d+/, format: 'json'}
   get 'elections/:id', to: 'elections#show', format: true, constraints: { format: 'json' }
+  patch 'candidacies/:id/update_questionnaire', to: 'candidacies#update_questionnaire', format:true, constraints: {id: /\d+/, format: 'json'}
 
   root to: 'home#index'
 end
