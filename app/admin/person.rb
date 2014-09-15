@@ -5,6 +5,12 @@ ActiveAdmin.register Person do
                 :twitter, :youtube, :linkedin, :remove_image,
                 :also_known_as, :email_other
 
+  scope :all, default: true
+
+  scope :no_emails do |people|
+    people.no_emails
+  end
+
   form :html => { :enctype => 'multipart/form-data' } do |f|
     f.inputs "Details", :multipart => true do
       f.input :name
@@ -47,6 +53,9 @@ ActiveAdmin.register Person do
     end
     column :email do |person|
       mail_to person.email  if person.email.present?
+    end
+    column :email_other do |person|
+      mail_to person.email_other  if person.email_other.present?
     end
     column :phone_number
     column :office_address do |person|

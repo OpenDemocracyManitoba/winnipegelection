@@ -52,4 +52,12 @@ class Person < ActiveRecord::Base
   def first_name
     name.split(' ').first
   end
+
+  # Class Methods
+
+  def self.no_emails
+    where("email IS NULL OR email = ''")
+    .where("email_other IS NULL OR email_other = ''")
+  end
+
 end
