@@ -1,6 +1,8 @@
 class CandidaciesController < ApplicationController
-  skip_before_action :verify_authenticity_token # Skip CSRF projection for this API controller.
-  before_action :api_authenticate # Found in application_controller.rb
+  # Skip CSRF projection for this API controller.
+  skip_before_action :verify_authenticity_token
+  # API auth found in application_controller.rb
+  before_action :api_authenticate
 
   def update_questionnaire
     respond_to do |format|
