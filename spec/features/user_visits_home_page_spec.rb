@@ -27,10 +27,20 @@ feature 'User visits the home page' do
     expect(page).to have_css('a', text: 'Council Candidates')
   end
 
-  scenario 'they can navigate to the council candidates page' do
+  scenario 'they can navigate to the all council candidates page' do
     click_link('Council Candidates')
-    st_vital_race = electoral_races(:st_vital_2014_election_race)
-    expect(page).to have_content(st_vital_race.name)
+    actual_race_names = [electoral_races(:point_douglas_2014_election_race).name,
+                         electoral_races(:st_vital_2014_election_race).name]
+    races = all('h2').map { |e| e.text }
+    expect(races).to eq(actual_race_names)
+  end
+
+  scenario 'they can navigate to the all trustee caniddates page' do
+    click_link('Trustee Candidates')
+    actual_race_names = [electoral_races(:ward_1_louis_reil_2014_election_race).name,
+                         electoral_races(:ward_2_louis_reil_2014_election_race).name]
+    races = all('h2').map { |e| e.text }
+    expect(races).to eq(actual_race_names)
   end
 
   context 'before the active election has occured' do
