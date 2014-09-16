@@ -1,10 +1,4 @@
-@import 'grid';
-@import 'mixins';
-@import 'mobile';
-
-// Place all the styles related to the candidates controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import './shared/shared.css.scss';
 
 .candidate-cards {
   .candidate-card {
