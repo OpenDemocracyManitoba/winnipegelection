@@ -1,0 +1,14 @@
+- title "Issue Websites - Winnipeg Election"
+.flow-it
+	.three-columns
+		h1 Issue Websites
+		p
+			'This is a list of websites from various interests, organizations, and stakeholder groups that promote election issues relating to the 
+			=active_election.name
+			'.
+		p
+			'Websites are listed in random order.
+		br
+		- @issue_websites.shuffle.each do |issue_website|
+			ul
+				li = link_to issue_website.title, issue_website.url, target: "_blank"

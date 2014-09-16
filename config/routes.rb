@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'electoral_races/council', to: 'electoral_races#council', as: :electoral_races_council
   get 'electoral_races/school_trustee', to: 'electoral_races#school_trustee', as: :electoral_races_school_trustee
 
+  get 'issue_websites/', to: 'issue_websites#index'
   root to: 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
