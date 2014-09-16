@@ -1,0 +1,74 @@
+@import 'mixins';
+
+.flow-it {
+  width: 100%;
+  overflow: hidden;
+  zoom: 1;
+  margin-bottom: 1em;
+}
+
+.non-column {
+  margin-left: 10px;
+}
+
+.one-column, .two-columns, .three-columns, .two-columns-early-shrink {
+  @include drop-shadow(0, 2px, 5px, 0.2);
+  margin: 10px;
+  border: 1px solid #e4e4e4;
+  padding: 10px;
+  float: left;
+  background-color: #eeeeee;
+  color: #333333;
+  p {
+    margin-bottom: 1em;
+    margin-left: 0;
+  }
+}
+
+.non-column, .one-column, .two-columns, .three-columns, .two-columns-early-shrink {
+  line-height: $line-height;
+  ul, ol {
+    margin-left: 2em;
+    margin-bottom: 1em;
+  }
+  h1, h2, h3, h4 {
+    margin-bottom: 1em;
+    margin-left: 0;
+  }
+}
+
+.three-columns {
+  width: 918px;
+}
+
+.two-columns {
+  width: 598px;
+}
+
+.two-columns-early-shrink {
+  width: 598px;
+}
+
+.one-column {
+  width: 278px;
+}
+
+.two-column-flow {
+  width: 640px;
+  float: left;
+}
+
+.one-column-flow {
+  width: 320px;
+  float: left;
+}
+
+.medium-row {
+  height: 350px;
+  overflow: hidden;
+}
+
+.short-row {
+  height: 235px;
+  overflow: hidden;
+}

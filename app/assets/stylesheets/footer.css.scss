@@ -1,0 +1,12 @@
+@import 'grid';
+@import 'mixins';
+@import 'mobile';
+
+footer {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 25px;
+  padding-top: 20px;
+  font-size: 10px;
+  color: #bbbbbb;
+  clear: both;
+}
