@@ -54,4 +54,4 @@ Also for production you will need to precompile the assets:
 
 ## License
 
-This is free and unencumbered software released into the public domain.  See UNLICENSE for details.
+This is **free and unencumbered** software released into the public domain.  See UNLICENSE for details.
