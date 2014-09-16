@@ -21,3 +21,6 @@
 /public/assets/*
 /public/cache/*
 /public/uploads/*
+
+# Ignore .DS_Store
+.DS_Store
