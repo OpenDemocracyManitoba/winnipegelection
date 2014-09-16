@@ -4,10 +4,7 @@ class ElectoralRacesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json {
-        render json: @electoral_races,
-               include: [:region, candidacies: { include: :person }]
-      }
+      format.json { render json: @electoral_races }
     end
   end
 
@@ -16,10 +13,7 @@ class ElectoralRacesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json {
-        render json: @electoral_races,
-               include: [:region, candidacies: { include: :person }]
-      }
+      format.json { render json: @electoral_races }
     end
   end
 
@@ -31,7 +25,6 @@ class ElectoralRacesController < ApplicationController
   def show_json
     @electoral_race = ElectoralRace.includes(candidacies: :person)
                                    .find(params[:id])
-    render json: @electoral_race,
-           include: [:region, candidacies: { include: :person }]
+    render json: @electoral_race
   end
 end

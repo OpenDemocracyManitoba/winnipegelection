@@ -36,6 +36,12 @@ class ElectoralRace < ActiveRecord::Base
     election.is_active?
   end
 
+  def as_json(_options)
+    super include: [:region,
+                    candidacies: { include: { person: { methods: :friendly_path } } }],
+          methods: :friendly_path
+  end
+
   include FriendlyURL
   def slug_for_friendly_url
     name_with_type_parent_and_year.parameterize

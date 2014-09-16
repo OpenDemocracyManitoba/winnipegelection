@@ -59,5 +59,4 @@ class Person < ActiveRecord::Base
     where("email IS NULL OR email = ''")
     .where("email_other IS NULL OR email_other = ''")
   end
-
 end

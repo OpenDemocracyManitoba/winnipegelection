@@ -19,6 +19,11 @@ class Election < ActiveRecord::Base
     days_until_election.zero?
   end
 
+  def as_json(_options)
+    super include: { electoral_races: { include: [region: { include: :region_type }],
+                                        methods: :friendly_path } }
+  end
+
   #### CLASS METHODS
 
   def self.active_election
