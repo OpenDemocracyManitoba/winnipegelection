@@ -1,3 +1,80 @@
+@import 'grid';
+@import 'mixins';
+@import 'mobile';
+
 // Place all the styles related to the candidates controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.candidate-cards {
+  .candidate-card {
+    position: relative;
+    @include drop-shadow(0, 2px, 5px, 0.2);
+    margin: 10px;
+    width: 288px;
+    min-height: $candidate-height;
+    border: 1px solid #e4e4e4;
+    padding-left: 10px;
+    background-color: #eeeeee;
+    float: left;
+    p {
+      margin-left: 0;
+      color: #333;
+    }
+    p.name {
+      position: absolute;
+      margin: 1em 0;
+    }
+    p.incumbent {
+      margin: 2.5em 0 0 0;
+      font-style: italic;
+      font-size: 0.8em;
+      color: #777;
+    }
+    .election-website, .website {
+      color: #999999;
+      font-size: 0.85em;
+      margin: 0.9em 0;
+    }
+    .phone, .candidate-party, .news, .address, .questionnaire {
+      font-size: 0.75em;
+      margin-bottom: 0.7em;
+    }
+    .questionnaire {
+      span {
+        font-weight: bold;
+        color: #2F7C24;
+      }
+    }
+    .image {
+      @include drop-shadow(1px, 1px, 8px, 0.3);
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: center;
+      width: 117px;
+      background-color: #dbdbda;
+      padding: 4px 0 2px 0;
+      img {
+        height: 104px;
+      }
+      p {
+        margin: 0;
+        font-size: 0.8em;
+        font-weight: bold;
+      }
+    }
+    .icons {
+      margin-bottom: 10px;
+      a img {
+        border-bottom: 2px solid $link-color;
+      }
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+.candidate-height {
+    min-height: $candidate-height - 20;
+}

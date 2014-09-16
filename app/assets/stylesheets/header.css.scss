@@ -1,0 +1,26 @@
+@import 'grid';
+@import 'mixins';
+@import 'mobile';
+
+header.site {
+  background: url(image-path('winnipeg_skyline.gif')) no-repeat bottom right;
+  padding: 25px 10px 0 10px;
+  height: 80px;
+  margin-right: 14px;
+  h1 {
+    font-size: 41px;
+    margin: -10px 0 0 0;
+    a {
+      color: #202040;
+      font-family: Georgia, "Bitstream Charter", serif;
+    }
+  }
+  h3 {
+    font-size: 1.2em;
+    color: #4a4a6f;
+    margin: 0.5em 0 0 0;
+  }
+  h1, h3 {
+    font-style: italic;
+  }
+}
