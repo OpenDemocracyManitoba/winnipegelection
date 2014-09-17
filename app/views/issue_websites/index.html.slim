@@ -11,5 +11,8 @@
 		ul
 		- @issue_websites.shuffle.each do |issue_website|
 			li = link_to issue_website.title, issue_website.url, target: "_blank"	
-			ul
-				p = issue_website.description
+			-if issue_website.description
+				ul
+					p = issue_website.description
+			- else
+				br
