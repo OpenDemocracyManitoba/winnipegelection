@@ -3,7 +3,8 @@ ActiveAdmin.register Person do
   permit_params :name, :office_address, :phone_number, :email,
                 :image, :website, :council_site, :facebook,
                 :twitter, :youtube, :linkedin, :remove_image,
-                :also_known_as, :email_other
+                :also_known_as, :email_other, :instagram,
+                :google_plus
 
   scope :all, default: true
 
@@ -36,6 +37,8 @@ ActiveAdmin.register Person do
       f.input :twitter
       f.input :youtube
       f.input :linkedin
+      f.input :instagram
+      f.input :google_plus
     end
 
     f.actions
@@ -62,7 +65,7 @@ ActiveAdmin.register Person do
       truncate person.office_address
     end
     column 'Online' do |p|
-      [:website, :council_site, :facebook, :twitter, :youtube, :linkedin].each do |site|
+      [:website, :council_site, :facebook, :twitter, :youtube, :linkedin, :instagram, :google_plus].each do |site|
         span do
           # Link to all websites. Link text is first letter of site type. Title attribute is site type.
           link_to_if p[site].present?, site.to_s[0].capitalize, p[site], title: site.to_s

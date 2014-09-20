@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140915141833) do
+ActiveRecord::Schema.define(version: 20140920125312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -164,6 +164,8 @@ ActiveRecord::Schema.define(version: 20140915141833) do
     t.datetime "updated_at"
     t.string   "also_known_as"
     t.string   "email_other"
+    t.string   "instagram"
+    t.string   "google_plus"
   end
 
   create_table "region_types", force: true do |t|
@@ -182,6 +184,8 @@ ActiveRecord::Schema.define(version: 20140915141833) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "seats"
+    t.text     "past_results"
+    t.string   "official_document"
   end
 
   add_index "regions", ["region_id"], name: "index_regions_on_region_id", using: :btree
