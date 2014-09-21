@@ -14,6 +14,8 @@ class ElectoralRace < ActiveRecord::Base
   delegate :name_with_parent, to: :region, prefix: true
   delegate :name_with_parent_and_type, to: :region, prefix: true, allow_nil: true
   delegate :name, to: :region, prefix: true
+  delegate :official_document, to: :region
+  delegate :past_results, to: :region
 
   def name_with_type_parent_and_year
     "#{region_name_with_parent_and_type} - #{year}"
