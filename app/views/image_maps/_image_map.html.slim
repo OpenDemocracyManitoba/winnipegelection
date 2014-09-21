@@ -1,0 +1,9 @@
+= image_tag image_map.image.url, :class => 'image_map', :usemap => '#map_polygons'
+
+map#map_polygons name='map_polygons'
+  - image_map.image_map_polygons.each do |polygon|
+    area[shape='poly'
+         coords=polygon.coordinates
+         title=polygon.electoral_race.region_name_with_parent
+         alt=polygon.electoral_race.region_name_with_parent
+         href=polygon.electoral_race.friendly_path]

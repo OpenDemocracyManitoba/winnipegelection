@@ -12,4 +12,9 @@ ActiveAdmin.register ImageMap do
     column :updated_at
     default_actions
   end
+
+  show do
+    render partial: 'image_maps/image_map', object: image_map
+  end
+
 end
