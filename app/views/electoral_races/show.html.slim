@@ -8,7 +8,12 @@ br
       p The information on this page was collected for the #{@electoral_race.election_name}.
       p For details on the most recent election #{link_to 'return to our home page', '/'}.
 p
-  = @electoral_race.candidates_and_seats_message
+  = @electoral_race.candidates_and_seats_message + ' '
+  em  Candidates are displayed in random order.
+- if @electoral_race.official_document.present?
+  p = link_to 'Official Region Boundaries Map.', @electoral_race.official_document
 = render @electoral_race
-p.small
-  em Candidates are displayed in random order.
+- if @electoral_race.past_results.present?
+  div#past_results
+    h2 Past Results
+    = markdown_with_tables(@electoral_race.past_results)

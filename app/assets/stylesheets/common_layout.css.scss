@@ -225,3 +225,31 @@ ul.home_latest_news {
         }
     }
 }
+
+#past_results {
+    table {
+        font-size: .85em;
+        margin-bottom: 1em;
+        th,td {
+            padding-left: 5px;
+        }
+        th {
+            text-align: left;
+            width: 70px;
+        }
+        tbody {
+            em {
+                color: green;
+            }
+            tr {
+                text-align: left;
+                td:first-child {
+                    width: 150px;
+                }
+            }
+            tr:nth-child(odd) {
+                background-color: #ddd;
+            }
+        }
+    }
+}
