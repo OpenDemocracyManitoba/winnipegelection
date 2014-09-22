@@ -10,6 +10,6 @@ ActiveAdmin.register NavigationHeading do
     column :parent_heading do |heading|
       heading.parent_heading.name  if heading.parent_heading.present?
     end
-    default_actions
+    actions
   end
 end

@@ -1,7 +1,7 @@
 ActiveAdmin.register Page do
 
   permit_params :title, :content, :permalink, :show_title, :navigation_heading_id
-  
+
   index do
     column :id
     column :title, sortable: :title do |page|
@@ -13,7 +13,7 @@ ActiveAdmin.register Page do
     column :permalink do |page|
       link_to page.permalink, page.friendly_path
     end
-    default_actions
+    actions
   end
 
   show do
@@ -25,5 +25,5 @@ ActiveAdmin.register Page do
       link_to page.title + " On Site", page.friendly_path
     end
   end
-  
+
 end

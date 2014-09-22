@@ -14,7 +14,7 @@ ActiveAdmin.register ElectoralRace do
       truncate electoral_race.polygon
     end
     column :updated_at
-    default_actions
+    actions
   end
 
   form do |f|

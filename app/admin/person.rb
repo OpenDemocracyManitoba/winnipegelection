@@ -81,6 +81,6 @@ ActiveAdmin.register Person do
       end
     end
     column :updated_at
-    default_actions
+    actions
   end
 end

@@ -11,6 +11,6 @@ ActiveAdmin.register ImageMapPolygon do
     column :electoral_race
     column :created_at
     column :updated_at
-    default_actions
+    actions
   end
 end

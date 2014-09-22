@@ -14,7 +14,7 @@ ActiveAdmin.register Candidacy do
     column :is_incumbent
     column :is_winner
     column :updated_at
-    default_actions
+    actions
   end
 
   form do |f|

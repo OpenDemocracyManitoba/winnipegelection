@@ -2,42 +2,41 @@ source 'https://rubygems.org'
 
 ruby '2.1.1'
 
-gem 'rails', '4.1.0'
-gem 'pg'
+gem 'rails', '~> 4.1.0'
+gem 'pg', '~> 0.17.1'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
-gem 'jquery-rails'
-gem 'turbolinks'
+gem 'jquery-rails', '~> 3.1.0'
+gem 'turbolinks', '~> 2.3.0'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 0.4.0',         group: :doc
 
-gem 'spring',        group: :development
+gem 'spring', '~> 1.1.2',       group: :development
 
 # Our WinnipegElection specific gems:
 
-gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
-gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4.1'
-gem 'formtastic', github: 'justinfrench/formtastic'
-
-gem 'slim-rails'
-gem 'redcarpet'
-gem 'carrierwave'
-gem 'mini_magick'
-gem 'validate_url'
-gem 'nokogiri'
-gem 'feed-normalizer'
-gem 'sitemap_generator'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise', '~> 3.3.0'
 gem 'kaminari'
 
+gem 'slim-rails', '~> 2.1.5'
+gem 'redcarpet', '~> 3.1.2'
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 3.8.1'
+gem 'validate_url', '~> 0.2.2'
+gem 'nokogiri', '~> 1.6.3'
+gem 'feed-normalizer', '~> 1.5.2'
+gem 'sitemap_generator', '~> 5.0.5'
+
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0.beta'
-  gem 'rspec', '>= 3.0.0.beta2'
-  gem 'guard-rspec', '~> 4.2.9'
-  gem 'capybara', github: 'jnicklas/capybara', branch: 'master' # '2.2.1'
-  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 3.1.0'
+  gem 'rspec', '>= 3.1.0'
+  gem 'rspec-collection_matchers', '~> 1.0.0'
+  gem 'guard-rspec', '~> 4.3.1'
+  gem 'capybara', '~> 2.4.3'
+  gem 'factory_girl_rails', '~> 4.4.1'
   gem 'railroady'
   gem 'rubocop', github: 'bbatsov/rubocop', branch: 'master'
   gem 'guard-rubocop'

@@ -18,7 +18,7 @@ ActiveAdmin.register Region do
     column :start_date
     column :end_date
     column :updated_at
-    default_actions
+    actions
   end
 
 end
