@@ -31,7 +31,7 @@ feature 'User visits the home page' do
     click_link('Council Candidates')
     actual_race_names = [electoral_races(:point_douglas_2014_election_race).name,
                          electoral_races(:st_vital_2014_election_race).name]
-    races = all('h2').map { |e| e.text }
+    races = all('h2').map(&:text)
     expect(races).to eq(actual_race_names)
   end
 
@@ -39,7 +39,7 @@ feature 'User visits the home page' do
     click_link('Trustee Candidates')
     actual_race_names = [electoral_races(:ward_1_louis_reil_2014_election_race).name,
                          electoral_races(:ward_2_louis_reil_2014_election_race).name]
-    races = all('h2').map { |e| e.text }
+    races = all('h2').map(&:text)
     expect(races).to eq(actual_race_names)
   end
 

@@ -44,6 +44,6 @@ class Election < ActiveRecord::Base
                    .includes(candidacies: :person)
                    .where(region_types: { name: 'School Ward' })
                    .order('regions.name')
-                   .sort_by { |er| er.region_name_with_parent }
+                   .sort_by(&:region_name_with_parent)
   end
 end
