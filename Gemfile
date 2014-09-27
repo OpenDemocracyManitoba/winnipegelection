@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 
 gem 'rails', '~> 4.1.0'
+gem 'sprockets-rails', '2.1.3' # Locked to set version because asset_path helper was throwing an error.
 gem 'pg', '~> 0.17.1'
-gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
@@ -21,7 +21,9 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'devise', '~> 3.3.0'
 gem 'kaminari'
 
+gem 'sass-rails', '~> 4.0.3'
 gem 'slim-rails', '~> 2.1.5'
+gem 'tilt', '~> 1.4.1' # Old version of tilt used due to sass and slim dependency error
 gem 'redcarpet', '~> 3.1.2'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 3.8.1'
