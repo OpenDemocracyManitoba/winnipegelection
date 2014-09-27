@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get 'electoral_races/:id/:slug', to: 'electoral_races#show', as: :electoral_race, constraints: {id: /\d+/}
   get 'electoral_races/council', to: 'electoral_races#council', as: :electoral_races_council
   get 'electoral_races/school_trustee', to: 'electoral_races#school_trustee', as: :electoral_races_school_trustee
+  
+  get 'image_maps/:id/:slug', to: 'image_maps#show', as: :image_map, constraints: {id: /\d+/}
 
   #JSON API ROUTES
   get 'electoral_races/:id', to: 'electoral_races#show_json', format: true, constraints: {id: /\d+/, format: 'json'}
