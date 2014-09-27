@@ -23,10 +23,10 @@ div.flow-it
           strong = link_to 'Mayoral Candidates', @mayoral_race.friendly_path
         p.small = link_to 'Role of the Mayor', '/pages/16/role-and-mandate-of-the-mayor'
     div.mini-map
-      .map = link_to image_tag('maps/civicwards_thumb.png'), electoral_races_council_path
+      .map = link_to image_tag('maps/civicwards_thumb.png'), @council_map.friendly_path
       .links
         p
-          strong = link_to 'Council Candidates', electoral_races_council_path
+          strong = link_to 'Council Candidates', @council_map.friendly_path
         p.small = link_to 'Role of a City Councillor', '/pages/17/the-role-of-a-city-councillor'
     div.mini-map
       .map = link_to image_tag('maps/schoolwards_thumb.png'), electoral_races_school_trustee_path

@@ -29,6 +29,7 @@ feature 'User visits the home page' do
 
   scenario 'they can navigate to the all council candidates page' do
     click_link('Council Candidates')
+    click_link('All City Council Candidates')
     actual_race_names = [electoral_races(:point_douglas_2014_election_race).name,
                          electoral_races(:st_vital_2014_election_race).name]
     races = all('h2').map(&:text)

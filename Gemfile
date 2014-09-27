@@ -3,7 +3,8 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 
 gem 'rails', '~> 4.1.0'
-gem 'sprockets-rails', '2.1.3' # Locked to set version because asset_path helper was throwing an error.
+# Locked sprockets to set version because asset_path helper was throwing an error.
+gem 'sprockets-rails', '2.1.3'
 gem 'pg', '~> 0.17.1'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
