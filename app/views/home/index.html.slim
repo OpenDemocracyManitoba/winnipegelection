@@ -5,22 +5,7 @@ div.flow-it
     p On <strong>Wednesday October 22 of 2014</strong> the citizens of Winnipeg go to the polls to elect their Mayor, their City Councillors and their School Trustees.
     br
     h2 Voter Countdown
-    div.days-until-election
-      - if active_election.days_until_election >= 0
-        div.flip-counter
-          div.splitFlap.tens-place
-            span.top = days_until_active_election_tens_place
-            span.bottom = days_until_active_election_tens_place
-          div.splitFlap.ones-place
-            span.top = days_until_active_election_ones_place
-            span.bottom = days_until_active_election_ones_place
-          span.days = 'Day'.pluralize(active_election.days_until_election)
-          - if active_election.days_until_election == 0
-            p Election today!
-          - else
-            p Until the Election!
-      - else
-        p = "The most recent election was held on #{active_election_date_in_english}."
+    = render 'days_until_election_flip_counter'
 
   div.one-column.medium-row
     h2 Find Your Candidates
