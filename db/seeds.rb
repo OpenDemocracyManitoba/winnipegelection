@@ -6,6 +6,11 @@ Election.destroy_all
 ElectoralRace.destroy_all
 Candidacy.destroy_all
 NavigationHeading.destroy_all
+ImageMap.destroy_all
+
+ImageMap.create!([
+  {name: 'City Council'}
+])
 
 home_nav_heading, candidates_nav_heading, about_nav_heading = NavigationHeading.create!([
   {name: 'Home', url: '/', display_order: 1.0},
