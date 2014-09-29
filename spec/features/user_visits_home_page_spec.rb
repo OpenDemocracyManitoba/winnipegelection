@@ -52,7 +52,10 @@ feature 'User visits the home page' do
     scenario 'they see the number of days until the election' do
       expect(page).to have_css('.days-until-election',
                                text: /Until the Election/)
-      expect(page).to have_css('.days', text: /\d+ Days/)
+      expect(page).to have_css('.days-until-election .digit.tens', 
+                               text: /\d+/)
+      expect(page).to have_css('.days-until-election .digit.ones', 
+                               text: /\d+/)
     end
 
     after(:all) do

@@ -1,0 +1,14 @@
+.days-until-election
+  - if active_election.days_until_election >= 0
+    .flip-counter
+      .digit.tens
+        span = days_until_active_election_tens_place
+      .digit.ones
+        span = days_until_active_election_ones_place
+      span.days = 'Day'.pluralize(active_election.days_until_election)
+      - if active_election.days_until_election == 0
+        p Election today!
+      - else
+        p Until the Election!
+  - else
+    p = "The most recent election was held on #{active_election_date_in_english}."
