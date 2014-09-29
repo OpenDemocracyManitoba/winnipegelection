@@ -8,7 +8,7 @@ class CandidaciesController < ApplicationController
     respond_to do |format|
       format.json do
         @candidacy = Candidacy.find(params[:id])
-        if params[:questionnaire].present?
+        unless params[:questionnaire].nil?
           @candidacy.update_attribute(:questionnaire, params[:questionnaire])
         end
         render json: @candidacy
