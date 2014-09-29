@@ -1,9 +1,9 @@
 .days-until-election
   - if active_election.days_until_election >= 0
     .flip-counter
-      .digit
+      .digit.tens
         span = days_until_active_election_tens_place
-      .digit
+      .digit.ones
         span = days_until_active_election_ones_place
       span.days = 'Day'.pluralize(active_election.days_until_election)
       - if active_election.days_until_election == 0
