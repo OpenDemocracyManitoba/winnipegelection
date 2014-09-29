@@ -1,12 +1,10 @@
-div.days-until-election
+.days-until-election
   - if active_election.days_until_election >= 0
-    div.flip-counter
-      div.splitFlap.tens-place
-        span.top = days_until_active_election_tens_place
-        span.bottom = days_until_active_election_tens_place
-      div.splitFlap.ones-place
-        span.top = days_until_active_election_ones_place
-        span.bottom = days_until_active_election_ones_place
+    .flip-counter
+      .digit
+        span = days_until_active_election_tens_place
+      .digit
+        span = days_until_active_election_ones_place
       span.days = 'Day'.pluralize(active_election.days_until_election)
       - if active_election.days_until_election == 0
         p Election today!
