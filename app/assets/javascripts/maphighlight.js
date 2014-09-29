@@ -367,8 +367,8 @@
     };
 })(jQuery);
 
-$(function() {
-        $('.image_map').maphilight( {
+var highlight_it = function() {
+    $('.image_map').maphilight( {
                 stroke: true,
                 strokeColor: '452B1A',
                 strokeWidth: 3,
@@ -376,4 +376,7 @@ $(function() {
                 fillColor: 'aaffaa',
                 fillOpacity: 0.20 } );
 
-    });
+};
+
+$(document).ready(highlight_it);
+$(document).on('page:load', highlight_it)
