@@ -17,18 +17,20 @@ SitemapGenerator::Sitemap.create do
   end
 
   Person.find_each do |person|
-    if person.most_recent_election.is_active
-      priority = 0.9
-      changefreq = 'daily'
-    else
-      priority = 0.7
-      changefreq = 'yearly'
-    end
+    unless person.most_recent_candidacy.nil?
+      if person.most_recent_election.is_active
+        priority = 0.9
+        changefreq = 'daily'
+      else
+        priority = 0.7
+        changefreq = 'yearly'
+      end
 
-    add person.friendly_path,
-        lastmod: person.updated_at,
-        priority: priority,
-        changefreq: changefreq
+      add person.friendly_path,
+          lastmod: person.updated_at,
+          priority: priority,
+          changefreq: changefreq
+    end
   end
 
   ElectoralRace.includes(:election, region: :region_type).each do |electoral_race|
