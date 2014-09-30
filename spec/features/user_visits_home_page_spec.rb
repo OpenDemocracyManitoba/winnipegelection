@@ -36,8 +36,13 @@ feature 'User visits the home page' do
     expect(races).to eq(actual_race_names)
   end
 
+  scenario 'they see a link to trustee candidates' do
+    expect(page).to have_css('a', text: 'Trustee Candidates')
+  end
+
   scenario 'they can navigate to the all trustee caniddates page' do
     click_link('Trustee Candidates')
+    click_link('All School Trustee Candidates')
     actual_race_names = [electoral_races(:ward_1_louis_reil_2014_election_race).name,
                          electoral_races(:ward_2_louis_reil_2014_election_race).name]
     races = all('h2').map(&:text)
@@ -52,9 +57,9 @@ feature 'User visits the home page' do
     scenario 'they see the number of days until the election' do
       expect(page).to have_css('.days-until-election',
                                text: /Until the Election/)
-      expect(page).to have_css('.days-until-election .digit.tens', 
+      expect(page).to have_css('.days-until-election .digit.tens',
                                text: /\d+/)
-      expect(page).to have_css('.days-until-election .digit.ones', 
+      expect(page).to have_css('.days-until-election .digit.ones',
                                text: /\d+/)
     end
 

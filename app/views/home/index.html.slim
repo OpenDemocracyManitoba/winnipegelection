@@ -16,16 +16,16 @@ div.flow-it
           strong = link_to 'Mayoral Candidates', @mayoral_race.friendly_path
         p.small = link_to 'Role of the Mayor', '/pages/16/role-and-mandate-of-the-mayor'
     div.mini-map
-      .map = link_to image_tag('maps/civicwards_thumb.png'), @council_map.friendly_path
+      .map = link_to image_tag(@council_map.image.small.url), @council_map.friendly_path
       .links
         p
           strong = link_to 'Council Candidates', @council_map.friendly_path
         p.small = link_to 'Role of a City Councillor', '/pages/17/the-role-of-a-city-councillor'
     div.mini-map
-      .map = link_to image_tag('maps/schoolwards_thumb.png'), electoral_races_school_trustee_path
+      .map = link_to image_tag(@trustee_map.image.small.url), @trustee_map.friendly_path
       .links
         p
-          strong = link_to 'Trustee Candidates', electoral_races_school_trustee_path
+          strong = link_to 'Trustee Candidates', @trustee_map.friendly_path
         p.small = link_to 'Role of a School Trustee', '/pages/18/the-role-of-a-school-trustee'
 
   div.one-column.medium-row.social

@@ -6,6 +6,7 @@ class HomeController < ApplicationController
                                    .where(region_types: { name: 'Mayoral' })
                                    .first
     @latest_news_articles = NewsArticle.approved.most_recent
-    @council_map = ImageMap.select(:name, :id).find_by(name: 'City Council')
+    @council_map = ImageMap.find_by(name: 'City Council')
+    @trustee_map = ImageMap.find_by(name: 'School Trustee')
   end
 end

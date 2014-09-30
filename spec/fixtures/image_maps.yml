@@ -1,2 +1,7 @@
 city_council_2014:
   name: 'City Council'
+  all_candidates_url: '/electoral_races/council'
+
+school_trustee_2014:
+  name: 'School Trustee'
+  all_candidates_url: '/electoral_races/school_trustee'

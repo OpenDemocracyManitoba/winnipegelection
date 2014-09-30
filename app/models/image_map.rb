@@ -15,4 +15,13 @@ class ImageMap < ActiveRecord::Base
     electoral_races.includes(:region)
                    .order('regions.name ASC')
   end
+
+  def parental_regions_ordered_by_region_name
+    electoral_races.group_by { |electoral_race| electoral_race.region.parent_region.name }
+                   .sort
+  end
+
+  def contains_nested_electoral_races?
+    electoral_races.joins(:region).where('regions.region_id > 0').present?
+  end
 end

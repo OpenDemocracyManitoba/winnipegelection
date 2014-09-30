@@ -4,12 +4,13 @@ h2 Select your #{@image_map.name} Ward
 p.grey Select your ward name or click on the map.
 br
 .flow_it
-  .hidden-block-when-mobile.acts_as_column
+  .hidden-block-when-mobile.two-column-flow
     = render @image_map
   .one-column
     h3 #{@image_map.name} Wards
-    ul
-      - if @image_map.name == 'City Council'
-          li= link_to 'All City Council Candidates', electoral_races_council_path
-      - @image_map.electoral_races_ordered_by_region_name.each do |electoral_race|
-        li= link_to electoral_race.region.name_with_parent, electoral_race.friendly_path
+    - if @image_map.contains_nested_electoral_races?
+      = render partial: 'electoral_races/electoral_races_list_nested', \
+               locals: { electoral_races_grouped_by_parent_region: @image_map.parental_regions_ordered_by_region_name, list_name: @image_map.name, all_candidates_url: @image_map.all_candidates_url }
+    -else
+      = render partial: 'electoral_races/electoral_races_list_unnested', \
+               locals: { electoral_races: @image_map.electoral_races_ordered_by_region_name, list_name: @image_map.name, all_candidates_url: @image_map.all_candidates_url }

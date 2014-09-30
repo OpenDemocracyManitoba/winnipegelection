@@ -1,0 +1,6 @@
+ul
+  - if all_candidates_url.present?
+    li
+      strong= link_to "All #{list_name} Candidates", all_candidates_url
+  - electoral_races.each do |electoral_race|
+    li= link_to electoral_race.region.name_with_parent, electoral_race.friendly_path

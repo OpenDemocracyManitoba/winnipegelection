@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140921123330) do
+ActiveRecord::Schema.define(version: 20140928133015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 20140921123330) do
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "all_candidates_url"
   end
 
   create_table "navigation_headings", force: true do |t|
