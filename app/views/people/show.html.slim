@@ -11,14 +11,18 @@
   .two-columns-early-shrink.candidate-height
     h2 #{@person.name}
     p Candidate in the #{link_to @person.most_recent_candidacy.formal_race_description, @person.most_recent_electoral_race.friendly_path}.
-    p There are #{link_to(pluralize(@news_mentions.size.to_i, 'recent news article'), '#recent_news')} that mention #{@person.name}. 
+    p There are #{link_to(pluralize(@news_mentions.size.to_i, 'recent news article'), '#recent_news')} that mention #{@person.name}.
+    br
+    p.small.grey Learn #{ link_to 'how we decide', '/pages/13/frequently-asked-questions#candidate_info' } what candidate information to list.
   - if @person.most_recent_candidacy.questionnaire?
     .three-columns
       h2 Questionnaire Response
       .questionnaire = markdown(@person.most_recent_candidacy.questionnaire)
+      br
+      p.small.grey Learn about #{ link_to 'our questionnaire process','/pages/13/frequently-asked-questions#questionnaire' }.
   .three-columns#recent_news
     h2 News that Mentions #{@person.name}
-    p.small.grey News articles are automatically gathered from #{ link_to 'Google News', 'http://news.google.ca' } by searching for the full names of the candidates in the upcoming election. See #{link_to 'faq', '/pages/13/frequently-asked-questions#news'} for more details.
+    p.small.grey News articles are automatically gathered from #{ link_to 'Google News', 'http://news.google.ca' } by searching for the full names of the candidates in the upcoming election. #{link_to 'More details', '/pages/13/frequently-asked-questions#news'}.
     - if @person.approved_news_mentions.empty?
       p No related news articles found.
     -else
@@ -33,4 +37,3 @@
       = paginate @news_mentions
       br
       p #{page_entries_info @news_mentions}.
-
