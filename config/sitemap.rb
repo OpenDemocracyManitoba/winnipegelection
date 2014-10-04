@@ -27,7 +27,7 @@ SitemapGenerator::Sitemap.create do
       end
 
       add person.friendly_path,
-          lastmod: person.updated_at,
+          lastmod: person.updated_at_including_news_mentions,
           priority: priority,
           changefreq: changefreq
     end

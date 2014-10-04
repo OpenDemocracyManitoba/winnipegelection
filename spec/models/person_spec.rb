@@ -48,12 +48,36 @@ describe Person do
 
   end
 
-  describe 'associated news mentions and news articles' do
-    it 'differentiates between all news articles and approved articles' do
-      darth = people(:darth_vadar)
-      approved_articles = darth.approved_news_articles
-      all_articles = darth.news_articles
-      expect(all_articles.count).to be > (approved_articles.count)
+  context 'when a Person has news mentions' do
+    let(:darth) { people(:darth_vadar) }
+
+    describe 'associated news mentions and news articles' do
+      it 'differentiates between all news articles and approved articles' do
+        approved_articles = darth.approved_news_articles
+        all_articles = darth.news_articles
+        expect(all_articles.count).to be > (approved_articles.count)
+      end
+    end
+
+    describe '#updated_at_including_news_mentions' do
+      it 'returns the updated at date of the most recent news mention' do
+        FactoryGirl.create(:news_mention,
+                           person: darth,
+                           news_article: FactoryGirl.create(:news_article))
+        most_recent_mention = NewsMention.last
+        timestamp = darth.updated_at_including_news_mentions
+        expect(timestamp).to eq(most_recent_mention.updated_at)
+      end
+    end
+  end
+
+  context 'when a Person has no news mentions' do
+    let(:tyrion) { people(:tyrion_lannister) }
+
+    describe '#updated_at_including_news_mentions' do
+      it 'returns the updated at timestamp of the Person' do
+        expect(tyrion.updated_at_including_news_mentions).to eq(tyrion.updated_at)
+      end
     end
   end
 end

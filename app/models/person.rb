@@ -53,6 +53,15 @@ class Person < ActiveRecord::Base
     name.split(' ').first
   end
 
+  def updated_at_including_news_mentions
+    most_recent_mention = news_mentions.last
+    if most_recent_mention
+      most_recent_mention.updated_at
+    else
+      updated_at
+    end
+  end
+
   # Class Methods
 
   def self.no_emails
