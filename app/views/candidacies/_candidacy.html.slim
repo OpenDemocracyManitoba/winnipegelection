@@ -31,4 +31,4 @@
   - if candidacy.questionnaire.present?
     p.questionnaire 
       span Questionnaire: 
-      | #{link_to "#{candidacy.person.first_name}'s Responses", candidacy.person.friendly_path}.
+      | #{link_to "Read #{candidacy.person.first_name}'s Answers", candidacy.person.friendly_path}
