@@ -24,7 +24,14 @@ br
     - else 
       p Coming soon!
   .two-columns
-    h2 Latest News for #{@electoral_race.name}
+    h2 Latest News - #{@electoral_race.name}
     - if @electoral_race.latest_news.present?
-        = render partial: 'news_articles/news_articles', object: @electoral_race.latest_news.paginated(params[:page])
-        = paginate @electoral_race.latest_news.paginated(params[:page]), params: { anchor:  'latest_news' }
+      p.small.grey News articles are automatically gathered from #{ link_to 'Google News', 'http://news.google.ca' } by searching for the names of candidates in this electoral race. #{link_to 'More details', '/pages/13/frequently-asked-questions#news'}.
+      br
+      = render partial: 'news_articles/news_articles', object: @electoral_race.latest_news.paginated(params[:page])
+      br
+      p
+        em See more news that mentions candidates in this electoral race:
+      = paginate @electoral_race.latest_news.paginated(params[:page]), params: { anchor:  'latest_news' }
+    - else
+      p No related news articles found.
