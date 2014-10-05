@@ -9,7 +9,8 @@ NavigationHeading.destroy_all
 ImageMap.destroy_all
 
 ImageMap.create!([
-  {name: 'City Council'}
+  {name: 'City Council'},
+  {name: 'School Trustee'}
 ])
 
 home_nav_heading, candidates_nav_heading, about_nav_heading = NavigationHeading.create!([
