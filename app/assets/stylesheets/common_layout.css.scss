@@ -204,11 +204,12 @@ div.questionnaire {
     }
 }
 
-ul.home_latest_news {
-    margin-left: 18px;
+ul#latest_news {
+    margin-left: 0;
 
     li {
-        margin-bottom: 0.5em;
+        margin-bottom: 1em;
+        list-style: none;
         p {
             margin-bottom: 0;
         }

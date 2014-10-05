@@ -27,7 +27,19 @@ class NewsArticle < ActiveRecord::Base
     where(moderation: 'rejected')
   end
 
-  def self.most_recent(number_of_articles = 5)
-    order(:publication_date).reverse_order.limit(number_of_articles)
+  def self.most_recent(number_of_articles = 4)
+    reverse_chronological.limit(number_of_articles)
+  end
+
+  def self.reverse_chronological
+    order(:publication_date).reverse_order
+  end
+
+  def self.with_people(people)
+    includes(news_mentions: :person).where(people: { id: people })
+  end
+
+  def self.paginated(page_number)
+    page(page_number)
   end
 end

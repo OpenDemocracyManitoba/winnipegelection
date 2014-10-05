@@ -12,10 +12,10 @@ Rails.application.routes.draw do
   get 'pages/:id/:slug', to: 'pages#show', as: :page, constraints: {id: /\d+/}
   get 'people/:id/:slug(/page/:page)', to: 'people#show', as: 'person', constraints: {id: /\d+/}
 
-  get 'electoral_races/:id/:slug', to: 'electoral_races#show', as: :electoral_race, constraints: {id: /\d+/}
+  get 'electoral_races/:id/:slug(/page/:page)', to: 'electoral_races#show', as: :electoral_race, constraints: {id: /\d+/}
   get 'electoral_races/council', to: 'electoral_races#council', as: :electoral_races_council
   get 'electoral_races/school_trustee', to: 'electoral_races#school_trustee', as: :electoral_races_school_trustee
-  
+
   get 'image_maps/:id/:slug', to: 'image_maps#show', as: :image_map, constraints: {id: /\d+/}
 
   #JSON API ROUTES

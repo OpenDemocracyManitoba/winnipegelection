@@ -1,0 +1,3 @@
+li
+  p = link_to truncate(news_article.title.chop + '.', length: 95) , news_article.url
+  p.small.grey #{news_article.news_source.name} - #{news_article.publication_date.to_formatted_s(:short)}

@@ -44,6 +44,10 @@ class ElectoralRace < ActiveRecord::Base
           methods: :friendly_path
   end
 
+  def latest_news
+    NewsArticle.approved.with_people(people).reverse_chronological
+  end
+
   include FriendlyURL
   def slug_for_friendly_url
     name_with_type_parent_and_year.parameterize
