@@ -19,7 +19,6 @@ br
     h2 Previous Elections
     - if @electoral_race.past_results.present?
       div#past_results
-        h2 Past Results
         = markdown_with_tables(@electoral_race.past_results)
     - else 
       p Coming soon!
