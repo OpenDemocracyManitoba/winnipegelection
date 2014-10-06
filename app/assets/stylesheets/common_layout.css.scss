@@ -243,3 +243,17 @@ ul#latest_news {
         }
     }
 }
+
+form#address_lookup {
+    margin-bottom: 1em;
+
+    p {
+        margin-top: 1em;
+    }
+    input.house_num {
+        width: 30px;
+    }
+    input.house_street {
+        width: 115px;
+    }
+}

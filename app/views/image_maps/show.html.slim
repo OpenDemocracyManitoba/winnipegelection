@@ -1,13 +1,15 @@
 - title "#{@image_map.name} Ward Map - Winnipeg Election"
 br
-h2 Select your #{@image_map.name} Ward
-p.grey Select your ward name or click on the map.
-br
 .flow_it
   .hidden-block-when-mobile.two-column-flow
+    h2 Select your #{@image_map.name} Ward
+    p.grey Find and select your ward name on the right or click on the map.
+    br
     = render @image_map
   .one-column
-    h3 #{@image_map.name} Wards
+    h3 Find Your Ward
+    = render 'address_lookup'
+    h3 Select a #{@image_map.name} Ward
     - if @image_map.contains_nested_electoral_races?
       = render partial: 'electoral_races/electoral_races_list_nested', \
                locals: { electoral_races_grouped_by_parent_region: @image_map.parental_regions_ordered_by_region_name, list_name: @image_map.name, all_candidates_url: @image_map.all_candidates_url }
