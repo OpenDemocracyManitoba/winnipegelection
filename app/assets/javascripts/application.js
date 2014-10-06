@@ -35,7 +35,7 @@
   }
 })(jQuery);
 
-$(document).ready(function(){
+var on_load_fnc = function(){
     $('div.candidate-cards').shuffle();
 
     $('input#ward_button').click(function(){
@@ -62,4 +62,7 @@ $(document).ready(function(){
         window.open("","myNewWin","width=800,height=600,toolbar=0,scrollbars=1");
         return true;
     });
-});
+};
+
+$(document).ready(on_load_fnc);
+$(document).on('page:load', on_load_fnc)
