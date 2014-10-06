@@ -256,4 +256,11 @@ form#address_lookup {
     input.house_street {
         width: 115px;
     }
+    input {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    input#ward_button {
+        padding: 1px 4px;
+    }
 }
