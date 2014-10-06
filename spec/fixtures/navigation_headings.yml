@@ -23,3 +23,13 @@ about:
   name: 'About'
   url: ''
   display_order: 3.0
+
+voter_resources:
+  name: 'Voter Resources'
+  url: ''
+  display_order: 4.0
+
+issue_websites:
+  name: 'Election Issues'
+  url: 'issue_websites'
+  parent_heading: voter_resources
