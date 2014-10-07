@@ -11,8 +11,7 @@
   .two-columns-early-shrink.candidate-height
     h2 #{@person.name}
     p Candidate in the #{link_to @person.most_recent_candidacy.formal_race_description, @person.most_recent_electoral_race.friendly_path}.
-    p There are #{link_to(pluralize(@news_mentions.size.to_i, 'recent news article'), '#recent_news')} that mention #{@person.name}.
-    br
+    p There are #{link_to(pluralize(@person.approved_news_articles.size, 'recent news article'), '#recent_news')} that mention #{@person.name}.
     p.small.grey Learn #{ link_to 'how we decide', '/pages/13/frequently-asked-questions#candidate_info' } what candidate information to list.
   - if @person.most_recent_candidacy.questionnaire?
     .three-columns

@@ -29,6 +29,6 @@
   - if candidacy.person.phone_number?
     p.phone Phone: #{ link_to candidacy.person.phone_number, 'tel:' + candidacy.person.phone_number }
   - if candidacy.questionnaire.present?
-    p.questionnaire 
-      span Questionnaire: 
+    p.questionnaire
+      span Questionnaire:
       | #{link_to "Read #{candidacy.person.first_name}'s Answers", candidacy.person.friendly_path}
