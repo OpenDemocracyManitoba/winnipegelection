@@ -17,11 +17,12 @@ Rails.application.routes.draw do
   get 'electoral_races/school_trustee', to: 'electoral_races#school_trustee', as: :electoral_races_school_trustee
 
   get 'image_maps/:id/:slug', to: 'image_maps#show', as: :image_map, constraints: {id: /\d+/}
+  get 'issue_websites', to: 'issue_websites#index'
+
+  root to: 'home#index'
 
   #JSON API ROUTES
   get 'electoral_races/:id', to: 'electoral_races#show_json', format: true, constraints: {id: /\d+/, format: 'json'}
   get 'elections/:id', to: 'elections#show', format: true, constraints: { format: 'json' }
   patch 'candidacies/:id/update_questionnaire', to: 'candidacies#update_questionnaire', format:true, constraints: {id: /\d+/, format: 'json'}
-
-  root to: 'home#index'
 end
