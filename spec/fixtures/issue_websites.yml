@@ -1,11 +1,11 @@
-issue_website:
-  title: "Hot Potato"
+issue_website_2014:
+  title: "Hot Potato 2014"
   description: "no touch"
   url: "http://manitobaelection.ca"
   election: winnipeg_2014_election
 
-issue_website:
-  title: "Hot Potato"
+issue_website_2010:
+  title: "Hot Potato 2010"
   description: "no touch"
   url: "http://manitobaelection.ca"
   election: winnipeg_2010_election
