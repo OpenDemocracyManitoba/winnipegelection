@@ -19,7 +19,7 @@ feature 'User visits election issue page' do
     end
   end
 
-  context 'On they are on the Issue Websites page' do
+  context 'when they are on the Issue Websites page' do
     scenario 'they are able to see issue websites for the current election' do
       visit issue_websites_path
       expect(page).to have_css('ul#issue_websites a', text: 'Hot Potato 2014')
