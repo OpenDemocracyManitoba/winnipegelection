@@ -1,0 +1,14 @@
+- title 'Latest Election News - Winnipeg Election 2014'
+.flow-it
+  .two-columns
+    h2
+      | The Latest Election News
+      = " - Page #{params[:page]}"  if params[:page]
+    = render partial: 'news_articles', object: @latest_news_articles
+    br
+    p
+      em Read more election news:
+    = paginate @latest_news_articles
+  .one-column
+    h2 The Twitter Conversation
+    = render partial: 'home/twitter', locals: { widget_size: :tall }

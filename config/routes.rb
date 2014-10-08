@@ -10,14 +10,15 @@ Rails.application.routes.draw do
   get 'pages/:id/candidate/:name_slug', to: 'people#redirect_show', constraints: {id: /\d+/}
 
   get 'pages/:id/:slug', to: 'pages#show', as: :page, constraints: {id: /\d+/}
-  get 'people/:id/:slug(/page/:page)', to: 'people#show', as: 'person', constraints: {id: /\d+/}
+  get 'people/:id/:slug(/page/:page)', to: 'people#show', as: 'person', constraints: {id: /\d+/, page: /\d+/}
 
-  get 'electoral_races/:id/:slug(/page/:page)', to: 'electoral_races#show', as: :electoral_race, constraints: {id: /\d+/}
+  get 'electoral_races/:id/:slug(/page/:page)', to: 'electoral_races#show', as: :electoral_race, constraints: {id: /\d+/, page: /\d+/}
   get 'electoral_races/council', to: 'electoral_races#council', as: :electoral_races_council
   get 'electoral_races/school_trustee', to: 'electoral_races#school_trustee', as: :electoral_races_school_trustee
 
   get 'image_maps/:id/:slug', to: 'image_maps#show', as: :image_map, constraints: {id: /\d+/}
   get 'issue_websites', to: 'issue_websites#index'
+  get 'news_articles(/page/:page)', to: 'news_articles#index', as: :news_articles, constraints: {page: /\d+/}
 
   root to: 'home#index'
 

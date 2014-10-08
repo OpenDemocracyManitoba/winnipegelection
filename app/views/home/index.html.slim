@@ -30,11 +30,13 @@ div.flow-it
 
   div.one-column.medium-row.social
     h2 The Twitter Conversation
-    = render 'twitter'
+    = render partial: 'twitter', locals: { widget_size: :short }
 
   div.one-column.medium-row
     h2 Latest Election News
     = render partial: 'news_articles/news_articles', object: @latest_news_articles
+    p.small
+      strong = link_to 'Read More Election News.', news_articles_path
     p.small.grey Articles are #{link_to 'gathered from Google News', '/pages/13/frequently-asked-questions#news'}.
 
   div.one-column.medium-row
@@ -48,7 +50,7 @@ div.flow-it
   div.one-column.medium-row
     h2 WinnipegElection.ca
     p A citizen created resource designed to help you learn about the candidates in the upcoming 2014 Winnipeg General Election.
-    p Built by #{link_to 'Open Democracy Manitoba', '/pages/11/about-us'}. 
+    p Built by #{link_to 'Open Democracy Manitoba', '/pages/11/about-us'}.
     br
     br
     | <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FWinnipeg-Election%2F145495908793867&amp;width=270&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=61535010545" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:270px; height:80px;" allowTransparency="true"></iframe>
