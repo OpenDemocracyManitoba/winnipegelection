@@ -7,13 +7,12 @@ br
     .three-columns class="notice"
       p The information on this page was collected for the #{@electoral_race.election_name}.
       p For details on the most recent election #{link_to 'return to our home page', '/'}.
-p= @electoral_race.candidates_and_seats_message
+p
+  = @electoral_race.candidates_and_seats_message
+  em  Candidates are displayed in random order.
 - if @electoral_race.official_document.present?
   p = link_to 'Official Region Boundaries Map.', @electoral_race.official_document
 = render @electoral_race
-p.small.grey
-  em  Candidates are displayed in random order.
-br
 .flow-it
   .one-column
     h2 Previous Elections
