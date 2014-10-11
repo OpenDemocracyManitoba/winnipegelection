@@ -3,8 +3,34 @@ ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
 
   content title: proc{ I18n.t("active_admin.dashboard") } do
-    
+
     columns do
+      column do
+        panel "#{Election.active_election.name} At a Glance" do
+          ul do
+            li do
+              strong "Candidacies: "
+              span Election.active_election.candidacies.count
+            end
+            li do
+              strong "Answered Questionnaires: "
+              span Election.active_election.answered_questionnaires
+            end
+            li do
+              strong "Approved News Articles: "
+              span NewsArticle.approved.count
+            end
+            li do
+              strong "Pending News Articles: "
+              span NewsArticle.pending.count
+            end
+            li do
+              strong "Rejected News Articles: "
+              span NewsArticle.rejected.count
+            end
+          end
+        end
+      end
       column do
         panel "Extra Links" do
           ul do

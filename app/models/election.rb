@@ -20,6 +20,10 @@ class Election < ActiveRecord::Base
     days_until_election.zero?
   end
 
+  def answered_questionnaires
+    candidacies.where("questionnaire != ''").count
+  end
+
   def as_json(_options)
     super include: { electoral_races: { include: [region: { include: :region_type }],
                                         methods: :friendly_path } }
