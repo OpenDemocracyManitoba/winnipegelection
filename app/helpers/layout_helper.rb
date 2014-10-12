@@ -8,4 +8,14 @@ module LayoutHelper
   def title_set?
     defined?(@title_set)
   end
+
+  def meta_description(description)
+    return  if description.blank?
+    content_for(:meta_description) { h(description) }
+    @meta_description_set = true
+  end
+
+  def meta_description_set?
+    defined?(@meta_description_set)
+  end
 end

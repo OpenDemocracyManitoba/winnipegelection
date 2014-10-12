@@ -1,4 +1,6 @@
 - title @person.name_for_title
+- meta_description "#{@person.name}, candidate in the #{@person.most_recent_candidacy.formal_race_description}. " \
+                   "Candidate questionnaires & the latest election news."
 - unless @is_running_in_active_election
   .flow-it
     .three-columns class="notice"

@@ -9,6 +9,8 @@ html
     meta name='HandheldFriendly' content='True'
     meta name='MobileOptimized' content='320'
     meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0'
+    - if meta_description_set?
+      meta name='description' content=yield(:meta_description)
     meta property='twitter:account_id' content='4503599631091882'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
