@@ -42,7 +42,8 @@ SitemapGenerator::Sitemap.create do
       changefreq = 'yearly'
     end
     add electoral_race.friendly_path,
-        lastmod: electoral_race.updated_at,
+        # TODO: lastmod should also consider associated candidacies
+        lastmod: electoral_race.updated_at_including_news_articles,
         priority: priority,
         changefreq: changefreq
   end

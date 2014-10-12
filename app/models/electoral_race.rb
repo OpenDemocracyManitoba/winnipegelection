@@ -48,6 +48,15 @@ class ElectoralRace < ActiveRecord::Base
     NewsArticle.approved.with_people(people).reverse_chronological
   end
 
+  def updated_at_including_news_articles
+    most_recent_article = latest_news.last
+    if most_recent_article
+      most_recent_article.updated_at
+    else
+      updated_at
+    end
+  end
+
   include FriendlyURL
   def slug_for_friendly_url
     name_with_type_parent_and_year.parameterize

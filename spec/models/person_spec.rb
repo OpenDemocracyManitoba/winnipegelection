@@ -64,6 +64,7 @@ describe Person do
         FactoryGirl.create(:news_mention,
                            person: darth,
                            news_article: FactoryGirl.create(:news_article))
+        # Fetched from AR so that timestamp is correct precision
         most_recent_mention = NewsMention.last
         timestamp = darth.updated_at_including_news_mentions
         expect(timestamp).to eq(most_recent_mention.updated_at)
