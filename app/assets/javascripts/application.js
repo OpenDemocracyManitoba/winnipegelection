@@ -37,6 +37,7 @@
 
 var on_load_fnc = function(){
     $('div.candidate-cards').shuffle();
+    $('ul#issue_websites').shuffle();
 
     $('input#ward_button').click(function(){
         var house_num    = $('input.house_num');
