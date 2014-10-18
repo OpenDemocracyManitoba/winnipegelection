@@ -9,7 +9,7 @@ class Election < ActiveRecord::Base
   delegate :year, to: :election_date
 
   def days_until_election
-    (self.election_date - Date.today).to_i
+    (self.election_date - Time.zone.now.to_date).to_i
   end
 
   def already_occured?
