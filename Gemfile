@@ -10,7 +10,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 gem 'jquery-rails', '~> 3.1.0'
-gem 'turbolinks', '~> 2.3.0'
+# gem 'turbolinks', '~> 2.3.0' Removed while static caching site.
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',         group: :doc
 

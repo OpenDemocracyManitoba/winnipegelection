@@ -12,8 +12,8 @@ html
     - if meta_description_set?
       meta name='description' content=yield(:meta_description)
     meta property='twitter:account_id' content='4503599631091882'
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
     link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"
   body
