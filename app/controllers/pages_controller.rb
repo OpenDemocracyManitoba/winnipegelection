@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  caches_page :index, :show
+
   def index
     @pages = Page.all
   end

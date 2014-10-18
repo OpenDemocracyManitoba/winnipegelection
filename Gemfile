@@ -32,6 +32,7 @@ gem 'validate_url', '~> 0.2.2'
 gem 'nokogiri', '~> 1.6.3'
 gem 'feed-normalizer', '~> 1.5.2'
 gem 'sitemap_generator', '~> 5.0.5'
+gem 'actionpack-page_caching'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
