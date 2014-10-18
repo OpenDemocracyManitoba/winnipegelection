@@ -1,4 +1,6 @@
 class ElectoralRacesController < ApplicationController
+  caches_page :council, :school_trustee, :show
+
   def council
     @electoral_races = active_council_races_order_by_region_name
 

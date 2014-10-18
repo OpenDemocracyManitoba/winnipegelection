@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  caches_page :index
+
   def index
     @mayoral_race = active_election.electoral_races
                                    .select('electoral_races.id, regions.name')

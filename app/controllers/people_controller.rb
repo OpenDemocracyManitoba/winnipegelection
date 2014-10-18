@@ -1,4 +1,6 @@
 class PeopleController < ApplicationController
+  caches_page :show
+
   def show
     @person = Person.friendly_find(params)
     @most_recent_candidacy = @person.most_recent_candidacy
