@@ -38,6 +38,11 @@ var on_load_fnc = function(){
     $('div.candidate-cards').shuffle();
     $('ul#issue_websites').shuffle();
 
+    $('a#where_to_vote').click(function(e) {
+        e.preventDefault();
+        window.open("http://datacloud.me/webapps/winnipeg/vote/?lang=en","myNewWin","width=700,height=500,toolbar=0,scrollbars=1");
+    });
+
     $('input#ward_button').click(function(){
         var house_num    = $('input.house_num');
         var house_street = $('input.house_street')
