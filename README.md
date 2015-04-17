@@ -46,7 +46,7 @@ Run the project migrations, ensuring first that you have configured your `config
 
 If you're deploying to production the migration command is:
 
-    RAILS_ENV=production bundle exec rake db:migration
+    RAILS_ENV=production bundle exec rake db:migrate
 
 Also for production you will need to precompile the assets:
 
