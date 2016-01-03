@@ -1,12 +1,26 @@
 - title 'Winnipeg Election 2014 - Inform Your Vote'
 - meta_description 'Candidate questionnaires for mayor, city council and school trustee, plus the latest election news. Inform your vote for the 2014 Winnipeg Election on October 22.'
+
+<div id="results">
+    <div class="flow-it">
+        <div class="three-columns">
+            <h2>Unofficial 2014 Winnipeg Election Results</h2>
+            <p><em>Although our website is not affiliated with the Winnipeg Free Press, we are embedding this content with their permission.</em></p>
+            <p><a href="http://winnipeg.ca/clerks/election/election2014/results/index.html"><strong>Election results are also available from the City of Winnipeg</strong>. The city's results include school trustee races.</a></p>
+        </div>
+    </div>
+    <iframe style="margin: 1em 10px; width:100%; height:680px;" src="http://www.winnipegfreepress.com/special/civicelection2014/results/"></iframe>
+</div>
+
 div.flow-it
   div.one-column.medium-row
     h2 Winnipeg Election 2014
     p On <strong>Wednesday October 22 of 2014</strong> the citizens of Winnipeg go to the polls to elect their Mayor, their City Councillors and their School Trustees.
     br
-    h2 Voter Countdown
-    = render 'days_until_election_flip_counter'
+    h2 Election Day is Today
+    p Polls are now closed.
+    p
+      strong Thank you for Voting Strong Winnipeg! ᕙ(ಠ‿ಠ)ᕗ
 
   div.one-column.medium-row
     h2 Find Your Candidates
@@ -42,7 +56,7 @@ div.flow-it
 
   div.one-column.medium-row
     h2 Where Do I Vote?
-    p To find your voting location enter your address in #{link_to 'the voting location tool made by the City of Winnipeg', 'http://datacloud.me/webapps/winnipeg/vote/?lang=en', id: 'where_to_vote'}.
+    p To find your voting location, enter your address in #{link_to 'the voting location tool made by the City of Winnipeg', 'http://datacloud.me/webapps/winnipeg/vote/?lang=en', id: 'where_to_vote'}.
     br
     br
     h2 Voter Education

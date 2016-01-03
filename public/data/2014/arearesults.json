@@ -1,0 +1,3074 @@
+{
+	"statistics": {
+		"timeStamp": "2014-10-22 23:18:49",
+		"eligibleVoters": 468713,
+		"globTurnout": "50.23%",
+		"globBallotCast": 235455,
+		"globTabulators": 225,
+		"globClosedTabulators": 225,
+		"globStartedPolls": 0,
+		"globPolls": 686,
+		"globClosedPolls": 686
+	},
+	"areaResults": [
+		{
+			"1": {
+				"statistics": {
+					"eligibleVoters": 468713,
+					"turnout": "50.23%",
+					"turnout2": "50.23%",
+					"ballotCast": 235455,
+					"ballotCast2": 235455,
+					"tabulators": 225,
+					"closedTabulators": 225,
+					"startedPolls": 0,
+					"polls": 686,
+					"closedPolls": 686
+				},
+				"contestResults": [
+				]
+			},
+			"2": {
+				"statistics": {
+					"eligibleVoters": 468713,
+					"turnout": "50.05%",
+					"turnout2": "49.99%",
+					"ballotCast": 234613,
+					"ballotCast2": 234293,
+					"tabulators": 225,
+					"closedTabulators": 225,
+					"startedPolls": 0,
+					"polls": 686,
+					"closedPolls": 686
+				},
+				"contestResults": [
+					{
+						"id": "1001",
+						"contestName": "Mayor",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 1,
+						"choiceResults": [
+							{
+								"id": "1",
+								"choiceName": "Robert-Falcon OUELLETTE",
+								"votes": 36823,
+								"percentage": "15.70%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "2",
+								"choiceName": "Judy WASYLYCIA-LEIS",
+								"votes": 58440,
+								"percentage": "24.92%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "3",
+								"choiceName": "Gord STEEVES",
+								"votes": 21080,
+								"percentage": "8.99%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "4",
+								"choiceName": "Michel FILLION",
+								"votes": 898,
+								"percentage": "0.38%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "5",
+								"choiceName": "David SANDERS",
+								"votes": 3718,
+								"percentage": "1.59%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "6",
+								"choiceName": "Brian BOWMAN",
+								"votes": 111504,
+								"percentage": "47.54%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "7",
+								"choiceName": "Paula HAVIXBECK",
+								"votes": 2083,
+								"percentage": "0.89%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"3": {
+				"statistics": {
+					"eligibleVoters": 31075,
+					"turnout": "100%",
+					"turnout2": "48.06%",
+					"ballotCast": 42047,
+					"ballotCast2": 14934,
+					"tabulators": 41,
+					"closedTabulators": 41,
+					"startedPolls": 0,
+					"polls": 74,
+					"closedPolls": 74
+				},
+				"contestResults": [
+					{
+						"id": "1008",
+						"contestName": "Ward Councillor for Old Kildonan",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 8,
+						"choiceResults": [
+							{
+								"id": "33",
+								"choiceName": "Donovan MARTIN",
+								"votes": 2932,
+								"percentage": "20.07%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "34",
+								"choiceName": "Suzanne HRYNYK",
+								"votes": 5732,
+								"percentage": "39.24%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "35",
+								"choiceName": "Devi SHARMA",
+								"votes": 5944,
+								"percentage": "40.69%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"4": {
+				"statistics": {
+					"eligibleVoters": 33837,
+					"turnout": "100%",
+					"turnout2": "49.87%",
+					"ballotCast": 44014,
+					"ballotCast2": 16873,
+					"tabulators": 44,
+					"closedTabulators": 44,
+					"startedPolls": 0,
+					"polls": 75,
+					"closedPolls": 75
+				},
+				"contestResults": [
+					{
+						"id": "1005",
+						"contestName": "Ward Councillor for Fort Rouge - East Fort Garry",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 5,
+						"choiceResults": [
+							{
+								"id": "23",
+								"choiceName": "Shane NESTRUCK",
+								"votes": 2086,
+								"percentage": "13.04%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "24",
+								"choiceName": "Norm MILLER",
+								"votes": 2152,
+								"percentage": "13.46%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "25",
+								"choiceName": "Jenny GERBASI",
+								"votes": 11756,
+								"percentage": "73.50%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"5": {
+				"statistics": {
+					"eligibleVoters": 37053,
+					"turnout": "100%",
+					"turnout2": "58.42%",
+					"ballotCast": 47820,
+					"ballotCast2": 21646,
+					"tabulators": 45,
+					"closedTabulators": 45,
+					"startedPolls": 0,
+					"polls": 82,
+					"closedPolls": 82
+				},
+				"contestResults": [
+					{
+						"id": "1010",
+						"contestName": "Ward Councillor for River Heights - Fort Garry",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 10,
+						"choiceResults": [
+							{
+								"id": "41",
+								"choiceName": "John ORLIKOW",
+								"votes": 11856,
+								"percentage": "55.90%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "42",
+								"choiceName": "Taz STUART",
+								"votes": 9355,
+								"percentage": "44.10%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"6": {
+				"statistics": {
+					"eligibleVoters": 25415,
+					"turnout": "100%",
+					"turnout2": "46.65%",
+					"ballotCast": 40132,
+					"ballotCast2": 11857,
+					"tabulators": 41,
+					"closedTabulators": 41,
+					"startedPolls": 0,
+					"polls": 67,
+					"closedPolls": 67
+				},
+				"contestResults": [
+					{
+						"id": "1013",
+						"contestName": "Ward Councillor for St. James - Brooklands",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 13,
+						"choiceResults": [
+							{
+								"id": "53",
+								"choiceName": "Bryan METCALFE",
+								"votes": 3548,
+								"percentage": "29.96%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "54",
+								"choiceName": "Stefan JONASSON",
+								"votes": 2292,
+								"percentage": "19.35%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "55",
+								"choiceName": "Scott GILLINGHAM",
+								"votes": 5174,
+								"percentage": "43.69%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "56",
+								"choiceName": "Fred MORRIS",
+								"votes": 828,
+								"percentage": "6.99%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"7": {
+				"statistics": {
+					"eligibleVoters": 31409,
+					"turnout": "100%",
+					"turnout2": "58.60%",
+					"ballotCast": 45908,
+					"ballotCast2": 18405,
+					"tabulators": 44,
+					"closedTabulators": 44,
+					"startedPolls": 0,
+					"polls": 74,
+					"closedPolls": 74
+				},
+				"contestResults": [
+					{
+						"id": "1002",
+						"contestName": "Ward Councillor for Charleswood - Tuxedo",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 2,
+						"choiceResults": [
+							{
+								"id": "8",
+								"choiceName": "Evan DUNCAN",
+								"votes": 5812,
+								"percentage": "32.33%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "9",
+								"choiceName": "Marty MORANTZ",
+								"votes": 6281,
+								"percentage": "34.94%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "10",
+								"choiceName": "Nadine STILLER",
+								"votes": 1956,
+								"percentage": "10.88%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "11",
+								"choiceName": "Luc LEWANDOSKI",
+								"votes": 2950,
+								"percentage": "16.41%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "12",
+								"choiceName": "Kevin NICHOLS",
+								"votes": 978,
+								"percentage": "5.44%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"8": {
+				"statistics": {
+					"eligibleVoters": 27623,
+					"turnout": "100%",
+					"turnout2": "37.81%",
+					"ballotCast": 38465,
+					"ballotCast2": 10444,
+					"tabulators": 40,
+					"closedTabulators": 40,
+					"startedPolls": 0,
+					"polls": 65,
+					"closedPolls": 65
+				},
+				"contestResults": [
+					{
+						"id": "1006",
+						"contestName": "Ward Councillor for Mynarski",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 6,
+						"choiceResults": [
+							{
+								"id": "26",
+								"choiceName": "Ross EADIE",
+								"votes": 6565,
+								"percentage": "64.38%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "27",
+								"choiceName": "Greg LITTLEJOHN",
+								"votes": 2698,
+								"percentage": "26.46%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "28",
+								"choiceName": "Trevor MUELLER",
+								"votes": 554,
+								"percentage": "5.43%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "29",
+								"choiceName": "Dave CAPAR",
+								"votes": 381,
+								"percentage": "3.74%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"9": {
+				"statistics": {
+					"eligibleVoters": 38417,
+					"turnout": "100%",
+					"turnout2": "53.86%",
+					"ballotCast": 47241,
+					"ballotCast2": 20692,
+					"tabulators": 46,
+					"closedTabulators": 46,
+					"startedPolls": 0,
+					"polls": 84,
+					"closedPolls": 84
+				},
+				"contestResults": [
+					{
+						"id": "1015",
+						"contestName": "Ward Councillor for St. Vital",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 15,
+						"choiceResults": [
+							{
+								"id": "60",
+								"choiceName": "Steven HENNESSEY",
+								"votes": 1940,
+								"percentage": "9.67%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "61",
+								"choiceName": "Brian MAYES",
+								"votes": 14128,
+								"percentage": "70.40%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "62",
+								"choiceName": "Glenn CHURCHILL",
+								"votes": 3999,
+								"percentage": "19.93%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"10": {
+				"statistics": {
+					"eligibleVoters": 36942,
+					"turnout": "100%",
+					"turnout2": "51.45%",
+					"ballotCast": 46470,
+					"ballotCast2": 19005,
+					"tabulators": 43,
+					"closedTabulators": 43,
+					"startedPolls": 0,
+					"polls": 79,
+					"closedPolls": 79
+				},
+				"contestResults": [
+					{
+						"id": "1014",
+						"contestName": "Ward Councillor for St. Norbert",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 14,
+						"choiceResults": [
+							{
+								"id": "57",
+								"choiceName": "Joe CHAN",
+								"votes": 1098,
+								"percentage": "5.95%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "58",
+								"choiceName": "Janice LUKES",
+								"votes": 10719,
+								"percentage": "58.10%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "59",
+								"choiceName": "Sachit MEHRA",
+								"votes": 6631,
+								"percentage": "35.94%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"11": {
+				"statistics": {
+					"eligibleVoters": 30058,
+					"turnout": "100%",
+					"turnout2": "42.07%",
+					"ballotCast": 40714,
+					"ballotCast2": 12646,
+					"tabulators": 42,
+					"closedTabulators": 42,
+					"startedPolls": 0,
+					"polls": 70,
+					"closedPolls": 70
+				},
+				"contestResults": [
+					{
+						"id": "1004",
+						"contestName": "Ward Councillor for Elmwood - East Kildonan",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 4,
+						"choiceResults": [
+							{
+								"id": "19",
+								"choiceName": "Jason SCHREYER",
+								"votes": 6830,
+								"percentage": "55.10%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "20",
+								"choiceName": "Thomas STEEN",
+								"votes": 4157,
+								"percentage": "33.54%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "21",
+								"choiceName": "Jason CUMMING",
+								"votes": 638,
+								"percentage": "5.15%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "22",
+								"choiceName": "Paul QUAYE",
+								"votes": 770,
+								"percentage": "6.21%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"12": {
+				"statistics": {
+					"eligibleVoters": 28032,
+					"turnout": "100%",
+					"turnout2": "49.56%",
+					"ballotCast": 41627,
+					"ballotCast2": 13894,
+					"tabulators": 40,
+					"closedTabulators": 40,
+					"startedPolls": 0,
+					"polls": 69,
+					"closedPolls": 69
+				},
+				"contestResults": [
+					{
+						"id": "1016",
+						"contestName": "Ward Councillor for Transcona",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 16,
+						"choiceResults": [
+							{
+								"id": "63",
+								"choiceName": "Ray ULASY",
+								"votes": 4277,
+								"percentage": "31.12%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "64",
+								"choiceName": "Blessing FESCHUK",
+								"votes": 507,
+								"percentage": "3.69%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "65",
+								"choiceName": "Russ WYATT",
+								"votes": 8490,
+								"percentage": "61.77%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "66",
+								"choiceName": "George BAARS-WILHELM",
+								"votes": 470,
+								"percentage": "3.42%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"13": {
+				"statistics": {
+					"eligibleVoters": 41221,
+					"turnout": "100%",
+					"turnout2": "53.65%",
+					"ballotCast": 48648,
+					"ballotCast2": 22114,
+					"tabulators": 44,
+					"closedTabulators": 44,
+					"startedPolls": 0,
+					"polls": 86,
+					"closedPolls": 86
+				},
+				"contestResults": [
+					{
+						"id": "1011",
+						"contestName": "Ward Councillor for St. Boniface",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 11,
+						"choiceResults": [
+							{
+								"id": "43",
+								"choiceName": "Paul NAJDA",
+								"votes": 775,
+								"percentage": "3.69%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "44",
+								"choiceName": "Matt ALLARD",
+								"votes": 15355,
+								"percentage": "73.01%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "45",
+								"choiceName": "Ryan DAVIES",
+								"votes": 3939,
+								"percentage": "18.73%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "46",
+								"choiceName": "Brad GROSS",
+								"votes": 961,
+								"percentage": "4.57%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"14": {
+				"statistics": {
+					"eligibleVoters": 28154,
+					"turnout": "100%",
+					"turnout2": "55.07%",
+					"ballotCast": 42375,
+					"ballotCast2": 15505,
+					"tabulators": 41,
+					"closedTabulators": 41,
+					"startedPolls": 0,
+					"polls": 68,
+					"closedPolls": 68
+				},
+				"contestResults": [
+					{
+						"id": "1007",
+						"contestName": "Ward Councillor for North Kildonan",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 7,
+						"choiceResults": [
+							{
+								"id": "30",
+								"choiceName": "Jeff BROWATY",
+								"votes": 11840,
+								"percentage": "78.39%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "31",
+								"choiceName": "Evan COMSTOCK",
+								"votes": 1914,
+								"percentage": "12.67%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "32",
+								"choiceName": "Andrew PODOLECKI",
+								"votes": 1350,
+								"percentage": "8.94%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"15": {
+				"statistics": {
+					"eligibleVoters": 26076,
+					"turnout": "100%",
+					"turnout2": "39.78%",
+					"ballotCast": 38404,
+					"ballotCast2": 10374,
+					"tabulators": 40,
+					"closedTabulators": 40,
+					"startedPolls": 0,
+					"polls": 66,
+					"closedPolls": 66
+				},
+				"contestResults": [
+					{
+						"id": "1009",
+						"contestName": "Ward Councillor for Point Douglas",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 9,
+						"choiceResults": [
+							{
+								"id": "36",
+								"choiceName": "Dale WHITE",
+								"votes": 1165,
+								"percentage": "11.43%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "37",
+								"choiceName": "Rebecca CHARTRAND",
+								"votes": 2024,
+								"percentage": "19.86%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "38",
+								"choiceName": "Anthony RAMOS",
+								"votes": 1871,
+								"percentage": "18.36%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "39",
+								"choiceName": "Mike PAGTAKHAN",
+								"votes": 4701,
+								"percentage": "46.13%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "40",
+								"choiceName": "Anne THOMPSON",
+								"votes": 429,
+								"percentage": "4.21%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"16": {
+				"statistics": {
+					"eligibleVoters": 29154,
+					"turnout": "100%",
+					"turnout2": "44.02%",
+					"ballotCast": 40382,
+					"ballotCast2": 12833,
+					"tabulators": 40,
+					"closedTabulators": 40,
+					"startedPolls": 0,
+					"polls": 69,
+					"closedPolls": 69
+				},
+				"contestResults": [
+					{
+						"id": "1003",
+						"contestName": "Ward Councillor for Daniel McIntyre",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 3,
+						"choiceResults": [
+							{
+								"id": "13",
+								"choiceName": "Harvey SMITH",
+								"votes": 3284,
+								"percentage": "26.17%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "14",
+								"choiceName": "John CARDOSO",
+								"votes": 518,
+								"percentage": "4.13%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "15",
+								"choiceName": "Godwin SMITH",
+								"votes": 257,
+								"percentage": "2.05%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "16",
+								"choiceName": "Dave DONALDSON",
+								"votes": 664,
+								"percentage": "5.29%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "17",
+								"choiceName": "Cindy GILROY",
+								"votes": 4209,
+								"percentage": "33.54%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "18",
+								"choiceName": "Keith BELLAMY",
+								"votes": 3618,
+								"percentage": "28.83%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"17": {
+				"statistics": {
+					"eligibleVoters": 24247,
+					"turnout": "100%",
+					"turnout2": "53.91%",
+					"ballotCast": 41238,
+					"ballotCast2": 13071,
+					"tabulators": 42,
+					"closedTabulators": 42,
+					"startedPolls": 0,
+					"polls": 64,
+					"closedPolls": 64
+				},
+				"contestResults": [
+					{
+						"id": "1012",
+						"contestName": "Ward Councillor for St. Charles",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 12,
+						"choiceResults": [
+							{
+								"id": "47",
+								"choiceName": "Grant NORDMAN",
+								"votes": 3972,
+								"percentage": "30.36%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "48",
+								"choiceName": "Don WOODSTOCK",
+								"votes": 905,
+								"percentage": "6.92%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "49",
+								"choiceName": "Dwight HILDEBRANDT",
+								"votes": 791,
+								"percentage": "6.05%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "50",
+								"choiceName": "Geoff BORDEN",
+								"votes": 244,
+								"percentage": "1.87%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "51",
+								"choiceName": "Shawn DOBSON",
+								"votes": 5040,
+								"percentage": "38.53%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "52",
+								"choiceName": "Eric HOLLAND",
+								"votes": 2129,
+								"percentage": "16.28%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"18": {
+				"statistics": {
+					"eligibleVoters": 16649,
+					"turnout": "100%",
+					"turnout2": "49.68%",
+					"ballotCast": 36731,
+					"ballotCast2": 8272,
+					"tabulators": 37,
+					"closedTabulators": 37,
+					"startedPolls": 0,
+					"polls": 53,
+					"closedPolls": 53
+				},
+				"contestResults": [
+					{
+						"id": "1026",
+						"contestName": "School Trustee for River East Transcona Ward 3",
+						"voteFor": 2,
+						"isAcclaimed": false,
+						"sort": 26,
+						"choiceResults": [
+							{
+								"id": "114",
+								"choiceName": "Eva PRYSIZNEY",
+								"votes": 4779,
+								"percentage": "38.99%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "115",
+								"choiceName": "Wayne RITCHER",
+								"votes": 3815,
+								"percentage": "31.13%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "116",
+								"choiceName": "Roland HEADLEY",
+								"votes": 3663,
+								"percentage": "29.88%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"19": {
+				"statistics": {
+					"eligibleVoters": 17497,
+					"turnout": "100%",
+					"turnout2": "49.95%",
+					"ballotCast": 36601,
+					"ballotCast2": 8740,
+					"tabulators": 36,
+					"closedTabulators": 36,
+					"startedPolls": 0,
+					"polls": 53,
+					"closedPolls": 53
+				},
+				"contestResults": [
+					{
+						"id": "1030",
+						"contestName": "School Trustee for Seven Oaks Ward 3",
+						"voteFor": 4,
+						"isAcclaimed": false,
+						"sort": 30,
+						"choiceResults": [
+							{
+								"id": "133",
+								"choiceName": "Baljit GILL",
+								"votes": 1269,
+								"percentage": "5.64%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "134",
+								"choiceName": "Teresa JAWORSKI",
+								"votes": 4524,
+								"percentage": "20.11%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "135",
+								"choiceName": "Claudia SARBIT",
+								"votes": 4218,
+								"percentage": "18.75%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "136",
+								"choiceName": "Richard SAWKA",
+								"votes": 4776,
+								"percentage": "21.23%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "137",
+								"choiceName": "Edward PLOSZAY",
+								"votes": 4398,
+								"percentage": "19.55%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "138",
+								"choiceName": "Karen BEAUDIN",
+								"votes": 3307,
+								"percentage": "14.70%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"20": {
+				"statistics": {
+					"eligibleVoters": 20169,
+					"turnout": "100%",
+					"turnout2": "53.40%",
+					"ballotCast": 38588,
+					"ballotCast2": 10770,
+					"tabulators": 40,
+					"closedTabulators": 40,
+					"startedPolls": 0,
+					"polls": 59,
+					"closedPolls": 59
+				},
+				"contestResults": [
+					{
+						"id": "1017",
+						"contestName": "School Trustee for Louis Riel Ward 1",
+						"voteFor": 2,
+						"isAcclaimed": false,
+						"sort": 17,
+						"choiceResults": [
+							{
+								"id": "67",
+								"choiceName": "Louise JOHNSTON",
+								"votes": 6484,
+								"percentage": "44.97%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "68",
+								"choiceName": "Tanjit NAGRA",
+								"votes": 2956,
+								"percentage": "20.50%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "69",
+								"choiceName": "Cindy TURNER",
+								"votes": 4979,
+								"percentage": "34.53%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"21": {
+				"statistics": {
+					"eligibleVoters": 16683,
+					"turnout": "100%",
+					"turnout2": "40.59%",
+					"ballotCast": 34914,
+					"ballotCast2": 6772,
+					"tabulators": 35,
+					"closedTabulators": 35,
+					"startedPolls": 0,
+					"polls": 51,
+					"closedPolls": 51
+				},
+				"contestResults": [
+					{
+						"id": "1038",
+						"contestName": "School Trustee for Winnipeg Ward 5",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 38,
+						"choiceResults": [
+							{
+								"id": "169",
+								"choiceName": "Jerry MEDINA",
+								"votes": 2106,
+								"percentage": "34.20%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "170",
+								"choiceName": "Kevin FREEDMAN",
+								"votes": 2198,
+								"percentage": "35.69%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "171",
+								"choiceName": "Kevin SETTEE",
+								"votes": 1854,
+								"percentage": "30.11%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"22": {
+				"statistics": {
+					"eligibleVoters": 28831,
+					"turnout": "100%",
+					"turnout2": "57.05%",
+					"ballotCast": 43855,
+					"ballotCast2": 16447,
+					"tabulators": 40,
+					"closedTabulators": 40,
+					"startedPolls": 0,
+					"polls": 68,
+					"closedPolls": 68
+				},
+				"contestResults": [
+					{
+						"id": "1019",
+						"contestName": "School Trustee for Louis Riel Ward 3",
+						"voteFor": 3,
+						"isAcclaimed": false,
+						"sort": 19,
+						"choiceResults": [
+							{
+								"id": "73",
+								"choiceName": "Sandy NEMETH",
+								"votes": 7394,
+								"percentage": "21.47%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "74",
+								"choiceName": "Josie LANDRY",
+								"votes": 6312,
+								"percentage": "18.32%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "75",
+								"choiceName": "Gill TYRRELL",
+								"votes": 2100,
+								"percentage": "6.10%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "76",
+								"choiceName": "Jeff FRANZMANN",
+								"votes": 1427,
+								"percentage": "4.14%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "77",
+								"choiceName": "Dave RICHARDSON",
+								"votes": 6262,
+								"percentage": "18.18%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "78",
+								"choiceName": "Carlene RUMMERY",
+								"votes": 5149,
+								"percentage": "14.95%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "79",
+								"choiceName": "Robert PAGE",
+								"votes": 3823,
+								"percentage": "11.10%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "80",
+								"choiceName": "Perry GILMOUR",
+								"votes": 1979,
+								"percentage": "5.75%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"23": {
+				"statistics": {
+					"eligibleVoters": 21683,
+					"turnout": "100%",
+					"turnout2": "49.28%",
+					"ballotCast": 39093,
+					"ballotCast2": 10686,
+					"tabulators": 38,
+					"closedTabulators": 38,
+					"startedPolls": 0,
+					"polls": 61,
+					"closedPolls": 61
+				},
+				"contestResults": [
+					{
+						"id": "1025",
+						"contestName": "School Trustee for River East Transcona Ward 2",
+						"voteFor": 2,
+						"isAcclaimed": false,
+						"sort": 25,
+						"choiceResults": [
+							{
+								"id": "109",
+								"choiceName": "Curtis BILEWITCH",
+								"votes": 1604,
+								"percentage": "9.41%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "110",
+								"choiceName": "Rod GIESBRECHT",
+								"votes": 4905,
+								"percentage": "28.77%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "111",
+								"choiceName": "Karen JONASSON",
+								"votes": 3638,
+								"percentage": "21.34%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "112",
+								"choiceName": "John TOEWS",
+								"votes": 4947,
+								"percentage": "29.02%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "113",
+								"choiceName": "Jeff CIESZECKI",
+								"votes": 1954,
+								"percentage": "11.46%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"24": {
+				"statistics": {
+					"eligibleVoters": 14941,
+					"turnout": "100%",
+					"turnout2": "63.64%",
+					"ballotCast": 37059,
+					"ballotCast2": 9508,
+					"tabulators": 36,
+					"closedTabulators": 36,
+					"startedPolls": 0,
+					"polls": 49,
+					"closedPolls": 49
+				},
+				"contestResults": [
+					{
+						"id": "1036",
+						"contestName": "School Trustee for Winnipeg Ward 3",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 36,
+						"choiceResults": [
+							{
+								"id": "164",
+								"choiceName": "Mark WASYLIW",
+								"votes": 5149,
+								"percentage": "66.46%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "165",
+								"choiceName": "Lee DOERKSEN",
+								"votes": 2599,
+								"percentage": "33.54%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"25": {
+				"statistics": {
+					"eligibleVoters": 20126,
+					"turnout": "100%",
+					"turnout2": "51.35%",
+					"ballotCast": 38646,
+					"ballotCast2": 10335,
+					"tabulators": 39,
+					"closedTabulators": 39,
+					"startedPolls": 0,
+					"polls": 60,
+					"closedPolls": 60
+				},
+				"contestResults": [
+					{
+						"id": "1024",
+						"contestName": "School Trustee for River East Transcona Ward 1",
+						"voteFor": 2,
+						"isAcclaimed": false,
+						"sort": 24,
+						"choiceResults": [
+							{
+								"id": "102",
+								"choiceName": "Lisa WEBINGER",
+								"votes": 1371,
+								"percentage": "8.20%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "103",
+								"choiceName": "Dakota KOCHIE",
+								"votes": 1721,
+								"percentage": "10.29%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "104",
+								"choiceName": "Louise HEDMAN",
+								"votes": 2500,
+								"percentage": "14.95%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "105",
+								"choiceName": "Sandy OWCZAR",
+								"votes": 1382,
+								"percentage": "8.27%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "106",
+								"choiceName": "Debbie NEUFELD",
+								"votes": 2586,
+								"percentage": "15.47%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "107",
+								"choiceName": "Colleen CARSWELL",
+								"votes": 3689,
+								"percentage": "22.06%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "108",
+								"choiceName": "Jerry SODOMLAK",
+								"votes": 3472,
+								"percentage": "20.76%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"26": {
+				"statistics": {
+					"eligibleVoters": 17782,
+					"turnout": "100%",
+					"turnout2": "57.92%",
+					"ballotCast": 38049,
+					"ballotCast2": 10299,
+					"tabulators": 37,
+					"closedTabulators": 37,
+					"startedPolls": 0,
+					"polls": 54,
+					"closedPolls": 54
+				},
+				"contestResults": [
+					{
+						"id": "1027",
+						"contestName": "School Trustee for River East Transcona Ward 4",
+						"voteFor": 2,
+						"isAcclaimed": false,
+						"sort": 27,
+						"choiceResults": [
+							{
+								"id": "117",
+								"choiceName": "Brian OLYNIK",
+								"votes": 6154,
+								"percentage": "37.56%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "118",
+								"choiceName": "Glenn MATSUMOTO",
+								"votes": 4350,
+								"percentage": "26.55%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "119",
+								"choiceName": "Peter KOTYK",
+								"votes": 5879,
+								"percentage": "35.88%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"27": {
+				"statistics": {
+					"eligibleVoters": 15690,
+					"turnout": "100%",
+					"turnout2": "52.01%",
+					"ballotCast": 36088,
+					"ballotCast2": 8161,
+					"tabulators": 37,
+					"closedTabulators": 37,
+					"startedPolls": 0,
+					"polls": 51,
+					"closedPolls": 51
+				},
+				"contestResults": [
+					{
+						"id": "1037",
+						"contestName": "School Trustee for Winnipeg Ward 4",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 37,
+						"choiceResults": [
+							{
+								"id": "166",
+								"choiceName": "Iggy GRINEVSKY",
+								"votes": 833,
+								"percentage": "13.28%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "167",
+								"choiceName": "Lisa NAYLOR",
+								"votes": 4221,
+								"percentage": "67.29%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "168",
+								"choiceName": "Robert GAMBLE",
+								"votes": 1219,
+								"percentage": "19.43%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"28": {
+				"statistics": {
+					"eligibleVoters": 17807,
+					"turnout": "100%",
+					"turnout2": "51.92%",
+					"ballotCast": 37066,
+					"ballotCast2": 9245,
+					"tabulators": 38,
+					"closedTabulators": 38,
+					"startedPolls": 0,
+					"polls": 56,
+					"closedPolls": 56
+				},
+				"contestResults": [
+					{
+						"id": "1018",
+						"contestName": "School Trustee for Louis Riel Ward 2",
+						"voteFor": 2,
+						"isAcclaimed": false,
+						"sort": 18,
+						"choiceResults": [
+							{
+								"id": "70",
+								"choiceName": "Chris WILSON",
+								"votes": 2818,
+								"percentage": "21.18%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "71",
+								"choiceName": "Chris SIGURDSON",
+								"votes": 4369,
+								"percentage": "32.84%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "72",
+								"choiceName": "Colleen MAYER",
+								"votes": 6117,
+								"percentage": "45.98%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"29": {
+				"statistics": {
+					"eligibleVoters": 19658,
+					"turnout": "100%",
+					"turnout2": "59.16%",
+					"ballotCast": 39838,
+					"ballotCast2": 11630,
+					"tabulators": 39,
+					"closedTabulators": 39,
+					"startedPolls": 0,
+					"polls": 58,
+					"closedPolls": 58
+				},
+				"contestResults": [
+					{
+						"id": "1021",
+						"contestName": "School Trustee for Pembina Trails Ward 1",
+						"voteFor": 3,
+						"isAcclaimed": false,
+						"sort": 21,
+						"choiceResults": [
+							{
+								"id": "86",
+								"choiceName": "Darren CHRISTLE",
+								"votes": 3218,
+								"percentage": "12.99%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "87",
+								"choiceName": "Gerry MELNYK",
+								"votes": 7044,
+								"percentage": "28.44%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "88",
+								"choiceName": "Tony BUCHEL",
+								"votes": 3441,
+								"percentage": "13.89%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "89",
+								"choiceName": "Jaime GLENAT",
+								"votes": 4822,
+								"percentage": "19.47%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "90",
+								"choiceName": "Dianne ZUK",
+								"votes": 6247,
+								"percentage": "25.22%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"30": {
+				"statistics": {
+					"eligibleVoters": 22552,
+					"turnout": "100%",
+					"turnout2": "50.25%",
+					"ballotCast": 39331,
+					"ballotCast2": 11332,
+					"tabulators": 38,
+					"closedTabulators": 38,
+					"startedPolls": 0,
+					"polls": 60,
+					"closedPolls": 60
+				},
+				"contestResults": [
+					{
+						"id": "1023",
+						"contestName": "School Trustee for Pembina Trails Ward 3",
+						"voteFor": 3,
+						"isAcclaimed": false,
+						"sort": 23,
+						"choiceResults": [
+							{
+								"id": "96",
+								"choiceName": "Kathleen McMILLAN",
+								"votes": 5552,
+								"percentage": "22.63%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "97",
+								"choiceName": "Marty DANIELSON",
+								"votes": 2303,
+								"percentage": "9.39%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "98",
+								"choiceName": "Osaed KHAN",
+								"votes": 3214,
+								"percentage": "13.10%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "99",
+								"choiceName": "Julie FISHER",
+								"votes": 5109,
+								"percentage": "20.83%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "100",
+								"choiceName": "Cindy NACHTIGALL",
+								"votes": 3902,
+								"percentage": "15.91%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "101",
+								"choiceName": "Laureen GOODRIDGE",
+								"votes": 4450,
+								"percentage": "18.14%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"31": {
+				"statistics": {
+					"eligibleVoters": 15994,
+					"turnout": "100%",
+					"turnout2": "56.87%",
+					"ballotCast": 37613,
+					"ballotCast2": 9095,
+					"tabulators": 39,
+					"closedTabulators": 39,
+					"startedPolls": 0,
+					"polls": 53,
+					"closedPolls": 53
+				},
+				"contestResults": [
+					{
+						"id": "1032",
+						"contestName": "School Trustee for St. James - Assiniboia Kirkfield - St. Charles Ward",
+						"voteFor": 3,
+						"isAcclaimed": false,
+						"sort": 32,
+						"choiceResults": [
+							{
+								"id": "144",
+								"choiceName": "Bruce CHEGUS",
+								"votes": 4981,
+								"percentage": "24.84%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "145",
+								"choiceName": "Sandy LETHBRIDGE",
+								"votes": 5402,
+								"percentage": "26.94%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "146",
+								"choiceName": "Cheryl SMUKOWICH",
+								"votes": 6045,
+								"percentage": "30.15%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "147",
+								"choiceName": "Tracey DREXLER",
+								"votes": 3622,
+								"percentage": "18.06%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"32": {
+				"statistics": {
+					"eligibleVoters": 29232,
+					"turnout": "100%",
+					"turnout2": "60.92%",
+					"ballotCast": 44456,
+					"ballotCast2": 17809,
+					"tabulators": 43,
+					"closedTabulators": 43,
+					"startedPolls": 0,
+					"polls": 71,
+					"closedPolls": 71
+				},
+				"contestResults": [
+					{
+						"id": "1022",
+						"contestName": "School Trustee for Pembina Trails Ward 2",
+						"voteFor": 3,
+						"isAcclaimed": false,
+						"sort": 22,
+						"choiceResults": [
+							{
+								"id": "91",
+								"choiceName": "Tim JOHNSON",
+								"votes": 7974,
+								"percentage": "23.06%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "92",
+								"choiceName": "Andrew HARDER",
+								"votes": 4627,
+								"percentage": "13.38%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "93",
+								"choiceName": "David JOHNSON",
+								"votes": 8953,
+								"percentage": "25.90%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "94",
+								"choiceName": "Sheila BILLINGHURST",
+								"votes": 6837,
+								"percentage": "19.78%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "95",
+								"choiceName": "Christiane DEVLIN",
+								"votes": 6181,
+								"percentage": "17.88%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"33": {
+				"statistics": {
+					"eligibleVoters": 13926,
+					"turnout": "100%",
+					"turnout2": "49.76%",
+					"ballotCast": 35723,
+					"ballotCast2": 6930,
+					"tabulators": 36,
+					"closedTabulators": 36,
+					"startedPolls": 0,
+					"polls": 51,
+					"closedPolls": 51
+				},
+				"contestResults": [
+					{
+						"id": "1031",
+						"contestName": "School Trustee for St. James - Assiniboia King Edward - Deer Lodge Ward",
+						"voteFor": 3,
+						"isAcclaimed": false,
+						"sort": 31,
+						"choiceResults": [
+							{
+								"id": "139",
+								"choiceName": "Michelle NYHOF FINLEY",
+								"votes": 2403,
+								"percentage": "15.93%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "140",
+								"choiceName": "Scott JOHNSTON",
+								"votes": 3676,
+								"percentage": "24.36%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "141",
+								"choiceName": "Ed HUME",
+								"votes": 3307,
+								"percentage": "21.92%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "142",
+								"choiceName": "Christina POOLIE",
+								"votes": 1842,
+								"percentage": "12.21%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "143",
+								"choiceName": "Jennifer LAWSON",
+								"votes": 3861,
+								"percentage": "25.59%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"34": {
+				"statistics": {
+					"eligibleVoters": 14738,
+					"turnout": "100%",
+					"turnout2": "58.43%",
+					"ballotCast": 36337,
+					"ballotCast2": 8612,
+					"tabulators": 36,
+					"closedTabulators": 36,
+					"startedPolls": 0,
+					"polls": 51,
+					"closedPolls": 51
+				},
+				"contestResults": [
+					{
+						"id": "1034",
+						"contestName": "School Trustee for Winnipeg Ward 1",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 34,
+						"choiceResults": [
+							{
+								"id": "153",
+								"choiceName": "Paul GUISE",
+								"votes": 661,
+								"percentage": "8.86%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "154",
+								"choiceName": "Sherri ROLLINS",
+								"votes": 2324,
+								"percentage": "31.15%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "155",
+								"choiceName": "Sheri OBERMAN",
+								"votes": 784,
+								"percentage": "10.51%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "156",
+								"choiceName": "David LOBSON",
+								"votes": 609,
+								"percentage": "8.16%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "157",
+								"choiceName": "Luigi IMBROGNO",
+								"votes": 561,
+								"percentage": "7.52%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "158",
+								"choiceName": "Marilyn SIMON",
+								"votes": 477,
+								"percentage": "6.39%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "159",
+								"choiceName": "Heather CARDONA",
+								"votes": 2044,
+								"percentage": "27.40%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"35": {
+				"statistics": {
+					"eligibleVoters": 16022,
+					"turnout": "100%",
+					"turnout2": "51.32%",
+					"ballotCast": 36632,
+					"ballotCast2": 8222,
+					"tabulators": 38,
+					"closedTabulators": 38,
+					"startedPolls": 0,
+					"polls": 52,
+					"closedPolls": 52
+				},
+				"contestResults": [
+					{
+						"id": "1033",
+						"contestName": "School Trustee for St. James - Assiniboia Silver Heights - Booth Ward",
+						"voteFor": 3,
+						"isAcclaimed": false,
+						"sort": 33,
+						"choiceResults": [
+							{
+								"id": "148",
+								"choiceName": "John MULLIGAN",
+								"votes": 3738,
+								"percentage": "20.98%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "149",
+								"choiceName": "Rockford McKAY",
+								"votes": 2744,
+								"percentage": "15.40%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "150",
+								"choiceName": "Craig McGREGOR",
+								"votes": 4023,
+								"percentage": "22.58%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "151",
+								"choiceName": "Craig JOHNSON",
+								"votes": 3805,
+								"percentage": "21.36%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "152",
+								"choiceName": "Alicja SZARKIEWICZ",
+								"votes": 3505,
+								"percentage": "19.67%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"36": {
+				"statistics": {
+					"eligibleVoters": 4333,
+					"turnout": "100%",
+					"turnout2": "59.57%",
+					"ballotCast": 31467,
+					"ballotCast2": 2581,
+					"tabulators": 31,
+					"closedTabulators": 31,
+					"startedPolls": 0,
+					"polls": 35,
+					"closedPolls": 35
+				},
+				"contestResults": [
+					{
+						"id": "1028",
+						"contestName": "School Trustee for Seine River Ward 1",
+						"voteFor": 3,
+						"isAcclaimed": false,
+						"sort": 28,
+						"choiceResults": [
+							{
+								"id": "120",
+								"choiceName": "Gary NELSON",
+								"votes": 1016,
+								"percentage": "24.49%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "121",
+								"choiceName": "Wendy BLOOMFIELD",
+								"votes": 1469,
+								"percentage": "35.41%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "122",
+								"choiceName": "Neil REAVELY",
+								"votes": 659,
+								"percentage": "15.88%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "123",
+								"choiceName": "Greg REID",
+								"votes": 1005,
+								"percentage": "24.22%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"37": {
+				"statistics": {
+					"eligibleVoters": 22898,
+					"turnout": "100%",
+					"turnout2": "58.11%",
+					"ballotCast": 41031,
+					"ballotCast2": 13305,
+					"tabulators": 39,
+					"closedTabulators": 39,
+					"startedPolls": 0,
+					"polls": 61,
+					"closedPolls": 61
+				},
+				"contestResults": [
+					{
+						"id": "1020",
+						"contestName": "School Trustee for Louis Riel Ward 4",
+						"voteFor": 2,
+						"isAcclaimed": false,
+						"sort": 20,
+						"choiceResults": [
+							{
+								"id": "81",
+								"choiceName": "Candace MAXYMOWICH",
+								"votes": 3179,
+								"percentage": "15.56%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "82",
+								"choiceName": "Tom PARKER",
+								"votes": 5334,
+								"percentage": "26.11%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "83",
+								"choiceName": "Hugh COBURN",
+								"votes": 4632,
+								"percentage": "22.67%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "84",
+								"choiceName": "Justin ST. LOUIS",
+								"votes": 3582,
+								"percentage": "17.53%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "85",
+								"choiceName": "Jeremy FRIESEN",
+								"votes": 3704,
+								"percentage": "18.13%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"38": {
+				"statistics": {
+					"eligibleVoters": 21891,
+					"turnout": "100%",
+					"turnout2": "47.22%",
+					"ballotCast": 38258,
+					"ballotCast2": 10338,
+					"tabulators": 38,
+					"closedTabulators": 38,
+					"startedPolls": 0,
+					"polls": 61,
+					"closedPolls": 61
+				},
+				"contestResults": [
+					{
+						"id": "1029",
+						"contestName": "School Trustee for Seven Oaks Ward 2",
+						"voteFor": 4,
+						"isAcclaimed": false,
+						"sort": 29,
+						"choiceResults": [
+							{
+								"id": "124",
+								"choiceName": "Greg McFARLANE",
+								"votes": 4676,
+								"percentage": "16.07%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "125",
+								"choiceName": "Dennis RUGGLES",
+								"votes": 3312,
+								"percentage": "11.38%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "126",
+								"choiceName": "Cory JUAN",
+								"votes": 3283,
+								"percentage": "11.28%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "127",
+								"choiceName": "Michele KADING",
+								"votes": 2169,
+								"percentage": "7.46%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "128",
+								"choiceName": "Derek DABEE",
+								"votes": 3812,
+								"percentage": "13.10%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "129",
+								"choiceName": "Chris CLACIO",
+								"votes": 1030,
+								"percentage": "3.54%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "130",
+								"choiceName": "Nirmal SIDHU",
+								"votes": 2011,
+								"percentage": "6.91%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "131",
+								"choiceName": "Diane CAMERON",
+								"votes": 4415,
+								"percentage": "15.18%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "132",
+								"choiceName": "Maria SANTOS",
+								"votes": 4385,
+								"percentage": "15.07%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"39": {
+				"statistics": {
+					"eligibleVoters": 15339,
+					"turnout": "100%",
+					"turnout2": "36.64%",
+					"ballotCast": 33763,
+					"ballotCast2": 5620,
+					"tabulators": 36,
+					"closedTabulators": 36,
+					"startedPolls": 0,
+					"polls": 50,
+					"closedPolls": 50
+				},
+				"contestResults": [
+					{
+						"id": "1039",
+						"contestName": "School Trustee for Winnipeg Ward 6",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 39,
+						"choiceResults": [
+							{
+								"id": "172",
+								"choiceName": "Cathy COLLINS",
+								"votes": 2843,
+								"percentage": "59.99%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "173",
+								"choiceName": "Julie JAVIER",
+								"votes": 1896,
+								"percentage": "40.01%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"40": {
+				"statistics": {
+					"eligibleVoters": 19572,
+					"turnout": "100%",
+					"turnout2": "33.66%",
+					"ballotCast": 34931,
+					"ballotCast2": 6587,
+					"tabulators": 37,
+					"closedTabulators": 37,
+					"startedPolls": 0,
+					"polls": 55,
+					"closedPolls": 55
+				},
+				"contestResults": [
+					{
+						"id": "1041",
+						"contestName": "School Trustee for Winnipeg Ward 8",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 41,
+						"choiceResults": [
+							{
+								"id": "176",
+								"choiceName": "Tracy BALL",
+								"votes": 627,
+								"percentage": "10.22%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "177",
+								"choiceName": "Betty EDEL",
+								"votes": 1719,
+								"percentage": "28.01%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "178",
+								"choiceName": "Jerald FUNK",
+								"votes": 272,
+								"percentage": "4.43%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "179",
+								"choiceName": "Mike BABINSKY",
+								"votes": 3520,
+								"percentage": "57.35%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"41": {
+				"statistics": {
+					"eligibleVoters": 14285,
+					"turnout": "100%",
+					"turnout2": "54.75%",
+					"ballotCast": 35892,
+					"ballotCast2": 7821,
+					"tabulators": 35,
+					"closedTabulators": 35,
+					"startedPolls": 0,
+					"polls": 49,
+					"closedPolls": 49
+				},
+				"contestResults": [
+					{
+						"id": "1035",
+						"contestName": "School Trustee for Winnipeg Ward 2",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 35,
+						"choiceResults": [
+							{
+								"id": "160",
+								"choiceName": "Steve BRODA-MILIAN",
+								"votes": 1103,
+								"percentage": "16.83%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "161",
+								"choiceName": "Chris BROUGHTON",
+								"votes": 2280,
+								"percentage": "34.78%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "162",
+								"choiceName": "Jennefer LARSEN",
+								"votes": 2001,
+								"percentage": "30.53%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "163",
+								"choiceName": "Andrew GAMBY",
+								"votes": 1171,
+								"percentage": "17.86%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"42": {
+				"statistics": {
+					"eligibleVoters": 16258,
+					"turnout": "100%",
+					"turnout2": "44.97%",
+					"ballotCast": 35671,
+					"ballotCast2": 7312,
+					"tabulators": 37,
+					"closedTabulators": 37,
+					"startedPolls": 0,
+					"polls": 52,
+					"closedPolls": 52
+				},
+				"contestResults": [
+					{
+						"id": "1042",
+						"contestName": "School Trustee for Winnipeg Ward 9",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 42,
+						"choiceResults": [
+							{
+								"id": "180",
+								"choiceName": "Dean KOSHELANYK",
+								"votes": 4510,
+								"percentage": "67.97%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							},
+							{
+								"id": "181",
+								"choiceName": "Michael PAJEMOLIN",
+								"votes": 2125,
+								"percentage": "32.03%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"43": {
+				"statistics": {
+					"eligibleVoters": 14157,
+					"turnout": "100%",
+					"turnout2": "39.90%",
+					"ballotCast": 34156,
+					"ballotCast2": 5649,
+					"tabulators": 35,
+					"closedTabulators": 35,
+					"startedPolls": 0,
+					"polls": 48,
+					"closedPolls": 48
+				},
+				"contestResults": [
+					{
+						"id": "1040",
+						"contestName": "School Trustee for Winnipeg Ward 7",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"sort": 40,
+						"choiceResults": [
+							{
+								"id": "174",
+								"choiceName": "James COOK",
+								"votes": 1717,
+								"percentage": "35.08%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "175",
+								"choiceName": "Allan BEACH",
+								"votes": 3177,
+								"percentage": "64.92%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 1,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}

@@ -18,16 +18,17 @@ html
     link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"
   body
     #container
-      #notices
-        - if notice
-          p.notice = notice
-        - if alert
-          p.alert = alert
       header.site
         h1 = link_to active_election.name, '/'
         h3 A Citizen Created Election Resource
 
       = render :partial => 'layouts/menu' unless nav_headings.empty?
+
+      #notices
+        - if notice
+          p.notice = notice
+        - if alert
+          p.alert = alert
 
       #main
         == yield

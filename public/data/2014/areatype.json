@@ -1,0 +1,30 @@
+[
+	{
+		"id": "6a3abf93-bc89-4ee5-bd5a-54cbecb970bc",
+		"areaType": "City",
+		"hasContests": false,
+		"showByDefault": false,
+		"parentid": ""
+	},
+	{
+		"id": "64e91621-2322-4bfc-87b3-e7ecbc90e8e3",
+		"areaType": "Mayor",
+		"hasContests": true,
+		"showByDefault": true,
+		"parentid": "6a3abf93-bc89-4ee5-bd5a-54cbecb970bc"
+	},
+	{
+		"id": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"areaType": "Ward Councillor",
+		"hasContests": true,
+		"showByDefault": false,
+		"parentid": "6a3abf93-bc89-4ee5-bd5a-54cbecb970bc"
+	},
+	{
+		"id": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"areaType": "School Trustee",
+		"hasContests": true,
+		"showByDefault": false,
+		"parentid": "6a3abf93-bc89-4ee5-bd5a-54cbecb970bc"
+	}
+]

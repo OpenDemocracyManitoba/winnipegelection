@@ -1,0 +1,346 @@
+[
+	{
+		"id": "1",
+		"areaName": "City of Winnipeg",
+		"sort": 1,
+		"hasContests": false,
+		"areaTypeId": "6a3abf93-bc89-4ee5-bd5a-54cbecb970bc",
+		"parentAreaId": ""
+	},
+	{
+		"id": "2",
+		"areaName": "Mayor",
+		"sort": 2,
+		"hasContests": true,
+		"areaTypeId": "64e91621-2322-4bfc-87b3-e7ecbc90e8e3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "3",
+		"areaName": "Old Kildonan",
+		"sort": 3,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "4",
+		"areaName": "Fort Rouge - East Fort Garry",
+		"sort": 4,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "5",
+		"areaName": "River Heights - Fort Garry",
+		"sort": 5,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "6",
+		"areaName": "St. James - Brooklands",
+		"sort": 6,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "7",
+		"areaName": "Charleswood - Tuxedo",
+		"sort": 7,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "8",
+		"areaName": "Mynarski",
+		"sort": 8,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "9",
+		"areaName": "St. Vital",
+		"sort": 9,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "10",
+		"areaName": "St. Norbert",
+		"sort": 10,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "11",
+		"areaName": "Elmwood - East Kildonan",
+		"sort": 11,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "12",
+		"areaName": "Transcona",
+		"sort": 12,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "13",
+		"areaName": "St. Boniface",
+		"sort": 13,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "14",
+		"areaName": "North Kildonan",
+		"sort": 14,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "15",
+		"areaName": "Point Douglas",
+		"sort": 15,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "16",
+		"areaName": "Daniel McIntyre",
+		"sort": 16,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "17",
+		"areaName": "St. Charles",
+		"sort": 17,
+		"hasContests": true,
+		"areaTypeId": "a8a5643d-b89a-4f74-83db-e85bcfebca0c",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "18",
+		"areaName": "River East Transcona (3)",
+		"sort": 18,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "19",
+		"areaName": "Seven Oaks (3)",
+		"sort": 19,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "20",
+		"areaName": "Louis Riel (1)",
+		"sort": 20,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "21",
+		"areaName": "Winnipeg (5)",
+		"sort": 21,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "22",
+		"areaName": "Louis Riel (3)",
+		"sort": 22,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "23",
+		"areaName": "River East Transcona (2)",
+		"sort": 23,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "24",
+		"areaName": "Winnipeg (3)",
+		"sort": 24,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "25",
+		"areaName": "River East Transcona (1)",
+		"sort": 25,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "26",
+		"areaName": "River East Transcona (4)",
+		"sort": 26,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "27",
+		"areaName": "Winnipeg (4)",
+		"sort": 27,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "28",
+		"areaName": "Louis Riel (2)",
+		"sort": 28,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "29",
+		"areaName": "Pembina Trails (1)",
+		"sort": 29,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "30",
+		"areaName": "Pembina Trails (3)",
+		"sort": 30,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "31",
+		"areaName": "St James-Assiniboia (Kirkfield-St Charles)",
+		"sort": 31,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "32",
+		"areaName": "Pembina Trails (2)",
+		"sort": 32,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "33",
+		"areaName": "St James-Assiniboia (King Edward-Deer Lodge)",
+		"sort": 33,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "34",
+		"areaName": "Winnipeg (1)",
+		"sort": 34,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "35",
+		"areaName": "St James-Assiniboia (Silver Heights-Booth)",
+		"sort": 35,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "36",
+		"areaName": "Seine River Ward 1 (Partial Results)",
+		"sort": 36,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "37",
+		"areaName": "Louis Riel (4)",
+		"sort": 37,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "38",
+		"areaName": "Seven Oaks (2)",
+		"sort": 38,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "39",
+		"areaName": "Winnipeg (6)",
+		"sort": 39,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "40",
+		"areaName": "Winnipeg (8)",
+		"sort": 40,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "41",
+		"areaName": "Winnipeg (2)",
+		"sort": 41,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "42",
+		"areaName": "Winnipeg (9)",
+		"sort": 42,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	},
+	{
+		"id": "43",
+		"areaName": "Winnipeg (7)",
+		"sort": 43,
+		"hasContests": true,
+		"areaTypeId": "c3cc6426-5575-45e1-9ce1-9f435c66e5c3",
+		"parentAreaId": "1"
+	}
+]
