@@ -1,26 +1,25 @@
 - title 'Winnipeg Election 2014 - Inform Your Vote'
 - meta_description 'Candidate questionnaires for mayor, city council and school trustee, plus the latest election news. Inform your vote for the 2014 Winnipeg Election on October 22.'
 
-<div id="results">
+<!-- <div id="results">
     <div class="flow-it">
         <div class="three-columns">
             <h2>Unofficial 2014 Winnipeg Election Results</h2>
             <p><em>Although our website is not affiliated with the Winnipeg Free Press, we are embedding this content with their permission.</em></p>
             <p><a href="http://winnipeg.ca/clerks/election/election2014/results/index.html"><strong>Election results are also available from the City of Winnipeg</strong>. The city's results include school trustee races.</a></p>
+            <p>Thank you for Voting Strong Winnipeg! ᕙ(ಠ‿ಠ)ᕗ</p>
         </div>
     </div>
     <iframe style="margin: 1em 10px; width:100%; height:680px;" src="http://www.winnipegfreepress.com/special/civicelection2014/results/"></iframe>
-</div>
+</div> -->
 
 div.flow-it
   div.one-column.medium-row
     h2 Winnipeg Election 2014
-    p On <strong>Wednesday October 22 of 2014</strong> the citizens of Winnipeg go to the polls to elect their Mayor, their City Councillors and their School Trustees.
+    p On <strong>Wednesday October 22 of 2014</strong> the citizens of Winnipeg went to the polls to elect their Mayor, their City Councillors and their School Trustees.
     br
-    h2 Election Day is Today
-    p Polls are now closed.
-    p
-      strong Thank you for Voting Strong Winnipeg! ᕙ(ಠ‿ಠ)ᕗ
+    h2 2014 Election Results
+    p= link_to 'City of Winnipeg Election Results', 'http://winnipeg.ca/clerks/election/election2014/results/index.html'
 
   div.one-column.medium-row
     h2 Find Your Candidates
@@ -43,9 +42,13 @@ div.flow-it
           strong = link_to 'Trustee Candidates', @trustee_map.friendly_path
         p.small = link_to 'Role of a School Trustee', '/pages/18/the-role-of-a-school-trustee'
 
-  div.one-column.medium-row.social
-    h2 The Twitter Conversation
-    = render partial: 'twitter', locals: { widget_size: :short }
+  div.one-column.medium-row
+    h2 2014 Election Issues
+    p We've compiled #{link_to 'a comprehensive list of issues webpages', '/issue_websites'} set up by various Winnipeg organizations for the 2014 Winnipeg Election.
+    br
+    h2 Voter Education
+    p Everything you always wanted to know about municipal elections in Winnipeg but were afraid to ask.
+    p Visit our #{link_to 'voter education page', '/pages/21/election-education'}.
 
   div.one-column.medium-row
     h2 Latest Election News
@@ -57,18 +60,11 @@ div.flow-it
   div.one-column.medium-row
     h2 Where Do I Vote?
     p To find your voting location, enter your address in #{link_to 'the voting location tool made by the City of Winnipeg', 'http://datacloud.me/webapps/winnipeg/vote/?lang=en', id: 'where_to_vote'}.
-    br
-    br
-    h2 Voter Education
-    p Everything you always wanted to know about municipal elections in Winnipeg but were afraid to ask.
-    p Visit our #{link_to 'voter education page', '/pages/21/election-education'}.
 
   div.one-column.medium-row
-    h2 2014 Election Issues
-    p We've compiled #{link_to 'a comprehensive list of issues webpages', '/issue_websites'} set up by various Winnipeg organizations for the 2014 Winnipeg Election.
-    br
     h2 WinnipegElection.ca
     p A citizen created voter resource built by #{link_to 'Open Democracy Manitoba', '/pages/11/about-us'}.
+    br
     | <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FWinnipeg-Election%2F145495908793867&amp;width=270&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=61535010545" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:270px; height:80px;" allowTransparency="true"></iframe>
     p
       | <a href="http://twitter.com/WpgElection" class="twitter-follow-button">Follow @WpgElection</a>
