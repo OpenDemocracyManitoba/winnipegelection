@@ -51,15 +51,6 @@ If you're deploying to production the migration command is:
 Also for production you will need to precompile the assets:
 
     RAILS_ENV=production bundle exec rake assets:precompile
-    
-## Database Backups
-
-Database backup exported after the 2014 Winnipeg election:
-
-* [Postgres SQL Export - Winnipeg Election 2014](https://github.com/OpenDemocracyManitoba/winnipegelection/blob/master/public/data/WE_Postgres_Database_Dump.sql)
-* [Postgres Custom Binary Export - Winnipeg Election 2014](https://github.com/OpenDemocracyManitoba/winnipegelection/blob/master/public/data/WE_Postgres_Database_Dump.sqlc)
-
-See: [Importing Winnipeg Election Database Backups](https://github.com/OpenDemocracyManitoba/winnipegelection/wiki/Database-and-Uploaded-Image-Replication).
 
 ## License
 
