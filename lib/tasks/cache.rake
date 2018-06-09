@@ -1,4 +1,21 @@
 namespace :cache do
+  task reseed: [:clear, :seed]  do
+  end
+
+  desc "DANGER: Remove existing HTML cached to public folder."
+  task :clear do
+    puts 'Flushing existing public folder HTML cache'
+    puts sh('touch /var/www/winnipegelection.ca/production/tmp/restart.txt')
+    puts sh('rm -f /var/www/winnipegelection.ca/production/public/index.html')
+    puts sh('rm -f /var/www/winnipegelection.ca/production/public/issue_websites.html')
+    puts sh('rm -f /var/www/winnipegelection.ca/production/public/news_articles.html')
+    puts sh('rm -rf /var/www/winnipegelection.ca/production/public/pages')
+    puts sh('rm -rf /var/www/winnipegelection.ca/production/public/people')
+    puts sh('rm -rf /var/www/winnipegelection.ca/production/public/electoral_races')
+    puts sh('rm -rf /var/www/winnipegelection.ca/production/public/image_maps')
+    puts sh('rm -rf /var/www/winnipegelection.ca/production/public/news_articles')
+  end
+
   desc "Visit all pages we which to seed to the public folder file cache."
   task :seed => :environment do
     require 'open-uri'
@@ -7,8 +24,8 @@ namespace :cache do
     def visit_route(current_route)
       to_visit = BASE_URL + current_route
       print to_visit
-      # io = open(to_visit)
-      # print " ! Coule not open #{to_visit}" unless io.status.first == '200'
+      io = open(to_visit)
+      print " ! Coule not open #{to_visit}" unless io.status.first == '200'
       puts
     end
 
